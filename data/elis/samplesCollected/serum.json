@@ -1,0 +1,10 @@
+{
+    "results":[
+        {"name":"Bilirubin Total", "value":"1"},
+        {"name":"Bilirubin Direct", "value":"1"},
+        {"name":"SGOT/AST", "value":"1"},
+        {"name":"SGPT/ALT", "value":"1"},
+        {"name":"Alkaline Phosphate", "value":"1"},
+        {"name":"LDH", "value":"1"}
+    ]
+}

@@ -1,0 +1,64 @@
+# Nurse at ADT is able to view bed availability and assign beds
+* Nurse opens admission tab
+* Select the newly created patient
+* Select Patient Movement "Admit Patient"
+* Enter adt notes "Admission notes"
+* Admit the patient
+* Select bed for admission
+* Allocate bed "304-c"
+* Click Assign
+
+# Nurse at ADT gives discharge disposition
+* Goto All admissions
+* Search the newly created patient
+* Select Patient Movement "Discharge Patient"
+* Enter adt notes "Discharge notes"
+* Discharge the patient
+
+# Nurse initiates clinical checkup
+* Nurse opens clinical tab
+* Nurse enters basic clinical details
+
+# Nurse captures BP, sugar checkup
+* Enter Observation Form "DiabetiesIntake"
+* Enter Observation Form "DiabetiesProgress"
+
+# Nurse enters HIV details
+* Enter Observation Form "HIVTreatmentAndCareIntake"
+
+# Nurse enters basic clinical details
+* Click History and Examination
+* Enter History and examination details
+* Save consultation data
+* Enter vitals
+
+# Nurse initiates clinical checkup with healthID
+* Nurse opens clinical tab with healthID
+* Nurse enters basic clinical details
+
+# Admit a patient to general ward bed <wardNumber>
+* Open "Bed Management" module
+* Goto All admissions
+* Search the newly created patient
+* Select the general ward
+* Allocate bed <wardNumber>
+* Click Admit
+* Click Admit on popup
+
+# Discharge the patient from allocated bed
+* Open "Bed Management" module
+* View Admitted patients
+* Enter admitted patient details
+* Click Discharge
+* Click Discharge on popup
+
+# Enter Second Vitals
+* Add new observation form
+* Select Second Vitals
+* Enter Pulse(/min)
+* Enter systolic, diastolic
+* Enter posture
+* Enter Temperature (F)
+* Enter RR (/min)
+* Enter SPO2 (%)
+                                        

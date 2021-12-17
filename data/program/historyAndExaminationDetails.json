@@ -1,0 +1,9 @@
+{
+    "Chief_Complaints":[{"Chief_Complaint":"Low backache",
+    "for":"3", 
+    "for_frequency":"Days"}],
+    "Chief_complaint_notes": "Chief Complaint Notes",
+    "History_Notes":"History Notes",
+    "Examination_notes":"Examination Notes",
+    "Smoking_History":"Yes"
+}

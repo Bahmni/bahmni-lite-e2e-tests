@@ -1,0 +1,30 @@
+# Login to Open ELIS
+* goto ELIS home
+* enter user name in ELIS
+* Enter password in ELIS
+* click Submit
+
+# Collect Sample
+* Find the patient
+* Click collect sample
+* Generate the auto id
+* Save in openELIS
+
+# Enter blood Lab results
+* Click today's sample in samples collected 
+* Find the patient
+* Enter lab result "blood" in samples collected
+
+# Enter serum Lab results
+* Click today's sample in samples collected 
+* Find the patient
+* Enter lab result "serum" in samples collected
+# Enter lab result <details> in samples collected
+* Open the result of the patient
+* Enter lab result <details> in the result
+* Save in openELIS
+
+# Validate lab result <details> in samples collected
+* Click lab dashboard
+* Validate lab result "blood"
+* Save in openELIS

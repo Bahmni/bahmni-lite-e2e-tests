@@ -1,0 +1,54 @@
+# Enter vitals
+* Click Vitals
+* Enter Pulse(/min)
+* Enter systolic, diastolic
+* Enter posture
+* Enter Temperature (F)
+* Enter RR (/min)
+* Enter SPO2 (%)
+* Save consultation data
+
+# Doctor issues an Admit disposition
+* Nurse opens clinical tab
+* Choose Disposition
+* Doctor advises admitting the patient
+* Save consultation data
+
+# Doctor captures the consultation notes <consultationNotes> for newly created patient
+* Doctor clicks consultation
+* Doctor captures consultation notes "Consultation notes"
+* Save consultation data
+
+# Doctor issues an Discharge disposition
+* Choose Disposition
+* Doctor advises discharging the patient
+* Save consultation data
+
+# Doctor advises medicines <medicines> and tests <tests>
+* Doctor starts ordering tests <tests>
+* Doctor starts prescribing medications <medicines>
+
+# Doctor opens Patient <program> dashboard
+* Open "Programs" module
+* Goto All sections and search the newly created patient
+* Open the program dashboard <program>
+
+# Doctor enrolls Patient onto <program> stage <stage> starting <startingDate> years ago with treatment start <treatmentStartDate> years ago, id <id>, dr incharge <doctorIncharge> and treatment stage <treatmentStage>
+* Open "Programs" module
+* Goto All sections and search the newly created patient
+* Enroll in program <program> stage <stage> starting <startingDate> years ago with treatment start <treatmentStartDate> years ago, id <id>, dr incharge <doctorIncharge> and treatment stage <treatmentStage>
+* Open the program dashboard <program>
+
+# Goto All sections and search the newly created patient
+* Goto All sections
+* Search the newly created patient
+
+# Doctor starts prescribing medications <medication>
+* Open "Medications" Tab
+* Doctor prescribes medicines <medication>
+* Save consultation data
+
+# Doctor starts ordering tests <tests>
+* Open "Orders" Tab
+* Doctor prescribe tests <tests>
+* Save consultation data

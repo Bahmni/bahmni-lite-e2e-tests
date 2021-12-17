@@ -1,0 +1,38 @@
+{
+    "ObservationFormName": "HIV Treatment and Care - Intake",
+    "ObservationFormDetails":
+    [
+        {"type":"TextArea","label":"Chief Complaint","value":"Low backache"},
+        {"type":"TextArea","label":"Others (Specify)","value":"Others (Specify)"},
+        {
+            "type":"Group","label":"Mothers ARV Regimen Details",
+            "value":[
+                {"type":"Button","label":"Regimen","value":"Others"},
+                {"type":"Date","label":"Regimen Start Date","value":"Today"}
+            ]
+        },
+        {"type":"Group","label":"HIV Exposed Baby",
+            "value":[
+                {"type":"Button","label":"Early Infant Diagnosis","value":"Within 2 months"},
+                {"type":"Date","label":"PCR Test Date","value":"Today"},
+                {"type":"TextArea","label":"PCR Test Result","value":"PCR Test Resul"},
+                {
+                    "type":"Group","label":"Antibody test after 18m",
+                    "value":[
+                        {"type":"Date","label":"Antibody test date","value":"Today"},
+                        {"type":"TextArea","label":"Antibody test result","value":"Antibody test result"}
+                ]},
+                {"type":"Date","label":"CPT Prophylaxis start date after 6wks","value":"Today-00/06/0004"}
+            ]},
+        {"type":"Group","label":"HIV Care History","value":[
+                {"type":"Date","label":"HIV +ve diagnosed date","value":"Today-00/00/0004"},
+                {"type":"Date","label":"Enrolled Date","value":"Today-00/00/0003"},
+                {"type":"Button","label":"WHO Staging","value":"II"},
+                {"type":"Button","label":"CPT Started","value":"Yes"},
+                {"type":"Date","label":"CPT Start date","value":"Today"},
+                {"type":"Button","label":"IPT Started","value":"Yes"},
+                {"type":"Date","label":"IPT Start date","value":"Today"}
+            ]
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "ObservationFormName": "Diabetes – Progress",
+    "ObservationFormDetails":
+    [
+        {"type":"TextBox","label":"Systolic data","value":"110"},
+        {"type":"TextBox","label":"Diastolic data","value":"110"},
+        {"type":"TextArea","label":"A1C","value":"A1C"},
+        {"type":"Date","label":"Last A1C Date","value":"Today-00/00/0004"},
+        {"type":"TextArea","label":"Last LDL","value":"Last LDL"},
+        {"type":"Date","label":"Last LDL Date","value":"Today-00/00/0004"}
+    ]
+}

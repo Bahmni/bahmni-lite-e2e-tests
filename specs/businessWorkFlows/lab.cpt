@@ -1,0 +1,9 @@
+# lab technician uploads report <report> in <module>
+* Goto Bahmni home
+* Open <module> module
+* Choose newly created patient
+* Add a report <report> to <module>
+
+# lab technician uploads patient document and radiology reports
+* lab technician uploads report "labReport1" in "Patient Documents"
+* lab technician uploads report "labReport2" in "Radiology Upload"
