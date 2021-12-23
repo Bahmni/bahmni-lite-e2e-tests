@@ -8,8 +8,10 @@ Tags: core
 * Receptionist creates the patient with mobile number <mobileNumber> and starts an OPD
 * Nurse initiates clinical checkup
 * Doctor advises medicines "opd/prescriptionFlow/prescriptions" and tests "opd/prescriptionFlow/labTests"
-* lab technician uploads patient document and radiology reports
 * visit is closed at the front desk
+* Login to Odoo
+* View Direct Sales Quotation
+* Confirm Sales
 
 ## Should be able to get OPConsultation notes of a patient
 Tags: E2E

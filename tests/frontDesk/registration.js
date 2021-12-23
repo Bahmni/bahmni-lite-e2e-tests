@@ -273,8 +273,9 @@ step("Open newly created patient details by search", async function () {
     await press('Enter', {waitForNavigation:true});
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 
-    if(link(patientIdentifierValue).exists())
-        await click(link(patientIdentifierValue))
+    try{
+        await click(link(patientIdentifierValue))        
+    }catch(e){}
 });
 step("Open newly created patient details by healthID", async function() {
     var patientHealthID = gauge.dataStore.scenarioStore.get("healthID")
