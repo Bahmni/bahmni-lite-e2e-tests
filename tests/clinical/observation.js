@@ -10,7 +10,8 @@ const {
 	$,
 	dropDown,
     fileField,
-    attach
+    attach,
+    scrollTo,
 } = require('taiko');
 const taikoHelper = require("../util/taikoHelper")
 const fileExtension = require("../util/fileExtension")
@@ -54,6 +55,7 @@ step("Enter History and examination details", async function() {
         await taikoHelper.repeatUntilFound(textBox(toRightOf("Chief Complaint")))
         await focus(textBox(toRightOf("Chief Complaint")))
         await write(chiefComplaint.Chief_Complaint,into(textBox(toRightOf("Chief Complaint"))));
+        await scrollTo("Chief Complaint")
         await click('Accept');
         await write(chiefComplaint.for, into(textBox(toRightOf("for"))));    
         await dropDown(toRightOf("for")).select(chiefComplaint.for_frequency);

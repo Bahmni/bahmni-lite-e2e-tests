@@ -138,7 +138,7 @@ step("Enter patient mobile number <mobile>", async function (mobile) {
 
 step("Click create new patient", async function () {
     await waitFor(2000)
-//    await click(link("Create New"),{waitForNavigation:true,waitForEvents:['networkIdle'],navigationTimeout:process.env.actionTimeout})
+//   await click(link("Create New"),{waitForNavigation:true,waitForEvents:['networkIdle'],navigationTimeout:process.env.actionTimeout})
     await click(link("Create New"),{waitForNavigation:true,navigationTimeout:process.env.actionTimeout})
     await taikoHelper.repeatUntilNotFound($("#overlay"))
     gauge.dataStore.scenarioStore.put("isNewPatient",true)

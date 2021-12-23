@@ -25,14 +25,9 @@ step("View Quotations below direct sales", async function() {
 });
 
 step("Click customer name", async function() {
-    var firstName = gauge.dataStore.scenarioStore.get("patientFirstName")
-    var middleName = gauge.dataStore.scenarioStore.get("patientMiddleName")
-    var lastName = gauge.dataStore.scenarioStore.get("patientLastName")
-
-    console.log(firstName)
-    console.log(middleName)
-    console.log(lastName)
-    await click(firstName+" "+middleName+" "+lastName);
+	var patientIdentifierValue= gauge.dataStore.scenarioStore.get("patientIdentifier");
+    console.log(patientIdentifierValue)
+    await click(patientIdentifierValue);
 });
 
 step("Confirm sale", async function() {
