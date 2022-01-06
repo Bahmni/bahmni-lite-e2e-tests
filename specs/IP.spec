@@ -9,7 +9,7 @@ Tags: core
 * Start an IPD Visit
 * Doctor issues an Admit disposition
 * Goto Bahmni home
-* Admit a patient to general ward bed "304-d"
+* Nurse admits the patient
 * Goto Bahmni home
 * Nurse opens clinical tab
 * Nurse enters basic clinical details
@@ -21,7 +21,6 @@ Tags: core
 * Choose newly created patient
 * Add a report "labReport1" to "Patient Documents"
 * Goto Bahmni home
-* Open "InPatient" module
-* Nurse at ADT gives discharge disposition
+* Nurse discharges the patient
 ___
 * visit is closed at the front desk

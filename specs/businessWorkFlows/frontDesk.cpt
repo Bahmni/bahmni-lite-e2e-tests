@@ -104,3 +104,7 @@
 * Select Mobile OTP
 * Authenticate with Mobile
 * Find match for NDHM record with firstName <firstName> middleName <middleName> lastName <lastName> age <age> gender <gender> mobileNumber <mobileNumber>
+
+# Goto patient registration page from consultation page
+* Click patient name on consultation page
+* Click registration on consultation page

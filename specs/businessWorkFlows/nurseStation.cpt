@@ -61,4 +61,11 @@
 * Enter Temperature (F)
 * Enter RR (/min)
 * Enter SPO2 (%)
-                                        
+
+# Nurse admits the patient
+* Open "InPatient" module
+* Nurse at ADT is able to view bed availability and assign beds
+
+# Nurse discharges the patient
+* Open "InPatient" module
+* Nurse at ADT gives discharge disposition

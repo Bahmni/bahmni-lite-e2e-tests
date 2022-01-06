@@ -52,8 +52,9 @@ step("Enter History and examination details", async function() {
     var historyAndExaminationDetails = JSON.parse(fileExtension.parseContent("./data/program/historyAndExaminationDetails.json"))
 
     for(var chiefComplaint of historyAndExaminationDetails.Chief_Complaints){
-        await taikoHelper.repeatUntilFound(textBox(toRightOf("Chief Complaint")))
-        await focus(textBox(toRightOf("Chief Complaint")))
+        // await taikoHelper.repeatUntilFound(textBox(toRightOf("Chief Complaint")))
+        // await focus(textBox(toRightOf("Chief Complaint")))
+        await scrollTo("Chief Complaint")
         await write(chiefComplaint.Chief_Complaint,into(textBox(toRightOf("Chief Complaint"))));
         await scrollTo("Chief Complaint")
         await click('Accept');
@@ -66,4 +67,17 @@ step("Enter History and examination details", async function() {
     await click(historyAndExaminationDetails.Smoking_History,toRightOf("Smoking History"));
 
     await attach(path.join("./data/program/"+'programReport1.jpg'),fileField({id:"file-browse-observation_9"}));
+});
+
+step("Click patient name on consultation page", async function() {
+    var firstName = gauge.dataStore.scenarioStore.get("patientFirstName")
+	var middleName = gauge.dataStore.scenarioStore.get("patientMiddleName")
+    var lastName = gauge.dataStore.scenarioStore.get("patientLastName")
+
+	var patientIdentifierValue= gauge.dataStore.scenarioStore.get("patientIdentifier");
+    await click(firstName+" "+lastName+" "+patientIdentifierValue)
+});
+
+step("Click registration on consultation page", async function() {
+    await click("Registration")
 });
