@@ -32,6 +32,7 @@ step("Click Start Special OPD Visit", async function() {
 
 step("Enroll in program <program> stage <programStage> starting <numberOfYearsAgo_startDate> years ago with treatment start <numberOfYearsAgo_treatmentDate> years ago, id <id>, dr incharge <doctor> and treatment stage <stage>", 
 async function (program, programStage, numberOfYearsAgo_startDate, numberOfYearsAgo_treatmentDate, id, doctor, stage) {
+    await waitFor("New Program Enrollment",below("Date of birth"))
     await click('New Program Enrollment',below("Date of birth"))
     await waitFor("Program :")
     await dropDown(toRightOf('Program')).select(program)
@@ -52,6 +53,7 @@ async function (program, programStage, numberOfYearsAgo_startDate, numberOfYears
 });
 
 step("Open the program dashboard <program>", async function(program) {
+    await waitFor($('.proggram-dashboard-text'))
     await click($('.proggram-dashboard-text'),{waitForNavigation:true,navigationTimeout:480000});
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
