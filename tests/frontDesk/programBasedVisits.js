@@ -53,9 +53,10 @@ async function (program, programStage, numberOfYearsAgo_startDate, numberOfYears
 });
 
 step("Open the program dashboard <program>", async function(program) {
-    await waitFor($('.proggram-dashboard-text'))
-    await click($('.proggram-dashboard-text'),{waitForNavigation:true,navigationTimeout:480000});
+    await waitFor(text(program+' Dashboard',within($('#dashboard-link'))))
+    await click(text(program+' Dashboard',within($('#dashboard-link'))),{waitForNavigation:true,navigationTimeout:480000});
     await taikoHelper.repeatUntilNotFound($("#overlay"))
+    await taikoHelper.repeatUntilNotFound(text("Saved"))
 });
 
 step("Goto All sections", async function () {
