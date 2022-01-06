@@ -9,6 +9,7 @@ const {
     dropDown,
     highlight,
     below,
+    within,
     $,
     text
 } = require('taiko');
@@ -94,11 +95,11 @@ step("Save consultation data", async function () {
 	await taikoHelper.repeatUntilNotFound($("#overlay"))
 	await click("Save",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
 	await taikoHelper.repeatUntilNotFound($("#overlay"))
-    await taikoHelper.repeatUntilNotFound(text("Saved"))
+    await waitFor(async () => !(await text("Saved",within('.message-text')).exists()));
 });
 
 step("Save visit data", async function () {
 	await click("Save",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
 	await taikoHelper.repeatUntilNotFound($("#overlay"))
-	await taikoHelper.repeatUntilNotFound(text("Saved"))
+    await waitFor(async () => !(await text("Saved",within('.message-text')).exists()));
 });
