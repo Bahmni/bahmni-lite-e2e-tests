@@ -2,17 +2,6 @@
 * Goto Bahmni home
 * Login as a receptionist with admin credentials location <location>
 
-# Create a new patient with random name and healthID mobileNumber <mobileNumber>
-* Click create new patient
-* To Associate a healthID, vefiy it
-* Enter random healthID details
-* Verify if healthId entered already exists
-* Select Mobile OTP
-* Authenticate with Mobile
-* Enter OTP for health care validation "0000" for with new healthID, patient details and mobileNumber <mobileNumber>
-* Create new record
-* Enter village "Village"
-* Save the patient data
 # Create a new patient with gender <gender> with random name, aged <age> with mobile number <mobileNumber>
 * Click create new patient
 * Enter patient random first name
@@ -58,11 +47,6 @@
 * Enter visit details
 * Close visit
 
-# Receptionist creates the patient firstName <firstName> middleName <middleName> lastName <lastName> with mobile number <mobileNumber> and starts an OPD
-* Open registration module
-* Create a new patient, if patient does not exist with firstName <firstName> middleName <middleName> lastName <lastName>, gender "F" mobileNumber <mobileNumber> age "30"
-* Start an OPD Visit
-
 # Receptionist creates the patient with mobile number <mobileNumber> and starts an OPD
 * Open registration module
 * Create a new patient with gender "Female" with random name, aged "29" with mobile number <mobileNumber>
@@ -84,27 +68,6 @@
 * Enter patient mobile number <mobileNumber>
 * Save the newly created patient data
 
-# Receptionist creates the patient with mobile number <mobileNumber> and starts an IPD
-* Open registration module
-* Create a new patient with gender "Female" with random name, aged "29" with mobile number <mobileNumber>
-* Open newly created patient details by search
-* IPD Visit is started at the front desk
-
 # Create a new patient, if patient does not exist with firstName <firstName> middleName <middleName> lastName <lastName>, gender <gender> mobileNumber <mobileNumber> age <age>
 * Check if patient <firstName> <middleName> <lastName> with mobile "mobileNumber" exists
 * Create a new patient with gender <gender> with name <firstName> <middleName> <lastName>, aged <age> with mobile number <mobileNumber>
-
-# Should not allow to associate HeatlhID if already linked
-* Should not allow to associate HeatlhID if already linked1
-
-# Should fetch record with firstName <firstName> middleName <middleName> lastName <lastName> gender <gender> age <age> and mobileNumber <mobileNumber>
-* To Associate a healthID, vefiy it
-* Enter healthID "soumyag@sbx"
-* Verify if healthId entered already exists
-* Select Mobile OTP
-* Authenticate with Mobile
-* Find match for NDHM record with firstName <firstName> middleName <middleName> lastName <lastName> age <age> gender <gender> mobileNumber <mobileNumber>
-
-# Goto patient registration page from consultation page
-* Click patient name on consultation page
-* Click registration on consultation page

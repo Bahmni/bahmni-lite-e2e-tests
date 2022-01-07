@@ -25,8 +25,8 @@
 * Save consultation data
 
 # Doctor advises medicines <medicines> and tests <tests>
-* Doctor starts ordering tests <tests>
-* Doctor starts prescribing medications <medicines>
+* Doctor prescribes tests <tests>
+* Doctor prescribes medications <medicines>
 
 # Doctor opens Patient <program> dashboard
 * Open "Programs" module
@@ -43,12 +43,12 @@
 * Goto All sections
 * Search the newly created patient
 
-# Doctor starts prescribing medications <medication>
+# Doctor prescribes medications <medication>
 * Open "Medications" Tab
 * Doctor prescribes medicines <medication>
 * Save consultation data
 
-# Doctor starts ordering tests <tests>
+# Doctor prescribes tests <tests>
 * Open "Orders" Tab
 * Doctor prescribe tests <tests>
 * Save consultation data

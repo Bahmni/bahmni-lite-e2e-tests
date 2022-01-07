@@ -17,17 +17,18 @@ var fileExtension = require("../util/fileExtension");
 var taikoHelper = require("../util/taikoHelper");
 
 step("Doctor prescribe tests <prescriptions>", async function (prescriptionFile) {
-    var prescriptionFile = "./data/"+prescriptionFile+".json";
+    var prescriptionFile = `./data/${prescriptionFile}.json`;
     var testPrescriptions = JSON.parse(fileExtension.parseContent(prescriptionFile))
     gauge.message(testPrescriptions)
 
     for (var test of testPrescriptions.tests) {
-            await click(test.test,{force: true})
+        await taikoHelper.repeatUntilFound(text(test.test))
+        await click(test.test,{force: true})
     }     
 });
 
 step("Doctor prescribes medicines <prescriptionNames>", async function (prescriptionNames) {
-    var prescriptionFile = "./data/"+prescriptionNames+".json";
+    var prescriptionFile = `./data/${prescriptionNames}.json`;
     gauge.dataStore.scenarioStore.put("prescriptions",prescriptionFile)
     var medicalPrescriptions = JSON.parse(fileExtension.parseContent(prescriptionFile))
     gauge.message(medicalPrescriptions)

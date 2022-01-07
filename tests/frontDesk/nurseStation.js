@@ -37,6 +37,8 @@ step("Enter adt notes <notes>", async function (notes) {
 
 step("Select bed for admission", async function() {
 	await openmrs.interceptGeneralWard()
+    await taikoHelper.repeatUntilFound(text("General Ward"))
+    // await waitFor(async () => await $("General Ward").exists())
 	await click("General Ward")
 });
 
@@ -52,6 +54,7 @@ step("Click Assign", async function() {
 step("Admit the patient", async function() {
 	await openmrs.interceptAdmissionLocation()
 	await click("Admit",{waitForNavigation:true})
+	await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
 
 step("Discharge the patient", async function() {
@@ -121,7 +124,7 @@ step("Enter Observation Form <observationFormFile>", async function(observationF
     await click("Add New Obs Form",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 
-    var observationFormValues = JSON.parse(fileExtension.parseContent("./data/opConsultation/"+observationFormFile+".json"))
+    var observationFormValues = JSON.parse(fileExtension.parseContent(`./data/opConsultation/${observationFormFile}.json`))
 
     await click(button(observationFormValues.ObservationFormName,{waitForNavigation:true,navigationTimeout:process.env.actionTimeout}));
     await taikoHelper.repeatUntilNotFound($("#overlay"))

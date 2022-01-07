@@ -65,7 +65,7 @@ function ddmmyyyy(dateToBeFormatted){
 	var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
 	var yyyy = date.getFullYear();
 
-    return dd.toString()+mm.toString()+yyyy.toString();
+    return `${dd.toString()}${mm.toString()}${yyyy.toString()}`;
 }
 
 function ddmmyyyyHHMM(dateToBeFormatted){
@@ -75,14 +75,15 @@ function ddmmyyyyHHMM(dateToBeFormatted){
 	var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
 	var yyyy = date.getFullYear();
 
-    return dd.toString()+"/"+mm.toString()+"/"+yyyy.toString()+" "+(new Date()).getHours()+":"+(new Date().getMinutes());
+    var newDate = new Date()
+    return `${dd.toString()}/${mm.toString()}/${yyyy.toString()} ${newDate.getHours()}:${newDate.getMinutes()}`;
 }
 
 function getyyyymmddFormattedDate(date){
     var dd = String(date.getDate()).padStart(2, '0');
 	var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
 	var yyyy = date.getFullYear();
-    return yyyy.toString()+"-"+mm.toString()+"-"+dd.toString();
+    return `${yyyy.toString()}-${mm.toString()}-${dd.toString()}`;
 }
 
 function nextYear() {

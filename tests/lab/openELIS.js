@@ -36,7 +36,7 @@ step("Save in openELIS", async function () {
 });
 
 step("Enter lab result <details> in the result", async function (details) {
-        var content = fileExtension.parseContent("./data/elis/samplesCollected/"+details+".json")
+        var content = fileExtension.parseContent(`./data/elis/samplesCollected/${details}.json`)
         var data = null;
         data = JSON.parse(content)
         for(var resultIndx=0;resultIndx<data.results.length;resultIndx++){
@@ -58,11 +58,11 @@ step("Click collect sample for <patientIdentifier>", async function(patientIdent
 step("Validate lab result <details>", async function (details) {
         var patientIdentifier = gauge.dataStore.scenarioStore.get("patientIdentifier")
         await click(image({title:'Validate'}),toRightOf(patientIdentifier))
-        var content = fileExtension.parseContent("./data/elis/samplesCollected/"+details+".json")
+        var content = fileExtension.parseContent(`./data/elis/samplesCollected/${details}.json`)
         var data = null;
         data = JSON.parse(content)
         for(var resultIndx=0;resultIndx<data.results.length;resultIndx++){
-                await click(checkBox(within($("#row_"+resultIndx),below("Accept"))));
+                await click(checkBox(within($(`#row_${resultIndx}`),below("Accept"))));
         }
 });
 

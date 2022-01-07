@@ -13,8 +13,8 @@ Tags: core
 * Goto Bahmni home
 * Nurse opens clinical tab
 * Nurse enters basic clinical details
-* Doctor starts ordering tests "opd/prescriptionFlow/labTests"
-* Doctor starts prescribing medications "opd/prescriptionFlow/prescriptions"
+* Doctor prescribes tests "opd/prescriptionFlow/labTests"
+* Doctor prescribes medications "opd/prescriptionFlow/prescriptions"
 * Doctor issues an Discharge disposition
 * Goto Bahmni home
 * Open "Patient Documents" module
