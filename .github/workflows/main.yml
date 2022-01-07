@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - 'release/v*.**'
   workflow_dispatch:
     inputs:
       target_env:
@@ -40,6 +41,7 @@ jobs:
       - name: Run test
         run: xvfb-run npm test
       - name: Upload reports
+        if: always()
         uses: actions/upload-artifact@v2
         with:
           name: bahmni-e2e-reports-${{ github.sha }}
