@@ -11,7 +11,6 @@ Tags: core
 * Doctor clicks consultation
 * Nurse enters basic clinical details
 * Doctor captures the consultation notes "Consultation Notes" for newly created patient
-* Doctor prescribes medications "opd/prescriptionFlow/prescriptions"
 * lab technician uploads patient document and radiology reports
 * Goto Bahmni home
 * Receptionist cancels the appointment
