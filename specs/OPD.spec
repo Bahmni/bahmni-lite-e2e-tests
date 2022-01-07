@@ -6,8 +6,12 @@
 Tags: core
 * Login to Bahmni location "General Ward" as a receptionist
 * Receptionist creates the patient with mobile number <mobileNumber> and starts an OPD
+* Receptionist creates a new appointment at "9:00" for service "Cardiology"
+* Go back to home page
 * Nurse initiates clinical checkup
 * Doctor advises medicines "opd/prescriptionFlow/prescriptions" and tests "opd/prescriptionFlow/labTests"
+* Goto Bahmni home
+* Receptionist cancels the appointment
 * visit is closed at the front desk
 * Login to Odoo
 * View Direct Sales Quotation

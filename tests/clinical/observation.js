@@ -69,7 +69,7 @@ step("Enter History and examination details", async function() {
     await attach(path.join("./data/program/",'programReport1.jpg'),fileField({id:"file-browse-observation_9"}));
 });
 
-step("Click patient name on consultation page", async function() {
+step("Click patient name", async function() {
     var firstName = gauge.dataStore.scenarioStore.get("patientFirstName")
 	var middleName = gauge.dataStore.scenarioStore.get("patientMiddleName")
     var lastName = gauge.dataStore.scenarioStore.get("patientLastName")
