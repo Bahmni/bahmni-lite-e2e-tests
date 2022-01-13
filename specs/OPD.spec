@@ -9,6 +9,7 @@ Tags: core
 * Nurse initiates clinical checkup
 * Doctor advises medicines "opd/prescriptionFlow/prescriptions" and tests "opd/prescriptionFlow/labTests"
 * visit is closed at the front desk
+* Verify data sync in radiology
 * Login to Odoo
 * View Direct Sales Quotation
 * Confirm Sales
@@ -26,6 +27,6 @@ Tags: E2E
 * Enter blood Lab results
 * Enter serum Lab results
 * Validate lab result "details" in samples collected
-* Goto Bahmni home
+* Goto Clinical module
 * visit is closed at the front desk
 

@@ -1,5 +1,6 @@
 # Login to Bahmni location <location> as a receptionist
-* Goto Bahmni home
+* Goto Bahmni main home
+* Open "Clinical Service" app
 * Login as a receptionist with admin credentials location <location>
 
 # Create a new patient with gender <gender> with random name, aged <age> with mobile number <mobileNumber>
@@ -41,7 +42,7 @@
 * Go back to home page
 
 # visit is closed at the front desk
-* Goto Bahmni home
+* Goto Clinical module
 * Open registration module
 * Open newly created patient details by search
 * Enter visit details

@@ -1,9 +1,5 @@
 const { goto, below, write, textBox, into, click, toLeftOf, checkBox } = require('taiko');
 
-step("goto odoo link", async function() {
-    await goto(process.env.odooHost);
-});
-
 step("enter odoo username", async function() {
     await write(process.env.odooUsername,below("Email"));
 });

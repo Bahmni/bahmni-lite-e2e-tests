@@ -1,5 +1,5 @@
 # lab technician uploads report <report> in <module>
-* Goto Bahmni home
+* Goto Clinical module
 * Open <module> module
 * Choose newly created patient
 * Add a report <report> to <module>

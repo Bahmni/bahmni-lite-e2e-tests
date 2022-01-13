@@ -12,7 +12,7 @@ Tags: core
 * Nurse enters basic clinical details
 * Doctor captures the consultation notes "Consultation Notes" for newly created patient
 * lab technician uploads patient document and radiology reports
-* Goto Bahmni home
+* Goto Clinical module
 * Receptionist cancels the appointment
 ___
 * visit is closed at the front desk

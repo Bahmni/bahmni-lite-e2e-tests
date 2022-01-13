@@ -179,10 +179,6 @@ step("Login as a receptionist with admin credentials location <location>", async
     await taikoHelper.repeatUntilNotFound(text("BAHMNI EMR LOGIN"))
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
-step("Goto Bahmni home", async function () {
-    await goto(process.env.bahmniHome,{waitForNavigation:true,navigationTimeout:250000});
-    await taikoHelper.repeatUntilNotFound($("#overlay"))
-});
 
 step("Enter registration fees <arg0>", async function (arg0) {
     await taikoHelper.repeatUntilFound(textBox(toRightOf("Registration Fees")))

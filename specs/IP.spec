@@ -8,19 +8,19 @@ Tags: core
 * Create a new patient with gender "Female" with random name, aged "29" with mobile number <mobileNumber>
 * Start an IPD Visit
 * Doctor issues an Admit disposition
-* Goto Bahmni home
+* Goto Clinical module
 * Nurse admits the patient
-* Goto Bahmni home
+* Goto Clinical module
 * Nurse opens clinical tab
 * Nurse enters basic clinical details
 * Doctor prescribes tests "opd/prescriptionFlow/labTests"
 * Doctor prescribes medications "opd/prescriptionFlow/prescriptions"
 * Doctor issues an Discharge disposition
-* Goto Bahmni home
+* Goto Clinical module
 * Open "Patient Documents" module
 * Choose newly created patient
 * Add a report "labReport1" to "Patient Documents"
-* Goto Bahmni home
+* Goto Clinical module
 * Nurse discharges the patient
 ___
 * visit is closed at the front desk

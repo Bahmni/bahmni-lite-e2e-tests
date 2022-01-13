@@ -1,0 +1,7 @@
+# Verify data sync in radiology
+* Goto Bahmni main home
+* Open "Radiology" app
+* Enter Radiology username
+* Enter Radiology password
+* Click Signin
+* Enter patient id in radiology app
