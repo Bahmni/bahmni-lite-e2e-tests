@@ -9,7 +9,6 @@ Tags: core
 * Nurse initiates clinical checkup
 * Doctor advises medicines "opd/prescriptionFlow/prescriptions" and tests "opd/prescriptionFlow/labTests"
 * visit is closed at the front desk
-* Verify data sync in radiology
 * Login to Odoo
 * View Direct Sales Quotation
 * Confirm Sales

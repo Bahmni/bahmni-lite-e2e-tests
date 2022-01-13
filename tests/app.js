@@ -15,5 +15,6 @@ step("Goto Bahmni main home", async function() {
 });
 
 step("Open <appName> app", async function (appName) {
-	await click(appName)
+	await click(appName,{waitForNavigation:true,navigationTimeout:250000});
+    await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
