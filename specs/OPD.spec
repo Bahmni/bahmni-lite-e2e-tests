@@ -10,9 +10,6 @@ Tags: core
 * Enter vitals
 * Doctor advises medicines "opd/prescriptionFlow/prescriptions" and tests "opd/prescriptionFlow/labTests"
 * visit is closed at the front desk
-* Login to Odoo
-* View Direct Sales Quotation
-* Confirm Sales
 
 ## Should be able to get OPConsultation notes of a patient
 Tags: E2E
