@@ -62,10 +62,3 @@ step("Goto All sections", async function () {
     await taikoHelper.repeatUntilFound(link("All"))
     await click(link("All"),{force:true,waitForNavigation:true,navigationTimeout:process.env.actionTimeout})    
 });
-
-step("Search the newly created patient with HealthID", async function () {
-    var healthID = gauge.dataStore.scenarioStore.get("healthID")
-    await write(healthID, into(textBox({ "placeholder": "Search Name/Patient Identifier  ..." })))
-    await click('Search',{waitForNavigation:true})
-    await taikoHelper.repeatUntilNotFound($("#overlay"))
-});

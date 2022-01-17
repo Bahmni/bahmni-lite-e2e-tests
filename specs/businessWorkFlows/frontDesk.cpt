@@ -18,11 +18,6 @@
 * Select the newly created patient
 * Doctor clicks consultation
 
-# Nurse opens clinical tab with healthID
-* Open "Clinical" module
-* Select the newly created patient with healthID
-* Doctor clicks consultation
-
 # Start an OPD Visit
 * Click Start OPD Visit
 * Enter registration fees "100"

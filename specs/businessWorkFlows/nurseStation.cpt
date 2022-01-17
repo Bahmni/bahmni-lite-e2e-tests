@@ -32,10 +32,6 @@
 * Save consultation data
 * Enter vitals
 
-# Nurse initiates clinical checkup with healthID
-* Nurse opens clinical tab with healthID
-* Nurse enters basic clinical details
-
 # Admit a patient to general ward bed <wardNumber>
 * Open "Bed Management" module
 * Goto All admissions

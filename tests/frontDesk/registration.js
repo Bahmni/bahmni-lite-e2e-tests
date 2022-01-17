@@ -45,36 +45,6 @@ step("Open registration module", async function () {
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
 
-step("To Associate a healthID, vefiy it", async function () {
-    await click("Verify Health ID",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
-});
-
-step("Enter random healthID details", async function () {
-    await click(textBox(toRightOf("Enter Health ID")));
-    var firstName = users.randomName(10)
-    gauge.dataStore.scenarioStore.put("patientFirstName",firstName)
-    gauge.message(`FirstName ${firstName}`);
-
-    var lastName = users.randomName(10)
-    gauge.dataStore.scenarioStore.put("patientLastName",lastName)
-    gauge.message(`LastName ${lastName}`);
-
-    var patientHealthID = `${firstName}${lastName}@sbx`;
-    gauge.dataStore.scenarioStore.put("healthID",patientHealthID)
-    console.log(`healthID ${patientHealthID}`);
-    gauge.message(`healthID ${patientHealthID}`);
-
-    await write(patientHealthID);
-});
-
-step("Enter healthID <healthID>", async function (patientHealthID) {
-    await click(textBox(toRightOf("Enter Health ID")));
-    gauge.dataStore.scenarioStore.put("healthID",patientHealthID)
-    console.log(`healthID ${patientHealthID}`);
-    gauge.message(`healthID ${patientHealthID}`);
-    await write(patientHealthID);
-});
-
 step("Enter patient random first name", async function () {
     var firstName = gauge.dataStore.scenarioStore.get("patientFirstName")
     if(firstName==null||firstName=="")
@@ -223,11 +193,6 @@ step("Create new record", async function() {
     await click(button("Create New Record"))
 });
 
-step("Update the verified HealthID", async function() {
-    await waitFor(button("Update"))
-	await click(button("Update"),{force: true})
-});
-
 step("Open newly created patient details by search", async function () {
     var patientIdentifierValue = gauge.dataStore.scenarioStore.get("patientIdentifier");
 
@@ -241,16 +206,6 @@ step("Open newly created patient details by search", async function () {
     try{
         await click(link(patientIdentifierValue))        
     }catch(e){}
-});
-step("Open newly created patient details by healthID", async function() {
-    var patientHealthID = gauge.dataStore.scenarioStore.get("healthID")
-
-    console.log(`patient HealthID ${patientHealthID}`)
-    gauge.message(`patient HealthID ${patientHealthID}`)
-
-    await write(patientHealthID, into(textBox({ "placeholder": "Enter ID" })))
-    await press('Enter', {waitForNavigation:true});
-    await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
 
 step("Verify correct patient form is open", async function() {
@@ -298,13 +253,6 @@ step("Click create new patient if patient does not exist", async function() {
     else 
         await click(link(below("ID")))
 });
-
-step("Select the newly created patient with healthID", async function() {    
-    var healthID = gauge.dataStore.scenarioStore.get("healthID")
-    await write(healthID)
-    await press('Enter', {waitForNavigation:true});
-    await taikoHelper.repeatUntilNotFound($("#overlay"))
-})
 
 step("Enter patient first name <firstName>", async function (firstName) {
     if(gauge.dataStore.scenarioStore.get("isNewPatient"))

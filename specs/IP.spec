@@ -12,7 +12,7 @@ Tags: core
 * Nurse admits the patient
 * Goto Clinical module
 * Nurse opens clinical tab
-* Nurse enters basic clinical details
+* Enter vitals
 * Doctor prescribes tests "opd/prescriptionFlow/labTests"
 * Doctor prescribes medications "opd/prescriptionFlow/prescriptions"
 * Doctor issues an Discharge disposition

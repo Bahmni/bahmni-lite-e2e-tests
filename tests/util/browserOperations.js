@@ -2,7 +2,8 @@ const {
     openBrowser,
     closeBrowser,
     screenshot,
-    reload
+    reload,
+    setConfig
 } = require('taiko');
 const path = require('path');
 
@@ -10,6 +11,7 @@ const headless = process.env.headless_chrome.toLowerCase() === 'true';
 
 beforeSuite(async () => {
     await openBrowser({headless:headless, args:["--no-sandbox","--start-maximized","--disable-dev-shm-usage","--start-fullscreen"]})
+    await setConfig( { ignoreSSLErrors: true});
 });
 
 afterSuite(async () => {
