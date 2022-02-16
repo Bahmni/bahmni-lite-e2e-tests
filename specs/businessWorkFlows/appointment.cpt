@@ -1,0 +1,32 @@
+# Receptionist creates a new appointment at <appointmentTime> for service <service>
+* Open "Appointment scheduling" module
+* Open Appointments List
+* Goto tomorrow's date
+* Begin capturing appointment details
+* Enter Patient id
+* Select service <service>
+* Select location "OPD-1"
+* Select appointment date
+* Enter appointment time <appointmentTime> into Start time
+* Compute end time
+* Click Save
+
+# Receptionist creates a walkin appointment at <appointmentTime> for service <service>
+* Open "Appointment scheduling" module
+* Open Appointments List
+* Goto Next week
+* Open calender at time <appointmentTime>
+* Select patient
+* Search and select service <service>
+* Check and Save
+* wait for "1000"
+* Click Close
+
+# Receptionist cancels the newly created appointment
+* Go back to home page
+* Open "Appointment scheduling" module
+* Open Appointments List
+* Goto appointments's date
+* Click patient name
+* Click Cancel
+* reload the page

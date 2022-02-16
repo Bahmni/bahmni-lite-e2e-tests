@@ -29,6 +29,6 @@ gauge.customScreenshotWriter = async function () {
     return path.basename(screenshotFilePath);
 };
 
-step("reload the consent request page", async function () {
-    await reload(process.env.bahmniHost+process.env.hiuURL, { navigationTimeout: 10000 })
+step("reload the page", async function () {
+    await reload()
 });

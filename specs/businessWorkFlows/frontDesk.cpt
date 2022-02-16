@@ -43,9 +43,12 @@
 * Enter visit details
 * Close visit
 
-# Receptionist creates the patient with mobile number <mobileNumber> and starts an OPD
+# Receptionist creates the patient with mobile number <mobileNumber>
 * Open registration module
 * Create a new patient with gender "Female" with random name, aged "29" with mobile number <mobileNumber>
+
+# Receptionist creates the patient with mobile number <mobileNumber> and starts an OPD
+* Receptionist creates the patient with mobile number <mobileNumber>
 * Start an OPD Visit
 
 # Receptionist creates the patient with mobile number <mobileNumber> and starts an Special OPD
@@ -67,23 +70,3 @@
 # Create a new patient, if patient does not exist with firstName <firstName> middleName <middleName> lastName <lastName>, gender <gender> mobileNumber <mobileNumber> age <age>
 * Check if patient <firstName> <middleName> <lastName> with mobile "mobileNumber" exists
 * Create a new patient with gender <gender> with name <firstName> <middleName> <lastName>, aged <age> with mobile number <mobileNumber>
-
-# Receptionist creates a new appointment at <appointmentTime> for service <service>
-* Open "Appointment scheduling" module
-* Open Appointments List
-* Goto tomorrow's date
-* Begin capturing appointment details
-* Enter Patient id
-* Select service <service>
-* Select location "OPD-1"
-* Select appointment date
-* Enter appointment time <appointmentTime> into Start time
-* Compute end time
-* Click Save
-
-# Receptionist cancels the appointment
-* Open "Appointment scheduling" module
-* Open Appointments List
-* Goto tomorrow's date
-* Click patient id
-* Click Cancel

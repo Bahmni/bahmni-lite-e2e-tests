@@ -41,6 +41,12 @@ step("Enter Patient id", async function() {
     await click(firstName);
 });
 
+step("Select patient", async function() {
+    var patientIdentifierValue = gauge.dataStore.scenarioStore.get("patientIdentifier");
+    await write(patientIdentifierValue);
+    await click(`(${patientIdentifierValue})`);
+});
+
 step("Click patient id", async function() {
     var patientIdentifierValue = gauge.dataStore.scenarioStore.get("patientIdentifier");
     await click(patientIdentifierValue);
@@ -50,6 +56,11 @@ step("Click patient id", async function() {
 
 step("Select service <service>", async function(service) {
     await dropDown(toRightOf("Service")).select(service);
+});
+
+step("Search and select service <service>", async function(service) {
+    await click("Service");
+    await click(service);
 });
 
 step("Select appointment date", async function() {
@@ -65,6 +76,12 @@ step("Enter appointment time <appointmentTime> into Start time", async function(
     await click(`${appointmentTime} am`)
 });
 
+step("Open calender at time <appointmentTime>", async function(appointmentTime) {
+    await click($(".fc-widget-content"),toRightOf(`${appointmentTime}`));
+    await waitFor(async () => !(await $("overlay").exists()))
+    gauge.dataStore.scenarioStore.put("appointmentStartDate",date.getDateFrommmddyyyy(await textBox({placeHolder:"mm/dd/yyyy"}).value()))
+});
+
 step("Compute end time", async function() {
     await waitFor(2000)
 });
@@ -73,13 +90,46 @@ step("Click Save", async function() {
     await click("Save")
 });
 
+step("Check and Save", async function() {
+    await click("Check and Save");
+});
+
 step("Click Cancel", async function() {
     //await confirm('Are you sure, you want to mark appointment as Cancelled?', async () => await accept())
+    await waitFor(1000)
     await click('Cancel')
     await waitFor(1000)
-    await click('Yes')
+    await click($('#yes'))
 });
 
 step("Goto tomorrow's date", async function() {
 	await click(button({type:'button'}, within($('[ng-click="goToNext()"]'))));
+});
+
+step("Goto appointments's date", async function() {
+    var appointmentStartDate = gauge.dataStore.scenarioStore.get("appointmentStartDate")
+    console.log(date.ddmmyyyyWithSlash(appointmentStartDate))
+    write(date.ddmmyyyyWithSlash(appointmentStartDate),into(timeField(toRightOf("Week"))))
+});
+
+step("Goto Next week", async function() {
+	await click("Week");
+    var month = date.getShortNameOfMonth(new Date())
+    await click(button(),toRightOf(month));
+});
+
+step("Goto day view of the calendar", async function() {
+	await click("Day");
+    var month = date.getShortNameOfMonth(new Date())
+    await click(button(),toRightOf(month));
+});
+
+
+step("Click Close", async function() {
+//    await click(button({"data-testid":"save-close-button"}),{waitForNavigation:true})
+	await click(button("Close",{waitForNavigation:true}))
+});
+
+step("Goto List view", async function() {
+    await click("List view");
 });

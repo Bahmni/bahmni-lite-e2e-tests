@@ -82,3 +82,9 @@ step("Open the result of the patient", async function() {
 step("Click lab dashboard", async function() {
         await click(link("Lab Dashboard"))
 });
+
+step("put first name <firstName> middle name <middleName> lastname <lastName>", async function(firstName, middleName, lastName) {
+	gauge.dataStore.scenarioStore.put("patientFirstName",firstName);
+        gauge.dataStore.scenarioStore.put("patientMiddleName",middleName);
+        gauge.dataStore.scenarioStore.put("patientLastName",lastName);
+});

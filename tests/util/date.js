@@ -57,6 +57,15 @@ function tomorrow() {
     tomorrow.setDate(tomorrow.getDate() + 1)
     return tomorrow;
 }
+function ddmmyyyyWithSlash(dateToBeFormatted){
+    const date = (dateToBeFormatted==null)? new Date(): dateToBeFormatted;
+
+    var dd = String(date.getDate()).padStart(2, '0');
+	var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
+	var yyyy = date.getFullYear();
+
+    return `${dd.toString()}/${mm.toString()}/${yyyy.toString()}`;
+}
 
 function ddmmyyyy(dateToBeFormatted){
     const date = (dateToBeFormatted==null)? new Date(): dateToBeFormatted;
@@ -85,19 +94,33 @@ function getyyyymmddFormattedDate(date){
 	var yyyy = date.getFullYear();
     return `${yyyy.toString()}-${mm.toString()}-${dd.toString()}`;
 }
+function getDateFrommmddyyyy(dateString){
+    console.log(dateString)
+    var dateParts = dateString.split("/");//mm/dd/yyyy
 
+    // month is 0-based, that's why we need dataParts[0] - 1
+    return new Date(+dateParts[2], dateParts[0] - 1, +dateParts[1]); 
+}
 function nextYear() {
 	var nextYear = new Date();
     nextYear.setFullYear(nextYear.getFullYear()+1);
     return nextYear;
 }
 
+function getShortNameOfMonth(date) {
+    const month = date.toLocaleString('default', { month: 'short' });
+    return month;
+}
+
 module.exports={
     today:date,
     yesterday:yesterday,
     ddmmyyyy:ddmmyyyy,
+    ddmmyyyyWithSlash:ddmmyyyyWithSlash,
     tomorrow:tomorrow,
     nextYear:nextYear,
+    getDateFrommmddyyyy:getDateFrommmddyyyy,
+    getShortNameOfMonth:getShortNameOfMonth,
     getyyyymmddFormattedDate:getyyyymmddFormattedDate,
     getDateYearsAgo:getDateYearsAgo,
     getDateAgo:getDateAgo,

@@ -71,9 +71,6 @@ step("Enter History and examination details", async function() {
 
 step("Click patient name", async function() {
     var firstName = gauge.dataStore.scenarioStore.get("patientFirstName")
-	var middleName = gauge.dataStore.scenarioStore.get("patientMiddleName")
-    var lastName = gauge.dataStore.scenarioStore.get("patientLastName")
-
-	var patientIdentifierValue= gauge.dataStore.scenarioStore.get("patientIdentifier");
-    await click(`${firstName} ${lastName} ${patientIdentifierValue}`)
+    await scrollTo(`${firstName}`)
+    await click(`${firstName}`)
 });
