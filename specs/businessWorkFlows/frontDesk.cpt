@@ -70,3 +70,8 @@
 # Create a new patient, if patient does not exist with firstName <firstName> middleName <middleName> lastName <lastName>, gender <gender> mobileNumber <mobileNumber> age <age>
 * Check if patient <firstName> <middleName> <lastName> with mobile "mobileNumber" exists
 * Create a new patient with gender <gender> with name <firstName> <middleName> <lastName>, aged <age> with mobile number <mobileNumber>
+
+# Receptionist creates a patient with mobileNumber <mobileNumber> and starts an IPD visit
+* Open registration module
+* Create a new patient with gender "Female" with random name, aged "29" with mobile number <mobileNumber>
+* Start an IPD Visit

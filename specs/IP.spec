@@ -4,9 +4,7 @@
 ## Should be able to get patient lab reports
 Tags: core
 * Login to Bahmni location "General Ward" as a receptionist
-* Open registration module
-* Create a new patient with gender "Female" with random name, aged "29" with mobile number <mobileNumber>
-* Start an IPD Visit
+* Receptionist creates a patient and starts an IPD visit
 * Doctor issues an Admit disposition
 * Goto Clinical module
 * Nurse admits the patient
