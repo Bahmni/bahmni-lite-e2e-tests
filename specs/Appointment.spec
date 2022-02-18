@@ -1,4 +1,4 @@
-# OPD Visits
+# Appointments
 |mobileNumber|
 |+91-9876543210|
 

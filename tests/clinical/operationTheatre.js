@@ -82,7 +82,7 @@ step("Add surgery", async function() {
 });
 
 step("Click doctor's OT schedule", async function() {
-    await scrollTo(process.env.surgeon)
+    await scrollTo("11:00 am")
 	await click(process.env.surgeon)
 });
 
