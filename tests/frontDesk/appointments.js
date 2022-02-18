@@ -108,8 +108,7 @@ step("Goto tomorrow's date", async function() {
 
 step("Goto appointments's date", async function() {
     var appointmentStartDate = gauge.dataStore.scenarioStore.get("appointmentStartDate")
-    console.log(date.ddmmyyyyWithSlash(appointmentStartDate))
-    write(date.ddmmyyyyWithSlash(appointmentStartDate),into(timeField(toRightOf("Week"))))
+    await timeField(toRightOf("Week")).select(new Date(appointmentStartDate));
 });
 
 step("Goto Next week", async function() {

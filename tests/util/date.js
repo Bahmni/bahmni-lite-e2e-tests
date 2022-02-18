@@ -57,15 +57,6 @@ function tomorrow() {
     tomorrow.setDate(tomorrow.getDate() + 1)
     return tomorrow;
 }
-function ddmmyyyyWithSlash(dateToBeFormatted){
-    const date = (dateToBeFormatted==null)? new Date(): dateToBeFormatted;
-
-    var dd = String(date.getDate()).padStart(2, '0');
-	var mm = String(date.getMonth() + 1).padStart(2, '0'); //January is 0!
-	var yyyy = date.getFullYear();
-
-    return `${dd.toString()}/${mm.toString()}/${yyyy.toString()}`;
-}
 
 function ddmmyyyy(dateToBeFormatted){
     const date = (dateToBeFormatted==null)? new Date(): dateToBeFormatted;
@@ -116,7 +107,6 @@ module.exports={
     today:date,
     yesterday:yesterday,
     ddmmyyyy:ddmmyyyy,
-    ddmmyyyyWithSlash:ddmmyyyyWithSlash,
     tomorrow:tomorrow,
     nextYear:nextYear,
     getDateFrommmddyyyy:getDateFrommmddyyyy,
