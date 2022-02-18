@@ -3,7 +3,7 @@
 |+91-9876543210|
 
 ## Admin should be able to merge patients
-Tags:prescriptions, diagnostics
+Tags:smoke
 * Login to Bahmni location "General Ward" as a receptionist
 * Receptionist creates the patient with mobile number <mobileNumber> and starts an OPD
 * Add this newly created patient as merge patient1
