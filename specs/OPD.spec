@@ -3,7 +3,7 @@
 |+91-9876543210|
 
 ## Doctor should be able to prescribe medicines and tests, relevant reports can be uploaded
-Tags: core
+Tags: smoke
 * Login to Bahmni location "General Ward" as a receptionist
 * Receptionist creates the patient with mobile number <mobileNumber> and starts an OPD
 * Nurse opens clinical tab

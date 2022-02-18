@@ -1,8 +1,8 @@
-# Merge Patient Visits
+# Admin operations
 |mobileNumber|
 |+91-9876543210|
 
-## Should be able to get patient lab reports and prescriptions after merge
+## Admin should be able to merge patients
 Tags:prescriptions, diagnostics
 * Login to Bahmni location "General Ward" as a receptionist
 * Receptionist creates the patient with mobile number <mobileNumber> and starts an OPD

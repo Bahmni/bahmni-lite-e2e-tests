@@ -29,7 +29,7 @@
 # Nurse enters basic clinical details
 * Click History and Examination
 * Enter History and examination details
-* Save consultation data
+* Save data
 * Enter vitals
 
 # Admit a patient to general ward bed <wardNumber>

@@ -3,7 +3,7 @@
 |+91-9876543210|
 
 ## A patient should be able to get a walkin appointment
-Tags: core
+Tags: smoke
 * Put identifier "GAN203078"
 * put first name "qBRPAPGSFq" middle name "YbPtRbvTAU" lastname "zjgFcYYjdB"
 * Login to Bahmni location "General Ward" as a receptionist

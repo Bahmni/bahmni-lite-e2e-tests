@@ -34,7 +34,7 @@ step("Begin capturing appointment details", async function() {
     await click("Add new appointment");
 });
 
-step("Enter Patient id", async function() {
+step("Select Patient id", async function () {
     var patientIdentifierValue = gauge.dataStore.scenarioStore.get("patientIdentifier");
     await write(patientIdentifierValue,into(textBox({placeHolder:"Patient Name or ID"})));
     var firstName = gauge.dataStore.scenarioStore.get("patientFirstName")

@@ -103,6 +103,14 @@ function getShortNameOfMonth(date) {
     return month;
 }
 
+function minusMinutes(date, minutes) {
+    return new Date(date.getTime() - minutes*60000);
+}
+
+function addMinutes(date, minutes) {
+    return new Date(date.getTime() + minutes*60000);
+}
+
 module.exports={
     today:date,
     yesterday:yesterday,
@@ -116,5 +124,7 @@ module.exports={
     getDateAgo:getDateAgo,
     getAge:getAge,
     getAgeByYears:getAgeByYears,
-    ddmmyyyyMMSS:ddmmyyyyHHMM
+    ddmmyyyyMMSS:ddmmyyyyHHMM,
+    minusMinutes:minusMinutes,
+    addMinutes:addMinutes,
 }

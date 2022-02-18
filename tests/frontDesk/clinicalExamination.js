@@ -92,7 +92,7 @@ step("Open <tabName> Tab", async function(tabName) {
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
 
-step("Save consultation data", async function () {
+step("Save data", async function () {
 	await taikoHelper.repeatUntilNotFound($("#overlay"))
 	await click("Save",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
 	await taikoHelper.repeatUntilNotFound($("#overlay"))

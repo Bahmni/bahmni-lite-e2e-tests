@@ -2,7 +2,7 @@
 |mobileNumber|
 |+91-9876543210|
 ## Should be able to get patient lab reports
-Tags: core
+Tags: smoke
 * Login to Bahmni location "General Ward" as a receptionist
 * Receptionist creates a patient and starts an IPD visit
 * Doctor issues an Admit disposition

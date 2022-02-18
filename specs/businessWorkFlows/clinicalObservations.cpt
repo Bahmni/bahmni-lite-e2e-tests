@@ -6,23 +6,23 @@
 * Enter Temperature (F)
 * Enter RR (/min)
 * Enter SPO2 (%)
-* Save consultation data
+* Save data
 
 # Doctor issues an Admit disposition
 * Nurse opens clinical tab
 * Choose Disposition
 * Doctor advises admitting the patient
-* Save consultation data
+* Save data
 
 # Doctor captures the consultation notes <consultationNotes> for newly created patient
 * Doctor clicks consultation
 * Doctor captures consultation notes "Consultation notes"
-* Save consultation data
+* Save data
 
 # Doctor issues an Discharge disposition
 * Choose Disposition
 * Doctor advises discharging the patient
-* Save consultation data
+* Save data
 
 # Doctor advises medicines <medicines> and tests <tests>
 * Doctor prescribes tests <tests>
@@ -46,9 +46,9 @@
 # Doctor prescribes medications <medication>
 * Open "Medications" Tab
 * Doctor prescribes medicines <medication>
-* Save consultation data
+* Save data
 
 # Doctor prescribes tests <tests>
 * Open "Orders" Tab
 * Doctor prescribe tests <tests>
-* Save consultation data
+* Save data

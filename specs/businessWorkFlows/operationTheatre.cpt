@@ -1,0 +1,15 @@
+# OT team creates an OT Schedule
+* Open "Operation Theatre" module
+* Click OT Scheduling
+* Create a new surgical block
+* Select the surgeon
+* Select the theatre location
+* Select tomorrow as the theatre booking date
+* Save OT data
+
+# Schedule a surgery for patient
+* Add surgery
+* Enter Patient id / name
+* Enter procedure details
+* Enter estimated time
+* Add surgery details
