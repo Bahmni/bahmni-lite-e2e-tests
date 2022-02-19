@@ -58,7 +58,7 @@
 * Enter RR (/min)
 * Enter SPO2 (%)
 
-# Nurse admits the patient
+# Nurse admits the patient to bed <bed>
 * Open "InPatient" module
 * Nurse at ADT is able to view bed availability and assign beds
 

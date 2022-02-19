@@ -28,3 +28,6 @@ Tags:smoke
 * Cancel surgeon's scheduled block
 * Enter reason for surgical block cancellation
 * Confirm cancellation
+* Go back to home page
+* visit is closed at the front desk
+

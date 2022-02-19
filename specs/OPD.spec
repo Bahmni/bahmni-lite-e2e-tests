@@ -24,6 +24,6 @@ Tags: E2E
 * Enter blood Lab results
 * Enter serum Lab results
 * Validate lab result "details" in samples collected
-* Goto Clinical module
+* Goto Clinical application
 * visit is closed at the front desk
 

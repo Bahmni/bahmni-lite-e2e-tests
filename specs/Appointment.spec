@@ -4,9 +4,8 @@
 
 ## A patient should be able to get a walkin appointment
 Tags: smoke
-* Put identifier "GAN203078"
-* put first name "qBRPAPGSFq" middle name "YbPtRbvTAU" lastname "zjgFcYYjdB"
 * Login to Bahmni location "General Ward" as a receptionist
+* Receptionist creates the patient with mobile number <mobileNumber>
 * Receptionist creates a walkin appointment at "10am" for service "Physiotherapy"
 * Receptionist cancels the newly created appointment
 
