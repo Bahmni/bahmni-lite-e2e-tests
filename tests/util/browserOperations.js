@@ -3,7 +3,8 @@ const {
     closeBrowser,
     screenshot,
     reload,
-    setConfig
+    setConfig,
+    closeTab
 } = require('taiko');
 const path = require('path');
 
@@ -31,4 +32,8 @@ gauge.customScreenshotWriter = async function () {
 
 step("reload the page", async function () {
     await reload()
+});
+
+step("close tab", async function() {
+	await closeTab()
 });

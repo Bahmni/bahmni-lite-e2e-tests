@@ -11,7 +11,8 @@ Tags: smoke
 * Enter vitals
 * Click back button
 * visit is closed at the front desk
-* Click back button
+* close tab
+* Open "Clinical Service" app
 * Receptionist creates the patient with mobile number <mobileNumber> and starts an OPD
 * Add this newly created patient as merge patient2
 * Nurse opens clinical tab
