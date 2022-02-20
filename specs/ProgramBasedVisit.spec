@@ -10,6 +10,5 @@ Tags: smoke
 * Enter vitals
 * Doctor captures the consultation notes "Consultation Notes" for newly created patient
 * lab technician uploads patient document and radiology reports
-* Goto Clinical application
 ___
 * visit is closed at the front desk

@@ -4,8 +4,8 @@
 * Select Patient Movement "Admit Patient"
 * Enter adt notes "Admission notes"
 * Admit the patient
-* Select bed for admission
-* Allocate bed "304-c"
+* Select bed for admission "Labour Ward"
+* Allocate bed "314-c"
 * Click Assign
 
 # Nurse at ADT gives discharge disposition

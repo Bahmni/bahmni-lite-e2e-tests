@@ -35,11 +35,11 @@ step("Enter adt notes <notes>", async function (notes) {
 	await write(notes,into(textBox(below("Adt Notes"))))
 });
 
-step("Select bed for admission", async function() {
+step("Select bed for admission <ward>", async function (ward) {
 	await openmrs.interceptGeneralWard()
-    await taikoHelper.repeatUntilFound(text("General Ward"))
+    await taikoHelper.repeatUntilFound(text(ward))
     // await waitFor(async () => await $("General Ward").exists())
-	await click("General Ward")
+	await click(ward)
 });
 
 step("Allocate bed <bedNumber>", async function(bedNumber) {

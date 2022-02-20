@@ -9,6 +9,7 @@ Tags: smoke
 * Nurse opens clinical tab
 * Enter vitals
 * Doctor advises medicines "opd/prescriptionFlow/prescriptions" and tests "opd/prescriptionFlow/labTests"
+* Click back button
 * visit is closed at the front desk
 
 ## Should be able to get OPConsultation notes of a patient

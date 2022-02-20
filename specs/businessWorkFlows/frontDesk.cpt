@@ -22,22 +22,22 @@
 * Click Start OPD Visit
 * Enter registration fees "100"
 * Save visit data
-* Go back to home page
+* Click back button
 
 # Start an IPD Visit
 * Click Start IPD Visit
 * Enter registration fees "100"
 * Save visit data
-* Go back to home page
+* Click back button
 
 # Start an Special OPD Visit
 * Click Start Special OPD Visit
 * Enter registration fees "100"
 * Save visit data
-* Go back to home page
+* Click back button
 
 # visit is closed at the front desk
-* Goto Clinical application
+* Click back button
 * Open registration module
 * Open newly created patient details by search
 * Enter visit details

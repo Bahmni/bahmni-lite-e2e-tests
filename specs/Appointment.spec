@@ -6,7 +6,7 @@
 Tags: smoke
 * Login to Bahmni location "General Ward" as a receptionist
 * Receptionist creates the patient with mobile number <mobileNumber>
-* Go back to home page
+* Click back button
 * Receptionist creates a walkin appointment at "10am" for service "Physiotherapy"
 * Receptionist cancels the newly created appointment
 

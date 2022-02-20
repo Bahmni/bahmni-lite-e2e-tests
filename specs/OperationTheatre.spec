@@ -8,11 +8,10 @@ Tags:smoke
 * Receptionist creates the patient with mobile number <mobileNumber> and starts an OPD
 * Nurse opens clinical tab
 * Enter vitals
-* Goto Bahmni main home
-* Open "Clinical Service" app
+* Click back button
+* Click back button
 * OT team creates an OT Schedule
-* Goto Bahmni main home
-* Open "Clinical Service" app
+* Click back button
 * Open "Operation Theatre" module
 * Click OT Scheduling
 * Goto operation date
@@ -28,6 +27,5 @@ Tags:smoke
 * Cancel surgeon's scheduled block
 * Enter reason for surgical block cancellation
 * Confirm cancellation
-* Go back to home page
 * visit is closed at the front desk
 

@@ -155,7 +155,7 @@ step("Enter registration fees <arg0>", async function (arg0) {
     await write("100", into(textBox(toRightOf("Registration Fees"))));
 });
 
-step("Go back to home page", async function () {
+step("Click back button", async function () {
     await taikoHelper.repeatUntilNotFound($("#overlay"))
     await click($('.back-btn'),{waitForNavigation:true});
     await taikoHelper.repeatUntilNotFound($("#overlay"))
