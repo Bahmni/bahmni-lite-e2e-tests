@@ -25,7 +25,8 @@ Tags: smoke
 * Add a report "labReport1" to "Patient Documents"
 * Click back button
 * visit is closed at the front desk
-* Click back button
+* close tab
+* Open "Clinical Service" app
 * Goto the openMRS Admin tab
 * Merge the newly created patients
 
