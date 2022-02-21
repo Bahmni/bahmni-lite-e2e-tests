@@ -13,6 +13,7 @@ const {
 	confirm,
 	accept,
 	button,
+	link,
 } = require('taiko');
 
 step("Add this newly created patient as merge patient1", async function() {
@@ -21,11 +22,6 @@ step("Add this newly created patient as merge patient1", async function() {
 
 step("Add this newly created patient as merge patient2", async function() {
 	gauge.dataStore.scenarioStore.put("merge_patientIdentifier2", gauge.dataStore.scenarioStore.get('patientIdentifier'));
-});
-
-step("Goto the openMRS Admin tab", async function() {
-	await goto(process.env.bahmniHost+process.env.openmrs);
-	await click("Administration")
 });
 
 step("Find patients to merge", async function() {
@@ -49,4 +45,16 @@ step("Merge patients", async function() {
 	await confirm('Are you sure you want to merge these patients?', async () => await accept())	
 	await click(button("Merge Patients"))
 //	await waitFor(async () => (await text("Patients merged successfully").exists()))
+});
+
+step("Goto Bed creation", async function() {
+	await click("Beds");
+});
+
+step("Goto Admin home", async function () {
+	await click(link(toLeftOf("Admission Locations")));
+});
+
+step("Goto Administration", async function() {
+	await click("Administration")
 });

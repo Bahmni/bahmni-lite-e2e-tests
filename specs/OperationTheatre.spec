@@ -2,7 +2,7 @@
 |mobileNumber|
 |+91-9876543210|
 
-## Admin should be block a surgical block and add a surgery
+## Admin should be able to schedule an OT
 Tags:smoke
 * Login to Bahmni location "General Ward" as a receptionist
 * Receptionist creates the patient with mobile number <mobileNumber> and starts an OPD
@@ -27,5 +27,6 @@ Tags:smoke
 * Cancel surgeon's scheduled block
 * Enter reason for surgical block cancellation
 * Confirm cancellation
+* Click back button
 * visit is closed at the front desk
 

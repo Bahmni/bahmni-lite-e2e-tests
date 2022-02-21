@@ -88,3 +88,7 @@ step("put first name <firstName> middle name <middleName> lastname <lastName>", 
         gauge.dataStore.scenarioStore.put("patientMiddleName",middleName);
         gauge.dataStore.scenarioStore.put("patientLastName",lastName);
 });
+
+step("click Send Anyway", async function() {
+	await click("Send Anyway")
+});

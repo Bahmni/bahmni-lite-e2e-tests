@@ -11,4 +11,5 @@ Tags: smoke
 * Doctor captures the consultation notes "Consultation Notes" for newly created patient
 * lab technician uploads patient document and radiology reports
 ___
+* Click back button
 * visit is closed at the front desk
