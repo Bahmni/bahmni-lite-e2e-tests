@@ -5,10 +5,7 @@
 ## Admin should be able to schedule an OT
 Tags:smoke
 * Login to Bahmni location "General Ward" as a receptionist
-* Receptionist creates the patient with mobile number <mobileNumber> and starts an OPD
-* Nurse opens clinical tab
-* Enter vitals
-* Click back button
+* Receptionist creates the patient with mobile number <mobileNumber>
 * Click back button
 * OT team creates an OT Schedule
 * Click back button
@@ -27,6 +24,4 @@ Tags:smoke
 * Cancel surgeon's scheduled block
 * Enter reason for surgical block cancellation
 * Confirm cancellation
-* Click back button
-* visit is closed at the front desk
 

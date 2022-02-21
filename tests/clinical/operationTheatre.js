@@ -16,6 +16,7 @@ const {
     attach,
     scrollTo,
     highlight,
+    scrollUp,
 } = require('taiko');
 var date = require("../util/date");
 var taikoHelper = require("../util/taikoHelper")
