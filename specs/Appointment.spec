@@ -9,5 +9,3 @@ Tags: smoke
 * Click back button
 * Receptionist creates a walkin appointment at "10am" for service "Dermatology"
 * Receptionist cancels the newly created appointment
-
-
