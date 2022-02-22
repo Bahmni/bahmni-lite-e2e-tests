@@ -22,7 +22,7 @@ jobs:
           cache: 'npm'
       - uses: zcong1993/setup-timezone@v1.1.2
         with: 
-          timezone: Asia/India
+          timezone: 'Asia/Kolkata', 
       - name: Install dependencies
         run: |
           sudo apt-get update
