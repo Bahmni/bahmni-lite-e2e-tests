@@ -150,6 +150,25 @@ step("Login as a receptionist with admin credentials location <location>", async
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
 
+step("Check login <location>", async function (location) {
+    try{
+        await taikoHelper.repeatUntilNotFound($("#overlay"))
+        if(await await button({"class":"btn-user-info"}).exists())
+        {
+            await click(button({"class":"btn-user-info"}))
+            await click('Logout',{waitForNavigation:true,navigationTimeout:250000});
+            await taikoHelper.repeatUntilNotFound($("#overlay"))
+        }
+        await write(users.getUserNameFromEncoding(process.env.receptionist), into(textBox({placeholder:"Enter your username"})));
+        await write(users.getPasswordFromEncoding(process.env.receptionist), into(textBox({placeholder:"Enter your password"})));
+        await dropDown("Location").select(location);
+        await click(button("Login"),{waitForNavigation:true,navigationTimeout:250000});
+        await taikoHelper.repeatUntilNotFound(text("BAHMNI EMR LOGIN"))
+        await taikoHelper.repeatUntilNotFound($("#overlay"))    
+    }
+    catch(err){}
+});
+
 step("Enter registration fees <arg0>", async function (arg0) {
     await taikoHelper.repeatUntilFound(textBox(toRightOf("Registration Fees")))
     await write("100", into(textBox(toRightOf("Registration Fees"))));
