@@ -1,5 +1,6 @@
 # Gauge tests for Bahmni E2E tests
 
+![E2E tests result](https://github.com/Bahmni/bahmni-e2e-tests/actions/workflows/main.yml/badge.svg?branch=main)
 End to End tests for Bahmni.
 <Todo> Add critical flows of OpenELIS, PACS and ODOO
 
