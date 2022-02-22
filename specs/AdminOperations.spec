@@ -1,10 +1,8 @@
 # Admin operations
-|mobileNumber|
-|+91-9876543210|
 
 ## Admin should be able to merge patients
 * Login to Bahmni location "General Ward" as a receptionist
-* Receptionist creates the patient with mobile number <mobileNumber> and starts an OPD
+* Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Add this newly created patient as merge patient1
 * Nurse opens clinical tab
 * Enter vitals
@@ -13,7 +11,7 @@
 * visit is closed at the front desk
 * close tab
 * Open "Clinical Service" app
-* Receptionist creates the patient with mobile number <mobileNumber> and starts an OPD
+* Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Add this newly created patient as merge patient2
 * Nurse opens clinical tab
 * Enter vitals

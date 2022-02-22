@@ -1,11 +1,8 @@
 # Operation Theatre
-|mobileNumber|
-|+91-9876543210|
-
 ## Admin should be able to block OT for a surgeon's and schedule a time for a patient's operation
 Tags:smoke
 * Login to Bahmni location "General Ward" as a receptionist
-* Receptionist creates the patient with mobile number <mobileNumber>
+* Receptionist creates the patient with mobile number "+91-9876543210"
 * Click back button
 * OT team creates an OT Schedule
 * Click back button
