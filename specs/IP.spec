@@ -1,5 +1,6 @@
 # IPD Visits
 ## Nurse should be able to admit and discharge a patient based on doctor's disposition
+Tags: smoke
 * Login to Bahmni location "General Ward" as a receptionist
 * Receptionist creates a patient with mobileNumber "+91-9876543210" and starts an IPD visit
 * Doctor issues an Admit disposition
