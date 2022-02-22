@@ -15,7 +15,9 @@ End to End tests for Bahmni.
 * npm install
 * `gauge run specs --env qa04 -v -p --tags smoke`
 > `--env` allows us to choose the environment on which the tests can run. These are the subfolders of the env folder with relevant property files.
+
 > `-v` runs the tests in the verbose mode
+
 > `--tags` allows us to choose the tests to run from the test suite. 
     In this command we are running only the `smoke` tests from the test suite. 
 

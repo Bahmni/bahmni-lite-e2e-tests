@@ -2,6 +2,8 @@ const {
     goto,
     $,
     click,
+    below,
+    highlight,
 } = require('taiko');
 var taikoHelper = require("util/taikoHelper");
 
@@ -15,6 +17,7 @@ step("Goto Bahmni main home", async function() {
 });
 
 step("Open <appName> app", async function (appName) {
-	await click(appName,{waitForNavigation:true,navigationTimeout:250000});
+    await highlight(appName)
+	await click(appName.toUpperCase(),{waitForNavigation:true,navigationTimeout:250000});
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 });

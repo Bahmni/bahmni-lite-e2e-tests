@@ -16,7 +16,7 @@ const {
     attach,
     scrollTo,
     highlight,
-    scrollUp,
+    toLeftOf,
 } = require('taiko');
 var date = require("../util/date");
 var taikoHelper = require("../util/taikoHelper")
@@ -110,8 +110,9 @@ step("Enter Patient id / name", async function() {
     await click(`( ${patientIdentifierValue} )`)
 });
 
-step("Goto operation date", async function() {
-	await click(button(toRightOf("Today")))
+step("Goto operation week", async function() {
+    await highlight("Week",toLeftOf("Day"));
+    await click("Week",toLeftOf("Day"));
 });
 
 step("Edit doctor's OT schedule", async function() {

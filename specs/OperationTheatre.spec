@@ -11,7 +11,7 @@ Tags:smoke
 * Click back button
 * Open "Operation Theatre" module
 * Click OT Scheduling
-* Goto operation date
+* Goto operation week
 * Click doctor's OT schedule
 * Edit doctor's OT schedule
 * Schedule a surgery for patient
