@@ -134,14 +134,16 @@ step("Select the newly created patient", async function() {
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 })
 
-step("Login as a receptionist with admin credentials location <location>", async function (location) {
+step("Check if previous login", async function () {
     await taikoHelper.repeatUntilNotFound($("#overlay"))
-    if(await await button({"class":"btn-user-info"}).exists())
-    {
-        await click(button({"class":"btn-user-info"}))
-        await click('Logout',{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
-        await taikoHelper.repeatUntilNotFound($("#overlay"))
-    }
+    if(!await button({"class":"btn-user-info"}).exists())
+        return
+    await click(button({"class":"btn-user-info"}))
+    await click('Logout',{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
+    await taikoHelper.repeatUntilNotFound($("#overlay"))
+})
+
+step("Login as a receptionist with admin credentials location <location>", async function (location) {
     await write(users.getUserNameFromEncoding(process.env.receptionist), into(textBox({placeholder:"Enter your username"})));
     await write(users.getPasswordFromEncoding(process.env.receptionist), into(textBox({placeholder:"Enter your password"})));
     await dropDown("Location").select(location);

@@ -19,10 +19,14 @@ step("Goto Bahmni main home", async function() {
 });
 
 step("Open <appName> app", async function (appName) {
+    await click(appName.toUpperCase(),{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
+});
+
+step("Check if <appName> app is opened", async function (appName) {
+    if(!await text(appName).exists())
+        return
+    gauge.message("App name exists")
     await highlight(appName)
-    do{
-        await click(appName.toUpperCase(),{waitForNavigation:true,waitForEvents:['networkIdle'],navigationTimeout:process.env.actionTimeout});
-        await taikoHelper.repeatUntilNotFound($("#overlay"))    
-        await waitFor(1000)
-    }while(await !text(appName).exists())
+    await click(appName.toUpperCase(),{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
+    await taikoHelper.repeatUntilNotFound($("#overlay"))    
 });
