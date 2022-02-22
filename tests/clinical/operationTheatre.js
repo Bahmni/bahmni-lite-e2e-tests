@@ -25,7 +25,7 @@ step("Click OT Scheduling", async function() {
 });
 
 step("Create a new surgical block", async function() {
-	await click("New Surgical Block",{waitForNavigation:true,navigationTimeout:250000});
+	await click("New Surgical Block",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
 });
 
 step("Select the surgeon", async function() {

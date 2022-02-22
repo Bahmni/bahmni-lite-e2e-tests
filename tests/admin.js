@@ -25,7 +25,7 @@ step("Add this newly created patient as merge patient2", async function() {
 });
 
 step("Find patients to merge", async function() {
-	await click("Find Patients to Merge")
+	await click("Find Patients to Merge",{waitForNavigation:true,navigationTimeout:process.env.mergeTimeout});
 });
 
 step("Enter patient identifiers to be merged", async function() {

@@ -7,6 +7,6 @@ step("Add a report <labReport> to <module>", async function (labReport, module) 
 	await attach(path.join("./data", `${labReport}.jpg`), fileField({'name':'image-document-upload'}),{waitForEvents:['DOMContentLoaded']});
 	await taikoHelper.repeatUntilNotFound($("#overlay"))
 	await taikoHelper.repeatUntilEnabled(button('SAVE'))
-	await click(button('SAVE'),{waitForNavigation:true,navigationTimeout:250000});
+	await click(button('SAVE'),{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
 	await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
