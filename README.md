@@ -8,6 +8,9 @@ End to End tests for Bahmni.
 * [Gauge](https://docs.getgauge.io/installing.html)
 * Install Taiko `npm install -g taiko`
 
+# QA Test plan
+* The details of scenarios covered and planned are given [here](https://bahmni.atlassian.net/wiki/spaces/BAH/pages/2813427741/QA+Automation+Testing)
+
 # Execution
 * npm install
 * `gauge run --tags 'core' specs -v`
