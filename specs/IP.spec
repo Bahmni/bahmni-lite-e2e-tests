@@ -1,7 +1,7 @@
 # IPD Visits
 |mobileNumber|
 |+91-9876543210|
-## Should be able to get patient lab reports
+## Nurse should be able to admit and discharge a patient based on doctor's disposition
 Tags: smoke
 * Login to Bahmni location "General Ward" as a receptionist
 * Receptionist creates a patient with mobileNumber <mobileNumber> and starts an IPD visit

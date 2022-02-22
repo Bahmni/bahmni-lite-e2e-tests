@@ -1,7 +1,7 @@
 # Program Based Visits
 |mobileNumber|
 |+91-9876543210|
-## Should be able to enter program level details for a patient
+## Enrol a patient under a program and proceed with consultation
 Tags: smoke
 * Login to Bahmni location "OPD-1" as a receptionist
 * Receptionist creates the patient with mobile number <mobileNumber> and starts an Special OPD
