@@ -40,7 +40,7 @@ step("Select tomorrow as the theatre booking date", async function() {
     var startDate = date.tomorrow();
     startDate.setHours(11)
     startDate.setMinutes(0)
-    var endDate = date.addMinutes(startDate,60)
+    var endDate = date.addMinutes(startDate,300)
 	await timeField(toRightOf("Start Date-time")).select(startDate);
     await timeField(toRightOf("End Date-time")).select(endDate);
     

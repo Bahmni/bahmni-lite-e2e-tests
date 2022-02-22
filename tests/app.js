@@ -18,6 +18,6 @@ step("Goto Bahmni main home", async function() {
 
 step("Open <appName> app", async function (appName) {
     await highlight(appName)
-	await click(appName.toUpperCase(),{waitForNavigation:true,waitForEvents:['networkIdle'],navigationTimeout:270000});
+	await click(appName.toUpperCase(),{waitForNavigation:true,waitForEvents:['networkIdle'],navigationTimeout:300000});
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
