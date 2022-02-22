@@ -83,7 +83,7 @@ step("Add surgery", async function() {
 });
 
 step("Click doctor's OT schedule", async function() {
-    await scrollTo("11:00 am")
+    await scrollTo("10:00 am")
 	await click(process.env.surgeon)
 });
 
@@ -110,9 +110,8 @@ step("Enter Patient id / name", async function() {
     await click(`( ${patientIdentifierValue} )`)
 });
 
-step("Goto operation week", async function() {
-    await highlight("Week",toLeftOf("Day"));
-    await click("Week",toLeftOf("Day"));
+step("Goto operation day", async function () {
+    click(button(toRightOf("Today"),toLeftOf("Week")))
 });
 
 step("Edit doctor's OT schedule", async function() {

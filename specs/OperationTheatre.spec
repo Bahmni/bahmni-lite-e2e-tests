@@ -11,7 +11,7 @@ Tags:smoke
 * Click back button
 * Open "Operation Theatre" module
 * Click OT Scheduling
-* Goto operation week
+* Goto operation day
 * Click doctor's OT schedule
 * Edit doctor's OT schedule
 * Schedule a surgery for patient
@@ -24,4 +24,3 @@ Tags:smoke
 * Cancel surgeon's scheduled block
 * Enter reason for surgical block cancellation
 * Confirm cancellation
-
