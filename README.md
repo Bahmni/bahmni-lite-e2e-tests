@@ -5,7 +5,7 @@ End to End tests for Bahmni.
 
 # Pre-requisites
 * [Node-js](https://nodejs.org/en/)
-* [Gauge](https://docs.getgauge.io/installing.html)
+* [Gauge](https://docs.gauge.org/getting_started/installing-gauge.html?os=macos&language=javascript&ide=vscode)
 * Install Taiko `npm install -g taiko`
 
 # QA Test plan

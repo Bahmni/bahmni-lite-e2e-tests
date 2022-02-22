@@ -18,6 +18,11 @@ Tags: smoke
 * click Send Anyway
 * Validate lab result "details" in samples collected
 * click Send Anyway
+* close tab
+* Login to Odoo
+* View Direct Sales Quotation
+* Confirm Sales
+___
 * Goto Clinical application
 * visit is closed at the front desk
 * close tab

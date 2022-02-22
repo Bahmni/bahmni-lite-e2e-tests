@@ -23,5 +23,5 @@ Tags: smoke
 * Click back button
 * Nurse discharges the patient
 ___
-* Click back button
+* Goto Clinical application
 * visit is closed at the front desk
