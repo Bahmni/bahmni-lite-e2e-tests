@@ -58,9 +58,9 @@ step("Select service <service>", async function(service) {
     await dropDown(toRightOf("Service")).select(service);
 });
 
-step("Search and select service <service>", async function(service) {
+step("Search and select service", async function() {
     await click("Service");
-    await click(service);
+    await click(process.env.service);
 });
 
 step("Select appointment date", async function() {

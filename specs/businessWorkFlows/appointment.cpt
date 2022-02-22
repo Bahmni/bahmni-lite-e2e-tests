@@ -11,13 +11,13 @@
 * Compute end time
 * Click Save
 
-# Receptionist creates a walkin appointment at <appointmentTime> for service <service>
+# Receptionist creates a walkin appointment at <appointmentTime> for service
 * Open "Appointment scheduling" module
 * Open Appointments List
 * Goto Next week
 * Open calender at time <appointmentTime>
 * Select patient
-* Search and select service <service>
+* Search and select service
 * Check and Save
 * wait for "1000"
 * Click Close
