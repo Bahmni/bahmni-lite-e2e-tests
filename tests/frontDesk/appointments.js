@@ -92,14 +92,6 @@ step("Check and Save", async function() {
     await click("Check and Save");
 });
 
-step("Click Cancel", async function() {
-    //await confirm('Are you sure, you want to mark appointment as Cancelled?', async () => await accept())
-    await scrollTo('Cancel')
-    await click('Cancel')
-    await scrollTo($('#yes'))
-    await click($('#yes'))
-});
-
 step("Goto tomorrow's date", async function() {
 	await click(button({type:'button'}, within($('[ng-click="goToNext()"]'))));
 });
@@ -156,5 +148,16 @@ step("select Repeats every <numberOfDays> days", async function (numberOfDays) {
 });
 
 step("Click Cancel all", async function() {
-	await click("Cancel All")
+    await scrollTo("Cancel All")
+    await click("Cancel All")
+});
+
+step("Click Cancel", async function() {
+    await scrollTo('Cancel')
+    await click('Cancel')
+});
+
+step("Cancel appointment", async function () {
+    await scrollTo($('#yes'))
+    await click($('#yes'))
 });

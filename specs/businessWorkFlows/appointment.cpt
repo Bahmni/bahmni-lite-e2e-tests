@@ -44,7 +44,7 @@
 * Open Appointments List
 * Goto appointments's date
 * Click patient name
-* Click Cancel
+* Cancel the appointment
 * reload the page
 
 
@@ -52,7 +52,7 @@
 * Click back button
 * Open "Appointment scheduling" module
 * Open Appointments List
-* Goto Next week
+* Goto appointments's date
 * Click patient name
 * Click Cancel
 * Click Cancel all
@@ -69,3 +69,21 @@
 * Check and Save
 * wait for "1000"
 * Click Close
+
+# The patient's appointment should not be found
+* Click back button
+* Open "Appointment scheduling" module
+* Open Appointments List
+* Goto appointments's date
+* Should not find the patient's name
+
+# The patient's appointment should not be found in next week
+* Click back button
+* Open "Appointment scheduling" module
+* Open Appointments List
+* Goto Next week
+* Should not find the patient's name
+
+# Cancel the appointment
+* Click Cancel
+* Cancel appointment

@@ -5,6 +5,7 @@ const {
     focus,
     toRightOf, 
     textBox, 
+    text,
     into, 
 	write, 
 	$,
@@ -16,6 +17,7 @@ const {
 const taikoHelper = require("../util/taikoHelper")
 const fileExtension = require("../util/fileExtension")
 const path = require('path');
+var assert = require("assert");
 
 step("Enter Pulse(/min)", async function() {
 	await write("70",into(textBox(toRightOf("Pulse"))));
@@ -74,3 +76,9 @@ step("Click patient name", async function() {
     await scrollTo(`${firstName}`)
     await click(`${firstName}`)
 });
+
+step("Should not find the patient's name", async function() {
+    var firstName = gauge.dataStore.scenarioStore.get("patientFirstName")
+    assert.ok(!await text(`${firstName}`).exists())
+});
+
