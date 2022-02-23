@@ -62,11 +62,11 @@ step("Add surgery details", async function() {
 step("Cancel the surgery", async function() {
     var patientIdentifierValue = gauge.dataStore.scenarioStore.get("patientIdentifier");
     await highlight(button("Cancel"),toRightOf(patientIdentifierValue));
-    await waitFor(1000)
+    await scrollTo("Cancel")
 	await click("Cancel",toRightOf(patientIdentifierValue));
     await waitFor(patientIdentifierValue)
     await highlight("Cancel Surgery")
-    await waitFor(1000)
+    await scrollTo("Cancel Surgery")
     await click("Cancel Surgery");
 });
 
@@ -88,10 +88,10 @@ step("Click doctor's OT schedule", async function() {
 });
 
 step("Cancel surgeon's scheduled block", async function() {
-    await waitFor(1000)
+    await scrollTo("Cancel Block")
 	await click("Cancel Block")
     await waitFor("This change will affect all surgeries of the block")
-    await waitFor(1000)
+    await scrollTo("Cancel Block",toRightOf("Postpone Block"))
     await click("Cancel Block",toRightOf("Postpone Block"))
 });
 
@@ -116,6 +116,6 @@ step("Goto operation day", async function () {
 
 step("Edit doctor's OT schedule", async function() {
     await highlight(button("Edit"))
-    await waitFor(1000)
+    await scrollTo("Edit")
     await click(button("Edit"))
 });

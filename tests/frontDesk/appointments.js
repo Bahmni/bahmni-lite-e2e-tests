@@ -47,13 +47,6 @@ step("Select patient", async function() {
     await click(`(${patientIdentifierValue})`);
 });
 
-step("Click patient id", async function() {
-    var patientIdentifierValue = gauge.dataStore.scenarioStore.get("patientIdentifier");
-    await click(patientIdentifierValue);
-    await waitFor(1000)
-});
-
-
 step("Select service <service>", async function(service) {
     await dropDown(toRightOf("Service")).select(service);
 });
@@ -82,6 +75,11 @@ step("Open calender at time <appointmentTime>", async function(appointmentTime) 
     gauge.dataStore.scenarioStore.put("appointmentStartDate",date.getDateFrommmddyyyy(await textBox({placeHolder:"mm/dd/yyyy"}).value()))
 });
 
+step("put <appointmentDate> as appointment date", async function(appointmentDate) {
+    gauge.dataStore.scenarioStore.put("appointmentStartDate",date.getDateFrommmddyyyy(appointmentDate))
+});
+
+
 step("Compute end time", async function() {
     await waitFor(2000)
 });
@@ -96,9 +94,9 @@ step("Check and Save", async function() {
 
 step("Click Cancel", async function() {
     //await confirm('Are you sure, you want to mark appointment as Cancelled?', async () => await accept())
-    await waitFor(1000)
+    await scrollTo('Cancel')
     await click('Cancel')
-    await waitFor(1000)
+    await scrollTo($('#yes'))
     await click($('#yes'))
 });
 
@@ -131,4 +129,32 @@ step("Click Close", async function() {
 
 step("Goto List view", async function() {
     await click("List view");
+});
+
+step("select the walk in appointment option", async function () {
+	await click(checkBox(toLeftOf("Walk-in Appointment")))
+});
+
+step("select the teleconsultation appointment option", async function () {
+	await click(checkBox(toLeftOf("Teleconsultation")))
+});
+
+step("select the recurring appointment option", async function () {
+	await click("Recurring Appointment");
+});
+
+step("select the Start date as today", async function () {
+	await click("Today",below("Starts"));
+});
+
+step("select the End date as after few occurances", async function () {
+    await click("After",below("Ends"));
+});
+
+step("select Repeats every <numberOfDays> days", async function (numberOfDays) {
+    await write(numberOfDays,into(textBox(below("Repeats"))));
+});
+
+step("Click Cancel all", async function() {
+	await click("Cancel All")
 });

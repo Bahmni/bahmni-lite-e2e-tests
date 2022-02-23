@@ -10,8 +10,12 @@ const {
     highlight,
     below,
     within,
+    scrollTo,
     $,
-    text
+    text,
+    confirm,
+    accept,
+    button
 } = require('taiko');
 var fileExtension = require("../util/fileExtension");
 var taikoHelper = require("../util/taikoHelper");
@@ -103,4 +107,14 @@ step("Save visit data", async function () {
 	await click("Save",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
 	await taikoHelper.repeatUntilNotFound($("#overlay"))
     await waitFor(async () => !(await text("Saved",within('.message-text')).exists()));
+});
+
+step("Join teleconsultation", async function() {
+    await scrollTo('Join Teleconsultation')
+    await click('Join Teleconsultation',{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
+    await taikoHelper.repeatUntilNotFound($("#overlay"))
+    await scrollTo(button('Join teleconsultation'),toRightOf("Scheduled"))
+    await click(button('Join teleconsultation',toRightOf("Scheduled")))
+    await highlight('Tele Consultation')
+    await click(($('[ng-click="closeTeleConsultation()"]')));
 });

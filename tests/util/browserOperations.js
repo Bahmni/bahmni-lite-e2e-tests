@@ -11,7 +11,7 @@ const path = require('path');
 const headless = process.env.headless_chrome.toLowerCase() === 'true';
 
 beforeSuite(async () => {
-    await openBrowser({headless:headless, args:["--no-sandbox","--start-maximized","--disable-dev-shm-usage","--start-fullscreen"]})
+    await openBrowser({headless:headless, args:["--no-sandbox","--start-maximized","--disable-dev-shm-usage","--start-fullscreen",'--use-fake-ui-for-media-stream']})
     await setConfig( { ignoreSSLErrors: true});
 });
 

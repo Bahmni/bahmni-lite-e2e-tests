@@ -52,3 +52,10 @@
 * Open "Orders" Tab
 * Doctor prescribe tests <tests>
 * Save data
+
+# The doctor joins the link for the appointment
+* Open "Appointment scheduling" module
+* Open Appointments List
+* Goto appointments's date
+* Click patient name
+* Join teleconsultation

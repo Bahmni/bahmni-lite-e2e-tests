@@ -18,6 +18,22 @@
 * Open calender at time <appointmentTime>
 * Select patient
 * Search and select service
+* select the walk in appointment option
+* Check and Save
+* wait for "1000"
+* Click Close
+
+# Receptionist creates a recurring appointment for days <days> at time <appointmentTime>
+* Open "Appointment scheduling" module
+* Open Appointments List
+* Goto Next week
+* Open calender at time <appointmentTime>
+* Select patient
+* Search and select service
+* select the recurring appointment option
+* select the Start date as today
+* select the End date as after few occurances                
+* select Repeats every <days> days
 * Check and Save
 * wait for "1000"
 * Click Close
@@ -30,3 +46,26 @@
 * Click patient name
 * Click Cancel
 * reload the page
+
+
+# Receptionist cancels all the appointments
+* Click back button
+* Open "Appointment scheduling" module
+* Open Appointments List
+* Goto Next week
+* Click patient name
+* Click Cancel
+* Click Cancel all
+* reload the page
+
+# Receptionist creates a teleconsultation appointment <appointmentTime>
+* Open "Appointment scheduling" module
+* Open Appointments List
+* Goto Next week
+* Open calender at time <appointmentTime>
+* Select patient
+* Search and select service
+* select the teleconsultation appointment option
+* Check and Save
+* wait for "1000"
+* Click Close

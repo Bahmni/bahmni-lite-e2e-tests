@@ -2,7 +2,7 @@
   "name": "gauge-taiko-template",
   "description": "Starter template for writing JavaScript tests for Gauge",
   "scripts": {
-    "test": "gauge run specs --env demo0.9.3 -v -p --tags smoke"
+    "test": "gauge run specs --env demo0.9.3 -v -p -n=3 --tags smoke"
   },
   "dependencies": {
     "taiko": "1.2.8",
