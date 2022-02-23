@@ -4,9 +4,11 @@ const {
     screenshot,
     reload,
     setConfig,
-    closeTab
+    closeTab,
+    $,
 } = require('taiko');
 const path = require('path');
+const taikoHelper = require('taikoHelper')
 
 const headless = process.env.headless_chrome.toLowerCase() === 'true';
 
@@ -32,6 +34,7 @@ gauge.customScreenshotWriter = async function () {
 
 step("reload the page", async function () {
     await reload()
+    await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
 
 step("close tab", async function() {

@@ -8,6 +8,7 @@ Tags: smoke
 * Enter vitals
 * Doctor advises medicines "opd/prescriptionFlow/prescriptions" and tests "opd/prescriptionFlow/labTests"
 * close tab
+* reload the page
 * Login to Open ELIS
 * Collect Sample
 * Enter blood Lab results
