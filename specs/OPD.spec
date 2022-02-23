@@ -16,7 +16,6 @@ Tags: smoke
 * click Send Anyway
 * Validate lab result "details" in samples collected
 * click Send Anyway
-* close tab
 ___
 * Goto Clinical application
 * visit is closed at the front desk
