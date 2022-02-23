@@ -7,7 +7,6 @@ Tags: smoke
 * Nurse opens clinical tab
 * Enter vitals
 * Doctor advises medicines "opd/prescriptionFlow/prescriptions" and tests "opd/prescriptionFlow/labTests"
-* close tab
 * Goto Bahmni main home
 * Login to Open ELIS
 * Collect Sample
