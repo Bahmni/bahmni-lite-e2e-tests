@@ -67,7 +67,7 @@ step("Select Patient Movement <movement>", async function(movement) {
 	await dropDown('Patient Movement').select(movement)
 });
 
-step("Goto All admissions", async function() {
+step("Goto All section", async function () {
 	await waitFor("All")
     await click("All",{force:true})
 });

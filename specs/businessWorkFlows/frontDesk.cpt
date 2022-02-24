@@ -20,6 +20,11 @@
 * Select the newly created patient
 * Doctor clicks consultation
 
+# Nurse opens clinical tab with all section
+* Open "Clinical" module
+* Goto All section
+* Select the newly created patient
+
 # Start an OPD Visit
 * Click Start OPD Visit
 * Enter registration fees "100"

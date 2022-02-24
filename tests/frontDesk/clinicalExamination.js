@@ -31,6 +31,12 @@ step("Doctor prescribe tests <prescriptions>", async function (prescriptionFile)
     }     
 });
 
+
+step("put medications <prescriptionNames>", async function (prescriptionNames) {
+    var prescriptionFile = `./data/${prescriptionNames}.json`;
+    gauge.dataStore.scenarioStore.put("prescriptions",prescriptionFile)
+})
+
 step("Doctor prescribes medicines <prescriptionNames>", async function (prescriptionNames) {
     var prescriptionFile = `./data/${prescriptionNames}.json`;
     gauge.dataStore.scenarioStore.put("prescriptions",prescriptionFile)

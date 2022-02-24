@@ -9,7 +9,7 @@
 * Click Assign
 
 # Nurse at ADT gives discharge disposition
-* Goto All admissions
+* Goto All section
 * Search the newly created patient
 * Select Patient Movement "Discharge Patient"
 * Enter adt notes "Discharge notes"
@@ -34,7 +34,7 @@
 
 # Admit a patient to general ward bed <wardNumber>
 * Open "Bed Management" module
-* Goto All admissions
+* Goto All section
 * Search the newly created patient
 * Select the general ward
 * Allocate bed <wardNumber>
