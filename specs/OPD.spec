@@ -19,11 +19,3 @@ Tags: smoke
 ___
 * Goto Clinical application
 * visit is closed at the front desk
-* wait for create new button
-* Click back button next to Create new
-* Nurse opens clinical tab with all section
-* verify name with id
-* verify OPD
-* verify prescription
-* verify vitals
-* close tab
