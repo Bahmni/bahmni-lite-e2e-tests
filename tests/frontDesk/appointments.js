@@ -137,6 +137,7 @@ step("select the recurring appointment option", async function () {
 
 step("select the Start date as today", async function () {
 	await click("Today",below("Starts"));
+    gauge.dataStore.scenarioStore.put("appointmentStartDate",new Date())
 });
 
 step("select the End date as after few occurances", async function () {
