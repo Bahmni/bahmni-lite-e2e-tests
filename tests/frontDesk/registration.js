@@ -180,8 +180,14 @@ step("Click back button", async function () {
     await taikoHelper.repeatUntilNotFound($("#overlay"))
     await click($('.back-btn'),{waitForNavigation:true});
     await taikoHelper.repeatUntilNotFound($("#overlay"))
+}); 
+
+step("Click back button next to Create new", async function () {
+    await taikoHelper.repeatUntilNotFound($("#overlay"))
+    await highlight($(".back-btn"),toLeftOf(link("Create New")));
+    await click($(".back-btn"),toLeftOf(link("Create New")));
+    await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
-    
 step("Enter visit details", async function() {
     await scrollTo(button("Enter Visit Details"))
     await click(button("Enter Visit Details"),{waitForNavigation:true})

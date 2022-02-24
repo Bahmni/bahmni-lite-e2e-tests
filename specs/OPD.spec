@@ -3,6 +3,7 @@
 ## Doctor should be able to prescribe medicines and tests and get relevant reports
 Tags: smoke
 * Login to Bahmni location "General Ward" as a receptionist
+* Open registration module
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Nurse opens clinical tab
 * Enter vitals
@@ -20,11 +21,10 @@ ___
 * Goto Clinical application
 * visit is closed at the front desk
 * wait for create new button
-* Click back button
+* Click back button next to Create new
 * Nurse opens clinical tab with all section
 * verify name with id
 * verify OPD
 * verify prescription
 * verify vitals
 * close tab
-
