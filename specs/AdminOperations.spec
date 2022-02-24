@@ -27,4 +27,7 @@ Tags: smoke
 * Open "Clinical Service" app
 * Goto the openMRS Admin tab
 * Merge the newly created patients
-
+* Goto Clinical application
+* Open registration module
+* Open patient2 details by search
+* Verify patient1 details are open

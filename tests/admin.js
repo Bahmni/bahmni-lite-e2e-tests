@@ -14,8 +14,10 @@ const {
 	accept,
 	button,
 	link,
+	press,
 } = require('taiko');
-
+var assert = require("assert");
+var taikoHelper = require("./util/taikoHelper")
 step("Add this newly created patient as merge patient1", async function() {
     gauge.dataStore.scenarioStore.put("merge_patientIdentifier1", gauge.dataStore.scenarioStore.get('patientIdentifier'));
 });
@@ -57,4 +59,18 @@ step("Goto Admin home", async function () {
 
 step("Goto Administration", async function() {
 	await click("Administration")
+});
+
+step("Open patient2 details by search", async function () {
+	var patientIdentifierValue = gauge.dataStore.scenarioStore.get("merge_patientIdentifier2");
+	await write(patientIdentifierValue)
+    await press('Enter', {waitForNavigation:true});
+    await taikoHelper.repeatUntilNotFound($("#overlay"))
+
+});
+
+step("Verify patient1 details are open", async function() {
+	var patientIdentifier = await $('#patientIdentifierValue').text();
+	var patientIdentifierValue = gauge.dataStore.scenarioStore.get("merge_patientIdentifier1");
+	assert.ok(patientIdentifier==patientIdentifierValue) 
 });
