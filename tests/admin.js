@@ -10,13 +10,20 @@ const {
 	textBox,
 	toLeftOf,
 	$,
+	text,
+	dragAndDrop,
 	confirm,
 	accept,
 	button,
 	link,
 	press,
+	doubleClick,
+	toRightOf,
+	highlight,
+	mouseAction,
 } = require('taiko');
 var assert = require("assert");
+var users = require("./util/users")
 var taikoHelper = require("./util/taikoHelper")
 step("Add this newly created patient as merge patient1", async function() {
     gauge.dataStore.scenarioStore.put("merge_patientIdentifier1", gauge.dataStore.scenarioStore.get('patientIdentifier'));
@@ -73,4 +80,37 @@ step("Verify patient1 details are open", async function() {
 	var patientIdentifier = await $('#patientIdentifierValue').text();
 	var patientIdentifierValue = gauge.dataStore.scenarioStore.get("merge_patientIdentifier1");
 	assert.ok(patientIdentifier==patientIdentifierValue) 
+});
+
+step("Open Form builder", async function() {
+	await click("Form Builder");
+});
+
+step("Create a form", async function() {
+	await click("Create a Form");
+});
+
+step("Enter form name", async function() {
+	var formName = users.randomName(10)
+	gauge.dataStore.scenarioStore.put("FormName",formName)
+	await write(formName,into(textBox(below("Form Name"))));
+});
+
+step("start creating a form", async function() {
+	await click("Create Form");
+});
+
+step("put formname <formName>", async function(formName) {
+	gauge.dataStore.scenarioStore.put("FormName",formName)
+});
+
+step("edit form <formName>", async function(formName) {
+	await click(link(toRightOf(formName)))
+});
+
+step("create obs <obsName>", async function(obsName) {
+	await dragAndDrop("Obs",$(".form-builder-row"));
+	await click("Select Obs Source")
+	await write(obsName,into(textBox(below("Control Properties"))))
+	await press('Enter')
 });
