@@ -18,4 +18,11 @@ Tags: smoke
 * click Send Anyway
 ___
 * Goto Clinical application
+* Nurse opens clinical tab with all section
+* verify name with id
+* verify OPD
+* verify prescription
+* verify vitals
+* Click back button
+* Click back button
 * visit is closed at the front desk
