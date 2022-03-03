@@ -17,10 +17,6 @@ Tags: smoke
 * Validate lab result "details" in samples collected
 * click Send Anyway
 * close tab
-* Login to Odoo
-* View Direct Sales Quotation
-* Confirm Sales
-* close tab
 ___
 * Open "Clinical Service" app
 * Nurse opens clinical tab with all section
