@@ -1,7 +1,7 @@
 # Appointments
 
 ## Create a service if it doesn't exist
-Tags: smoke
+Tags: workInProgress
 * Login to Bahmni location "General Ward" as a receptionist
 * Open "Appointment scheduling" module
 * Open admin tab of Appointments
