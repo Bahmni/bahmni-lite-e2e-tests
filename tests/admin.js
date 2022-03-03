@@ -108,9 +108,24 @@ step("edit form <formName>", async function(formName) {
 	await click(link(toRightOf(formName)))
 });
 
-step("create obs <obsName>", async function(obsName) {
+step("create obs <obsName> <properties>", async function(obsName,properties) {
 	await dragAndDrop("Obs",$(".form-builder-row"));
 	await click("Select Obs Source")
 	await write(obsName,into(textBox(below("Control Properties"))))
 	await press('Enter')
+	await click(obsName)
+	for (var row of properties.rows) {
+        await click(checkBox(toRightOf(row.cells[0])));
+    }
+});
+
+step("create obs group <obsName>", async function(obsName) {
+	await dragAndDrop("ObsGroup",$(".form-builder-row"));
+	await click("Select ObsGroup Source")
+	await write(obsName,into(textBox(below("Control Properties"))))
+	await press('Enter')
+});
+
+step("create a section", async function() {
+	await dragAndDrop("Section",$(".form-builder-row"));
 });

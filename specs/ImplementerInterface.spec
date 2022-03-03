@@ -1,10 +1,18 @@
 # Implementer interface
 
 ## Admin should be able to create a form
-Tags: smoke
+
+tags: regression
+
 * Login to Bahmni location "General Ward" as a receptionist
 * Open "Implementer interface" module
 * Open Form builder
 * put formname "Formrandom"
 * edit form "Formrandom"
-* create obs "Height"
+* create obs "Height" 
+   |Property |
+   |---------|
+   |Mandatory|
+   |AddMore  |
+   |Abnormal |
+* create obs group "Heart"

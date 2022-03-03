@@ -27,7 +27,7 @@ const {
 var date = require("../util/date");
 
 step("Open Appointments List", async function() {
-    await click("Appointments List");
+    await click(process.env.appointmentList);
 });
 
 step("Begin capturing appointment details", async function() {
@@ -161,4 +161,16 @@ step("Click Cancel", async function() {
 step("Cancel appointment", async function () {
     await scrollTo($('#yes'))
     await click($('#yes'))
+});
+
+step("Open admin tab of Appointments", async function() {
+	await click("Admin")
+    await taikoHelper.repeatUntilNotFound($("#overlay"))
+});
+
+step("Create a service if it does not exist", async function() {
+    if(await text("Automation").exists())
+        return
+    await click("Add New Service")
+    await write("Automation",into(textBox({placeHolder:"Enter a service name"})))
 });

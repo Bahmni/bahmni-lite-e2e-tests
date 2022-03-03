@@ -16,8 +16,13 @@ Tags: smoke
 * click Send Anyway
 * Validate lab result "details" in samples collected
 * click Send Anyway
+* close tab
+* Login to Odoo
+* View Direct Sales Quotation
+* Confirm Sales
+* close tab
 ___
-* Goto Clinical application
+* Open "Clinical Service" app
 * Nurse opens clinical tab with all section
 * verify name with id
 * verify OPD
