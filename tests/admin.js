@@ -73,7 +73,9 @@ step("Open patient2 details by search", async function () {
 	await write(patientIdentifierValue)
     await press('Enter', {waitForNavigation:true});
     await taikoHelper.repeatUntilNotFound($("#overlay"))
-
+    try{
+        await click(link(patientIdentifierValue))        
+    }catch(e){}
 });
 
 step("Verify patient1 details are open", async function() {
@@ -128,4 +130,13 @@ step("create obs group <obsName>", async function(obsName) {
 
 step("create a section", async function() {
 	await dragAndDrop("Section",$(".form-builder-row"));
+});
+
+step("Create an appointment location if it doesn't exist", async function() {
+	if(await text(process.env.appointmentLocation).exists())
+		return
+	await click("Add Location")
+	await write(process.env.appointmentLocation,into(textBox(toRightOf("Name"))))
+	await click(checkBox(toLeftOf("Appointment Location")))
+	await click("Save Location")
 });

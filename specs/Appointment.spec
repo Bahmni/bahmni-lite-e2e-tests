@@ -1,11 +1,18 @@
 # Appointments
 
 ## Create a service if it doesn't exist
-Tags: workInProgress
+Tags: smoke
 * Login to Bahmni location "General Ward" as a receptionist
 * Open "Appointment scheduling" module
 * Open admin tab of Appointments
 * Create a service if it does not exist
+
+## Create an appointment location if it doesn't exisit
+Tags: workInprogress
+* Login to Bahmni location "General Ward" as a receptionist
+* Goto the openMRS Admin tab
+* Manage locations
+* Create an appointment location if it doesn't exist
 
 ## A receptionist should be able to create a walkin appointment for a patient
 Tags: smoke

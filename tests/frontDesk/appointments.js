@@ -57,6 +57,11 @@ step("Search and select service", async function() {
     await click(process.env.service);
 });
 
+step("Search and select appointment location", async function() {
+    await click("Location");
+    await click(process.env.appointmentLocation);
+});
+
 step("Select appointment date", async function() {
     await timeField({type:"date"},toRightOf("Date")).select(date.tomorrow());
 });
@@ -170,8 +175,15 @@ step("Open admin tab of Appointments", async function() {
 });
 
 step("Create a service if it does not exist", async function() {
-    if(await text("Automation").exists())
+    if(await text(process.env.service).exists())
         return
     await click("Add New Service")
-    await write("Automation",into(textBox({placeHolder:"Enter a service name"})))
+    await write(process.env.service,into(textBox({placeHolder:"Enter a service name"})))
+    await write("For test automation",into(textBox({placeHolder:"Enter description"})))
+    await click("Save")
+    await taikoHelper.repeatUntilNotFound($("#overlay"))
+});
+
+step("Manage locations", async function() {
+	await click("Manage Locations")    
 });
