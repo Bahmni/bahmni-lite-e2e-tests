@@ -19,6 +19,7 @@
 * Open "Clinical" module
 * Select the newly created patient
 * Doctor clicks consultation
+* wait for overlay to disappear
 
 # Nurse opens clinical tab with all section
 * Open "Clinical" module
@@ -47,6 +48,7 @@
 * Open registration module
 * Open newly created patient details by search
 * Enter visit details
+* Confirm if you want to close the visit
 * Close visit
 
 # Receptionist creates the patient with mobile number <mobileNumber>

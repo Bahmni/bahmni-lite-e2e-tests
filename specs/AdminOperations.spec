@@ -21,6 +21,7 @@ Tags: smoke
 * Open "Patient Documents" module
 * Choose newly created patient
 * Add a report "labReport1" to "Patient Documents"
+* Save the report
 * Click back button
 * visit is closed at the front desk
 * close tab

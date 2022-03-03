@@ -90,5 +90,7 @@ step("put first name <firstName> middle name <middleName> lastname <lastName>", 
 });
 
 step("click Send Anyway", async function() {
-	await click("Send Anyway")
+        try{
+                await click("Send Anyway")
+        }catch(e){}
 });

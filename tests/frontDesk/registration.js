@@ -195,8 +195,6 @@ step("Enter visit details", async function() {
 });
 
 step("Close visit", async function() {
-    await waitFor(2000)
-    await confirm('Are you sure you want to close this visit?', async () => await accept())
     await click(button("Close Visit"),{waitForNavigation:true,navigationTimeout:340000})
     await taikoHelper.repeatUntilNotFound($("#overlay"))
     await taikoHelper.repeatUntilFound(link("Create New"))
@@ -335,4 +333,9 @@ step("Choose newly created patient", async function() {
 
 step("wait for create new button", async function() {
 	await waitFor(link("Create New"))
+});
+
+step("Confirm if you want to close the visit", async function() {
+    await waitFor(2000)
+    await confirm('Are you sure you want to close this visit?', async () => await accept())
 });

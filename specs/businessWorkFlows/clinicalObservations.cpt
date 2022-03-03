@@ -16,6 +16,7 @@
 
 # Doctor captures the consultation notes <consultationNotes> for newly created patient
 * Doctor clicks consultation
+* wait for overlay to disappear
 * Doctor captures consultation notes "Consultation notes"
 * Save data
 

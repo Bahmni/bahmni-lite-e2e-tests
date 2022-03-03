@@ -5,7 +5,7 @@
     "test": "gauge run specs --env qa04 -v -p -n=3 --tags smoke"
   },
   "dependencies": {
-    "taiko": "latest",
+    "taiko": "git://github.com/getgauge/taiko.git#e5658da",
     "axios": "latest",
     "buffer": "latest",
     "uuid": "latest"

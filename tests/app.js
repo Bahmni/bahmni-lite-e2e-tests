@@ -30,3 +30,8 @@ step("Check if <appName> app is opened", async function (appName) {
     await click(appName.toUpperCase(),{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
     await taikoHelper.repeatUntilNotFound($("#overlay"))    
 });
+
+step("wait for overlay to disappear", async function() {
+    await taikoHelper.repeatUntilNotFound($("#overlay"))
+    await waitFor(async () => !(await $("overlay").exists()))
+});
