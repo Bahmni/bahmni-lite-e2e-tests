@@ -6,7 +6,7 @@ Tags: smoke
 * Doctor issues an Admit disposition
 * Click back button
 * Click back button
-* Nurse admits the patient to bed "304-c"
+* Nurse admits the patient to bed "314-d"
 * Click back button
 * Nurse opens clinical tab
 * Enter vitals

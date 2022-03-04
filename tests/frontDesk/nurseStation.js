@@ -22,7 +22,6 @@ const {
 	toRightOf,
 	$
 } = require('taiko');
-const openmrs = require("../util/omod")
 var taikoHelper = require("../util/taikoHelper");
 var fileExtension = require("../util/fileExtension");
 
@@ -36,7 +35,6 @@ step("Enter adt notes <notes>", async function (notes) {
 });
 
 step("Select bed for admission <ward>", async function (ward) {
-	await openmrs.interceptGeneralWard()
     await taikoHelper.repeatUntilFound(text(ward))
     // await waitFor(async () => await $("General Ward").exists())
 	await click(ward)
@@ -52,7 +50,6 @@ step("Click Assign", async function() {
 });
 
 step("Admit the patient", async function() {
-	await openmrs.interceptAdmissionLocation()
 	await click("Admit",{waitForNavigation:true})
 	await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
