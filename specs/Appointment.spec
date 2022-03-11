@@ -11,6 +11,7 @@ Tags: smoke
 Tags: workInprogress
 * Login to Bahmni location "General Ward" as a receptionist
 * Goto the openMRS Admin tab
+* Goto Administration
 * Manage locations
 * Create an appointment location if it doesn't exist
 

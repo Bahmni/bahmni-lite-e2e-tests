@@ -40,14 +40,18 @@ step("put medications <prescriptionNames>", async function (prescriptionNames) {
 step("Doctor prescribes medicines <prescriptionNames>", async function (prescriptionNames) {
     var prescriptionFile = `./data/${prescriptionNames}.json`;
     gauge.dataStore.scenarioStore.put("prescriptions",prescriptionFile)
+    var drugName = gauge.dataStore.scenarioStore.get("Drug Name")
+
     var medicalPrescriptions = JSON.parse(fileExtension.parseContent(prescriptionFile))
     gauge.message(medicalPrescriptions)
 
     if(medicalPrescriptions.drug_name!=null)
     {
+        if(drugName==null)
+            drugName = medicalPrescriptions.drug_name;
         try
         {
-            await write(medicalPrescriptions.drug_name,into(textBox(toRightOf("Drug Name"))));
+            await write(drugName,into(textBox(toRightOf("Drug Name"))));
             await dropDown(toRightOf("Units")).select(medicalPrescriptions.units);
             await dropDown(toRightOf("Frequency")).select(medicalPrescriptions.frequency)
             await click("Accept");
@@ -56,7 +60,7 @@ step("Doctor prescribes medicines <prescriptionNames>", async function (prescrip
             await write(medicalPrescriptions.duration,into(textBox(toRightOf("Duration"))));    
         }
         catch(e){
-            await write(medicalPrescriptions.drug_name,into(textBox(below("Drug Name"))));
+            await write(drugName,into(textBox(below("Drug Name"))));
             await dropDown(below("Units")).select(medicalPrescriptions.units);
             await dropDown(below("Frequency")).select(medicalPrescriptions.frequency)
             await click("Accept");

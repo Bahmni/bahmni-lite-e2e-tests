@@ -8,10 +8,22 @@
 * Open "Admin" module
 * Goto Bed creation
 * Goto Admin home
-* Goto Administration
 
 # create a form
 * Open Form builder
 * Create a form
 * Enter form name
 * start creating a form
+
+# Admin adds a new drug concept
+* Goto Dictionary
+* Add a new concept
+* Create a general drug
+* Create a drug with more details
+
+# Create a general drug
+* enter a concept name
+* enter a description
+* select the type of concept being created as "Drug"
+* make it saleable
+* save the concept

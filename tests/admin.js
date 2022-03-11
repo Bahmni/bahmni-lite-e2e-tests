@@ -2,6 +2,8 @@
 const {
     goto,
     write,
+	above,
+	dropDown,
     click,
     into,
     below,
@@ -21,6 +23,7 @@ const {
 	toRightOf,
 	highlight,
 	mouseAction,
+	currentURL,
 } = require('taiko');
 var assert = require("assert");
 var users = require("./util/users")
@@ -68,8 +71,13 @@ step("Goto Administration", async function() {
 	await click("Administration")
 });
 
+step("Goto Dictionary", async function() {
+	await click("Dictionary")
+});
+
 step("Open patient2 details by search", async function () {
 	var patientIdentifierValue = gauge.dataStore.scenarioStore.get("merge_patientIdentifier2");
+	gauge.message(patientIdentifierValue)
 	await write(patientIdentifierValue)
     await press('Enter', {waitForNavigation:true});
     await taikoHelper.repeatUntilNotFound($("#overlay"))
@@ -139,4 +147,47 @@ step("Create an appointment location if it doesn't exist", async function() {
 	await write(process.env.appointmentLocation,into(textBox(toRightOf("Name"))))
 	await click(checkBox(toLeftOf("Appointment Location")))
 	await click("Save Location")
+});
+
+step("Add a new concept", async function() {
+	await click("Add new concept",{waitForNavigation:true})
+});
+
+step("enter a concept name", async function () {
+	var drugName = users.randomName(10)
+	await write(drugName,into(textBox(above("Synonyms"),below("English"))));
+	gauge.message(drugName)
+    gauge.dataStore.scenarioStore.put("Drug Concept",drugName)
+});
+
+step("enter a description", async function() {
+	await write("For automation",into(textBox(toRightOf("Description"),below("Short Name"))));
+});
+
+step("make it saleable", async function() {
+	await click("True",toRightOf("saleable"));
+});
+
+step("select the type of concept being created as <conceptType>", async function (conceptType) {
+	await dropDown(toRightOf("Class")).select(conceptType);
+});
+
+step("save the concept", async function() {
+	await click("Save Concept");
+});
+
+step("Create a drug with more details", async function() {
+	var _currentURL = await currentURL();
+	await click("Administration");
+    await click("Manage Concept Drugs");
+    await click("Add Concept Drug");
+	var drugName = users.randomName(10)
+
+	await write(drugName,into(textBox(toRightOf("Name"),above("Concept"))));
+    gauge.dataStore.scenarioStore.put("Drug Name",drugName)
+
+	var drugConcept = gauge.dataStore.scenarioStore.get("Drug Concept")
+    await write(drugConcept,into(textBox({placeHolder:"Enter concept name or id"})));
+
+	await click("Save Concept Drug");
 });
