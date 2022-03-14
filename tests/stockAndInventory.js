@@ -29,3 +29,7 @@ step("Click customer name", async function() {
 step("Confirm sale", async function() {
     await click("Confirm Sale");
 });
+
+step("Goto Odoo", async function() {
+    await goto(process.env.odooURL, { waitForNavigation: true, navigationTimeout: process.env.actionTimeout });
+});

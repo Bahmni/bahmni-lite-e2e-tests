@@ -19,6 +19,7 @@ step("Goto Bahmni main home", async function() {
 });
 
 step("Open <appName> app", async function (appName) {
+    await highlight(appName)
     await click(appName.toUpperCase(),{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
 });
 

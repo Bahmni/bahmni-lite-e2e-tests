@@ -7,7 +7,6 @@ Tags: smoke
 * Nurse opens clinical tab
 * Enter vitals
 * Doctor advises medicines "opd/prescriptionFlow/prescriptions" and tests "opd/prescriptionFlow/labTests"
-* Goto Bahmni main home
 * Login to Open ELIS
 * Collect Sample
 * Enter blood Lab results
@@ -16,7 +15,6 @@ Tags: smoke
 * click Send Anyway
 * Validate lab result "details" in samples collected
 * click Send Anyway
-* close tab
 * Login to Odoo
 * View Direct Sales Quotation
 * Confirm Sales

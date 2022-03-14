@@ -47,4 +47,4 @@ Tags:openMRS
 * Goto Bahmni main home
 * Login to Odoo
 * View Direct Sales Quotation
-* Confirm sales
+* Confirm Sales

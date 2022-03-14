@@ -94,3 +94,7 @@ step("click Send Anyway", async function() {
                 await click("Send Anyway")
         }catch(e){}
 });
+
+step("Goto OpenELIS", async function() {
+        await goto(process.env.bahmniHost + process.env.openelisHome, { waitForNavigation: true, navigationTimeout: process.env.actionTimeout });
+});
