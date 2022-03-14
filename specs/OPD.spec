@@ -19,7 +19,7 @@ Tags: smoke
 * View Direct Sales Quotation
 * Confirm Sales
 ___
-* Open "Clinical Service" app
+* Goto Clinical application
 * Nurse opens clinical tab with all section
 * verify name with id
 * verify OPD

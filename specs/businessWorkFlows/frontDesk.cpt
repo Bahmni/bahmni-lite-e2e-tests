@@ -1,6 +1,5 @@
 # Login to Bahmni location <location> as a receptionist
-* Goto Bahmni main home
-* Open "Clinical Service" app
+* Goto Clinical application
 * Check if "Clinical Service" app is opened
 * Check if previous user is still logged in
 * Login as a receptionist with admin credentials location <location>
