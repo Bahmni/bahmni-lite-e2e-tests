@@ -8,8 +8,10 @@ step("enter odoo password", async function() {
     await write(process.env.odooPassword,into(textBox(below("Password"))));
 });
 
-step("Log in to odoo", async function() {
-    await click("Log in");
+step("Log in to odoo", async function () {
+    await click("Log in",
+        { waitForNavigation: true, navigationTimeout: process.env.actionTimeout }
+    );
 });
 
 step("Click Sales", async function() {
