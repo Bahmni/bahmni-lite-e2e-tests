@@ -12,6 +12,7 @@ var taikoHelper = require("util/taikoHelper");
 step("Goto Clinical application", async function () {
     await goto(process.env.bahmniHome,{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
     if(await text("Advanced").exists())
+    {
         await click("Advanced")
         await click("Proceed to")
     }
