@@ -112,7 +112,7 @@ step("Click create new patient", async function () {
 });
 
 step("Save the patient data", async function () {
-    await click("Save",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
+    await click("Save",{navigationTimeout:process.env.actionTimeout});
     await taikoHelper.repeatUntilNotFound($("#overlay"))
     await waitFor(async () => !(await text("Saved",within('.message-text')).exists()));
     await taikoHelper.repeatUntilFound($("#patientIdentifierValue"))
