@@ -135,11 +135,11 @@ step("Select the newly created patient", async function() {
 })
 
 step("Log out if still logged in", async function () {
-    if(!await button({"class":"btn-user-info"}).exists())
-        return
-    await click(button({"class":"btn-user-info"}))
-    await click('Logout',{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
-    await taikoHelper.repeatUntilNotFound($("#overlay"))
+    try{
+        await click(button({"class":"btn-user-info"}))
+        await click('Logout',{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
+        await taikoHelper.repeatUntilNotFound($("#overlay"))    
+    }catch(e){}
 })
 
 step("Login as a receptionist with admin credentials location <location>", async function (location) {
