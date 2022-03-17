@@ -50,6 +50,7 @@ step("verify OPD", async function() {
 });
 
 step("verify prescription", async function () {
+    await taikoHelper.repeatUntilNotFound($(".dashboard-section-loader"))
     var prescriptionFile = gauge.dataStore.scenarioStore.get("prescriptions")
     var medicalPrescriptions = JSON.parse(fileExtension.parseContent(prescriptionFile))
     assert.ok(await (await text(medicalPrescriptions.drug_name)).exists())

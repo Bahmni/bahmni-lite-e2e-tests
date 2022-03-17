@@ -13,6 +13,7 @@ const {
     fileField,
     attach,
     scrollTo,
+    reload,
 } = require('taiko');
 const taikoHelper = require("../util/taikoHelper")
 const fileExtension = require("../util/fileExtension")
@@ -46,8 +47,9 @@ step("Enter posture", async function () {
 
 step("Click Vitals", async function() {
 	await waitFor('Vitals')
-	await click("Vitals",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout})
-	await taikoHelper.repeatUntilNotFound($("#overlay"))
+    await reload()
+    await click("Vitals",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout})
+await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
 
 step("Enter History and examination details", async function() {

@@ -141,7 +141,7 @@ step("create a section", async function() {
 });
 
 step("Create an appointment location if it doesn't exist", async function() {
-	if(await text(process.env.appointmentLocation).exists())
+	if(await link(process.env.appointmentLocation).exists())
 		return
 	await click("Add Location")
 	await write(process.env.appointmentLocation,into(textBox(toRightOf("Name"))))
