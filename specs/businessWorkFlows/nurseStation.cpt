@@ -1,11 +1,11 @@
-# Nurse at ADT is able to view bed availability and assign beds
+# Nurse at ADT is able to view bed availability and assign beds to bed <bed>
 * Nurse opens admission tab
 * Select the newly created patient
 * Select Patient Movement "Admit Patient"
 * Enter adt notes "Admission notes"
 * Admit the patient
 * Select bed for admission "Labour Ward"
-* Allocate bed "314-c"
+* Allocate bed <bed>
 * Click Assign
 
 # Nurse at ADT gives discharge disposition
@@ -60,7 +60,7 @@
 
 # Nurse admits the patient to bed <bed>
 * Open "InPatient" module
-* Nurse at ADT is able to view bed availability and assign beds
+* Nurse at ADT is able to view bed availability and assign beds to bed <bed>
 
 # Nurse discharges the patient
 * Open "InPatient" module

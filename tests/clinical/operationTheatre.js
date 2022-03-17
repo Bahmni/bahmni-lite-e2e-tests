@@ -25,10 +25,13 @@ step("Click OT Scheduling", async function() {
 });
 
 step("Create a new surgical block", async function() {
+    await scrollTo("New Surgical Block")
+    await highlight("New Surgical Block")
 	await click("New Surgical Block",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
 });
 
 step("Select the surgeon", async function() {
+    await highlight(dropDown(toRightOf("Surgeon")))
 	await dropDown(toRightOf("Surgeon")).select(process.env.surgeon);
 });
 
