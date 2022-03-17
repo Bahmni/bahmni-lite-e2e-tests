@@ -180,7 +180,7 @@ step("Create a service if it does not exist", async function() {
     await click("Add New Service")
     await write(process.env.service,into(textBox({placeHolder:"Enter a service name"})))
     await write("For test automation",into(textBox({placeHolder:"Enter description"})))
-    await click("Save")
+    await click("Save",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout})
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
 

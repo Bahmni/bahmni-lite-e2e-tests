@@ -146,7 +146,7 @@ step("Create an appointment location if it doesn't exist", async function() {
 	await click("Add Location")
 	await write(process.env.appointmentLocation,into(textBox(toRightOf("Name"))))
 	await click(checkBox(toLeftOf("Appointment Location")))
-	await click("Save Location")
+	await click("Save Location",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout})
 });
 
 step("Add a new concept", async function() {

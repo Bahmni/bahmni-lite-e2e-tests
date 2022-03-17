@@ -18,7 +18,6 @@
 * Open calender at time <appointmentTime>
 * Select patient
 * Search and select service
-* Search and select appointment location
 * select the walk in appointment option
 * Check and Save
 * wait for "1000"
@@ -31,7 +30,6 @@
 * Open calender at time <appointmentTime>
 * Select patient
 * Search and select service
-* Search and select appointment location
 * select the recurring appointment option
 * select the Start date as today
 * select the End date as after few occurances                

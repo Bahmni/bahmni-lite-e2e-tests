@@ -134,8 +134,7 @@ step("Select the newly created patient", async function() {
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 })
 
-step("Check if previous user is still logged in", async function () {
-    await taikoHelper.repeatUntilNotFound($("#overlay"))
+step("Log out if still logged in", async function () {
     if(!await button({"class":"btn-user-info"}).exists())
         return
     await click(button({"class":"btn-user-info"}))

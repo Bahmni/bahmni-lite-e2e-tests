@@ -2,7 +2,7 @@
 var assert = require("assert");
 var fileExtension = require("./util/fileExtension")
 var requestResponse = require("./util/requestResponse");
-const date = require("./util/date")
+const date = require("./util/date");
 
 step("Verify openmrs OPD patient details with mobileNumber <mobileNumber>", async function (mobileNumber) {
     var firstName = gauge.dataStore.scenarioStore.get("patientFirstName")
@@ -56,3 +56,4 @@ step("Verify openmrs IPD patient details with mobileNumber <mobileNumber>", asyn
     var IPDPrescriptions = await requestResponse.makeOpenVisitCall(patientUUID,"IPD",process.env.visitPrescriptions)
     var IPDDiagnostics = await requestResponse.makeOpenVisitCall(patientUUID,"IPD",process.env.visitDiagnosticReports)
 });
+

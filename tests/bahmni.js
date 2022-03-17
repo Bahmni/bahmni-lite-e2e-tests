@@ -6,6 +6,7 @@ const {
     highlight,
     text,
     waitFor,
+    link,
 } = require('taiko');
 var taikoHelper = require("util/taikoHelper");
 
@@ -40,4 +41,8 @@ step("Check if <appName> app is opened", async function (appName) {
 step("wait for overlay to disappear", async function() {
     await taikoHelper.repeatUntilNotFound($("#overlay"))
     await waitFor(async () => !(await $("overlay").exists()))
+});
+
+step("Log out of openmrs", async function() {
+	await click(link("Log out"))
 });

@@ -120,7 +120,7 @@ step("Save visit data", async function () {
 
 step("Join teleconsultation", async function() {
     await scrollTo('Join Teleconsultation')
-    await click('Join Teleconsultation',{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
+    await click('Join Teleconsultation');
     await taikoHelper.repeatUntilNotFound($("#overlay"))
     await scrollTo(button('Join teleconsultation'),toRightOf("Scheduled"))
     await click(button('Join teleconsultation',toRightOf("Scheduled")))
