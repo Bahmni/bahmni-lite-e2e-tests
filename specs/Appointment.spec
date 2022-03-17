@@ -8,7 +8,7 @@ Tags: smoke
 * Create a service if it does not exist
 
 ## Create an appointment location if it doesn't exisit
-Tags: workInprogress
+Tags: smoke
 * Login to Bahmni location "General Ward" as a receptionist
 * Goto the openMRS Admin tab
 * Goto Administration
