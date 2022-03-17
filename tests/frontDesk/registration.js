@@ -136,7 +136,8 @@ step("Select the newly created patient", async function() {
 
 step("Log out if still logged in", async function () {
     try{
-        await click(button({"class":"btn-user-info"}))
+        await highlight(${".btn-user-info"})
+        await click($({".btn-user-info"}))
         await click('Logout',{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
         await taikoHelper.repeatUntilNotFound($("#overlay"))    
     }catch(e){}
@@ -189,14 +190,14 @@ step("Click back button next to Create new", async function () {
 });
 step("Enter visit details", async function() {
     await scrollTo(button("Enter Visit Details"))
-    await click(button("Enter Visit Details"),{waitForNavigation:true})
+    await click(button("Enter Visit Details"),{waitForNavigation:true,navigationTimeout:process.env.actionTimeout})
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
 
 step("Close visit", async function() {
     await scrollTo(button("Close Visit"))
     await highlight(button("Close Visit"))
-    await click(button("Close Visit"),{waitForNavigation:true,navigationTimeout:340000})
+    await click(button("Close Visit"),{waitForNavigation:true,navigationTimeout:process.env.actionTimeout})
     await taikoHelper.repeatUntilNotFound($("#overlay"))
     await taikoHelper.repeatUntilFound(link("Create New"))
 });
