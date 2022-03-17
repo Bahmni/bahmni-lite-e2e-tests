@@ -47,8 +47,12 @@ step("Enter posture", async function () {
 
 step("Click Vitals", async function() {
 	await waitFor('Vitals')
-    await reload()
-    await click("Vitals",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout})
+    try{
+        await click("Vitals",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout})
+    }catch(e){
+        await reload()
+        await click("Vitals",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout})    
+    }
 await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
 
