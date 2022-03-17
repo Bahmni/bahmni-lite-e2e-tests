@@ -15,9 +15,6 @@ Tags: smoke
 * click Send Anyway
 * Validate lab result "details" in samples collected
 * click Send Anyway
-* Login to Odoo
-* View Direct Sales Quotation
-* Confirm Sales
 ___
 * Goto Clinical application
 * Nurse opens clinical tab with all section
@@ -25,6 +22,9 @@ ___
 * verify OPD
 * verify prescription
 * verify vitals
+* Doctor clicks consultation
+* Doctor notes the diagnosis
+* Save data
 * Click back button
 * Click back button
 * visit is closed at the front desk

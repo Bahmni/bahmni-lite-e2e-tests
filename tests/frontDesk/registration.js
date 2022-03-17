@@ -195,6 +195,8 @@ step("Enter visit details", async function() {
 });
 
 step("Close visit", async function() {
+    await scrollTo(button("Close Visit"))
+    await highlight(button("Close Visit"))
     await click(button("Close Visit"),{waitForNavigation:true,navigationTimeout:340000})
     await taikoHelper.repeatUntilNotFound($("#overlay"))
     await taikoHelper.repeatUntilFound(link("Create New"))

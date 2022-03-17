@@ -28,6 +28,7 @@ step("Doctor prescribe tests <prescriptions>", async function (prescriptionFile)
     for (var test of testPrescriptions.tests) {
         await taikoHelper.repeatUntilFound(text(test.test))
         await click(test.test,{force: true})
+        await waitFor(100)
     }     
 });
 
@@ -125,4 +126,15 @@ step("Join teleconsultation", async function() {
     await click(button('Join teleconsultation',toRightOf("Scheduled")))
     await highlight('Tele Consultation')
     await click(($('[ng-click="closeTeleConsultation()"]')));
+});
+
+step("Doctor notes the diagnosis", async function() {
+	await click("Diagnosis");
+    await write("Cardiac arrest",into(textBox(below("Diagnosis"))));
+    await click("Accept",toRightOf("Cardiac arrest"))
+    await click("Primary",below("Order"));
+    await click("Confirmed",below("Certainty"));
+    await write("Diabetes II, uncomplicated",into(textBox(below("Condition"))));
+    await click("Accept",toRightOf("Diabetes II, uncomplicated"));
+    await click("Active");
 });
