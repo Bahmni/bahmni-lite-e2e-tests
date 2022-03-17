@@ -22,6 +22,7 @@
 
 # Doctor issues an Discharge disposition
 * Choose Disposition
+* wait for overlay to disappear
 * Doctor advises discharging the patient
 * Save data
 

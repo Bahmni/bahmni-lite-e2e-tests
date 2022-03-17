@@ -85,7 +85,6 @@ step("Doctor clicks consultation", async function() {
 
 step("Choose Disposition", async function() {
     await click("Disposition",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
-    await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
 
 step("Doctor advises admitting the patient", async function() {
