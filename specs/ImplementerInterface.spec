@@ -2,7 +2,7 @@
 
 ## Admin should be able to create a form
 
-tags: regression
+tags: dataSetup
 
 * Login to Bahmni location "General Ward" as a receptionist
 * Open "Implementer interface" module
