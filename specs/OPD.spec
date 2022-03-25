@@ -1,5 +1,19 @@
 # OPD Visits
 
+## Doctor should be able to prescribe radiology tests
+* Login to Bahmni location "General Ward" as a receptionist
+* Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
+* Nurse opens clinical tab
+* Open "Orders" Tab
+* Place a radiology order for test "chest, 1 view (x-ray)"
+* verify patient details on DCM4chee
+* Login to Odoo
+* Convert Quotation to Sales
+* View Direct Sales Quotation
+* Confirm Sales
+* Goto Clinical application
+* visit is closed at the front desk
+
 ## Doctor should be able to prescribe medicines and tests and get relevant reports
 Tags: smoke,next
 * Login to Bahmni location "General Ward" as a receptionist
@@ -19,7 +33,6 @@ Tags: smoke,next
 * Convert Quotation to Sales
 * View Direct Sales Quotation
 * Confirm Sales
-___
 * Goto Clinical application
 * Nurse opens clinical tab with all section
 * verify name with id

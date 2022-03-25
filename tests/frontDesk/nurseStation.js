@@ -21,6 +21,7 @@ const {
 	timeField,
 	toRightOf,
 	$,
+	scrollTo,
 	toLeftOf
 } = require('taiko');
 var taikoHelper = require("../util/taikoHelper");
@@ -105,7 +106,9 @@ step("Click Discharge on popup", async function() {
 
 step("Click Admit on popup", async function() {
 	await waitFor(async () => !(await $("overlay").exists()));
-	await click("Admit",toLeftOf("Cancel"))
+	await highlight("Cancel")
+	await scrollTo("Cancel")
+	await click("Admit")
 	// await click(text('Admit', within($('[ng-click="admitConfirmation()"]'))));
 });
 

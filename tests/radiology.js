@@ -15,8 +15,8 @@ step("Click Signin", async function() {
 });
 
 step("Enter patient id in radiology app", async function() {
-    var patientIdentifierValue = gauge.dataStore.scenarioStore.get("patientIdentifier");
-    await write(patientIdentifierValue,into(textBox(below("ID"))))
+    var patientFirstName = gauge.dataStore.scenarioStore.get("patientFirstName");
+    await write(patientFirstName,into(textBox(below("Patient Name"))))
     await press("Enter")
 });
 
@@ -47,4 +47,8 @@ step("Search on DCM4chee", async function () {
 step("click on the patient details", async function() {
     var firstName = gauge.dataStore.scenarioStore.get("patientFirstName")
 	await click(firstName)
+});
+
+step("Click Modality Worklist", async function() {
+	await click("Modality Worklist")
 });
