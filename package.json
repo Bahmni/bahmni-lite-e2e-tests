@@ -2,9 +2,9 @@
   "name": "gauge-taiko-template",
   "description": "Starter template for writing JavaScript tests for Gauge",
   "scripts": {
-    "local": "gauge run specs --env local -v -p -n=3 --tags 'next | BedManagement'",
+    "local": "gauge run specs --env local -v -p --tags 'next | BedManagement'",
     "next": "gauge run specs --env next -v -p -n=3 --tags 'next'",
-    "log4j": "gauge run specs --env qa08 -v -p -n=3 --tags 'smoke | BedManagement'",
+    "log4j": "gauge run specs --env demo0.9.3 -v -p -n=3 --tags 'smoke | BedManagement | IPModule'",
     "test": "gauge run specs --env next -v -p -n=3 --tags 'next | BedManagement'"
   },
   "dependencies": {

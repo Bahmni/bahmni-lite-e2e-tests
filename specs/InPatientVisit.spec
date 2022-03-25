@@ -1,4 +1,4 @@
-# IPD Visits
+# In Patient Visit
 ## Nurse should be able to admit and discharge a patient based on doctor's disposition
 Tags: IPModule
 * Login to Bahmni location "General Ward" as a receptionist

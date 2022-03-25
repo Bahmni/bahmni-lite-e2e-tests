@@ -20,7 +20,8 @@ const {
 	highlight,
 	timeField,
 	toRightOf,
-	$
+	$,
+	toLeftOf
 } = require('taiko');
 var taikoHelper = require("../util/taikoHelper");
 var fileExtension = require("../util/fileExtension");
@@ -104,7 +105,8 @@ step("Click Discharge on popup", async function() {
 
 step("Click Admit on popup", async function() {
 	await waitFor(async () => !(await $("overlay").exists()));
-	await click(text('Admit', within($('[ng-click="admitConfirmation()"]'))));
+	await click("Admit",toLeftOf("Cancel"))
+	// await click(text('Admit', within($('[ng-click="admitConfirmation()"]'))));
 });
 
 step("Select Second Vitals", async function () {
