@@ -66,3 +66,10 @@
 * Goto appointments's date
 * Click patient name
 * Join teleconsultation
+
+# Enroll in program <program> stage <programStage> starting <numberOfYearsAgo_startDate> years ago with treatment start <numberOfYearsAgo_treatmentDate> years ago, id <id>, dr incharge <doctor> and treatment stage <stage>
+* Begin new program enrollment
+* Create a program <program>
+* Select program starting <numberOfYearsAgo_startDate> years ago with treatment start <numberOfYearsAgo_treatmentDate> years ago
+* Select other details id "1234", dr incharge "doctor" and treatment stage "Initial Stage"
+* Enroll in program
