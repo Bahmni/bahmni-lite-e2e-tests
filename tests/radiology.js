@@ -1,5 +1,5 @@
-const { write, toRightOf,into,textBox, press, goto, below, scrollTo,click } = require("taiko");
-
+const { write, toRightOf,into,textBox, press, goto, below, scrollTo,click, text,above, highlight, waitFor,$,evaluate } = require("taiko");
+var assert= require("assert")
 var users = require("util/users");
 
 step("Enter Radiology username", async function() {
@@ -16,6 +16,8 @@ step("Click Signin", async function() {
 
 step("Enter patient id in radiology app", async function() {
     var patientFirstName = gauge.dataStore.scenarioStore.get("patientFirstName");
+    await highlight("Patient Name")
+    await highlight(textBox(below("Patient Name")))
     await write(patientFirstName,into(textBox(below("Patient Name"))))
     await press("Enter")
 });
@@ -46,9 +48,17 @@ step("Search on DCM4chee", async function () {
 
 step("click on the patient details", async function() {
     var firstName = gauge.dataStore.scenarioStore.get("patientFirstName")
-	await click(firstName)
+    var lastName = gauge.dataStore.scenarioStore.get("patientLastName")
+
+    var name = `${firstName},${lastName}`
+    var nameInTable = await $("//table[@class='content-table']//td[2]").text()
+    assert.ok(name.toLowerCase() == nameInTable.toLowerCase())
+    var ord = await $("//table[@class='content-table']//td[10]").text()
+    gauge.dataStore.scenarioStore.put("ORD",ord)
+    gauge.message(ord)
 });
 
 step("Click Modality Worklist", async function() {
-	await click("Modality Worklist")
+	await click("Modality Worklist",{waitForNavigation:true})
+    await waitFor(1000)
 });

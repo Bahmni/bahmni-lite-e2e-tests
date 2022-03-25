@@ -191,6 +191,7 @@ step("Click back button next to Create new", async function () {
 });
 step("Enter visit details", async function() {
     await scrollTo(button("Enter Visit Details"))
+    await highlight(button("Enter Visit Details"))
     await click(button("Enter Visit Details"),{waitForNavigation:true,navigationTimeout:process.env.actionTimeout})
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
