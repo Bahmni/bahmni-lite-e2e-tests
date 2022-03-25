@@ -1,7 +1,7 @@
 # Admin operations
 
 ## Admin should be able to merge patients
-Tags: smoke
+Tags: smoke,next
 * Login to Bahmni location "General Ward" as a receptionist
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Add this newly created patient as merge patient1
@@ -32,6 +32,14 @@ Tags: smoke
 * Open patient2 details by search
 * Verify patient1 details are open
 
+## Create a report
+* Login to Bahmni location "General Ward" as a receptionist
+* Goto the openMRS Admin tab
+* Goto reporting
+* Goto Report Administration
+* Create Period Indicator Report
+* Add Period Indicator Details
+
 ## A saleable concept should be available in ODOO
 Tags:openMRS
 * Login to Bahmni location "General Ward" as a receptionist
@@ -40,8 +48,9 @@ Tags:openMRS
 * Goto Clinical application
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Nurse opens clinical tab
-* Doctor advises medicines "opd/prescriptionFlow/prescriptions" and tests "opd/prescriptionFlow/labTests"
+* Doctor prescribes medications "opd/prescriptionFlow/prescriptions"
 * Goto Bahmni main home
 * Login to Odoo
+* Convert Quotation to Sales
 * View Direct Sales Quotation
 * Confirm Sales

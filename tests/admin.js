@@ -191,3 +191,27 @@ step("Create a drug with more details", async function() {
 
 	await click("Save Concept Drug");
 });
+
+step("Goto Manage Address Hierarchy", async function() {
+	await click("Manage Address Hierarchy",{waitForNavigation:true})
+});
+
+step("Goto reporting", async function() {
+	await click("Reporting")
+});
+
+step("Goto Report Administration", async function() {
+	await click("Report Administration")
+});
+
+step("Create Period Indicator Report", async function () {
+	await click("Period Indicator Report")
+	await write(users.randomName(10),below("Name"))
+	await click("Submit")
+});
+
+step("Add Period Indicator Details", async function() {
+	await click("Add Dimension")
+	await write(users.randomName(10),into(textBox(toRightOf("Key"))))
+	await click("Submit")
+});

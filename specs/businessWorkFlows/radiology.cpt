@@ -1,6 +1,11 @@
-# Verify data sync in radiology
-* Open "Radiology" app
+# Login to DCM4chee
+* Goto DCM4chee
 * Enter Radiology username
 * Enter Radiology password
 * Click Signin
+
+# verify patient details on DCM4chee
+* Login to DCM4chee
 * Enter patient id in radiology app
+* Search on DCM4chee
+* click on the patient details

@@ -11,7 +11,7 @@ const {
 var taikoHelper = require("util/taikoHelper");
 
 step("Goto Clinical application", async function () {
-    await goto(process.env.bahmniHome,{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
+    await goto(process.env.bahmniHome,{waitForNavigation:true,navigationTimeout:process.env.loginTimeout});
     if(await text("Advanced").exists())
     {
         await click("Advanced")
@@ -40,7 +40,7 @@ step("Check if <appName> app is opened", async function (appName) {
 
 step("wait for overlay to disappear", async function() {
     await taikoHelper.repeatUntilNotFound($("#overlay"))
-    await waitFor(async () => !(await $("overlay").exists()))
+    //await waitFor(async () => !(await $("#overlay").exists()))
 });
 
 step("Log out of openmrs", async function() {

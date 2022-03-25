@@ -35,3 +35,7 @@ step("Confirm sale", async function() {
 step("Goto Odoo", async function() {
     await goto(process.env.odooURL, { waitForNavigation: true, navigationTimeout: process.env.actionTimeout });
 });
+
+step("Click Quotations", async function() {
+	await click("Quotations")
+});
