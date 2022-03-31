@@ -187,3 +187,7 @@ step("Create a service if it does not exist", async function() {
 step("Manage locations", async function() {
 	await click("Manage Locations")    
 });
+
+step("Goto Today", async function() {
+	await click("Today")
+});
