@@ -1,23 +1,11 @@
 name: Bahmni e2e tests
-on:
-  push:
-    branches:
-      - main
-      - 'release/v*.**'
-  workflow_dispatch:
-    inputs:
-      target_env:
-        description: 'Envrionemtn to run e2e against (demo, dev)'
-        default: 'demo'
-        required: false
+
+on: repository_dispatch
+
 jobs:
   build-and-run:
     name: Build and Run E2E test
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        test-commands: ["npm run next", "npm run log4j"]
-      fail-fast: false
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
@@ -45,10 +33,10 @@ jobs:
       - run: npm install @getgauge/cli
       - run: npm install
       - name: Run test
-        run: xvfb-run ${{ matrix.test-commands }}
+        run: xvfb-run ${{ github.event.client_payload.testCommand }}
       - name: Upload reports
         if: always()
         uses: actions/upload-artifact@v2
         with:
-          name: bahmni-e2e-reports(${{ matrix.test-commands }})-${{ github.sha }}
+          name: bahmni-e2e-reports(${{ github.event.client_payload.testCommand }})-${{ github.sha }}
           path: ./reports
