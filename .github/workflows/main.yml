@@ -16,7 +16,11 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        test-commands: ["npm run next", "npm run log4j"]
+        include:
+          - test-command: "npm run next"
+            tag: "next"
+          - test-command: "npm run log4j"
+            tag: "log4j"
       fail-fast: false
     steps:
       - uses: actions/checkout@v2
@@ -50,5 +54,5 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v2
         with:
-          name: bahmni-e2e-reports-${{ github.sha }}
+          name: bahmni-e2e-reports-${{ github.sha }}-${{ matrix.tag }}
           path: ./reports
