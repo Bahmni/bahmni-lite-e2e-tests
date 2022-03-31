@@ -45,7 +45,7 @@ jobs:
       - run: npm install @getgauge/cli
       - run: npm install
       - name: Run test
-        run: xvfb-run ${{ matrix.include.test-commands }}
+        run: xvfb-run ${{ matrix.test-commands }}
       - name: Upload reports
         if: always()
         uses: actions/upload-artifact@v2
