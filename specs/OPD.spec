@@ -19,10 +19,6 @@ Tags: next
 * Nurse opens clinical tab
 * Enter vitals
 * Doctor advises medicines "opd/prescriptionFlow/prescriptions" and tests "opd/prescriptionFlow/labTests"
-* Login to Odoo
-* Convert Quotation to Sales
-* View Direct Sales Quotation
-* Confirm Sales
 * Goto Clinical application
 * Nurse opens clinical tab with all section
 * verify name with id

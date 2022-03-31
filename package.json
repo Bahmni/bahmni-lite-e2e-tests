@@ -8,7 +8,7 @@
     "test": "gauge run specs --env next -v -p -n=3 --tags 'next | BedManagement'"
   },
   "dependencies": {
-    "taiko": "latest",
+    "taiko": "^1.3.2",
     "axios": "latest",
     "buffer": "latest",
     "uuid": "latest"

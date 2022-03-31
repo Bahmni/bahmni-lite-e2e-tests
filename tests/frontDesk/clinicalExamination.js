@@ -55,6 +55,7 @@ step("Doctor prescribes medicines <prescriptionNames>", async function (prescrip
         try
         {
             await write(drugName,into(textBox(toRightOf("Drug Name"))));
+            await waitFor(1000)
             await dropDown(toRightOf("Units")).select(medicalPrescriptions.units);
             await dropDown(toRightOf("Frequency")).select(medicalPrescriptions.frequency)
             await click("Accept");
