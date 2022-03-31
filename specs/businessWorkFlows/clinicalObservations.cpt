@@ -11,6 +11,7 @@
 # Doctor issues an Admit disposition
 * Nurse opens clinical tab
 * Choose Disposition
+* Wait for message "The Disposition Note will also be removed" to disappear
 * Doctor advises admitting the patient
 * Save data
 
@@ -23,6 +24,7 @@
 # Doctor issues an Discharge disposition
 * Choose Disposition
 * wait for overlay to disappear
+* Wait for message "The Disposition Note will also be removed" to disappear
 * Doctor advises discharging the patient
 * Save data
 

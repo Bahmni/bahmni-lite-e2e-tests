@@ -46,3 +46,7 @@ step("wait for overlay to disappear", async function() {
 step("Log out of openmrs", async function() {
 	await click(link("Log out"))
 });
+
+step("Wait for message <message> to disappear", async function(message) {
+    await taikoHelper.repeatUntilNotFound(text(message))
+});

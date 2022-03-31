@@ -1,4 +1,4 @@
-const { goto, below, write, textBox, into, click, toLeftOf, checkBox } = require('taiko');
+const { goto, below, write, textBox, into, click, toLeftOf, checkBox, reload } = require('taiko');
 
 step("enter odoo username", async function() {
     await write(process.env.odooUsername,below("Email"));
@@ -33,6 +33,7 @@ step("Confirm sale", async function() {
 });
 
 step("Goto Odoo", async function() {
+    await reload()
     await goto(process.env.odooURL, { waitForNavigation: true, navigationTimeout: process.env.actionTimeout });
 });
 

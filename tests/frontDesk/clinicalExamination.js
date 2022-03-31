@@ -90,13 +90,11 @@ step("Choose Disposition", async function() {
 });
 
 step("Doctor advises admitting the patient", async function() {
-    await taikoHelper.repeatUntilNotFound(text("The Disposition Note will also be removed"))
     await dropDown("Disposition Type").select('Admit Patient')
     await write("Admission Notes",into(textBox(below("Disposition Notes"))))
 });
 
 step("Doctor advises discharging the patient", async function() {
-    await taikoHelper.repeatUntilNotFound(text("The Disposition Note will also be removed"))
     await dropDown("Disposition Type").select('Discharge Patient')
     await write("Discharge Notes",into(textBox(below("Disposition Notes"))))
 });
