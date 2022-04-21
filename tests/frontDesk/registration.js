@@ -134,7 +134,7 @@ step("Select the newly created patient", async function() {
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 })
 
-step("Log out if still logged in", async function () {
+step(["Log out if still logged in","Receptionist logs out"], async function () {
     try
     {
         await highlight($(".btn-user-info"))
@@ -144,9 +144,9 @@ step("Log out if still logged in", async function () {
     }catch(e){}
 })
 
-step("Login as a receptionist with admin credentials location <location>", async function (location) {
-    await write(users.getUserNameFromEncoding(process.env.receptionist), into(textBox({placeholder:"Enter your username"})));
-    await write(users.getPasswordFromEncoding(process.env.receptionist), into(textBox({placeholder:"Enter your password"})));
+step("Login as user <user> with admin credentials location <location>", async function (user, location) {
+    await write(users.getUserNameFromEncoding(process.env[user]), into(textBox({placeholder:"Enter your username"})));
+    await write(users.getPasswordFromEncoding(process.env[user]), into(textBox({placeholder:"Enter your password"})));
     await dropDown("Location").select(location);
     await click(button("Login"),{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
     await taikoHelper.repeatUntilNotFound(text("BAHMNI EMR LOGIN"))

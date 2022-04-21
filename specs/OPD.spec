@@ -2,7 +2,7 @@
 
 ## Doctor should be able to prescribe radiology tests
 Tags: smoke
-* Login to Bahmni location "General Ward" as a receptionist
+* Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Nurse opens clinical tab
 * Open "Orders" Tab
@@ -14,7 +14,7 @@ Tags: smoke
 
 ## Doctor should be able to prescribe medicines and tests and get relevant reports from LabLite
 Tags: next
-* Login to Bahmni location "General Ward" as a receptionist
+* Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Nurse opens clinical tab
 * Enter vitals
@@ -34,11 +34,11 @@ Tags: next
 
 ## Doctor should be able to prescribe medicines and tests and get relevant reports
 Tags: smoke
-* Login to Bahmni location "General Ward" as a receptionist
+* Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Nurse opens clinical tab
 * Enter vitals
-* Doctor advises medicines "opd/prescriptionFlow/lab/paracetamol" and tests "opd/prescriptionFlow/lab/Haemogram"
+* Doctor advises medicines "opd/prescriptionFlow/medication/paracetamol" and tests "opd/prescriptionFlow/lab/Haemogram"
 * Login to Open ELIS
 * Collect Sample
 * Enter blood Lab results
@@ -55,7 +55,7 @@ Tags: smoke
 * Nurse opens clinical tab with all section
 * verify name with id
 * verify OPD
-* verify prescription "opd/prescriptionFlow/lab/paracetamol"
+* verify prescription "opd/prescriptionFlow/medication/paracetamol"
 * verify vitals
 * Doctor clicks consultation
 * Doctor notes the diagnosis

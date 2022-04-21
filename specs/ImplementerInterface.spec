@@ -4,7 +4,7 @@
 
 tags: dataSetup
 
-* Login to Bahmni location "General Ward" as a receptionist
+* Login to Bahmni location "General Ward" as a "receptionist"
 * Open "Implementer interface" module
 * Open Form builder
 * put formname "Formrandom"

@@ -7,6 +7,8 @@ const {
     text,
     waitFor,
     link,
+    button,
+    toRightOf,
 } = require('taiko');
 var taikoHelper = require("util/taikoHelper");
 
@@ -49,4 +51,10 @@ step("Log out of openmrs", async function() {
 
 step("Wait for message <message> to disappear", async function(message) {
     await taikoHelper.repeatUntilNotFound(text(message))
+});
+
+step("Logout from dashboard", async function() {
+	await click(button(toRightOf("Save")))
+    await waitFor(1000)
+    await click("Logout",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
 });

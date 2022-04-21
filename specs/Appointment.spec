@@ -2,14 +2,14 @@
 
 ## Create a service if it doesn't exist
 Tags: smoke
-* Login to Bahmni location "General Ward" as a receptionist
+* Login to Bahmni location "General Ward" as a "receptionist"
 * Open "Appointment scheduling" module
 * Open admin tab of Appointments
 * Create a service if it does not exist
 
 ## Create an appointment location if it doesn't exisit
 Tags: smoke
-* Login to Bahmni location "General Ward" as a receptionist
+* Login to Bahmni location "General Ward" as a "receptionist"
 * Goto the openMRS Admin tab
 * Goto Administration
 * Manage locations
@@ -17,7 +17,7 @@ Tags: smoke
 
 ## A receptionist should be able to create a walkin appointment for a patient
 Tags: regression
-* Login to Bahmni location "General Ward" as a receptionist
+* Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210"
 * Click back button
 * Receptionist creates a walkin appointment at "10am" for service
@@ -26,7 +26,7 @@ Tags: regression
 
 ## A receptionist should be able to create and cancel recurring appointment for a patient
 Tags: smoke
-* Login to Bahmni location "General Ward" as a receptionist
+* Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210"
 * Click back button
 * Receptionist creates a recurring appointment for days "2" at time "12pm"
@@ -35,7 +35,7 @@ Tags: smoke
 
 ## A receptionist should be able to create and cancel teleconsultation appointment for a patient
 Tags: regression
-* Login to Bahmni location "General Ward" as a receptionist
+* Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210"
 * Click back button
 * Receptionist creates a teleconsultation appointment "11am"

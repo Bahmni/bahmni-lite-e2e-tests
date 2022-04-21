@@ -1,9 +1,9 @@
-# Login to Bahmni location <location> as a receptionist
+# Login to Bahmni location <location> as a <user>
 * Goto Clinical application
 * Check if "Clinical Service" app is opened
 * wait for overlay to disappear
 * Log out if still logged in
-* Login as a receptionist with admin credentials location <location>
+* Login as user <user> with admin credentials location <location>
 
 # Create a new patient with gender <gender> with random name, aged <age> with mobile number <mobileNumber>
 * Click create new patient

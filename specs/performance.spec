@@ -2,7 +2,7 @@
 
 ## Doctor should be able to prescribe medicines and tests and get relevant reports from LabLite
 Tags: next
-* Login to Bahmni location "General Ward" as a receptionist
+* Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Nurse opens clinical tab
 * Enter vitals
