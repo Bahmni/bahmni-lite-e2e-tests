@@ -48,7 +48,7 @@ Tags:openMRS
 * Goto Clinical application
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Nurse opens clinical tab
-* Doctor prescribes medications "opd/prescriptionFlow/prescriptions"
+* Doctor prescribes medications "opd/prescriptionFlow/medication/paracetamol"
 * Goto Bahmni main home
 * Login to Odoo
 * Convert Quotation to Sales

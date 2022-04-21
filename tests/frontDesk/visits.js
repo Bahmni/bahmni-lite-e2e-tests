@@ -49,7 +49,7 @@ step("verify OPD", async function() {
 //    await highlight("23 Feb 22",toLeftOf("OPD"));
 });
 
-step("verify prescription", async function () {
+step("verify prescription <prescription>", async function (arg0) {
     await taikoHelper.repeatUntilNotFound($(".dashboard-section-loader"))
     var prescriptionFile = gauge.dataStore.scenarioStore.get("prescriptions")
     var medicalPrescriptions = JSON.parse(fileExtension.parseContent(prescriptionFile))

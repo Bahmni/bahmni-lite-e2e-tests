@@ -233,7 +233,7 @@ step("Open newly created patient details by search", async function () {
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 
     try{
-        await click(link(patientIdentifierValue))        
+        await click(link(patientIdentifierValue),{waitForNavigation:true,navigationTimeout:process.env.actionTimeout})
     }catch(e){}
 });
 

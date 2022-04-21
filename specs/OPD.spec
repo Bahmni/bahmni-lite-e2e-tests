@@ -18,12 +18,12 @@ Tags: next
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Nurse opens clinical tab
 * Enter vitals
-* Doctor advises medicines "opd/prescriptionFlow/prescriptions" and tests "opd/prescriptionFlow/labTests"
+* Doctor advises medicines "opd/prescriptionFlow/medication/paracetamol" and tests "opd/prescriptionFlow/lab/Haemogram"
 * Goto Clinical application
 * Nurse opens clinical tab with all section
 * verify name with id
 * verify OPD
-* verify prescription
+* verify prescription "opd/prescriptionFlow/medication/paracetamol"
 * verify vitals
 * Doctor clicks consultation
 * Doctor notes the diagnosis
@@ -38,7 +38,7 @@ Tags: smoke
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Nurse opens clinical tab
 * Enter vitals
-* Doctor advises medicines "opd/prescriptionFlow/prescriptions" and tests "opd/prescriptionFlow/labTests"
+* Doctor advises medicines "opd/prescriptionFlow/lab/paracetamol" and tests "opd/prescriptionFlow/lab/Haemogram"
 * Login to Open ELIS
 * Collect Sample
 * Enter blood Lab results
@@ -55,7 +55,7 @@ Tags: smoke
 * Nurse opens clinical tab with all section
 * verify name with id
 * verify OPD
-* verify prescription
+* verify prescription "opd/prescriptionFlow/lab/paracetamol"
 * verify vitals
 * Doctor clicks consultation
 * Doctor notes the diagnosis

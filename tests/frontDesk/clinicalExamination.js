@@ -24,14 +24,12 @@ var date=require("../util/date")
 
 step("Doctor prescribe tests <prescriptions>", async function (prescriptionFile) {
     var prescriptionFile = `./data/${prescriptionFile}.json`;
-    var testPrescriptions = JSON.parse(fileExtension.parseContent(prescriptionFile))
-    gauge.message(testPrescriptions)
+    var testPrescription = JSON.parse(fileExtension.parseContent(prescriptionFile))
+    gauge.message(testPrescription)
 
-    for (var test of testPrescriptions.tests) {
-        await taikoHelper.repeatUntilFound(text(test.test))
-        await click(test.test,{force: true})
-        await waitFor(100)
-    }     
+    await taikoHelper.repeatUntilFound(text(testPrescription.test))
+    await click(testPrescription.test,{force: true})
+    await waitFor(100)
 });
 
 

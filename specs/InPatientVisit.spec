@@ -10,8 +10,8 @@ Tags: IPModule
 * Click back button
 * Nurse opens clinical tab
 * Enter vitals
-* Doctor prescribes tests "opd/prescriptionFlow/labTests"
-* Doctor prescribes medications "opd/prescriptionFlow/prescriptions"
+* Doctor prescribes tests "opd/prescriptionFlow/lab/Haemogram"
+* Doctor prescribes medications "opd/prescriptionFlow/medication/paracetamol"
 * Doctor issues an Discharge disposition
 * Click back button
 * Click back button
@@ -33,8 +33,8 @@ Tags: BedManagement
 * Click back button
 * Nurse opens clinical tab
 * Enter vitals
-* Doctor prescribes tests "opd/prescriptionFlow/labTests"
-* Doctor prescribes medications "opd/prescriptionFlow/prescriptions"
+* Doctor prescribes tests "opd/prescriptionFlow/lab/Haemogram"
+* Doctor prescribes medications "opd/prescriptionFlow/medication/paracetamol"
 * Doctor issues an Discharge disposition
 * Click back button
 * Click back button

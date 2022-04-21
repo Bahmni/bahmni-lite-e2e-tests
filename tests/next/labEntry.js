@@ -14,9 +14,7 @@ step("Select the patient on patient serach screen", async function () {
 
 step("Validate the lab tests <labTests> are available", async function (labTests) {
 	var prescriptionFile = `./data/${labTests}.json`;
-    var testPrescriptions = JSON.parse(fileExtension.parseContent(prescriptionFile))
+    var testDetail = JSON.parse(fileExtension.parseContent(prescriptionFile))
 
-    for (var testDetail of testPrescriptions.tests) {
-		assert.ok(await text(testDetail.test).exists())
-    }     
+	assert.ok(await text(testDetail.test).exists())
 });
