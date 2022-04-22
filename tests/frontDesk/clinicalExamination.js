@@ -106,8 +106,6 @@ step("Open <tabName> Tab", async function(tabName) {
 
 step("Save visit data", async function () {
 	await click("Save",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
-	await taikoHelper.repeatUntilNotFound($("#overlay"))
-    await waitFor(async () => !(await text("Saved",within('.message-text')).exists()));
 });
 
 step("Join teleconsultation", async function() {

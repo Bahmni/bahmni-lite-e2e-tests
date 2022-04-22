@@ -9,6 +9,7 @@ const {
     link,
     button,
     toRightOf,
+    within,
 } = require('taiko');
 var taikoHelper = require("util/taikoHelper");
 
@@ -43,6 +44,11 @@ step("Check if <appName> app is opened", async function (appName) {
 step("wait for overlay to disappear", async function() {
     await taikoHelper.repeatUntilNotFound($("#overlay"))
     //await waitFor(async () => !(await $("#overlay").exists()))
+});
+
+step("wait for overlay and Saved to disappear", async function() {
+	await taikoHelper.repeatUntilNotFound($("#overlay"))
+    await waitFor(async () => !(await text("Saved",within('.message-text')).exists()));
 });
 
 step("Log out of openmrs", async function() {

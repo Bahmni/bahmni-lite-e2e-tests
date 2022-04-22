@@ -1,6 +1,6 @@
 # Nurse at ADT is able to view bed availability and assign beds to bed <bed>
 * Nurse opens admission tab
-* Select the newly created patient
+* Select the newly created patient with network idle
 * wait for overlay to disappear
 * Select Patient Movement "Admit Patient"
 * Enter adt notes "Admission notes"
@@ -11,7 +11,7 @@
 
 # Nurse at ADT gives discharge disposition
 * Goto All section
-* Search the newly created patient
+* Select the newly created patient with network idle
 * wait for overlay to disappear
 * Select Patient Movement "Discharge Patient"
 * Enter adt notes "Discharge notes"

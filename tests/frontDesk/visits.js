@@ -29,6 +29,14 @@ step("Click Start OPD Visit", async function () {
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
 
+step("Select the newly created patient with network idle", async function () {
+    var patientIdentifierValue = gauge.dataStore.scenarioStore.get("patientIdentifier");
+    await write(patientIdentifierValue, into(textBox({ "placeholder": "Search Name/Patient Identifier  ..." })))
+    await click('Search',{waitForNavigation:true,waitForEvents:['networkIdle'],navigationTimeout:process.env.mergeTimeout});
+});
+
+
+
 step("Search the newly created patient", async function () {
     var patientIdentifierValue = gauge.dataStore.scenarioStore.get("patientIdentifier");
     await write(patientIdentifierValue, into(textBox({ "placeholder": "Search Name/Patient Identifier  ..." })))
