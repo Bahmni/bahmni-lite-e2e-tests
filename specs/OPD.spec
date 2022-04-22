@@ -4,11 +4,13 @@
 Tags: smoke
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
-* Nurse opens clinical tab
+* Logout and Login to Bahmni location "General Ward" as a "doctor"
+* Open clinical tab
 * Open "Orders" Tab
 * Place a radiology order for test "chest, 1 view (x-ray)"
 * Click back button
 * Click back button
+* Logout and Login to Bahmni location "General Ward" as a "receptionist"
 * visit is closed at the front desk
 * verify patient details on DCM4chee
 
@@ -16,11 +18,12 @@ Tags: smoke
 Tags: next
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
-* Nurse opens clinical tab
+* Logout and Login to Bahmni location "General Ward" as a "doctor"
+* Open clinical tab
 * Enter vitals
 * Doctor advises medicines "opd/prescriptionFlow/medication/paracetamol" and tests "opd/prescriptionFlow/lab/Haemogram"
 * Goto Clinical application
-* Nurse opens clinical tab with all section
+* Open clinical tab with all section
 * verify name with id
 * verify OPD
 * verify prescription "opd/prescriptionFlow/medication/paracetamol"
@@ -30,13 +33,15 @@ Tags: next
 * Save data
 * Click back button
 * Click back button
+* Logout and Login to Bahmni location "General Ward" as a "receptionist"
 * visit is closed at the front desk
 
 ## Doctor should be able to prescribe medicines and tests and get relevant reports
 Tags: smoke
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
-* Nurse opens clinical tab
+* Logout and Login to Bahmni location "General Ward" as a "doctor"
+* Open clinical tab
 * Enter vitals
 * Doctor advises medicines "opd/prescriptionFlow/medication/paracetamol" and tests "opd/prescriptionFlow/lab/Haemogram"
 * Login to Open ELIS
@@ -52,7 +57,7 @@ Tags: smoke
 * View Direct Sales Quotation
 * Confirm Sales
 * Goto Clinical application
-* Nurse opens clinical tab with all section
+* Open clinical tab with all section
 * verify name with id
 * verify OPD
 * verify prescription "opd/prescriptionFlow/medication/paracetamol"
@@ -62,4 +67,5 @@ Tags: smoke
 * Save data
 * Click back button
 * Click back button
+* Logout and Login to Bahmni location "General Ward" as a "receptionist"
 * visit is closed at the front desk

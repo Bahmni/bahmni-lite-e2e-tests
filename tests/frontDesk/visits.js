@@ -19,21 +19,20 @@ var assert = require('assert')
 step("Click Start IPD Visit", async function() {
     await scrollTo("Start OPD Visit")
     await click(button(toRightOf('Start OPD Visit'), within($(".submit-btn-container"))));
-    await click('Start IPD visit',{waitForNavigation:true})
+    await click('Start IPD visit',{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
 
 step("Click Start OPD Visit", async function () {
     await scrollTo("Start OPD Visit")
-    await click("Start OPD Visit",{waitForNavigation:true});
+    await click("Start OPD Visit",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
 
 step("Search the newly created patient", async function () {
     var patientIdentifierValue = gauge.dataStore.scenarioStore.get("patientIdentifier");
     await write(patientIdentifierValue, into(textBox({ "placeholder": "Search Name/Patient Identifier  ..." })))
-    await click('Search',{waitForNavigation:true})
-    await taikoHelper.repeatUntilNotFound($("#overlay"))
+    await click('Search',{waitForNavigation:true,navigationTimeout:process.env.mergeTimeout});
 });
 
 step("verify name with id", async function() {

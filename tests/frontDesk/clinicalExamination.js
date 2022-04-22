@@ -89,6 +89,7 @@ step("Choose Disposition", async function() {
 });
 
 step("Doctor advises admitting the patient", async function() {
+    await waitFor(1000)
     await dropDown("Disposition Type").select('Admit Patient')
     await write("Admission Notes",into(textBox(below("Disposition Notes"))))
 });
@@ -101,13 +102,6 @@ step("Doctor advises discharging the patient", async function() {
 step("Open <tabName> Tab", async function(tabName) {
     await click(tabName,{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
     await taikoHelper.repeatUntilNotFound($("#overlay"))
-});
-
-step("Save data", async function () {
-	await taikoHelper.repeatUntilNotFound($("#overlay"))
-	await click("Save",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
-	await taikoHelper.repeatUntilNotFound($("#overlay"))
-    await waitFor(async () => !(await text("Saved",within('.message-text')).exists()));
 });
 
 step("Save visit data", async function () {

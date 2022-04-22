@@ -59,6 +59,6 @@ step("click on the patient details", async function() {
 });
 
 step("Click Modality Worklist", async function() {
-	await click("Modality Worklist",{waitForNavigation:true})
+	await click("Modality Worklist",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
     await waitFor(1000)
 });

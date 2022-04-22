@@ -52,7 +52,7 @@ step("Click Assign", async function() {
 });
 
 step("Admit the patient", async function() {
-	await click("Admit",{waitForNavigation:true})
+	await click("Admit",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
 	await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
 
@@ -87,7 +87,7 @@ step("View Admitted patients", async function() {
 step("Enter admitted patient details", async function() {
 	var patientIdentifierValue= gauge.dataStore.scenarioStore.get("patientIdentifier");
 	await write(patientIdentifierValue, into(textBox(below("Admitted"))))
-	await press("Enter",{waitForNavigation:true})
+	await press("Enter",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
 
@@ -116,7 +116,7 @@ step("Click Admit on popup", async function() {
 
 step("Select Second Vitals", async function () {
 	await waitFor('Second Vitals')
-	await click("Second Vitals",{waitForNavigation:true})
+	await click("Second Vitals",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
 });
 
 step("Add new observation form", async function() {

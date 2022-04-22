@@ -49,10 +49,10 @@ step("Enter posture", async function () {
 step("Click Vitals", async function() {
 	await waitFor('Vitals')
     try{
-        await reload({waitForNavigation:true})
+        await reload({waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
         await click("Vitals",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout})
     }catch(e){
-        await reload({waitForNavigation:true})
+        await reload({waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
         await highlight("Vitals")
         await click("Vitals",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout})    
     }

@@ -79,7 +79,7 @@ step("Open patient2 details by search", async function () {
 	var patientIdentifierValue = gauge.dataStore.scenarioStore.get("merge_patientIdentifier2");
 	gauge.message(patientIdentifierValue)
 	await write(patientIdentifierValue)
-    await press('Enter', {waitForNavigation:true});
+    await press('Enter', {waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
     await taikoHelper.repeatUntilNotFound($("#overlay"))
     try{
         await click(link(patientIdentifierValue))        
@@ -150,7 +150,7 @@ step("Create an appointment location if it doesn't exist", async function() {
 });
 
 step("Add a new concept", async function() {
-	await click("Add new concept",{waitForNavigation:true})
+	await click("Add new concept",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
 });
 
 step("enter a concept name", async function () {
@@ -193,7 +193,7 @@ step("Create a drug with more details", async function() {
 });
 
 step("Goto Manage Address Hierarchy", async function() {
-	await click("Manage Address Hierarchy",{waitForNavigation:true})
+	await click("Manage Address Hierarchy",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
 });
 
 step("Goto reporting", async function() {

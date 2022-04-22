@@ -130,7 +130,7 @@ step("Select Mobile OTP", async function () {
 step("Select the newly created patient", async function() {
     var patientIdentifierValue = gauge.dataStore.scenarioStore.get("patientIdentifier");
     await write(patientIdentifierValue)
-    await press('Enter', {waitForNavigation:true});
+    await press('Enter', {waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 })
 
@@ -179,7 +179,7 @@ step("Enter registration fees <arg0>", async function (arg0) {
 
 step("Click back button", async function () {
     await taikoHelper.repeatUntilNotFound($("#overlay"))
-    await click($('.back-btn'),{waitForNavigation:true});
+    await click($('.back-btn'),{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 }); 
 
@@ -229,7 +229,7 @@ step("Open newly created patient details by search", async function () {
     gauge.message(`patient Identifier ${patientIdentifierValue}`)
 
     await write(patientIdentifierValue, into(textBox({ "placeholder": "Enter ID" })))
-    await press('Enter', {waitForNavigation:true});
+    await press('Enter', {waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 
     try{

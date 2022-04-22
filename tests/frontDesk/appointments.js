@@ -121,8 +121,8 @@ step("Goto day view of the calendar", async function() {
 
 
 step("Click Close", async function() {
-//    await click(button({"data-testid":"save-close-button"}),{waitForNavigation:true})
-	await click(button("Close",{waitForNavigation:true}))
+//    await click(button({"data-testid":"save-close-button"}),{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
+	await click(button("Close",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout}))
 });
 
 step("Goto List view", async function() {

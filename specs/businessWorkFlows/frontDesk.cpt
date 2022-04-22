@@ -5,6 +5,9 @@
 * Log out if still logged in
 * Login as user <user> with admin credentials location <location>
 
+# Logout and Login to Bahmni location <location> as a <user>
+* Log out if still logged in
+* Login as user <user> with admin credentials location <location>
 # Create a new patient with gender <gender> with random name, aged <age> with mobile number <mobileNumber>
 * Click create new patient
 * Enter patient random first name
@@ -15,13 +18,13 @@
 * Enter village "Village"
 * Save the patient data
 
-# Nurse opens clinical tab
+# Open clinical tab
 * Open "Clinical" module
 * Select the newly created patient
 * Doctor clicks consultation
 * wait for overlay to disappear
 
-# Nurse opens clinical tab with all section
+# Open clinical tab with all section
 * Open "Clinical" module
 * Goto All section
 * Select the newly created patient
@@ -83,3 +86,7 @@
 * Open registration module
 * Create a new patient with gender "Female" with random name, aged "29" with mobile number <mobileNumber>
 * Start an IPD Visit
+
+# Save data
+* wait for overlay to disappear
+* Save visit data

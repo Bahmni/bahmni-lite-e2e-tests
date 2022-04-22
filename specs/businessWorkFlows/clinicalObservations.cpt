@@ -9,7 +9,7 @@
 * Save data
 
 # Doctor issues an Admit disposition
-* Nurse opens clinical tab
+* Open clinical tab
 * Choose Disposition
 * Wait for message "The Disposition Note will also be removed" to disappear
 * Doctor advises admitting the patient
@@ -51,6 +51,7 @@
 # Goto All sections and search the newly created patient
 * Goto All sections
 * Search the newly created patient
+* wait for overlay to disappear
 
 # Doctor prescribes medications <medication>
 * Open "Medications" Tab

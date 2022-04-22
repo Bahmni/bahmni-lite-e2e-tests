@@ -5,7 +5,7 @@ Tags: smoke,next
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Add this newly created patient as merge patient1
-* Nurse opens clinical tab
+* Open clinical tab
 * Enter vitals
 * Click back button
 * Click back button
@@ -13,7 +13,7 @@ Tags: smoke,next
 * Goto Clinical application
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Add this newly created patient as merge patient2
-* Nurse opens clinical tab
+* Open clinical tab
 * Enter vitals
 * Click back button
 * Click back button
@@ -47,7 +47,7 @@ Tags:openMRS
 * Admin adds a new drug concept
 * Goto Clinical application
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
-* Nurse opens clinical tab
+* Open clinical tab
 * Doctor prescribes medications "opd/prescriptionFlow/medication/paracetamol"
 * Goto Bahmni main home
 * Login to Odoo

@@ -4,7 +4,7 @@
 Tags: next
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
-* Nurse opens clinical tab
+* Open clinical tab
 * Enter vitals
 * Open "Orders" Tab
 * Doctor prescribe tests "opd/prescriptionFlow/lab/Haemogram"
@@ -19,7 +19,7 @@ Tags: next
 * Doctor prescribes medicines "opd/prescriptionFlow/medication/paracetamol"
 * Save data
 * Goto Clinical application
-* Nurse opens clinical tab with all section
+* Open clinical tab with all section
 * verify name with id
 * verify OPD
 * verify prescription "opd/prescriptionFlow/medication/Alprazolam"
