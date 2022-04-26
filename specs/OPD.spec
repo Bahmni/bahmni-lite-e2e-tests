@@ -15,7 +15,7 @@ Tags: hospital
 * verify patient details on DCM4chee
 
 ## Doctor should be able to prescribe medicines and tests and get relevant reports from LabLite
-Tags: lab
+Tags: lablite
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
@@ -40,7 +40,7 @@ Tags: lab
 * visit is closed at the front desk
 
 ## Doctor should be able to prescribe medicines and tests and get relevant reports
-Tags: lab
+Tags: hospital
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Logout and Login to Bahmni location "General Ward" as a "doctor"

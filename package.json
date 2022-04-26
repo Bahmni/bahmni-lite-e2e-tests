@@ -2,10 +2,10 @@
   "name": "gauge-taiko-template",
   "description": "Starter template for writing JavaScript tests for Gauge",
   "scripts": {
-    "local": "gauge run specs --env local -v -p --tags 'lab | BedManagement'",
-    "lab": "gauge run specs --env lab -v -p -n=3 --tags 'lab | BedManagement'",
+    "local": "gauge run specs --env local -v -p --tags 'lablite | BedManagement'",
+    "lablite": "gauge run specs --env lablite -v -p -n=3 --tags 'lablite | BedManagement'",
     "hospital": "gauge run specs --env demo0.9.3 -v -p -n=3 --tags 'hospital | BedManagement | IPModule'",
-    "test": "gauge run specs --env lab -v -p -n=3 --tags 'lab | BedManagement'"
+    "test": "gauge run specs --env lablite -v -p -n=3 --tags 'lablite | BedManagement'"
   },
   "dependencies": {
     "taiko": "^1.3.2",
