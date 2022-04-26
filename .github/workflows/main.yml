@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        test-commands: ["npm run lab", "npm run hospital"]
+        test-commands: ["npm run lablite", "npm run hospital"]
       fail-fast: false
     steps:
       - uses: actions/checkout@v2
