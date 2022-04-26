@@ -1,6 +1,6 @@
 # Program Based Visits
 ## Enrol a patient under a program and proceed with consultation
-Tags: smoke,next
+Tags: hospital,lab
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an Special OPD
 * Logout and Login to Bahmni location "General Ward" as a "doctor"

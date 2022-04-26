@@ -14,19 +14,19 @@ This repo is for End to End tests for Bahmni.
 
 # Execution
 * npm install
-* `gauge run specs --env qa08 -v -p --tags 'smoke | IPModule'`
+* `gauge run specs --env qa08 -v -p --tags 'hospital | IPModule'`
 > `--env` allows us to choose the environment on which the tests can run. These are the subfolders of the env folder with relevant property files.
 
 > `-v` runs the tests in the verbose mode
 
 > `--tags` allows us to choose the tests to run from the test suite. 
-    In this command we are running the `smoke` tests and the tests for the `IPModule` from the test suite. 
+    In this command we are running the `hospital` tests and the tests for the `IPModule` from the test suite. 
     If we want to run the bed management module tests instead of IPModule, we can use the following command
-    `gauge run specs --env qa08 -v -p --tags 'smoke | BedManagement'`
+    `gauge run specs --env qa08 -v -p --tags 'hospital | BedManagement'`
     
 > The HTML reports can be found in `./reports/html-report` after the run.
 
 ## To run on local
-* `gauge run specs --env local -v -p --tags 'smoke | IPModule'`
+* `gauge run specs --env local -v -p --tags 'hospital | IPModule'`
 > This will run the test on the URL of the vagrant setup `https://192.168.33.10/`. 
 If you want to change this you can edit the URLs in `bahmni.properties` in the `<test checkout Folder>/env/local` folder.

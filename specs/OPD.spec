@@ -1,7 +1,7 @@
 # OPD Visits
 
 ## Doctor should be able to prescribe radiology tests
-Tags: smoke
+Tags: hospital
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
@@ -15,13 +15,16 @@ Tags: smoke
 * verify patient details on DCM4chee
 
 ## Doctor should be able to prescribe medicines and tests and get relevant reports from LabLite
-Tags: next
+Tags: lab
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
 * Open clinical tab
 * Enter vitals
 * Doctor advises medicines "opd/prescriptionFlow/medication/paracetamol" and tests "opd/prescriptionFlow/lab/Haemogram"
+* Goto Clinical application
+* Open "Lab entry" module
+* Open a patient in lablite
 * Goto Clinical application
 * Open clinical tab with all section
 * verify name with id
@@ -37,7 +40,7 @@ Tags: next
 * visit is closed at the front desk
 
 ## Doctor should be able to prescribe medicines and tests and get relevant reports
-Tags: smoke
+Tags: lab
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Logout and Login to Bahmni location "General Ward" as a "doctor"

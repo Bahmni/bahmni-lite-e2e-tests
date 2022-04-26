@@ -35,6 +35,11 @@ step("Select the newly created patient with network idle", async function () {
     await click('Search',{waitForNavigation:true,waitForEvents:['networkIdle'],navigationTimeout:process.env.mergeTimeout});
 });
 
+step("Select the newly created patient with network idle for IP", async function () {
+    var patientIdentifierValue = gauge.dataStore.scenarioStore.get("patientIdentifier");
+    await write(patientIdentifierValue)
+    await press("Enter",{waitForNavigation:true,waitForEvents:['networkIdle'],navigationTimeout:process.env.mergeTimeout});
+});
 
 
 step("Search the newly created patient", async function () {

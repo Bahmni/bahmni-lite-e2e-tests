@@ -31,6 +31,7 @@ var assert = require("assert");
 
 step("Open <moduleName> module", async function (moduleName) {
     await waitFor(async () => (await link("Programs").exists()))
+    await scrollTo(moduleName)
     await click(moduleName,{waitForNavigation:true,waitForEvents:['networkIdle','DOMContentLoaded'],navigationTimeout:process.env.actionTimeout});
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 });

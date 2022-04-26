@@ -1,14 +1,14 @@
 # Appointments
 
 ## Create a service if it doesn't exist
-Tags: smoke
+Tags: hospital
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Open "Appointment scheduling" module
 * Open admin tab of Appointments
 * Create a service if it does not exist
 
 ## Create an appointment location if it doesn't exisit
-Tags: smoke
+Tags: hospital
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Goto the openMRS Admin tab
 * Goto Administration
@@ -25,7 +25,7 @@ Tags: regression
 * The patient's appointment should not be found
 
 ## A receptionist should be able to create and cancel recurring appointment for a patient
-Tags: smoke
+Tags: hospital
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210"
 * Click back button
