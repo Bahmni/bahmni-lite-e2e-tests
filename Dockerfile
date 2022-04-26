@@ -50,5 +50,5 @@ RUN npm install -g @getgauge/cli \
     && gauge install screenshot \
     && gauge config check_updates false
 
-# Default command on running the image
+# Default command on running the image____________
 ENTRYPOINT ["npm", "test"]
