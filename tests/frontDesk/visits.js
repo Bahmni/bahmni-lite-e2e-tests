@@ -11,6 +11,7 @@ const {
     write,
     into,
     textBox,
+    press,
     scrollTo
 } = require('taiko');
 var taikoHelper = require("../util/taikoHelper");
