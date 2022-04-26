@@ -1,4 +1,4 @@
-# Lab Entry
+# Lab Lite
 
 ## Clinic staff should be able to upload a lab report
 
@@ -8,7 +8,7 @@ tags: workInProgress
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Open clinical tab
 * Doctor prescribes tests "opd/prescriptionFlow/lab/Haemogram"
+* Goto Clinical application
 * Open "Lab entry" module
-* Enter patient name in patient search screen
-* Select the patient on patient serach screen
+* Open a patient in lablite
 * Validate the lab tests "opd/prescriptionFlow/lab/Haemogram" are available
