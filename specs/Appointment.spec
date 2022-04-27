@@ -1,14 +1,14 @@
 # Appointments
 
 ## Create a service if it doesn't exist
-Tags: hospital
+Tags: hospital,dataSetup
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Open "Appointment scheduling" module
 * Open admin tab of Appointments
 * Create a service if it does not exist
 
 ## Create an appointment location if it doesn't exisit
-Tags: hospital
+Tags: hospital,dataSetup
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Goto the openMRS Admin tab
 * Goto Administration

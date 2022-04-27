@@ -14,7 +14,6 @@ Tags: IPModule
 * Open clinical tab
 * Enter vitals
 * Doctor prescribes tests "opd/prescriptionFlow/lab/Haemogram"
-* Doctor prescribes medications "opd/prescriptionFlow/medication/paracetamol"
 * Doctor issues an Discharge disposition
 * Click back button
 * Click back button
@@ -26,6 +25,7 @@ Tags: IPModule
 * Click back button
 * Logout and Login to Bahmni location "General Ward" as a "nurse"
 * Nurse discharges the patient
+* Click back button
 
 ## Nurse uses Bed management to admit and discharge a patient based on doctor's disposition
 Tags: BedManagement
