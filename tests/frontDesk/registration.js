@@ -21,7 +21,8 @@ const {
     link,
     below,
     press,
-    scrollTo
+    scrollTo,
+    reload
 } = require('taiko');
 var users = require("../util/users");
 var date = require("../util/date");
@@ -146,6 +147,10 @@ step(["Log out if still logged in","Receptionist logs out"], async function () {
 })
 
 step("Login as user <user> with admin credentials location <location>", async function (user, location) {
+    if(!textBox(toRightOf("Username")).exists())
+    {
+        await reload()
+    }
     await write(users.getUserNameFromEncoding(process.env[user]), into(textBox(toRightOf("Username"))));
     await write(users.getPasswordFromEncoding(process.env[user]), into(textBox(toRightOf("Password"))));
     await dropDown("Location").select(location);
