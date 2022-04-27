@@ -95,6 +95,7 @@ step("Doctor advises admitting the patient", async function() {
 });
 
 step("Doctor advises discharging the patient", async function() {
+    await waitFor(async () => (await dropDown("Disposition Type").exists()))
     await dropDown("Disposition Type").select('Discharge Patient')
     await write("Discharge Notes",into(textBox(below("Disposition Notes"))))
 });

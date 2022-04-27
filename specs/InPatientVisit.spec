@@ -56,5 +56,5 @@ Tags: BedManagement
 * Discharge the patient from allocated bed
 * Click back button
 ___
-* Logout and Login to Bahmni location "General Ward" as a "receptionist"
+* Login to Bahmni location "General Ward" as a "receptionist"
 * visit is closed at the front desk
