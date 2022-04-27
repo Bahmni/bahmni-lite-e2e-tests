@@ -42,6 +42,17 @@ step("Select the newly created patient for IP", async function () {
     await press("Enter",{waitForNavigation:true,navigationTimeout:process.env.mergeTimeout});
 });
 
+step("Select the newly created patient for IP Admission", async function () {
+    var patientIdentifierValue = gauge.dataStore.scenarioStore.get("patientIdentifier");
+    await write(patientIdentifierValue)
+    await press("Enter",{waitForNavigation:true,navigationTimeout:process.env.mergeTimeout});
+});
+
+step("Select the newly created patient for IP Discharge", async function () {
+    var patientIdentifierValue = gauge.dataStore.scenarioStore.get("patientIdentifier");
+    await write(patientIdentifierValue)
+    await click("Search",{waitForNavigation:true,navigationTimeout:process.env.mergeTimeout});
+});
 
 step("Search the newly created patient", async function () {
     var patientIdentifierValue = gauge.dataStore.scenarioStore.get("patientIdentifier");

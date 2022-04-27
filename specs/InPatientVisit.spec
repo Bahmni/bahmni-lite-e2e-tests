@@ -8,7 +8,7 @@ Tags: IPModule
 * Click back button
 * Click back button
 * Logout and Login to Bahmni location "General Ward" as a "nurse"
-* Nurse admits the patient to bed "314-d"
+* Nurse admits the patient to bed "314-a"
 * Click back button
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
 * Open clinical tab
@@ -26,6 +26,8 @@ Tags: IPModule
 * Logout and Login to Bahmni location "General Ward" as a "nurse"
 * Nurse discharges the patient
 * Click back button
+* Login to Bahmni location "General Ward" as a "receptionist"
+* visit is closed at the front desk
 
 ## Nurse uses Bed management to admit and discharge a patient based on doctor's disposition
 Tags: BedManagement
@@ -55,6 +57,5 @@ Tags: BedManagement
 * Logout and Login to Bahmni location "General Ward" as a "nurse"
 * Discharge the patient from allocated bed
 * Click back button
-___
-* Login to Bahmni location "General Ward" as a "receptionist"
+* Logout and Login to Bahmni location "General Ward" as a "receptionist"
 * visit is closed at the front desk
