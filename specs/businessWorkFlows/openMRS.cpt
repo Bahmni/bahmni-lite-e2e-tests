@@ -1,0 +1,9 @@
+# Login to openMRS as user <arg0>
+* Goto openMRS
+* Login as "admin"
+
+# Create a hospital user
+* Add hospital user <file:data/hospitalUser/doctor.json>
+* Enter hospital user's personal details
+* Enter hospital user's details
+* Save hospital user

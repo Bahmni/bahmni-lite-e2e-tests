@@ -2,7 +2,7 @@
 
 ## Admin should be able to create a form
 
-tags: dataSetup
+tags: master-data-management
 
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Open "Implementer interface" module
