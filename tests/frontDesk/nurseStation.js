@@ -57,12 +57,15 @@ step("Admit the patient", async function() {
 });
 
 step("Discharge the patient", async function() {
+    await waitFor(async () => (await dropDown('Patient Movement').exists()))
+	await click(dropDown('Patient Movement'))
 	await dropDown('Patient Movement').select('Discharge Patient')
 	await click("Discharge",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout})
 });
 
 step("Select Patient Movement <movement>", async function(movement) {
-	await waitFor(2000)
+	await waitFor(dropDown('Patient Movement'.exists()))
+	await click(dropDown("Patient Movement"))
 	await dropDown('Patient Movement').select(movement)
 });
 
