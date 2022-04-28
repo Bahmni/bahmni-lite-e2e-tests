@@ -89,7 +89,7 @@ step("Choose Disposition", async function() {
 });
 
 step("Doctor advises admitting the patient", async function() {
-    await waitFor(dropDown("Disposition Type").exists())
+    await waitFor(async () => (await dropDown("Disposition Type").exists()))
     await dropDown("Disposition Type").select('Admit Patient')
     await write("Admission Notes",into(textBox(below("Disposition Notes"))))
 });
