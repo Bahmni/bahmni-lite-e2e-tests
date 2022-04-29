@@ -45,7 +45,7 @@ function getDateYearsAgo(numberOfYearsAgo){
     dateYearsAgo.setFullYear(dateYearsAgo.getFullYear() - numberOfYearsAgo)
     return dateYearsAgo;
 }
-function date() {
+function today() {
     const today = new Date()
     return today
 }
@@ -112,7 +112,7 @@ function addMinutes(date, minutes) {
 }
 
 module.exports={
-    today:date,
+    today:today,
     yesterday:yesterday,
     ddmmyyyy:ddmmyyyy,
     tomorrow:tomorrow,

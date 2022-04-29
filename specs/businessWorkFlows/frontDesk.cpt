@@ -93,3 +93,5 @@
 # Save data
 * wait for overlay to disappear
 * Save visit data
+* wait for overlay to disappear
+

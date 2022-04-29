@@ -1,6 +1,6 @@
 const { button, toRightOf, textBox, into, write, click, timeField,below,scrollTo,text,evaluate,$, checkBox,waitFor,image,within } = require('taiko');
 var date = require("./date");
-
+var assert = require("assert")
 
 async function repeatUntilEnabled(element){
     var isDisabled = true;
@@ -30,11 +30,39 @@ async function repeatUntilNotVisible(element){
     }while (isFound) 
 }
 
-async function executeConfigurations(configurations,observationFormName){
+async function verifyConfigurations(configurations,observationFormName){
     for(var configuration of configurations){
         switch(configuration.type) {
             case 'Group':
-                await executeConfigurations(configuration.value,observationFormName)
+                await verifyConfigurations(configuration.value,observationFormName)
+              break;
+            default:
+                if(configuration.label!="Date of Sample Collection")
+                    assert.ok(await text(configuration.value,toRightOf(configuration.label)).exists())
+                break;
+          }            
+    }
+}
+
+function getDate(dateValue){
+    if(dateValue=='Today')
+        return date.today();
+    else
+    {
+        dateLessThan = dateValue.split("-");
+        if(dateLessThan.length>1)
+        {
+            return date.getDateAgo(dateLessThan[1]);
+        }
+    }
+    throw "Unexpected date"
+}
+
+async function executeConfigurations(configurations,observationFormName,isNotObsForm){
+    for(var configuration of configurations){
+        switch(configuration.type) {
+            case 'Group':
+                await executeConfigurations(configuration.value,observationFormName,isNotObsForm)
               break;
             case 'TextArea':
                 if(configuration.proximity!=null&&configuration.proximity!="")
@@ -59,21 +87,16 @@ async function executeConfigurations(configurations,observationFormName){
             break;
           case 'Button':
               {
-                await scrollTo(text(observationFormName,toRightOf("History and Examination")))
+                if(!isNotObsForm)
+                    await scrollTo(text(observationFormName,toRightOf("History and Examination")))
+                else
+                    await scrollTo(text(observationFormName))
                 await click(button(configuration.value),toRightOf(configuration.label))
             }
             break;      
             case 'Date':
-                if(configuration.value=='Today')
-                    await timeField({type:"date"},toRightOf(configuration.label)).select(date.today());
-                else
-                {
-                    dateLessThan = configuration.value.split("-");
-                    if(dateLessThan.length>1)
-                    {
-                        await timeField({type:"date"},toRightOf(configuration.label)).select(date.getDateAgo(dateLessThan[1]));
-                    }
-                }
+                var dateValue = getDate(configuration.value)
+                await timeField({type:"date"},toRightOf(configuration.label)).select(dateValue);
             break;      
             default:
                 console.log("Unhandled "+configuration.label+":"+configuration.value)
@@ -82,6 +105,7 @@ async function executeConfigurations(configurations,observationFormName){
 }
 
 module.exports={
+    verifyConfigurations:verifyConfigurations,
     executeConfigurations:executeConfigurations,
     repeatUntilNotFound:repeatUntilNotVisible,
     repeatUntilFound:repeatUntilFound,

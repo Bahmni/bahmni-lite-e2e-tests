@@ -8,3 +8,10 @@
 # lab technician uploads patient document and radiology reports
 * lab technician uploads report "labReport1" in "Patient Documents"
 * lab technician uploads report "labReport2" in "Radiology Upload"
+
+# Collect sample in Bacteriology
+* Choose Bacteriology
+* Enter Date of Sample Collection
+* Enter type of sample "Blood"
+* Enter Bacteriology results
+* Save data

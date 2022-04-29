@@ -72,3 +72,19 @@ Tags: hospital
 * Click back button
 * Logout and Login to Bahmni location "General Ward" as a "receptionist"
 * visit is closed at the front desk
+
+## Bacteriology staff should be able to collect sample
+Tags: clinic
+* Login to Bahmni location "General Ward" as a "receptionist"
+* Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
+* Logout and Login to Bahmni location "General Ward" as a "doctor"
+* Open clinical tab
+* Collect sample in Bacteriology
+* Click back button
+* Click back button
+* Open clinical tab with all section
+* verify bacteriology details
+* Click back button
+* Click back button
+* Logout and Login to Bahmni location "General Ward" as a "receptionist"
+* visit is closed at the front desk
