@@ -1,0 +1,15 @@
+{
+    "name":"doctor",
+    "inheritedRoles":[
+        "Clinical-App",
+        "Clinical-App-Bacteriology",
+        "Clinical-App-Common",
+        "Clinical-App-Diagnosis",
+        "Clinical-App-Disposition",
+        "Clinical-App-Observations",
+        "Clinical-App-Orders",
+        "Clinical-App-Read-Only",
+        "Clinical-App-Save",
+        "Clinical-App-Treatment"
+    ]
+}

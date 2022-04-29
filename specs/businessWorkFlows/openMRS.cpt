@@ -3,6 +3,21 @@
 * Login as "admin"
 
 # Create a hospital user
+* Manage Users
+* Add hospital user <file:data/hospitalUser/doctor.json>
+* Enter hospital user's personal details
+* Enter hospital user's details
+* Save hospital user
+
+# Create a doctor role
+* Manage Roles
+* Add a doctor's role
+
+# Add a doctor's role
+* Add Role <file:data/hospitalUser/doctorRole.json>
+* Save role
+
+# Create a lab technician role
 * Add hospital user <file:data/hospitalUser/doctor.json>
 * Enter hospital user's personal details
 * Enter hospital user's details

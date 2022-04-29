@@ -12,6 +12,26 @@ step("Manage Users", async function() {
 	await click("Manage Users");
 });
 
+step("Manage Roles", async function() {
+	await click("Manage Roles");
+});
+
+
+step("Add Role <roleDetailsFile>", async function(roleDetailsFile) {
+	await click("Add Role");
+    var roleDetails = JSON.parse(roleDetailsFile)
+    gauge.dataStore.scenarioStore.put("roleDetails",roleDetails)
+    await write(roleDetails.name,into(textBox(toRightOf("Role"))))
+    for(var resultIndx=0;resultIndx<roleDetails.inheritedRoles.length;resultIndx++){
+        await click(roleDetails.inheritedRoles[resultIndx])
+    }
+});
+
+step("Save role", async function(roleDetails) {
+    await scrollTo("Save role")
+	await click("Save role",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
+});
+
 step("Add hospital user <hospitalUser>", async function (hospitalUser) {
     await click("Add User");
     await click("Next",below("Create a new person"));
