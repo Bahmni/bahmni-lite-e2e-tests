@@ -85,12 +85,6 @@ step("Click lab dashboard", async function() {
         await click(link("Lab Dashboard"))
 });
 
-step("put first name <firstName> middle name <middleName> lastname <lastName>", async function(firstName, middleName, lastName) {
-	gauge.dataStore.scenarioStore.put("patientFirstName",firstName);
-        gauge.dataStore.scenarioStore.put("patientMiddleName",middleName);
-        gauge.dataStore.scenarioStore.put("patientLastName",lastName);
-});
-
 step("click Send Anyway", async function() {
         try{
                 await click("Send Anyway")

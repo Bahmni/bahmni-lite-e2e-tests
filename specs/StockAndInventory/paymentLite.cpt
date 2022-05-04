@@ -1,0 +1,33 @@
+# Login to paymentLite
+* Goto paymentlite
+* Click Login
+
+# Create a patient in patientLite
+* Open Customers
+* Enter patient details in paymentLite
+* Select currency as "INR - Indian Rupee"
+* Save customer
+
+# Create a doctor in paymentLite with consultation fee <fees>
+* Click Items
+* Add doctor with fees <fees>
+
+# Create drug with price <price>
+* Click Items
+* Add a drug with price <price>
+
+# Raise an invoice for patient
+* Click Invoices
+* Create a new invoice
+* Associate the newly created patient to an invoice
+* Save Invoice
+
+# Associate the newly created patient to an invoice
+* Create new customer
+* Choose the doctor in paymentlite
+
+# Collect the payment from the patient
+* Click Payments
+* Enter patient name for payment
+* Enter amount "150" the patient is willing to pay
+* Select the payment mode as "cash"

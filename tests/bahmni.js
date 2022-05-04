@@ -13,6 +13,13 @@ const {
 } = require('taiko');
 var taikoHelper = require("util/taikoHelper");
 
+step("put first name <firstName> middle name <middleName> lastname <lastName>", async function(firstName, middleName, lastName) {
+	gauge.dataStore.scenarioStore.put("patientFirstName",firstName);
+        gauge.dataStore.scenarioStore.put("patientMiddleName",middleName);
+        gauge.dataStore.scenarioStore.put("patientLastName",lastName);
+});
+
+
 step("Goto Clinical application", async function () {
     await goto(process.env.bahmniHome,{waitForNavigation:true,navigationTimeout:process.env.loginTimeout});
     if(await text("Advanced").exists())
@@ -57,4 +64,10 @@ step("Log out of openmrs", async function() {
 
 step("Wait for message <message> to disappear", async function(message) {
     await taikoHelper.repeatUntilNotFound(text(message))
+});
+
+step("put doctor first name <doctorFirstName> middle name <doctorMiddleName> lastname <doctorLastName>", async function(doctorFirstName, doctorMiddleName, doctorLastName) {
+    gauge.dataStore.scenarioStore.put("doctorFirstName",doctorFirstName);
+    gauge.dataStore.scenarioStore.put("doctorMiddleName",doctorMiddleName);
+    gauge.dataStore.scenarioStore.put("doctorLastName",doctorLastName);
 });

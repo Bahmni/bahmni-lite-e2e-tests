@@ -39,6 +39,16 @@ Tags: clinic
 * Logout and Login to Bahmni location "General Ward" as a "receptionist"
 * visit is closed at the front desk
 
+## Doctor and medicines should be billed in paymentlite
+Tags: payment-lite
+* put first name "cfirstName" middle name "cmiddleName" lastname "clastName"
+* put doctor first name "dFirstName" middle name "dMiddleName" lastname "dLastName"
+* put medications "opd/prescriptionFlow/medication/paracetamol"
+* Login to paymentLite
+* Create a patient in patientLite
+* Raise an invoice for patient
+* Collect the payment from the patient
+
 ## Doctor should be able to prescribe medicines and tests and get relevant reports
 Tags: hospital
 * Login to Bahmni location "General Ward" as a "receptionist"
