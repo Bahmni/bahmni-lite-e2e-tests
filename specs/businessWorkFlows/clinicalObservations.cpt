@@ -1,4 +1,6 @@
 # Enter vitals
+* reload the page
+* wait for overlay to disappear
 * Click Vitals
 * Enter Pulse(/min)
 * Enter systolic, diastolic
@@ -65,7 +67,7 @@
 
 # The doctor joins the link for the appointment
 * Open "Appointment scheduling" module
-* Open Appointments List
+* View all appointments
 * Goto appointments's date
 * Click patient name
 * Join teleconsultation

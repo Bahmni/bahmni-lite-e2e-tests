@@ -1,6 +1,6 @@
 # Receptionist creates a new appointment at <appointmentTime> for service <service>
 * Open "Appointment scheduling" module
-* Open Appointments List
+* View all appointments
 * Goto tomorrow's date
 * Begin capturing appointment details
 * Select Patient id
@@ -13,7 +13,7 @@
 
 # Receptionist creates a walkin appointment at <appointmentTime> for service
 * Open "Appointment scheduling" module
-* Open Appointments List
+* View all appointments
 * Goto Next week
 * Open calender at time <appointmentTime>
 * Select patient
@@ -25,7 +25,7 @@
 
 # Receptionist creates a recurring appointment for days <days> at time <appointmentTime>
 * Open "Appointment scheduling" module
-* Open Appointments List
+* View all appointments
 * Goto Today
 * Open calender at time <appointmentTime>
 * Select patient
@@ -41,7 +41,7 @@
 # Receptionist cancels the newly created appointment
 * Click back button
 * Open "Appointment scheduling" module
-* Open Appointments List
+* View all appointments
 * Goto appointments's date
 * Click patient name
 * Cancel the appointment
@@ -51,7 +51,7 @@
 # Receptionist cancels all the appointments
 * Click back button
 * Open "Appointment scheduling" module
-* Open Appointments List
+* View all appointments
 * Goto appointments's date
 * Click patient name
 * Click Cancel
@@ -60,7 +60,7 @@
 
 # Receptionist creates a teleconsultation appointment <appointmentTime>
 * Open "Appointment scheduling" module
-* Open Appointments List
+* View all appointments
 * Goto Next week
 * Open calender at time <appointmentTime>
 * Select patient
@@ -73,14 +73,14 @@
 # The patient's appointment should not be found
 * Click back button
 * Open "Appointment scheduling" module
-* Open Appointments List
+* View all appointments
 * Goto appointments's date
 * Should not find the patient's name
 
 # The patient's appointment should not be found in next week
 * Click back button
 * Open "Appointment scheduling" module
-* Open Appointments List
+* View all appointments
 * Goto Next week
 * Should not find the patient's name
 

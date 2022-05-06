@@ -33,8 +33,7 @@ gauge.customScreenshotWriter = async function () {
 };
 
 step("reload the page", async function () {
-    await reload()
-    await taikoHelper.repeatUntilNotFound($("#overlay"))
+    await reload({waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
 });
 
 step("close tab", async function() {
