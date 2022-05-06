@@ -17,17 +17,37 @@
 * Add a drug with price <price>
 
 # Raise an invoice for patient
-* Click Invoices
+* Click Customers
+* Select customer
+* Click New Transaction
 * Create a new invoice
 * Associate the newly created patient to an invoice
 * Save Invoice
+* Note the invoice number
 
 # Associate the newly created patient to an invoice
-* Create new customer
 * Choose the doctor in paymentlite
+* Add a new Item
+* Enter Exchange Rate "70"
+* Choose the prescibed medicines in paymentlite
 
 # Collect the payment from the patient
 * Click Payments
 * Enter patient name for payment
 * Enter amount "150" the patient is willing to pay
 * Select the payment mode as "cash"
+* Associate the invoice to the payment
+* Save payment
+
+# Note the invoice number
+* Click Invoices
+* Goto the tab Draft
+* Goto the tab All
+* Note the invoice number of the patient
+
+# Verify the payment is complete
+* Click Invoices
+* Goto the tab Draft
+* Goto the tab All
+* open the invoice
+* verify the payment is complete

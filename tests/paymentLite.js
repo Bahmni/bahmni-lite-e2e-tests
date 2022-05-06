@@ -1,5 +1,6 @@
-const { goto, click, waitFor, button, write, into, textBox, below, scrollTo, above } = require("taiko");
+const { goto, click, waitFor, button, write, into, textBox, below, scrollTo, above, toLeftOf, toRightOf,$, text, doubleClick, press,link } = require("taiko");
 var fileExtension = require("util/fileExtension")
+var assert = require("assert")
 step("Goto paymentlite", async function() {
 	await goto(process.env.paymentLite)
 });
@@ -71,7 +72,7 @@ step("Click Invoices", async function() {
     await waitFor(async () => (await button("New Invoice").exists()))
 });
 
-step("Create new customer", async function() {
+step("Choose the patient", async function () {
 	await waitFor("New Customer")
 	await click("New Customer")
 	var firstName = gauge.dataStore.scenarioStore.get("patientFirstName")
@@ -81,7 +82,7 @@ step("Create new customer", async function() {
 });
 
 step("Choose the doctor in paymentlite", async function() {
-	await click(textBox(below("Items")))
+	await click(textBox(above("Add New Item"),below("Items")))
 	var doctorFirstName = gauge.dataStore.scenarioStore.get("doctorFirstName");
 	await scrollTo(doctorFirstName)
 	await click(doctorFirstName)
@@ -92,8 +93,8 @@ step("Add a new Item", async function() {
 	await click("Add New Item")
 });
 
-step("Choose the prescibed medicines in paymentlite", async function() {
-	await click(textBox(below("Items")))
+step("Choose the prescibed medicines in paymentlite", async function () {
+	await click(textBox(toLeftOf("1",toLeftOf("$ 0.00"))));
 	var prescriptionFile = gauge.dataStore.scenarioStore.get("prescriptions");
     var medicalPrescriptions = JSON.parse(fileExtension.parseContent(prescriptionFile))
 	var drugName = medicalPrescriptions.drug_name;
@@ -114,12 +115,16 @@ step("Click Payments", async function() {
 });
 
 step("Enter patient name for payment", async function() {
-	await click(textBox(above("Amount"), below("Customer")))
-
 	var firstName = gauge.dataStore.scenarioStore.get("patientFirstName")
+	var middleName = gauge.dataStore.scenarioStore.get("patientMiddleName")
+	var lastName = gauge.dataStore.scenarioStore.get("patientLastName")
 
-	await scrollTo(firstName)
-	await click(firstName)
+	await write(`${firstName}`, into(textBox(above("Amount"), below("Customer"))))
+	await click(`${firstName} ${middleName} ${lastName}`)
+	await press("Enter")
+
+	// await scrollTo(firstName)
+	// await click(firstName)
 });
 
 step("Enter amount <amount> the patient is willing to pay", async function (amount) {
@@ -133,4 +138,69 @@ step("Select the payment mode as <paymentMode>", async function(paymentMode) {
 
 step("Create a new invoice", async function() {
 	await click("New Invoice")
+});
+
+step("Enter Exchange Rate <rate>", async function (rate) {
+	await doubleClick(textBox(below("Exchange Rate",above("Enter exchange rate to convert from INR to USD",toRightOf("1 INR =",toLeftOf("USD"))))))
+	await write(rate,into(textBox(below("Exchange Rate",above("Enter exchange rate to convert from INR to USD",toRightOf("1 INR =",toLeftOf("USD")))))));
+});
+
+step("Click Customers", async function() {
+	await click("Customers")
+});
+
+step("Select customer", async function() {
+	var firstName = gauge.dataStore.scenarioStore.get("patientFirstName")
+    var middleName = gauge.dataStore.scenarioStore.get("patientMiddleName")
+    var lastName = gauge.dataStore.scenarioStore.get("patientLastName")
+
+	await click(`${firstName} ${middleName}`)
+});
+
+step("Click New Transaction", async function() {
+	await click("New Transaction")
+});
+
+step("New Payment", async function() {
+	await click("New Payment")
+});
+
+step("Save payment", async function() {
+	await click("Save payment")
+});
+
+step("Goto the tab Draft", async function() {
+	await click("Draft")
+});
+
+step("Goto the tab All", async function() {
+	await click("All")
+});
+
+step("Note the invoice number of the patient", async function() {
+	var firstName = gauge.dataStore.scenarioStore.get("patientFirstName")
+	var middleName = gauge.dataStore.scenarioStore.get("patientMiddleName")
+
+	var invoiceNumber = await link(toLeftOf(`${firstName} ${middleName}`)).text()
+	gauge.dataStore.scenarioStore.put("invoiceNumber",invoiceNumber)
+});
+
+step("Associate the invoice to the payment", async function() {
+	var invoiceNumber = gauge.dataStore.scenarioStore.get("invoiceNumber")
+	await click($(".bg-multiselect-caret",toRightOf("Select Invoice")))
+	await click(invoiceNumber)
+});
+
+step("open the invoice", async function() {
+	var invoiceNumber = gauge.dataStore.scenarioStore.get("invoiceNumber")
+	await click(link(invoiceNumber))
+});
+
+step("verify the payment is complete", async function() {
+	var invoiceNumber = gauge.dataStore.scenarioStore.get("invoiceNumber")
+	assert.ok(await text("COMPLETED",below(invoiceNumber)).exists())
+});
+
+step("Add Payment", async function() {
+	await click("Add Payment")
 });

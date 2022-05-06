@@ -39,15 +39,24 @@ Tags: clinic
 * Logout and Login to Bahmni location "General Ward" as a "receptionist"
 * visit is closed at the front desk
 
+## Create data for paymentLite
+Tags: payment-lite
+* put doctor first name "d3FirstName" middle name "d3MiddleName" lastname "d3LastName"
+* put medications "opd/prescriptionFlow/medication/payment-lite"
+* Login to paymentLite
+* Create a doctor in paymentLite with consultation fee "15000"
+* Create drug with price "1000"
+
 ## Doctor and medicines should be billed in paymentlite
 Tags: payment-lite
-* put first name "cfirstName" middle name "cmiddleName" lastname "clastName"
-* put doctor first name "dFirstName" middle name "dMiddleName" lastname "dLastName"
-* put medications "opd/prescriptionFlow/medication/paracetamol"
+* put randomly generated names for patient
+* put doctor first name "d3FirstName" middle name "d3MiddleName" lastname "d3LastName"
+* put medications "opd/prescriptionFlow/medication/payment-lite"
 * Login to paymentLite
 * Create a patient in patientLite
 * Raise an invoice for patient
 * Collect the payment from the patient
+* Verify the payment is complete
 
 ## Doctor should be able to prescribe medicines and tests and get relevant reports
 Tags: hospital

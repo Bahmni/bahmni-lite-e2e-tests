@@ -12,13 +12,27 @@ const {
     within,
 } = require('taiko');
 var taikoHelper = require("util/taikoHelper");
+var users = require("util/users")
 
 step("put first name <firstName> middle name <middleName> lastname <lastName>", async function(firstName, middleName, lastName) {
 	gauge.dataStore.scenarioStore.put("patientFirstName",firstName);
-        gauge.dataStore.scenarioStore.put("patientMiddleName",middleName);
-        gauge.dataStore.scenarioStore.put("patientLastName",lastName);
+    gauge.dataStore.scenarioStore.put("patientMiddleName",middleName);
+    gauge.dataStore.scenarioStore.put("patientLastName",lastName);
 });
 
+step("put randomly generated names for patient", async function() {
+    var firstName = users.randomName(8)
+    gauge.message(`firstName ${firstName}`)
+    gauge.dataStore.scenarioStore.put("patientFirstName",firstName)
+
+    var middleName = users.randomName(8)
+    gauge.message(`middleName ${middleName}`)
+    gauge.dataStore.scenarioStore.put("patientMiddleName",middleName);
+
+    var lastName = users.randomName(8)
+    gauge.message(`firstName ${lastName}`)
+    gauge.dataStore.scenarioStore.put("patientLastName",lastName);
+});
 
 step("Goto Clinical application", async function () {
     await goto(process.env.bahmniHome,{waitForNavigation:true,navigationTimeout:process.env.loginTimeout});
