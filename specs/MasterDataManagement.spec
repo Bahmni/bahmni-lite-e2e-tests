@@ -6,12 +6,6 @@ Tags: master-data-management
 * Login to openMRS as user "admin"
 * Goto Administration
 * Manage Users
-* Create a doctor role
-
-## Create a new role for a doctor user
-Tags: master-data-management
-
-* Login to openMRS as user "admin"
-* Goto Administration
-* Create a hospital user
-* Associate the newly created user to the doctor role
+* Create a doctor role if not already exists
+* Create a hospital user and assign doctor role
+* Log out of openmrs
