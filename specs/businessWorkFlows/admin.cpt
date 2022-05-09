@@ -27,3 +27,15 @@
 * select the type of concept being created as "Drug"
 * make it saleable
 * save the concept
+
+# Upload <profile> data file
+* select profile type <profile>
+* upload file for <profile> profile
+* wait for "2000"
+* verify upload status <profile> data
+
+# Verfiy encounter upload
+* verify "encounter" visit
+* wait for "1000"
+* Click back button
+* Click back button

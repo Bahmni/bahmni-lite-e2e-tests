@@ -54,3 +54,22 @@ Tags:openMRS
 * Convert Quotation to Sales
 * View Direct Sales Quotation
 * Confirm Sales
+
+## Admin should be able to import data as CSV
+*  Login to Bahmni location "General Ward" as a "receptionist"
+*  Open "Admin" module
+*  Open feature "CSV Upload"
+*  Upload "Patient" data file
+*  Click back button
+*  Click back button
+*  Open registration module
+*  Select the newly created patient
+*  Verify new patient creation
+*  Click back button
+*  Open "Admin" module
+*  Open feature "CSV Upload"
+*  Upload "Encounter" data file
+*  Click back button
+*  Click back button
+*  Open clinical tab with all section
+*  Verfiy encounter upload
