@@ -19,6 +19,7 @@ const {
     confirm,
     accept,
     button,
+    near,
     link,
     press,
     doubleClick,
