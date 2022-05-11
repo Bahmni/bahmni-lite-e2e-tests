@@ -70,23 +70,9 @@ function remove(file) {
   catch(e) { console.log("Error removing file %s due to %s", file, e); }
 }
 
-async function modifyCsvContent(file,key,value){
-  let str = fs.readFileSync(file,"utf-8");
-  const header_cols = str.slice(0, str.indexOf("\n")).trim().split(',');
-  const patient= await csv().fromFile(file);
-  patient[0][key]=value;
-  const patientIncsv= new Parser({fields: header_cols})
-                                              .parse(patient);
-  fs.writeFileSync(file,patientIncsv.split('"').join(''));
-}
 
-async function readCSVasJson(file){
-  return await csv().fromFile(file);
-}
 
 module.exports={
-  modifyCsvContent:modifyCsvContent,
-  readCSVasJson:readCSVasJson,
   parseContent:parseContent,
   copyFile:copyFile,
   write: write,

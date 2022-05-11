@@ -40,8 +40,12 @@ function getGender(gender){
         return "Undisclosed"
 }
 
+function getRegID(){
+    return "BAH-".concat(randomNumber(10000,1000000));
+}
+
 module.exports={
-    randomNumber:randomNumber,
+    getRegID:getRegID,
     randomName:randomName,
     getUserNameFromEncoding:getUserNameFromEncoding,
     getPasswordFromEncoding:getPasswordFromEncoding,

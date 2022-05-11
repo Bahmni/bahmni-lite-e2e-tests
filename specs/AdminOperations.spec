@@ -58,7 +58,7 @@ Tags:openMRS
 ## Admin should be able to import data as CSV
 *  Login to Bahmni location "General Ward" as a "receptionist"
 *  Open "Admin" module
-*  Open feature "CSV Upload"
+*  Open "CSV Upload"
 *  Upload "Patient" data file
 *  Click back button
 *  Click back button
@@ -67,7 +67,7 @@ Tags:openMRS
 *  Verify new patient creation
 *  Click back button
 *  Open "Admin" module
-*  Open feature "CSV Upload"
+*  Open "CSV Upload"
 *  Upload "Encounter" data file
 *  Click back button
 *  Click back button

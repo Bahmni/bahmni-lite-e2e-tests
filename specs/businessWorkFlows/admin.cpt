@@ -35,7 +35,7 @@
 * verify upload status <profile> data
 
 # Verfiy encounter upload
-* verify "encounter" visit
+* verify encounter visit
 * wait for "1000"
 * Click back button
 * Click back button

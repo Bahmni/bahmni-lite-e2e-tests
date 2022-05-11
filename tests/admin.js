@@ -35,7 +35,7 @@ const path = require('path');
 var assert = require("assert");
 var users = require("./util/users")
 var taikoHelper = require("./util/taikoHelper")
-var fileExtension=require("./util/fileExtension")
+const csvConfig=require("./util/csvConfig")
 
 
 step("Goto Bed creation", async function() {
@@ -50,10 +50,10 @@ step("Goto Dictionary", async function() {
 	await click("Dictionary")
 });
 
- 
-step("Open feature <submodule>", async function(submodule) {
-	await click(submodule)
+step("Open <submodule>", async function(submodule) {
+	await click(submodule);
 });
+
 step("Open patient2 details by search", async function () {
 	var patientIdentifierValue = gauge.dataStore.scenarioStore.get("merge_patientIdentifier2");
 	gauge.message(patientIdentifierValue)
@@ -195,26 +195,11 @@ step("Add Period Indicator Details", async function() {
 	await click("Submit")
 });
 step("select profile type <profile>", async function(profile) {
-    await radioButton({id:profile.toLowerCase()}).select()
+    await radioButton(above(profile)).select();
 });
-
 step("upload file for <profile> profile",async function(profile) {
-    let filepath="./data/admin/profileUpload/";
         try{
-            if(profile=='Patient'){
-                var RegId='BAH-'+users.randomNumber(10000,1000000);
-                gauge.dataStore.scenarioStore.put("patientIdentifier",RegId);
-                console.log(gauge.dataStore.scenarioStore.get("patientIdentifier"));
-                await fileExtension.modifyCsvContent(filepath+profile.toLowerCase()+'.csv','Registration Number',
-                RegId);
-            }
-            else if(profile=='Encounter'){
-                    await fileExtension.modifyCsvContent(filepath+profile.toLowerCase()+'.csv','Registration Number',
-                    gauge.dataStore.scenarioStore.get("patientIdentifier"));
-                }
-            await attach(path.join(filepath,profile.toLowerCase()+'.csv'),
-                                fileField({id:"inputFileUpload"}));
-            
+            await attach(await csvConfig.getUpdatedCSV(profile,users.getRegID()),fileField({id:"inputFileUpload"}));            
         }
         catch(e){
             console.error(e);
@@ -224,56 +209,39 @@ step("upload file for <profile> profile",async function(profile) {
 });
 step("verify upload status <profile> data",async function(profile) {
 
-    await click(button("Refresh"));
-
-    var fileName= await tableCell({row:1, col:1}).text();
-    var uploadDate = await tableCell({row:1, col:2}).text();
-    var uploadStatus = await tableCell({row:1, col:3}).text();
-    try{
-        if(fileName==profile.toLowerCase()+'.csv'){
-            assert.ok(uploadStatus=='COMPLETED');
-            gauge.dataStore.scenarioStore.put(profile+"UploadDate",uploadDate);
-        }
+    await click(button("Refresh")); 
+    if(await text(profile.toLowerCase()+'.csv',near("Name")).exists()){
+            assert.ok(await text('COMPLETED',near("Status")).exists());
     }
-    catch(e){
-        console.error(e)
-    }
-    //console.log(gauge.dataStore.scenarioStore.get(profile+"UploadDate"))
-    alert(/^can not be represented as java.sql.Timestamp]9.csv.*$/, async () => await accept())
+    alert(/^can not be represented as java.sql.Timestamp]9.*$/, async () => await accept())
 });
 
-async function getCSVobj(profile) {
-    var file="./data/admin/profileUpload/"+profile.toLowerCase()+'.csv';
-    return await fileExtension.readCSVasJson(file);
-};
 
 step("Verify new patient creation",async function() {
-    const obj =(await getCSVobj('patient'))[0];
-    assert.ok(obj['Registration Number']==await $('#patientIdentifierValue').text());
-    assert.ok(obj['First Name']==await textBox({id: 'givenName'}).value());
-    assert.ok(obj['Middle Name']==await textBox({id: 'middleName'}).value());
-    assert.ok(obj['Last Name']==await textBox({id: 'familyName'}).value());
-
-    assert.ok(users.getGender(obj['Gender'])==users.getGender(await dropDown({id: 'gender'}).value()));
-    assert.ok(obj['Address']['Village']==await textBox(toRightOf("Village")).value());
-    assert.ok(obj['Address']['Tehsil']==await textBox(toRightOf("Tehsil")).value());
-    assert.ok(obj['Address']['District']==await textBox(toRightOf("District")).value());
-    assert.ok(obj['Address']['State']==await textBox(toRightOf("State")).value());
+    const patientJson =(await csvConfig.getCSVasJson('patient'))[0];
+    assert.ok(await text(patientJson['Registration Number']).exists());
+    assert.ok(await text(patientJson['First Name'],toRightOf("Patient Name")).exists());
+    assert.ok(await text(patientJson['Middle Name'],toRightOf("Patient Name")).exists());
+    assert.ok(await text(patientJson['Last Name'],toRightOf("Patient Name")).exists());
+    assert.ok(users.getGender(patientJson.Gender)==users.getGender(await dropDown(toRightOf("Gender")).value()));
+    assert.ok(await text(patientJson.Address.Village,toRightOf("Village")).exists());
+    assert.ok(await text(patientJson.Address.Tehsil,toRightOf("Tehsil")).exists());
+    assert.ok(await text(patientJson.Address.District,toRightOf("District")).exists());
+    assert.ok(await text(patientJson.Address.State,toRightOf("State")).exists());  
     });
 
-step("verify <profile> visit", async function (profile) {
-    const obj= (await getCSVobj(profile))[0];
-    assert.ok(obj.visitType==await $('#visitType').text());
-    await click(link({class:'visit'}));
-    var regId= obj['Registration Number'];
-    if (await $("//div/child::span[contains(text(),'"+regId+"')]").exists()){
-        assert.ok(await (await text(obj['Repeat']['1']['Obs']['Hospital Course'])).exists());
-        assert.ok(await (await text(obj['Repeat']['1']['Obs']['Chief Complaint Duration'])).exists());
-        assert.ok(await (await text(obj['Repeat']['1']['Obs']['Examination Notes'])).exists());
-        assert.ok(await (await text(obj['Repeat']['1']['Obs']['History Notes'])).exists());
-        assert.ok(await (await text(obj['Repeat']['1']['Obs']['Chief Complaint Notes'])).exists());
-        assert.ok(await (await text(obj['Repeat']['1']['Obs']['Smoking History'])).exists());
-        assert.ok(await (await text(obj['Repeat']['1']['Obs']['Consultation Note'])).exists());
-        assert.ok(await (await text(obj['Repeat']['1']['Diagnosis']['1'])).exists());
+step("verify encounter visit", async function () {
+    const encounterJson= (await csvConfig.getCSVasJson('encounter'))[0];
+    assert.ok(await text(encounterJson.visitType).exists());
+    await click(link(below("Visits")));
+    if (await text(encounterJson['Registration Number']).exists()){
+        assert.ok(await text(encounterJson.Repeat['1']['Obs']['Hospital Course'],toRightOf("Hospital Course")).exists());
+        assert.ok(await text(encounterJson.Repeat['1']['Obs']['Chief Complaint Duration'],toRightOf("Chief Complaint Duration")).exists());
+        assert.ok(await text(encounterJson.Repeat['1']['Obs']['Examination Notes'],toRightOf('Examination Notes')).exists());
+        assert.ok(await text(encounterJson.Repeat['1']['Obs']['History Notes'],toRightOf("History Notes")).exists());
+        assert.ok(await text(encounterJson.Repeat['1']['Obs']['Chief Complaint Notes'],toRightOf("Chief Complaint Notes")).exists());
+        assert.ok(await text(encounterJson.Repeat['1']['Obs']['Smoking History'],toRightOf("Smoking History")).exists());
+        assert.ok(await text(encounterJson.Repeat['1']['Obs']['Consultation Note'],toRightOf("consultation note")).exists());
+        assert.ok(await text(encounterJson.Repeat['1']['Diagnosis']['1'],below("Diagnoses")).exists());
      }
 });
