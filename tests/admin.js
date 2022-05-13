@@ -2,32 +2,42 @@
 const {
     goto,
     write,
-	above,
-	dropDown,
+    above,
+    dropDown,
     click,
     into,
     below,
     waitFor,
-	checkBox,
-	textBox,
-	toLeftOf,
-	$,
-	text,
-	dragAndDrop,
-	confirm,
-	accept,
-	button,
-	link,
-	press,
-	doubleClick,
-	toRightOf,
-	highlight,
-	mouseAction,
-	currentURL,
+    checkBox,
+    textBox,
+    toLeftOf,
+    alert,
+    $,
+    text,
+    attach,
+    dragAndDrop,
+    confirm,
+    accept,
+    button,
+    near,
+    link,
+    press,
+    doubleClick,
+    toRightOf,
+    highlight,
+    mouseAction,
+    currentURL,
+    radioButton,
+    fileField,
+    tableCell,
 } = require('taiko');
+
+const path = require('path');
 var assert = require("assert");
 var users = require("./util/users")
 var taikoHelper = require("./util/taikoHelper")
+const csvConfig=require("./util/csvConfig")
+
 
 step("Goto Bed creation", async function() {
 	await click("Beds");
@@ -39,6 +49,10 @@ step("Goto Admin home", async function () {
 
 step("Goto Dictionary", async function() {
 	await click("Dictionary")
+});
+
+step("Open <submodule>", async function(submodule) {
+	await click(submodule);
 });
 
 step("Open patient2 details by search", async function () {
@@ -180,4 +194,55 @@ step("Add Period Indicator Details", async function() {
 	await click("Add Dimension")
 	await write(users.randomName(10),into(textBox(toRightOf("Key"))))
 	await click("Submit")
+});
+step("select profile type <profile>", async function(profile) {
+    await radioButton(above(profile)).select();
+});
+step("upload file for <profile> profile",async function(profile) {
+        try{
+            await attach(await csvConfig.getUpdatedCSV(profile,users.getRegID()),fileField({id:"inputFileUpload"}));            
+        }
+        catch(e){
+            console.error(e);
+        }
+        await waitFor(2000)
+        await click(button("Upload"))       
+});
+step("verify upload status <profile> data",async function(profile) {
+
+    await click(button("Refresh")); 
+    if(await text(profile.toLowerCase()+'.csv',near("Name")).exists()){
+            assert.ok(await text('COMPLETED',near("Status")).exists());
+    }
+    alert(/^can not be represented as java.sql.Timestamp]9.*$/, async () => await accept())
+});
+
+
+step("Verify new patient creation",async function() {
+    const patientJson =(await csvConfig.getCSVasJson('patient'))[0];
+    assert.ok(await text(patientJson['Registration Number']).exists());
+    assert.ok(await text(patientJson['First Name'],toRightOf("Patient Name")).exists());
+    assert.ok(await text(patientJson['Middle Name'],toRightOf("Patient Name")).exists());
+    assert.ok(await text(patientJson['Last Name'],toRightOf("Patient Name")).exists());
+    assert.ok(users.getGender(patientJson.Gender)==users.getGender(await dropDown(toRightOf("Gender")).value()));
+    assert.ok(await text(patientJson.Address.Village,toRightOf("Village")).exists());
+    assert.ok(await text(patientJson.Address.Tehsil,toRightOf("Tehsil")).exists());
+    assert.ok(await text(patientJson.Address.District,toRightOf("District")).exists());
+    assert.ok(await text(patientJson.Address.State,toRightOf("State")).exists());  
+    });
+
+step("verify encounter visit", async function () {
+    const encounterJson= (await csvConfig.getCSVasJson('encounter'))[0];
+    assert.ok(await text(encounterJson.visitType).exists());
+    await click(link(below("Visits")));
+    if (await text(encounterJson['Registration Number']).exists()){
+        assert.ok(await text(encounterJson.Repeat['1']['Obs']['Hospital Course'],toRightOf("Hospital Course")).exists());
+        assert.ok(await text(encounterJson.Repeat['1']['Obs']['Chief Complaint Duration'],toRightOf("Chief Complaint Duration")).exists());
+        assert.ok(await text(encounterJson.Repeat['1']['Obs']['Examination Notes'],toRightOf('Examination Notes')).exists());
+        assert.ok(await text(encounterJson.Repeat['1']['Obs']['History Notes'],toRightOf("History Notes")).exists());
+        assert.ok(await text(encounterJson.Repeat['1']['Obs']['Chief Complaint Notes'],toRightOf("Chief Complaint Notes")).exists());
+        assert.ok(await text(encounterJson.Repeat['1']['Obs']['Smoking History'],toRightOf("Smoking History")).exists());
+        assert.ok(await text(encounterJson.Repeat['1']['Obs']['Consultation Note'],toRightOf("consultation note")).exists());
+        assert.ok(await text(encounterJson.Repeat['1']['Diagnosis']['1'],below("Diagnoses")).exists());
+     }
 });

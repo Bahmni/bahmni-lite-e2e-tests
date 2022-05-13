@@ -24,6 +24,11 @@ function randomName(length) {
    return result;
 }
 
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+  }
+
+
 function getGender(gender){
     if(gender=='M')
         return "Male"
@@ -35,7 +40,12 @@ function getGender(gender){
         return "Undisclosed"
 }
 
+function getRegID(){
+    return "BAH-".concat(randomNumber(10000,1000000));
+}
+
 module.exports={
+    getRegID:getRegID,
     randomName:randomName,
     getUserNameFromEncoding:getUserNameFromEncoding,
     getPasswordFromEncoding:getPasswordFromEncoding,

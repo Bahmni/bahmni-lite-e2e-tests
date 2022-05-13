@@ -2,6 +2,9 @@ var path = require("path");
 
 var cwd = process.cwd();
 var fs = require("fs");
+const {Parser} = require('json2csv');
+const {csv}=require('csvtojson');
+
 
 
 function parseContent(file) {
@@ -66,6 +69,8 @@ function remove(file) {
   try { fs.unlinkSync(file); }
   catch(e) { console.log("Error removing file %s due to %s", file, e); }
 }
+
+
 
 module.exports={
   parseContent:parseContent,
