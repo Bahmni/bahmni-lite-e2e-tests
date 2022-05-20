@@ -107,3 +107,10 @@ Tags: clinic
 * Click back button
 * Logout and Login to Bahmni location "General Ward" as a "receptionist"
 * visit is closed at the front desk
+
+
+## Demo Doctor should be able to prescribe medicines and tests and get relevant reports from LabLite
+Tags: Demo
+* Login to Bahmni location "Bahmni Clinic" as a "receptionist"
+* Receptionist creates the patient with mobile number "+919876543210" and starts an Lab Visit
+* visit is closed at the front desk

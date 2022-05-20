@@ -39,11 +39,10 @@ step("Open <moduleName> module", async function (moduleName) {
 
 step("Open registration module", async function () {
     try{
-        await waitFor(async () => (await link("Programs").exists()))
+        await waitFor(async () => (await link("Registration").exists()))
     }catch(e){}
-    await click("Registration",{waitForNavigation:true,
-        waitForEvents:['networkIdle','DOMContentLoaded'],navigationTimeout:process.env.actionTimeout}, 
-        toLeftOf(link("Programs")));
+    await click(link("Registration"),{waitForNavigation:true,
+        waitForEvents:['networkIdle','DOMContentLoaded'],navigationTimeout:process.env.actionTimeout});
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
 

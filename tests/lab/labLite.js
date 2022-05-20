@@ -26,6 +26,7 @@ step("open patient details in sidePanel", async function() {
 
     assert.ok(await text("Found 1 patient").exists())
     await click(`${patientFirstName} ${patientMiddleName} ${patientLastName}`)
+    await click("Upload Report");
 });
 
 step("Validate the lab tests <labTests> are available", async function (labTests) {

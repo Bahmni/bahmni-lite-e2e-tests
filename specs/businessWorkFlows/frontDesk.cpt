@@ -18,6 +18,15 @@
 * Enter village "Village"
 * Save the patient data
 
+# Create a new patient with gender <gender> with random name, aged <age> with mobile number <mobileNumber> without village
+* Click create new patient
+* Enter patient random first name
+* Enter patient random middle name
+* Enter patient random last name
+* Enter patient gender <gender>
+* Enter age of the patient <age>
+* Save the patient data
+
 # Open clinical tab
 * Open "Clinical" module
 * Select the newly created patient
@@ -32,6 +41,12 @@
 # Start an OPD Visit
 * Click Start OPD Visit
 * Enter registration fees "100"
+* Save visit data
+* wait for overlay and Saved to disappear
+* Click back button
+
+# Start a <visit> Visit
+* Click Start OPD Visit
 * Save visit data
 * wait for overlay and Saved to disappear
 * Click back button
@@ -57,6 +72,10 @@
 * Confirm if you want to close the visit
 * Close visit
 
+# Receptionist creates the patient with mobile number <mobileNumber> without village
+* Open registration module
+* Create a new patient with gender "Female" with random name, aged "29" with mobile number <mobileNumber> without village
+
 # Receptionist creates the patient with mobile number <mobileNumber>
 * Open registration module
 * Create a new patient with gender "Female" with random name, aged "29" with mobile number <mobileNumber>
@@ -64,6 +83,10 @@
 # Receptionist creates the patient with mobile number <mobileNumber> and starts an OPD
 * Receptionist creates the patient with mobile number <mobileNumber>
 * Start an OPD Visit
+
+# Receptionist creates the patient with mobile number <mobileNumber> and starts an Lab Visit
+* Receptionist creates the patient with mobile number <mobileNumber> without village
+* Start a "Lab" Visit
 
 # Receptionist creates the patient with mobile number <mobileNumber> and starts an Special OPD
 * Open registration module
