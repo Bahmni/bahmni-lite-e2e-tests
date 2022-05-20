@@ -1,7 +1,9 @@
 # Admin operations
 
 ## Admin should be able to merge patients
-Tags: hospital,clinic
+
+tags: hospital, clinic
+
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Add this newly created patient as merge patient1
@@ -28,7 +30,7 @@ Tags: hospital,clinic
 * Goto Administration
 * Merge the newly created patients
 * Goto Clinical application
-* Open registration module
+* Open "Registration" module
 * Open patient2 details by search
 * Verify patient1 details are open
 
@@ -41,7 +43,9 @@ Tags: hospital,clinic
 * Add Period Indicator Details
 
 ## A saleable concept should be available in ODOO
-Tags:openMRS
+
+tags: openMRS
+
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Goto the openMRS Admin tab
 * Admin adds a new drug concept
@@ -56,20 +60,20 @@ Tags:openMRS
 * Confirm Sales
 
 ## Admin should be able to import data as CSV
-*  Login to Bahmni location "General Ward" as a "receptionist"
-*  Open "Admin" module
-*  Open "CSV Upload"
-*  Upload "Patient" data file
-*  Click back button
-*  Click back button
-*  Open registration module
-*  Select the newly created patient
-*  Verify new patient creation
-*  Click back button
-*  Open "Admin" module
-*  Open "CSV Upload"
-*  Upload "Encounter" data file
-*  Click back button
-*  Click back button
-*  Open clinical tab with all section
-*  Verfiy encounter upload
+* Login to Bahmni location "General Ward" as a "receptionist"
+* Open "Admin" module
+* Open "CSV Upload"
+* Upload "Patient" data file
+* Click back button
+* Click back button
+* Open "Registration" module
+* Select the newly created patient
+* Verify new patient creation
+* Click back button
+* Open "Admin" module
+* Open "CSV Upload"
+* Upload "Encounter" data file
+* Click back button
+* Click back button
+* Open clinical tab with all section
+* Verfiy encounter upload

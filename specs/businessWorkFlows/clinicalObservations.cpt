@@ -2,13 +2,7 @@
 * reload the page
 * wait for overlay to disappear
 * Click Vitals
-* Enter Pulse(/min)
-* Enter systolic, diastolic
-* Enter posture
-* Enter Temperature (F)
-* Enter RR (/min)
-* Enter SPO2 (%)
-* Save data
+* Enter Form Values "Vitals"
 
 # Doctor issues an Admit disposition
 * Open clinical tab

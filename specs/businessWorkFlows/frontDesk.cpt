@@ -66,18 +66,18 @@
 * Click back button
 
 # visit is closed at the front desk
-* Open registration module
+* Open "Registration" module
 * Open newly created patient details by search
 * Enter visit details
 * Confirm if you want to close the visit
 * Close visit
 
 # Receptionist creates the patient with mobile number <mobileNumber> without village
-* Open registration module
+* Open "Registration" module
 * Create a new patient with gender "Female" with random name, aged "29" with mobile number <mobileNumber> without village
 
 # Receptionist creates the patient with mobile number <mobileNumber>
-* Open registration module
+* Open "Registration" module
 * Create a new patient with gender "Female" with random name, aged "29" with mobile number <mobileNumber>
 
 # Receptionist creates the patient with mobile number <mobileNumber> and starts an OPD
@@ -89,7 +89,7 @@
 * Start a "Lab" Visit
 
 # Receptionist creates the patient with mobile number <mobileNumber> and starts an Special OPD
-* Open registration module
+* Open "Registration" module
 * Create a new patient with gender "Female" with random name, aged "29" with mobile number <mobileNumber>
 * Start an Special OPD Visit
 
@@ -109,7 +109,7 @@
 * Create a new patient with gender <gender> with name <firstName> <middleName> <lastName>, aged <age> with mobile number <mobileNumber>
 
 # Receptionist creates a patient with mobileNumber <mobileNumber> and starts an IPD visit
-* Open registration module
+* Open "Registration" module
 * Create a new patient with gender "Female" with random name, aged "29" with mobile number <mobileNumber>
 * Start an IPD Visit
 

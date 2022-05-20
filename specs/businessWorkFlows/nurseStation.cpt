@@ -22,11 +22,17 @@
 * Nurse enters basic clinical details
 
 # Nurse captures BP, sugar checkup
-* Enter Observation Form "DiabetiesIntake"
-* Enter Observation Form "DiabetiesProgress"
+* Add new observation Form
+* Select the Observation Form "DiabetiesIntake"
+* Enter Form Values "DiabetiesIntake"
+* Add new observation Form
+* Select the Observation Form "DiabetiesProgress"
+* Enter Form Values "DiabetiesProgress"
 
 # Nurse enters HIV details
-* Enter Observation Form "HIVTreatmentAndCareIntake"
+* Add new observation Form
+* Select the Observation Form "HIVTreatmentAndCareIntake"
+* Enter Form Values "HIVTreatmentAndCareIntake"
 
 # Nurse enters basic clinical details
 * Click History and Examination
@@ -50,16 +56,6 @@
 * Enter admitted patient details
 * Click Discharge
 * Click Discharge on popup
-
-# Enter Second Vitals
-* Add new observation form
-* Select Second Vitals
-* Enter Pulse(/min)
-* Enter systolic, diastolic
-* Enter posture
-* Enter Temperature (F)
-* Enter RR (/min)
-* Enter SPO2 (%)
 
 # Nurse admits the patient to bed <bed>
 * Open "InPatient" module
