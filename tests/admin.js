@@ -37,7 +37,7 @@ var assert = require("assert");
 var taikoHelper = require("./util/taikoHelper");
 var users = require("./util/users");
 const csvConfig=require("./util/csvConfig");
-const { selectEntriesTillLoopEnds } = require('./util/taikoHelper');
+
 
 
 step("Goto Bed creation", async function() {
