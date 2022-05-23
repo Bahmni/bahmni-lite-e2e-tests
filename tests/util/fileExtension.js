@@ -2,8 +2,6 @@ var path = require("path");
 
 var cwd = process.cwd();
 var fs = require("fs");
-const {Parser} = require('json2csv');
-const {csv}=require('csvtojson');
 
 
 

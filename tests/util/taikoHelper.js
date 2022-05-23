@@ -1,4 +1,4 @@
-const { button, toRightOf, textBox, into, write, click, timeField,below,scrollTo,text,evaluate,$, checkBox,waitFor,image,within } = require('taiko');
+const { button, toRightOf, textBox, into, write,press, click, timeField,below,scrollTo,text,evaluate,$, checkBox,waitFor,image,within } = require('taiko');
 var date = require("./date");
 var assert = require("assert")
 
@@ -58,6 +58,14 @@ function getDate(dateValue){
     throw "Unexpected date"
 }
 
+async function selectEntriesTillIterationEnds(entrySequence){
+       var patientIdentifierValue = gauge.dataStore.scenarioStore.get("patientIdentifier"+(entrySequence));
+       await write(patientIdentifierValue)
+       await press('Enter', {waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
+       await repeatUntilNotVisible($("#overlay"));
+}
+
+
 async function executeConfigurations(configurations,observationFormName,isNotObsForm){
     for(var configuration of configurations){
         switch(configuration.type) {
@@ -105,6 +113,7 @@ async function executeConfigurations(configurations,observationFormName,isNotObs
 }
 
 module.exports={
+    selectEntriesTillIterationEnds:selectEntriesTillIterationEnds,
     verifyConfigurations:verifyConfigurations,
     executeConfigurations:executeConfigurations,
     repeatUntilNotFound:repeatUntilNotVisible,
