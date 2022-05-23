@@ -34,9 +34,10 @@ const {
 
 const path = require('path');
 var assert = require("assert");
-var users = require("./util/users")
-var taikoHelper = require("./util/taikoHelper")
-const csvConfig=require("./util/csvConfig")
+var taikoHelper = require("./util/taikoHelper");
+var users = require("./util/users");
+const csvConfig=require("./util/csvConfig");
+const { selectEntriesTillLoopEnds } = require('./util/taikoHelper');
 
 
 step("Goto Bed creation", async function() {
@@ -200,7 +201,7 @@ step("select profile type <profile>", async function(profile) {
 });
 step("upload file for <profile> profile",async function(profile) {
         try{
-            await attach(await csvConfig.getUpdatedCSV(profile,users.getRegID()),fileField({id:"inputFileUpload"}));            
+            await attach(await csvConfig.generateUpdatedCSV(profile),fileField({id:"inputFileUpload"}));            
         }
         catch(e){
             console.error(e);
@@ -218,31 +219,43 @@ step("verify upload status <profile> data",async function(profile) {
 });
 
 
-step("Verify new patient creation",async function() {
-    const patientJson =(await csvConfig.getCSVasJson('patient'))[0];
-    assert.ok(await text(patientJson['Registration Number']).exists());
-    assert.ok(await text(patientJson['First Name'],toRightOf("Patient Name")).exists());
-    assert.ok(await text(patientJson['Middle Name'],toRightOf("Patient Name")).exists());
-    assert.ok(await text(patientJson['Last Name'],toRightOf("Patient Name")).exists());
-    assert.ok(users.getGender(patientJson.Gender)==users.getGender(await dropDown(toRightOf("Gender")).value()));
-    assert.ok(await text(patientJson.Address.Village,toRightOf("Village")).exists());
-    assert.ok(await text(patientJson.Address.Tehsil,toRightOf("Tehsil")).exists());
-    assert.ok(await text(patientJson.Address.District,toRightOf("District")).exists());
-    assert.ok(await text(patientJson.Address.State,toRightOf("State")).exists());  
+step("Verify bulk <profile> data upload",async function(profile) {
+    var dataLength=gauge.dataStore.scenarioStore.get("fileDataLength")-1;
+    let recordSeq=0;
+    while(recordSeq<dataLength){ 
+        const csvAsJson =(await csvConfig.getCSVasJson(profile.toLowerCase()))[recordSeq];
+        await taikoHelper.selectEntriesTillLoopEnds(recordSeq);
+        switch(profile){
+            case "Patient":
+                assert.ok(await text(csvAsJson['Registration Number']).exists());
+                assert.ok(await text(csvAsJson['First Name'],toRightOf("Patient Name")).exists());
+                assert.ok(await text(csvAsJson['Middle Name'],toRightOf("Patient Name")).exists());
+                assert.ok(await text(csvAsJson['Last Name'],toRightOf("Patient Name")).exists());
+                assert.ok(users.getGender(csvAsJson.Gender)==users.getGender(await dropDown(toRightOf("Gender")).value()));
+                assert.ok(await text(csvAsJson.Address.Village,toRightOf("Village")).exists());
+                assert.ok(await text(csvAsJson.Address.Tehsil,toRightOf("Tehsil")).exists());
+                assert.ok(await text(csvAsJson.Address.District,toRightOf("District")).exists());
+                assert.ok(await text(csvAsJson.Address.State,toRightOf("State")).exists()); 
+                await click(link("Search"));
+                break;
+            case "Encounter":
+                assert.ok(await text(csvAsJson.visitType).exists());
+                await click(link(below("Visits")));
+                assert.ok(await text(csvAsJson['Registration Number']).exists());
+                assert.ok(await text(csvAsJson.Repeat['1']['Obs']['Hospital Course'],toRightOf("Hospital Course")).exists());
+                assert.ok(await text(csvAsJson.Repeat['1']['Obs']['Chief Complaint Duration'],toRightOf("Chief Complaint Duration")).exists());
+                assert.ok(await text(csvAsJson.Repeat['1']['Obs']['Examination Notes'],toRightOf('Examination Notes')).exists());
+                assert.ok(await text(csvAsJson.Repeat['1']['Obs']['History Notes'],toRightOf("History Notes")).exists());
+                assert.ok(await text(csvAsJson.Repeat['1']['Obs']['Chief Complaint Notes'],toRightOf("Chief Complaint Notes")).exists());
+                assert.ok(await text(csvAsJson.Repeat['1']['Obs']['Smoking History'],toRightOf("Smoking History")).exists());
+                assert.ok(await text(csvAsJson.Repeat['1']['Obs']['Consultation Note'],toRightOf("consultation note")).exists());
+                assert.ok(await text(csvAsJson.Repeat['1']['Diagnosis']['1'],below("Diagnoses")).exists());
+                await click($('.back-btn'),{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
+                break;
+        }        
+        recordSeq++;
+    } 
     });
 
-step("verify encounter visit", async function () {
-    const encounterJson= (await csvConfig.getCSVasJson('encounter'))[0];
-    assert.ok(await text(encounterJson.visitType).exists());
-    await click(link(below("Visits")));
-    if (await text(encounterJson['Registration Number']).exists()){
-        assert.ok(await text(encounterJson.Repeat['1']['Obs']['Hospital Course'],toRightOf("Hospital Course")).exists());
-        assert.ok(await text(encounterJson.Repeat['1']['Obs']['Chief Complaint Duration'],toRightOf("Chief Complaint Duration")).exists());
-        assert.ok(await text(encounterJson.Repeat['1']['Obs']['Examination Notes'],toRightOf('Examination Notes')).exists());
-        assert.ok(await text(encounterJson.Repeat['1']['Obs']['History Notes'],toRightOf("History Notes")).exists());
-        assert.ok(await text(encounterJson.Repeat['1']['Obs']['Chief Complaint Notes'],toRightOf("Chief Complaint Notes")).exists());
-        assert.ok(await text(encounterJson.Repeat['1']['Obs']['Smoking History'],toRightOf("Smoking History")).exists());
-        assert.ok(await text(encounterJson.Repeat['1']['Obs']['Consultation Note'],toRightOf("consultation note")).exists());
-        assert.ok(await text(encounterJson.Repeat['1']['Diagnosis']['1'],below("Diagnoses")).exists());
-     }
-});
+
+

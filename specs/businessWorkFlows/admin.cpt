@@ -34,8 +34,7 @@
 * wait for "2000"
 * verify upload status <profile> data
 
-# Verfiy encounter upload
-* verify encounter visit
+# Verfiy bulk encounter upload
+* Verify bulk "Encounter" data upload
 * wait for "1000"
-* Click back button
 * Click back button
