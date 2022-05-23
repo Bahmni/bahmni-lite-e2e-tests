@@ -120,12 +120,14 @@ step("create a section", async function() {
 	await dragAndDrop("Section",$(".form-builder-row"));
 });
 
-step("Create an appointment location if it doesn't exist", async function() {
-	if(await link(process.env.appointmentLocation).exists())
+step("Create a location <location> if it doesn't exist", async function (locationProperty) {
+    var locationName = process.env[locationProperty].split(":")[0]
+    var locationType = process.env[locationProperty].split(":")[1]
+	if(await link(locationName).exists())
 		return
 	await click("Add Location")
-	await write(process.env.appointmentLocation,into(textBox(toRightOf("Name"))))
-	await click(checkBox(toLeftOf("Appointment Location")))
+	await write(locationName,into(textBox(toRightOf("Name"))))
+	await click(checkBox(toLeftOf(locationType)))
 	await click("Save Location",{waitForNavigation:true,navigationTimeout:process.env.actionTimeout})
 });
 

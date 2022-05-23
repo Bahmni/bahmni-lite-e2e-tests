@@ -36,7 +36,8 @@ step("Select the surgeon", async function() {
 });
 
 step("Select the theatre location", async function() {
-	await click(process.env.OTLocation,toRightOf("Location"));
+    var locationName = process.env["OTLocation"].split(":")[0]
+	await click(locationName,toRightOf("Location"));
 });
 
 step("Select tomorrow as the theatre booking date", async function() {

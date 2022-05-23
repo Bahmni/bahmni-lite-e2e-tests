@@ -13,7 +13,7 @@ Tags: hospital,master-data-management
 * Goto the openMRS Admin tab
 * Goto Administration
 * Manage locations
-* Create an appointment location if it doesn't exist
+* Create a location "appointmentLocation" if it doesn't exist
 
 ## A receptionist should be able to create a walkin appointment for a patient
 Tags: regression
