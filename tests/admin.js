@@ -247,7 +247,9 @@ step("Verify bulk <profile> data upload",async function(profile) {
                 assert.ok(await text(recordAsJson.Repeat['1']['Obs']['Examination Notes'],toRightOf('Examination Notes')).exists());
                 assert.ok(await text(recordAsJson.Repeat['1']['Obs']['History Notes'],toRightOf("History Notes")).exists());
                 assert.ok(await text(recordAsJson.Repeat['1']['Obs']['Chief Complaint Notes'],toRightOf("Chief Complaint Notes")).exists());
+                //The below assertion will fail due to bug in application, the Smoking history is displayed as NO even if the value is YES in CSV----
                 assert.ok(await text(recordAsJson.Repeat['1']['Obs']['Smoking History'],toRightOf("Smoking History")).exists());
+                //-----------------------------------------//
                 assert.ok(await text(recordAsJson.Repeat['1']['Obs']['Consultation Note'],toRightOf("consultation note")).exists());
                 assert.ok(await text(recordAsJson.Repeat['1']['Diagnosis']['1'],below("Diagnoses")).exists());
                 await click($('.back-btn'),{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
