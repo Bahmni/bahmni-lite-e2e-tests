@@ -90,5 +90,4 @@ step("verify vitals", async function() {
     assert.ok(await (await text("110",toRightOf("Systolic"))).exists())
     assert.ok(await (await text("Sitting",toRightOf("Posture"))).exists())
     assert.ok(await (await text("70",toRightOf("Pulse"))).exists())
-    assert.ok(await (await text("1",toRightOf("Haemogram"))).exists())
 });

@@ -34,6 +34,11 @@
                     "type": "TextBox",
                     "label": "Systolic (mm Hg)",
                     "value": "110"
+                },
+                {
+                    "type": "Button",
+                    "label": "Posture",
+                    "value": "Sitting"
                 }
             ]
         }
