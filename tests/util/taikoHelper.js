@@ -58,7 +58,7 @@ function getDate(dateValue){
     throw "Unexpected date"
 }
 
-async function selectEntriesTillLoopEnds(entrySequence){
+async function selectEntriesTillIterationEnds(entrySequence){
        var patientIdentifierValue = gauge.dataStore.scenarioStore.get("patientIdentifier"+(entrySequence));
        await write(patientIdentifierValue)
        await press('Enter', {waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
@@ -113,7 +113,7 @@ async function executeConfigurations(configurations,observationFormName,isNotObs
 }
 
 module.exports={
-    selectEntriesTillLoopEnds:selectEntriesTillLoopEnds,
+    selectEntriesTillIterationEnds:selectEntriesTillIterationEnds,
     verifyConfigurations:verifyConfigurations,
     executeConfigurations:executeConfigurations,
     repeatUntilNotFound:repeatUntilNotVisible,
