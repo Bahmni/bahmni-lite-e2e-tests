@@ -221,45 +221,4 @@ step("verify upload status <profile> data",async function(profile) {
 });
 
 
-step("Verify bulk <profile> data upload",async function(profile) {
-    var recordLength=gauge.dataStore.scenarioStore.get("fileDataLength")-1;
-    let recordSeq=0;
-    while(recordSeq<recordLength){ 
-        const recordAsJson =(await csvConfig.getCSVasJson(profile.toLowerCase()))[recordSeq];
-        await taikoHelper.selectEntriesTillIterationEnds(recordSeq);
-        switch(profile){
-            case "Patient":
-                assert.ok(await text(recordAsJson['Registration Number']).exists());
-                assert.ok(await text(recordAsJson['First Name'],toRightOf("Patient Name")).exists());
-                assert.ok(await text(recordAsJson['Middle Name'],toRightOf("Patient Name")).exists());
-                assert.ok(await text(recordAsJson['Last Name'],toRightOf("Patient Name")).exists());
-                assert.ok(users.getGender(recordAsJson.Gender)==users.getGender(await dropDown(toRightOf("Gender")).value()));
-                assert.ok(await text(recordAsJson.Address.Village,toRightOf("Village")).exists());
-                assert.ok(await text(recordAsJson.Address.Tehsil,toRightOf("Tehsil")).exists());
-                assert.ok(await text(recordAsJson.Address.District,toRightOf("District")).exists());
-                assert.ok(await text(recordAsJson.Address.State,toRightOf("State")).exists()); 
-                await click(link("Search"));
-                break;
-            case "Encounter":
-                assert.ok(await text(recordAsJson.visitType).exists());
-                await click(link(below("Visits")));
-                assert.ok(await text(recordAsJson['Registration Number']).exists());
-                assert.ok(await text(recordAsJson.Repeat['1']['Obs']['Hospital Course'],toRightOf("Hospital Course")).exists());
-                assert.ok(await text(recordAsJson.Repeat['1']['Obs']['Chief Complaint Duration'],toRightOf("Chief Complaint Duration")).exists());
-                assert.ok(await text(recordAsJson.Repeat['1']['Obs']['Examination Notes'],toRightOf('Examination Notes')).exists());
-                assert.ok(await text(recordAsJson.Repeat['1']['Obs']['History Notes'],toRightOf("History Notes")).exists());
-                assert.ok(await text(recordAsJson.Repeat['1']['Obs']['Chief Complaint Notes'],toRightOf("Chief Complaint Notes")).exists());
-                //The below assertion will fail due to bug in application, the Smoking history is displayed as NO even if the value is YES in CSV----
-                assert.ok(await text(recordAsJson.Repeat['1']['Obs']['Smoking History'],toRightOf("Smoking History")).exists());
-                //-----------------------------------------//
-                assert.ok(await text(recordAsJson.Repeat['1']['Obs']['Consultation Note'],toRightOf("consultation note")).exists());
-                assert.ok(await text(recordAsJson.Repeat['1']['Diagnosis']['1'],below("Diagnoses")).exists());
-                await click($('.back-btn'),{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
-                break;
-        }        
-        recordSeq++;
-    } 
-    });
-
-
 

@@ -13,6 +13,8 @@ const {
 } = require('taiko');
 var taikoHelper = require("util/taikoHelper");
 var users = require("util/users")
+const csvConfig=require("util/csvConfig");
+
 
 step("put first name <firstName> middle name <middleName> lastname <lastName>", async function(firstName, middleName, lastName) {
 	gauge.dataStore.scenarioStore.put("patientFirstName",firstName);
@@ -84,4 +86,14 @@ step("put doctor first name <doctorFirstName> middle name <doctorMiddleName> las
     gauge.dataStore.scenarioStore.put("doctorFirstName",doctorFirstName);
     gauge.dataStore.scenarioStore.put("doctorMiddleName",doctorMiddleName);
     gauge.dataStore.scenarioStore.put("doctorLastName",doctorLastName);
+});
+
+step("Choose a random uploaded patient identifier", async function() {
+    //var recordLength=gauge.dataStore.scenarioStore.get("fileDataLength")-1;
+    let recordSeq=0;
+    const recordAsJson =(await csvConfig.getCSVasJson("patient"))[recordSeq];
+
+    // await taikoHelper.selectEntriesTillIterationEnds(recordSeq);
+    var patientIdentifierValue = gauge.dataStore.scenarioStore.get("patientIdentifier"+(recordSeq));
+    gauge.dataStore.scenarioStore.put("patientIdentifier",patientIdentifierValue);
 });

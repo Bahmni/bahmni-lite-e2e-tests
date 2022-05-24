@@ -33,8 +33,3 @@
 * upload file for <profile> profile
 * wait for "2000"
 * verify upload status <profile> data
-
-# Verfiy bulk encounter upload
-* Verify bulk "Encounter" data upload
-* wait for "1000"
-* Click back button
