@@ -25,8 +25,8 @@ step("Click Start IPD Visit", async function() {
 });
 
 step("Click Start OPD Visit", async function () {
-    await scrollTo(`Start ${process.env.default_visit_type} Visit`)
-    await click(`Start ${process.env.default_visit_type} Visit`,{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
+    await scrollTo(`Start ${process.env.default_visit_type} visit`)
+    await click(`Start ${process.env.default_visit_type} visit`,{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
     await taikoHelper.repeatUntilNotFound($("#overlay"))
 });
 

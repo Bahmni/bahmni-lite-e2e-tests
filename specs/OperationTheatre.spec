@@ -1,7 +1,11 @@
 # Operation Theatre
-Tags: hospital
+
+tags: hospital
+
 ## Create an OT location if it doesn't exisit
-Tags: hospital,master-data-management
+
+tags: hospital, master-data-management
+
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Goto the openMRS Admin tab
 * Goto Administration
@@ -20,7 +24,7 @@ Tags: hospital,master-data-management
 * Edit doctor's OT schedule
 * Schedule a surgery for patient
 * Cancel the surgery
-* Give reason 
+* Give reason
 * Confirm cancellation
 * Save OT data
 * Click OT Scheduling
