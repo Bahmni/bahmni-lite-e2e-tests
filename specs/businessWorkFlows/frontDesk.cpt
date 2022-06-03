@@ -16,6 +16,7 @@
 * Enter patient gender <gender>
 * Enter age of the patient <age>
 * Enter village "Village"
+* Enter patient mobile number <mobileNumber>
 * Save the patient data
 
 # Create a new patient with gender <gender> with random name, aged <age> with mobile number <mobileNumber> without village
