@@ -1,0 +1,16 @@
+{
+    "ObservationFormName": "Vitals",
+    "ObservationFormDetails":
+    [
+        {"type":"Button","label":"Diagnosis Confirmed","value":"Confirmed Elsewhere"},
+        {
+            "type":"Group","label":"Smoking history",
+            "value":[
+                {"type":"Button","label":"Smoking history","value":"Yes"},     
+                {"type":"TextBox","label":"Packs per day","value":"2"},
+                {"type":"TextBox","label":"Number of years","value":"2"}
+            ]
+        }
+    ]
+}
+
