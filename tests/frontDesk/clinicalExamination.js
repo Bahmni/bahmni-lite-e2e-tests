@@ -50,10 +50,15 @@ step("Doctor prescribes medicines <prescriptionNames>", async function (prescrip
         if (drugName == null)
             drugName = medicalPrescriptions.drug_name;
         await write(drugName, into(textBox(toRightOf("Drug Name"))));
-        await click(text(drugName, below("Drug Name"), toRightOf("Drug Name")));
         await dropDown(toRightOf("Units")).select(medicalPrescriptions.units);
         await dropDown(toRightOf("Frequency")).select(medicalPrescriptions.frequency)
-        await click("Accept");
+        try{
+            await click("Accept");
+        }
+        catch(e){
+            await click(text(drugName, below("Drug Name"), toRightOf("Drug Name")));
+            await click("Accept");
+        }
         await write(medicalPrescriptions.dose, into(textBox(toRightOf("Dose"))));
         await write(medicalPrescriptions.duration, into(textBox(toRightOf("Duration"))));
         await click("Add");
