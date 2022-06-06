@@ -17,29 +17,6 @@
 * Enter adt notes "Discharge notes"
 * Discharge the patient
 
-# Nurse initiates clinical checkup
-* Open clinical tab
-* Nurse enters basic clinical details
-
-# Nurse captures BP, sugar checkup
-* Add new observation Form
-* Select the Observation Form "DiabetiesIntake"
-* Enter Form Values "DiabetiesIntake"
-* Add new observation Form
-* Select the Observation Form "DiabetiesProgress"
-* Enter Form Values "DiabetiesProgress"
-
-# Nurse enters HIV details
-* Add new observation Form
-* Select the Observation Form "HIVTreatmentAndCareIntake"
-* Enter Form Values "HIVTreatmentAndCareIntake"
-
-# Nurse enters basic clinical details
-* Click History and Examination
-* Enter History and examination details
-* Save data
-* Enter vitals
-
 # Admit a patient to general ward bed <wardNumber>
 * Open "Bed Management" module
 * Goto All section

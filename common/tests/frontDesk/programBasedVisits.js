@@ -22,7 +22,7 @@ const {
 var date = require("../util/date");
 var fileExtension = require("../util/fileExtension");
 var path = require("path")
-var taikoHelper = require("../util/taikoHelper")
+const taikoHelper = require("../util/taikoHelper")
 
 step("Click Start Special OPD Visit", async function() {
     await scrollTo("Start OPD Visit")

@@ -24,7 +24,7 @@ const {
 	scrollTo,
 	toLeftOf
 } = require('taiko');
-var taikoHelper = require("../util/taikoHelper");
+const taikoHelper = require("../util/taikoHelper")
 var fileExtension = require("../util/fileExtension");
 
 step("Nurse opens admission tab", async function () {
@@ -74,15 +74,6 @@ step("Goto All section", async function () {
 	await click("All", { force: true })
 });
 
-step("Goto Admitted tab", async function () {
-	await click("Admitted")
-});
-
-step("Goto back from clinical tab", async function () {
-	await click($("#clinicalHomeBackLink"), { waitForNavigation: true, waitForEvents: ['networkIdle'], navigationTimeout: process.env.actionTimeout });
-	await taikoHelper.repeatUntilNotFound($("#overlay"))
-});
-
 step("View Admitted patients", async function () {
 	await click("Admitted")
 });
@@ -117,20 +108,6 @@ step("Click Admit on popup", async function () {
 	// await click(text('Admit', within($('[ng-click="admitConfirmation()"]'))));
 });
 
-step("Select Second Vitals", async function () {
-	await waitFor('Second Vitals')
-	await click("Second Vitals", { waitForNavigation: true, navigationTimeout: process.env.actionTimeout });
-});
-
-step("Add new observation form", async function () {
-	await click("Add New Obs Form", { waitForNavigation: true, navigationTimeout: process.env.actionTimeout });
-	await taikoHelper.repeatUntilNotFound($("#overlay"))
-});
-
-step("Select the Observation Form <observationFormFile>", async function (observationFormFile) {
-	var observationFormValues = JSON.parse(fileExtension.parseContent(`./data/opConsultation/${observationFormFile}.json`))
-	await click(button(observationFormValues.ObservationFormName, { waitForNavigation: true, navigationTimeout: process.env.actionTimeout }));
-})
 step("Enter Form Values <observationFormFile>", async function (observationFormFile) {
 	var observationFormValues = JSON.parse(fileExtension.parseContent(`./data/opConsultation/${observationFormFile}.json`))
 	await taikoHelper.repeatUntilNotFound($("#overlay"))
@@ -139,12 +116,6 @@ step("Enter Form Values <observationFormFile>", async function (observationFormF
 	await click("Save", { waitForNavigation: true, navigationTimeout: process.env.actionTimeout });
 	await taikoHelper.repeatUntilNotFound($("#overlay"))
 })
-
-step("Add new observation Form", async function () {
-	await click("Add New Obs Form", { waitForNavigation: true, navigationTimeout: process.env.actionTimeout });
-	await taikoHelper.repeatUntilNotFound($("#overlay"))
-})
-
 
 step("Click History and Examination", async function () {
 	await click("History and Examination", { waitForNavigation: true, navigationTimeout: process.env.actionTimeout })

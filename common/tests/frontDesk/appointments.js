@@ -25,7 +25,7 @@ const {
     scrollTo
 } = require('taiko');
 var date = require("../util/date");
-var taikoHelper = require("../util/taikoHelper")
+const taikoHelper = require("../util/taikoHelper")
 
 step("View all appointments", async function () {
     await click(process.env.appointmentList);

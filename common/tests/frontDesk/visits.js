@@ -14,7 +14,7 @@ const {
     press,
     scrollTo
 } = require('taiko');
-var taikoHelper = require("../util/taikoHelper");
+const taikoHelper = require("../util/taikoHelper")
 var fileExtension = require("../util/fileExtension")
 var assert = require('assert')
 step("Click Start IPD Visit", async function() {

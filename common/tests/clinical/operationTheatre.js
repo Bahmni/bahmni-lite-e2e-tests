@@ -19,7 +19,7 @@ const {
     toLeftOf,
 } = require('taiko');
 var date = require("../util/date");
-var taikoHelper = require("../util/taikoHelper")
+const taikoHelper = require("../util/taikoHelper")
 step("Click OT Scheduling", async function() {
 	await click("OT Scheduling")
 });

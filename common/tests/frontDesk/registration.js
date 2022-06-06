@@ -26,7 +26,7 @@ const {
 } = require('taiko');
 var users = require("../util/users");
 var date = require("../util/date");
-var taikoHelper = require("../util/taikoHelper");
+const taikoHelper = require("../util/taikoHelper")
 
 var assert = require("assert");
 

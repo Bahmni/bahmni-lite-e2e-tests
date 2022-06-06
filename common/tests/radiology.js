@@ -1,6 +1,6 @@
 const { write, toRightOf,into,textBox, press, goto, below, scrollTo,click, text,above, highlight, waitFor,$,evaluate } = require("taiko");
 var assert= require("assert")
-var users = require("util/users");
+var users = require("./util/users");
 
 step("Enter Radiology username", async function() {
     await write(users.getUserNameFromEncoding(process.env.pacsUser),into(textBox(toRightOf("Username"))));

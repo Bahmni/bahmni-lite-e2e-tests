@@ -8,7 +8,7 @@ const {
     press,
     text,
 } = require('taiko');
-var taikoHelper = require("../util/taikoHelper");
+const taikoHelper = require("../util/taikoHelper")
 var users = require("../util/users");
 
 step("Login as <user>", async function (user) {

@@ -19,7 +19,7 @@ const {
     button
 } = require('taiko');
 var fileExtension = require("../util/fileExtension");
-var taikoHelper = require("../util/taikoHelper");
+const taikoHelper = require("../util/taikoHelper")
 var date = require("../util/date")
 
 step("Doctor prescribe tests <prescriptions>", async function (prescriptionFile) {

@@ -1,7 +1,7 @@
 const { click, waitFor, text, timeField,toRightOf,scrollTo } = require("taiko");
-var date = require("util/date");
-var fileExtension = require("util/fileExtension");
-var taikoHelper = require("util/taikoHelper")
+var date = require("./util/date");
+var fileExtension = require("./util/fileExtension");
+var taikoHelper = require("./util/taikoHelper");
 
 step("Choose Bacteriology", async function() {
 	await click("Bacteriology")

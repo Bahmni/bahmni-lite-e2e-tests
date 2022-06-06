@@ -85,10 +85,6 @@
 * Receptionist creates the patient with mobile number <mobileNumber>
 * Start an OPD Visit
 
-# Receptionist creates the patient with mobile number <mobileNumber> and starts an Lab Visit
-* Receptionist creates the patient with mobile number <mobileNumber> without village
-* Start a "Lab" Visit
-
 # Receptionist creates the patient with mobile number <mobileNumber> and starts an Special OPD
 * Open "Registration" module
 * Create a new patient with gender "Female" with random name, aged "29" with mobile number <mobileNumber>

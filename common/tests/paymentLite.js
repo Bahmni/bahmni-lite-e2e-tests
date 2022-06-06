@@ -1,5 +1,5 @@
 const { goto, click, waitFor, button, write, into, textBox, below, scrollTo, above, toLeftOf, toRightOf,$, text, doubleClick, press,link } = require("taiko");
-var fileExtension = require("util/fileExtension")
+var fileExtension = require("./util/fileExtension")
 var assert = require("assert")
 step("Goto paymentlite", async function() {
 	await goto(process.env.paymentLite)

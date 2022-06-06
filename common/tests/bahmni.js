@@ -11,9 +11,9 @@ const {
     toRightOf,
     within,
 } = require('taiko');
-var taikoHelper = require("util/taikoHelper");
-var users = require("util/users")
-const csvConfig=require("util/csvConfig");
+var taikoHelper = require("./util/taikoHelper");
+var users = require("./util/users")
+const csvConfig=require("./util/csvConfig");
 
 
 step("put first name <firstName> middle name <middleName> lastname <lastName>", async function(firstName, middleName, lastName) {

@@ -8,7 +8,7 @@ const {
     $,
 } = require('taiko');
 const path = require('path');
-const taikoHelper = require('taikoHelper')
+const taikoHelper = require("../util/taikoHelper")
 
 const headless = process.env.headless_chrome.toLowerCase() === 'true';
 
