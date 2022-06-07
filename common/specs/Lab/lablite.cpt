@@ -1,9 +1,0 @@
-# Open a patient in lablite
-* start patient serach
-* enter the patient name in lablite
-* wait for overlay to disappear
-* Select the patient in lablite search result
-
-
-# Verify the open orders in Lablite
-* Verify test prescribed is displayed on Pending Lab Orders table
