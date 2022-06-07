@@ -18,7 +18,11 @@ beforeSuite(async () => {
 });
 
 afterSuite(async () => {
-    await closeBrowser();
+    try{
+        await closeBrowser();        
+    }catch(e){
+        gauge.message(e.message)
+    }
 });
 
 // Return a screenshot file name
