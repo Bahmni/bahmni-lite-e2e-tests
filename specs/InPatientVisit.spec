@@ -8,7 +8,7 @@ Tags: IPModule
 * Click back button
 * Click back button
 * Logout and Login to Bahmni location "General Ward" as a "nurse"
-* Nurse admits the patient to bed "314-a"
+* Nurse admits the patient to available bed
 * Click back button
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
 * Open clinical tab
@@ -38,7 +38,7 @@ Tags: BedManagement
 * Click back button
 * Click back button
 * Logout and Login to Bahmni location "General Ward" as a "nurse"
-* Admit a patient to general ward bed "304-d"
+* Admit a patient to general ward bed
 * Click back button
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
 * Open clinical tab
