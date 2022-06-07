@@ -38,7 +38,7 @@ tags: hospital
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
 * Open clinical tab
 * Open "Orders" Tab
-* Place a radiology order for test "chest, 1 view (x-ray)"
+* Place a radiology order for test "chest lateral"
 * Click back button
 * Click back button
 * Logout and Login to Bahmni location "General Ward" as a "receptionist"

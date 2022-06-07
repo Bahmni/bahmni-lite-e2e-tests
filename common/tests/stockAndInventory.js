@@ -1,11 +1,17 @@
 const { goto, below, write, textBox, into, click, toLeftOf, checkBox, reload } = require('taiko');
 
 step("enter odoo username", async function() {
-    await write(process.env.odooUsername,below("Email"));
+    if(await textBox(below("Password")).exists())
+    {
+        await write(process.env.odooUsername,into(textBox(below("Email"))));
+    }
 });
 
 step("enter odoo password", async function() {
-    await write(process.env.odooPassword,into(textBox(below("Password"))));
+    if(await textBox(below("Password")).exists())
+    {
+        await write(process.env.odooPassword,into(textBox(below("Password"))));
+    }
 });
 
 step("Log in to odoo", async function () {

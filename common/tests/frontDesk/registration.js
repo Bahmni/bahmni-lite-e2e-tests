@@ -129,13 +129,22 @@ step("Select the newly created patient", async function() {
 })
 
 step(["Log out if still logged in","Receptionist logs out"], async function () {
+    while(await $('.back-btn').exists())
+    {
+        await taikoHelper.repeatUntilNotFound($("#overlay"))
+        await click($('.back-btn'),{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
+        await taikoHelper.repeatUntilNotFound($("#overlay"))    
+    }
+
     try
     {
         await highlight($(".btn-user-info"))
         await click($(".btn-user-info"))
         await click('Logout',{waitForNavigation:true,navigationTimeout:process.env.actionTimeout});
         await taikoHelper.repeatUntilNotFound($("#overlay"))    
-    }catch(e){}
+    }catch(e){
+        gauge.message(e.message)
+    }
 })
 
 step("Login as user <user> with admin credentials location <location>", async function (user, location) {
