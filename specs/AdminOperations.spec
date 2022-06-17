@@ -58,3 +58,13 @@ tags: openMRS
 * Convert Quotation to Sales
 * View Direct Sales Quotation
 * Confirm Sales
+
+## Admin should be able to do the search index and Give OT Access to receptionist
+
+tags: setup
+* Login to Bahmni location "General Ward" as a "admin"
+* Goto the openMRS Admin tab
+* Goto Administration
+* Do Search Index
+* Goto Administration
+* Give "OT: FullAccess" to "receptionist"
