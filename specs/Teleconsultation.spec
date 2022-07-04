@@ -1,7 +1,7 @@
 # Appointments
 
 ## A receptionist should be able to create and cancel teleconsultation appointment for a patient
-Tags: regression
+Tags: hospital
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Open "Appointment scheduling" module
 * Open admin tab of Appointments
