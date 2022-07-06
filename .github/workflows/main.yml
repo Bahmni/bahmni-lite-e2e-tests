@@ -16,7 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        test-commands: ["npm run lite", "npm run hospital"]
+        test-commands: ["npm run hospital"]
+        # the below line is commented, Lite environment scripts will be added to GHA once the clinic config team deploys the basic flow changes.
+        # test-commands: ["npm run lite", "npm run hospital"]
       fail-fast: false
     steps:
       - uses: actions/checkout@v2
