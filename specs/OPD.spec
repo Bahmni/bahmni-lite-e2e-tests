@@ -57,7 +57,7 @@ tags: payment-lite
 
 ## Doctor and medicines should be billed in paymentlite
 
-tags: payment-lite
+tags: lite
 
 * put randomly generated names for patient
 * put doctor first name "d3FirstName" middle name "d3MiddleName" lastname "d3LastName"
@@ -125,7 +125,7 @@ tags: clinic
 tags: lite
 
 * Login to Bahmni location "Bahmni Clinic" as a "receptionist"
-* Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
+* Receptionist creates the patient with mobile number "mobileNumber" without village
 * Logout and Login to Bahmni location "Bahmni Clinic" as a "doctor"
 * Open clinical tab
 * Enter vitals

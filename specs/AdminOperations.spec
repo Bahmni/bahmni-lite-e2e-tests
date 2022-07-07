@@ -2,7 +2,7 @@
 
 ## Admin should be able to merge patients
 
-tags: hospital, clinic
+tags: hospital
 
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
