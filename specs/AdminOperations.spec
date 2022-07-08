@@ -44,7 +44,7 @@ tags: hospital
 
 ## A saleable concept should be available in ODOO
 
-tags: openMRS
+tags: hospital
 
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Goto the openMRS Admin tab
@@ -62,6 +62,7 @@ tags: openMRS
 ## Admin should be able to do the search index and Give OT Access to receptionist
 
 tags: setup
+
 * Login to Bahmni location "General Ward" as a "admin"
 * Goto the openMRS Admin tab
 * Goto Administration
