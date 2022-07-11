@@ -4,6 +4,8 @@ on:
     branches:
       - main
       - 'release/v*.**'
+  schedule:
+    - cron:  '30 2 * * *'
   workflow_dispatch:
     inputs:
       target_env:
