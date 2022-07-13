@@ -134,7 +134,7 @@ tags: lite
 * Open "Lab entry" module
 * Open a patient in lablite
 * Verify the open orders in Lablite
-* open upload report side panel
+* Upload and verify report in lablite
 * Goto Clinical application
 * Open clinical tab with all section
 * verify name with id
