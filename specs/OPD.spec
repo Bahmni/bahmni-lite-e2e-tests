@@ -122,7 +122,7 @@ tags: hospital
 
 ## Doctor should be able to prescribe medicines and tests and get relevant reports from LabLite
 
-tags: lite
+tags: lite, lab
 
 * Login to Bahmni location "Bahmni Clinic" as a "receptionist"
 * Receptionist creates the patient with mobile number "mobileNumber" without village
