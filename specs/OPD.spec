@@ -135,9 +135,10 @@ tags: lite, lab
 * Open a patient in lablite
 * Verify the open orders in Lablite
 * Upload and verify report in lablite
+Verify order is removed from Pending lab orders table
 * Goto Clinical application
 * Open clinical tab with all section
 * verify name with id
-verify the document uploaded is available in patient dashboard
+verify the document uploaded/Reports table is available in patient dashboard
 * Logout and Login to Bahmni location "Bahmni Clinic" as a "receptionist"
 * visit is closed at the front desk
