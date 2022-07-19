@@ -5,7 +5,7 @@
     "local": "gauge run specs --env local -v -p --tags 'clinic | BedManagement'",
     "lite": "gauge run specs --env lite -v -p -n=3 --tags 'lite'",
     "hospital": "gauge run specs --env demo0.9.3 -v -p -n=3 --tags 'setup';gauge run specs --env demo0.9.3 -v -p -n=6 --tags 'hospital | BedManagement | IPModule'",
-    "test": "gauge run specs --env next -v -p -n=3 --tags 'clinic | BedManagement'"
+    "ci": "gauge run specs -v -p "
   },
   "dependencies": {
     "axios": "^0.27.2",
