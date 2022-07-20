@@ -122,29 +122,23 @@ tags: hospital
 
 ## Doctor should be able to prescribe medicines and tests and get relevant reports from LabLite
 
-tags: lite
+tags: lite, lab
 
 * Login to Bahmni location "Bahmni Clinic" as a "receptionist"
 * Receptionist creates the patient with mobile number "mobileNumber" without village
+* Click Start OPD Visit
 * Logout and Login to Bahmni location "Bahmni Clinic" as a "doctor"
 * Open clinical tab
-* Enter vitals
-* Doctor advises medicines "opd/prescriptionFlow/medication/paracetamol" and tests "opd/prescriptionFlow/lab/Haemogram"
+* Doctor prescribes tests "opd/prescriptionFlow/lab/Haemogram"
 * Goto Clinical application
 * Open "Lab entry" module
 * Open a patient in lablite
 * Verify the open orders in Lablite
 * Upload and verify report in lablite
+Verify order is removed from Pending lab orders table
 * Goto Clinical application
 * Open clinical tab with all section
 * verify name with id
-* verify OPD
-* verify prescription "opd/prescriptionFlow/medication/paracetamol"
-* verify vitals
-* Doctor clicks consultation
-* Doctor notes the diagnosis
-* Save data
-* Click back button
-* Click back button
+verify the document uploaded/Reports table is available in patient dashboard
 * Logout and Login to Bahmni location "Bahmni Clinic" as a "receptionist"
 * visit is closed at the front desk
