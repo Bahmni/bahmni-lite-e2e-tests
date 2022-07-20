@@ -67,6 +67,8 @@ Patient should be auto created in bahmni
 * Collect the payment from the patient
 * Verify the payment is complete
 Run report and validate
+* Logout and Login to Bahmni location "Bahmni Clinic" as a "receptionist"
+* visit is closed at the front desk
 
 ## Doctor should be able to prescribe medicines and tests and get relevant reports
 
