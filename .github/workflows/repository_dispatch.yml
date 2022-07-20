@@ -35,7 +35,7 @@ jobs:
       - run: npm install @getgauge/cli
       - run: npm install
       - name: Run test
-        run: xvfb-run ${{ github.event.client_payload.testCommand }}
+        run: xvfb-run npm run ci -- ${{ github.event.client_payload.testCommand }}
       - name: Upload reports
         if: always()
         uses: actions/upload-artifact@v2
