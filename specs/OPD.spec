@@ -57,17 +57,18 @@ tags: lite, payment
 * Doctor advises medicines "opd/prescriptionFlow/medication/paracetamol" and tests "opd/prescriptionFlow/lab/Haemogram"
 * Goto Bahmni main home
 * put doctor first name "d3FirstName" middle name "d3MiddleName" lastname "d3LastName"
-* Login to paymentLite
-* Create a doctor in paymentLite with consultation fee "15000"
+* Login to Payment lite
+* Create a doctor in Payment Lite with consultation fee "15000"
 * Create drug with price "1000"
 Drug should flow from Bahmni
-* Create a patient in patientLite
+* Create a patient in Payment Lite
 Patient should be auto created in bahmni
 * Raise an invoice for patient
 * Collect the payment from the patient
 * Verify the payment is complete
 Run report and validate
-* Logout and Login to Bahmni location "Bahmni Clinic" as a "receptionist"
+* Logout of Payment Lite
+* Goto Clinical application
 * visit is closed at the front desk
 
 ## Doctor should be able to prescribe medicines and tests and get relevant reports

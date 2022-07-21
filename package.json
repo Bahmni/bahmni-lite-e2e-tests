@@ -12,6 +12,7 @@
     "buffer": "latest",
     "csvtojson": "latest",
     "json2csv": "latest",
+    "pdf-parse": "^1.1.1",
     "taiko": "1.3.2",
     "uuid": "latest"
   }
