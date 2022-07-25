@@ -1,4 +1,4 @@
-name: Bahmni e2e tests
+name: Repository Dispatch
 
 on: repository_dispatch
 
@@ -42,3 +42,18 @@ jobs:
         with:
           name: bahmni-e2e-reports(${{ github.event.client_payload.testCommand }})-${{ github.sha }}
           path: ./reports
+  notification:
+    name: Slack notification1
+    needs:
+      - build-and-run
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Success
+        if: ${{ needs.build-and-run.result == 'success' }}
+          run: |
+            curl -X POST -H 'Content-type: application/json' --data '{"text":">🟢 Bahmni Smoke Tests Passed. \n<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|View Report & Run Details #${{github.run_id}}>"}' ${{ secrets.SLACK_WEBHOOK_URL }}
+        - name: Failure
+          if: ${{ needs.build-and-run.result == 'failure' }}
+          run: |
+            curl -X POST -H 'Content-type: application/json' --data '{"text":"🔴 Bahmni Smoke Tests Failed. \n<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|View Report & Run Details #${{github.run_id}}>"}' ${{ secrets.SLACK_WEBHOOK_URL }}
