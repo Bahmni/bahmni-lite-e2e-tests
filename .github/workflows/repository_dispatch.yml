@@ -67,7 +67,7 @@ jobs:
           name: bahmni-e2e-reports($TEST_ENV)-${{ github.sha }}
           path: ./reports
   notification:
-    name: Slack notification1
+    name: Slack notification
     needs:
       - build-and-run
     runs-on: ubuntu-latest
