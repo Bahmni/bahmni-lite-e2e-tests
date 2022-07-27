@@ -3,9 +3,9 @@ name: Repository Dispatch
 on: 
   push:
     barnches:
-      - e2e_Trigger_enhancement
+      - main
   repository_dispatch:
-    types: [Smoke-Test-Dev-Lit]
+    types: [Smoke-Test-Dev-Lite]
   workflow_dispatch:
     inputs:
       TEST_CONTEXT:
