@@ -1,4 +1,4 @@
-name: Repository Dispatch
+name: Bahmni E2E Tests & Repository Dispatch
 
 on: 
   push:
@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       TEST_CONTEXT:
-        description: 'Test tags to be executed.'
+        description: 'Test tags to be executed. eg. lite, payments, lab, hospital. Logical operators can be used.'
         required: false
         default: lite
       TEST_ENV:
