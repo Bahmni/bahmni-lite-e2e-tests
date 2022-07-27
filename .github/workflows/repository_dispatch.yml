@@ -23,6 +23,9 @@ on:
           - lite
           - demo
           - demo0.9.4
+env:
+  TEST_CONTEXT: ${{ github.event.client_payload.TEST_CONTEXT || github.event.inputs.TEST_CONTEXT || 'lite' }}
+  TEST_ENV: ${{ github.event.client_payload.TEST_ENV || github.event.inputs.TEST_ENV || 'dev.lite' }}
 jobs:
   build-and-run:
     name: Build and Run E2E tests
@@ -56,12 +59,12 @@ jobs:
       - run: npm install @getgauge/cli
       - run: npm install
       - name: Run test
-        run: xvfb-run npm run ci -- --env ${{ github.event.client_payload.TEST_ENV || github.event.inputs.TEST_ENV }} --tags ${{ github.event.client_payload.TEST_CONTEXT || github.event.inputs.TEST_CONTEXT }}
+        run: xvfb-run npm run ci -- --env $TEST_ENV --tags $TEST_CONTEXT
       - name: Upload reports
         if: always()
         uses: actions/upload-artifact@v2
         with:
-          name: bahmni-e2e-reports(${{ github.event.client_payload.TEST_ENV || github.event.inputs.TEST_ENV }})-${{ github.sha }}
+          name: bahmni-e2e-reports($TEST_ENV)-${{ github.sha }}
           path: ./reports
   notification:
     name: Slack notification1
