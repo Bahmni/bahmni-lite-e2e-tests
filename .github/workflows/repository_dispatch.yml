@@ -2,7 +2,7 @@ name: Bahmni E2E Tests & Repository Dispatch
 
 on: 
   push:
-    barnches:
+    branches:
       - main
   repository_dispatch:
     types: [Smoke-Test-Dev-Lite]
