@@ -138,6 +138,8 @@ tags: lite, lab
 * Open a patient in lablite
 * Verify the open orders in Lablite
 * Upload and verify report in lablite
+* Navigate to Audit Log module
+* Verify lab-lite audit events
 Verify order is removed from Pending lab orders table
 * Goto Clinical application
 * Open clinical tab with all section
