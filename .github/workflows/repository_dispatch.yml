@@ -9,9 +9,9 @@ on:
   workflow_dispatch:
     inputs:
       TEST_CONTEXT:
-        description: 'Test tags to be executed. eg. lite, payments, lab, hospital. Logical operators can be used.'
+        description: 'Test tags to be executed. eg. clinic, payment, lab, hospital. Logical operators can be used.'
         required: false
-        default: lite
+        default: clinic
       TARGET_ENV:
         description: 'Environment to test'
         required: true
@@ -24,7 +24,7 @@ on:
           - demo
           - demo0.9.4
 env:
-  TEST_CONTEXT: ${{ github.event.client_payload.context || github.event.inputs.TEST_CONTEXT || 'lite' }}
+  TEST_CONTEXT: ${{ github.event.client_payload.context || github.event.inputs.TEST_CONTEXT || 'clinic' }}
   TARGET_ENV: ${{ github.event.inputs.TARGET_ENV || 'dev.lite' }}
 jobs:
   build-and-run:
