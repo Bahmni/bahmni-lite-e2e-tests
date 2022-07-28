@@ -12,7 +12,7 @@ on:
         description: 'Test tags to be executed. eg. lite, payments, lab, hospital. Logical operators can be used.'
         required: false
         default: lite
-      TEST_ENV:
+      TARGET_ENV:
         description: 'Environment to test'
         required: true
         type: choice
@@ -24,8 +24,8 @@ on:
           - demo
           - demo0.9.4
 env:
-  TEST_CONTEXT: ${{ github.event.client_payload.TEST_CONTEXT || github.event.inputs.TEST_CONTEXT || 'lite' }}
-  TEST_ENV: ${{ github.event.client_payload.TEST_ENV || github.event.inputs.TEST_ENV || 'dev.lite' }}
+  TEST_CONTEXT: ${{ github.event.client_payload.context || github.event.inputs.TEST_CONTEXT || 'lite' }}
+  TARGET_ENV: ${{ github.event.client_payload.target_env || github.event.inputs.TARGET_ENV || 'dev.lite' }}
 jobs:
   build-and-run:
     name: Build and Run E2E tests
@@ -59,12 +59,12 @@ jobs:
       - run: npm install @getgauge/cli
       - run: npm install
       - name: Run test
-        run: xvfb-run npm run ci -- --env $TEST_ENV --tags $TEST_CONTEXT
+        run: xvfb-run npm run ci -- --env $TARGET_ENV --tags $TEST_CONTEXT
       - name: Upload reports
         if: always()
         uses: actions/upload-artifact@v2
         with:
-          name: bahmni-e2e-reports($TEST_ENV)-${{ github.sha }}
+          name: bahmni-e2e-reports(${{env.TARGET_ENV}})-${{env.TEST_CONTEXT}}
           path: ./reports
   notification:
     name: Slack notification
@@ -76,8 +76,8 @@ jobs:
       - name: Success
         if: ${{ needs.build-and-run.result == 'success' }}
         run: |
-          curl -X POST -H 'Content-type: application/json' --data '{"text":">🟢 Bahmni E2E Tests Passed in $TEST_ENV. \n<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|View Report & Run Details #${{github.run_id}}>"}' ${{ secrets.SLACK_WEBHOOK_URL }}
+          curl -X POST -H 'Content-type: application/json' --data '{"text":">🟢 Bahmni E2E Tests Passed in ${{env.TARGET_ENV}}. \n<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|View Report & Run Details #${{github.run_id}}>"}' ${{ secrets.SLACK_WEBHOOK_URL }}
       - name: Failure
         if: ${{ needs.build-and-run.result == 'failure' }}
         run: |
-          curl -X POST -H 'Content-type: application/json' --data '{"text":"🔴 Bahmni E2E Tests Failed in $TEST_ENV. \n<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|View Report & Run Details #${{github.run_id}}>"}' ${{ secrets.SLACK_WEBHOOK_URL }}
+          curl -X POST -H 'Content-type: application/json' --data '{"text":"🔴 Bahmni E2E Tests Failed in ${{env.TARGET_ENV}}. \n<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|View Report & Run Details #${{github.run_id}}>"}' ${{ secrets.SLACK_WEBHOOK_URL }}
