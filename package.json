@@ -3,7 +3,7 @@
   "description": "Starter template for writing JavaScript tests for Gauge",
   "scripts": {
     "local": "gauge run specs --env local -v -p --tags 'clinic | BedManagement'",
-    "lite": "gauge run specs --env lite -v -p -n=3 --tags 'lite'",
+    "lite": "gauge run specs --env lite -v -p -n=3 --tags 'clinic'",
     "hospital": "gauge run specs --env demo0.9.3 -v -p -n=3 --tags 'setup';gauge run specs --env demo0.9.3 -v -p -n=6 --tags 'hospital | BedManagement | IPModule'",
     "ci": "gauge run specs -v -p "
   },

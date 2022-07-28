@@ -44,7 +44,7 @@ tags: hospital
 
 ## A saleable concept should be available in ODOO
 
-tags: hospital
+tags: hospital, payment
 
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Goto the openMRS Admin tab
