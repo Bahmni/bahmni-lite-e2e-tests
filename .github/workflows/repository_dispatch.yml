@@ -25,7 +25,7 @@ on:
           - demo0.9.4
 env:
   TEST_CONTEXT: ${{ github.event.client_payload.context || github.event.inputs.TEST_CONTEXT || 'lite' }}
-  TARGET_ENV: ${{ github.event.client_payload.target_env || github.event.inputs.TARGET_ENV || 'dev.lite' }}
+  TARGET_ENV: ${{ github.event.inputs.TARGET_ENV || 'dev.lite' }}
 jobs:
   build-and-run:
     name: Build and Run E2E tests
