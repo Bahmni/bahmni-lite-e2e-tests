@@ -66,7 +66,8 @@ Patient should be auto created in bahmni
 * Raise an invoice for patient
 * Collect the payment from the patient
 * Verify the payment is complete
-Run report and validate
+* Run report and validate
+* Goto paymentlite
 * Logout of Payment Lite
 * Goto Clinical application
 * visit is closed at the front desk
