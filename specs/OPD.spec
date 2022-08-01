@@ -2,7 +2,7 @@
 
 ## Old Uploaded Patient data should be available for billing
 
-tags: hospital
+tags: hospital, lab, payment
 
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Open "Admin" module
@@ -31,7 +31,7 @@ tags: hospital
 
 ## Doctor should be able to prescribe radiology tests
 
-tags: hospital
+tags: hospital, radiology
 
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
@@ -47,7 +47,7 @@ tags: hospital
 
 ## Doctor and medicines should be billed in paymentlite
 
-tags: lite, payment
+tags: clinic, payment-lite
 
 * Login to Bahmni location "Bahmni Clinic" as a "receptionist"
 * Receptionist creates the patient with mobile number "mobileNumber" without village
@@ -73,7 +73,7 @@ Run report and validate
 
 ## Doctor should be able to prescribe medicines and tests and get relevant reports
 
-tags: hospital
+tags: hospital, lab, payment
 
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
@@ -125,7 +125,7 @@ tags: hospital
 
 ## Doctor should be able to prescribe medicines and tests and get relevant reports from LabLite
 
-tags: lite, lab
+tags: clinic, lab-lite
 
 * Login to Bahmni location "Bahmni Clinic" as a "receptionist"
 * Receptionist creates the patient with mobile number "mobileNumber" without village
