@@ -2,6 +2,7 @@ name: Bahmni e2e tests
 on:
   push:
     branches:
+      - main
   schedule:
     - cron:  '30 0 * * *'
   workflow_dispatch:
@@ -9,7 +10,7 @@ on:
       TEST_CONTEXT:
         description: 'Test tags to be executed. eg. clinic, payment, lab, hospital. Logical operators can be used.'
         required: false
-        default: demo
+        default: hospital
       TARGET_ENV:
         description: 'Environment to test'
         required: true
@@ -21,9 +22,15 @@ on:
           - lite
           - demo
           - demo0.9.4
+      TEST_SETUP:
+        description: 'Enable this to run Pre-Requiste Tests'
+        required: true
+        type: boolean
+        default: true
 env:
   TEST_CONTEXT: ${{ github.event.inputs.TEST_CONTEXT || 'hospital' }}
   TARGET_ENV: ${{ github.event.inputs.TARGET_ENV || 'demo' }}
+  TEST_SETUP: ${{ github.event.inputs.TEST_SETUP || 'true' }}
 jobs:
   build-and-run:
     name: Build and Run E2E test
@@ -56,7 +63,10 @@ jobs:
             fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
       - run: npm install @getgauge/cli
       - run: npm install
-      - name: Run test
+      - name: Run Setup
+        if: ${{ env.TEST_SETUP == 'true' }}
+        run: xvfb-run npm run ci -- --env $TARGET_ENV --tags 'setup'
+      - name: Run tests
         run: xvfb-run npm run ci -- --env $TARGET_ENV --tags $TEST_CONTEXT
       - name: Upload reports
         if: always()
