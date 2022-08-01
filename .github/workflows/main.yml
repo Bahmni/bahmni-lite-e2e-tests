@@ -2,26 +2,32 @@ name: Bahmni e2e tests
 on:
   push:
     branches:
-      - main
-      - 'release/v*.**'
   schedule:
     - cron:  '30 0 * * *'
   workflow_dispatch:
     inputs:
-      target_env:
-        description: 'Envrionment to run e2e against (demo, dev)'
-        default: 'demo'
+      TEST_CONTEXT:
+        description: 'Test tags to be executed. eg. clinic, payment, lab, hospital. Logical operators can be used.'
         required: false
+        default: demo
+      TARGET_ENV:
+        description: 'Environment to test'
+        required: true
+        type: choice
+        default: demo
+        options:
+          - dev.lite
+          - qa.lite
+          - lite
+          - demo
+          - demo0.9.4
+env:
+  TEST_CONTEXT: ${{ github.event.inputs.TEST_CONTEXT || 'hospital' }}
+  TARGET_ENV: ${{ github.event.inputs.TARGET_ENV || 'demo' }}
 jobs:
   build-and-run:
     name: Build and Run E2E test
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        test-commands: ["npm run demo"]
-        # the below line is commented, Lite environment scripts will be added to GHA once the clinic config team deploys the basic flow changes.
-        # test-commands: ["npm run lite", "npm run hospital"]
-      fail-fast: false
     steps:
       - uses: actions/checkout@v2
         with:
@@ -51,10 +57,25 @@ jobs:
       - run: npm install @getgauge/cli
       - run: npm install
       - name: Run test
-        run: xvfb-run ${{ matrix.test-commands }}
+        run: xvfb-run npm run ci -- --env $TARGET_ENV --tags $TEST_CONTEXT
       - name: Upload reports
         if: always()
         uses: actions/upload-artifact@v2
         with:
-          name: bahmni-e2e-reports(${{ matrix.test-commands }})-${{ github.sha }}
+          name: bahmni-e2e-reports(${{env.TARGET_ENV}})-${{env.TEST_CONTEXT}}
           path: ./reports
+  notification:
+    name: Slack notification
+    needs:
+      - build-and-run
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Success
+        if: ${{ needs.build-and-run.result == 'success' }}
+        run: |
+          curl -X POST -H 'Content-type: application/json' --data '{"text":">🟢 Bahmni E2E Tests Passed in ${{env.TARGET_ENV}}. \n<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|View Report & Run Details #${{github.run_id}}>"}' ${{ secrets.SLACK_WEBHOOK_URL }}
+      - name: Failure
+        if: ${{ needs.build-and-run.result == 'failure' }}
+        run: |
+          curl -X POST -H 'Content-type: application/json' --data '{"text":"🔴 Bahmni E2E Tests Failed in ${{env.TARGET_ENV}}. \n<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|View Report & Run Details #${{github.run_id}}>"}' ${{ secrets.SLACK_WEBHOOK_URL }}
