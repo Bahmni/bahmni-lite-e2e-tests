@@ -1,6 +1,6 @@
 # In Patient Visit
 ## Nurse should be able to admit and discharge a patient based on doctor's disposition
-Tags: IPModule
+Tags: hospital, IPModule
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates a patient with mobileNumber "+91-9876543210" and starts an IPD visit
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
@@ -30,7 +30,7 @@ Tags: IPModule
 * visit is closed at the front desk
 
 ## Nurse uses Bed management to admit and discharge a patient based on doctor's disposition
-Tags: BedManagement
+Tags: hospital, BedManagement
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates a patient with mobileNumber "+91-9876543210" and starts an IPD visit
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
