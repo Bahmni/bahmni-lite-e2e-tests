@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - BAH-2164-deploy-test-reports-in-github-pages-and-enhance-slack-notification
   schedule:
     - cron:  '30 0 * * *'
   workflow_dispatch:
@@ -75,38 +76,13 @@ jobs:
           name: bahmni-e2e-reports(${{env.TARGET_ENV}})-${{env.TEST_CONTEXT}}
           path: ./reports
       - name: Deploy reports
+        if:  always()
         env:
           SRC_FOLDER_PATH: 'reports/html-report'
           TARGET_BRANCH: 'gh-pages'
-        if: always()
-        run: | 
-            git config --global user.name ${{ secrets.BAHMNI_USERNAME}}
-            git config --global user.email ${{ secrets.BAHMNI_EMAIL}}
-            git fetch
-            git checkout -f $TARGET_BRANCH
-            mv $SRC_FOLDER_PATH report-${{GITHUB.RUN_ID}}-${{GITHUB.RUN_ATTEMPT}}
-            MAX_DIR=10
-            count=$(ls -d report-* | wc -l)
-            count=`echo $count | sed -e 's/^[[:space:]]*//'`
-            echo Total directories - $count
-            if [ $count -eq $MAX_DIR ]
-            then
-              deleteDir=0
-            else
-              deleteDir=`expr $count - $MAX_DIR`
-            fi
-            echo Total directories to be deleted - $deleteDir
-            if [ $count -gt $MAX_DIR ]
-            then  
-              echo "deleting reports older than $MAX_DIR occurrences"
-              ls -d report-* | head -$deleteDir | xargs rm -rf
-            fi
-            count=$(ls -d report-* | wc -l)
-            count=`echo $count | sed -e 's/^[[:space:]]*//'`
-            echo total files after deletion $count
-            git add .
-            git commit -m "Deploy Reports"
-            git push origin $TARGET_BRANCH
+          MAX_DIR: 10
+        shell: bash
+        run: bash .github/deleteOldReports.sh $MAX_DIR $SRC_FOLDER_PATH $TARGET_BRANCH ${{secrets.BAHMNI_USERNAME}} ${{secrets.BAHMNI_EMAIL}} ${{GITHUB.RUN_ID}} ${{GITHUB.RUN_ATTEMPT}}
   notification:
     name: Slack notification
     needs:
