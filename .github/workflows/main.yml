@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - BAH-2164-deploy-test-reports-in-github-pages-and-enhance-slack-notification
   schedule:
     - cron:  '30 0 * * *'
   workflow_dispatch:
@@ -74,6 +75,39 @@ jobs:
         with:
           name: bahmni-e2e-reports(${{env.TARGET_ENV}})-${{env.TEST_CONTEXT}}
           path: ./reports
+      - name: Deploy reports
+        env:
+          SRC_FOLDER_PATH: 'reports/html-report'
+          TARGET_BRANCH: 'gh-pages'
+        if: always()
+        run: | 
+            git config --global user.name ${{ secrets.BAHMNI_USERNAME}}
+            git config --global user.email ${{ secrets.BAHMNI_EMAIL}}
+            git fetch
+            git checkout -f $TARGET_BRANCH
+            mv $SRC_FOLDER_PATH report-${{GITHUB.RUN_ID}}-${{GITHUB.RUN_ATTEMPT}}
+            MAX_DIR=10
+            count=$(ls -d report-* | wc -l)
+            count=`echo $count | sed -e 's/^[[:space:]]*//'`
+            echo Total directories - $count
+            if [ $count -eq $MAX_DIR ]
+            then
+              deleteDir=0
+            else
+              deleteDir=`expr $count - $MAX_DIR`
+            fi
+            echo Total directories to be deleted - $deleteDir
+            if [ $count -gt $MAX_DIR ]
+            then  
+              echo "deleting reports older than $MAX_DIR occurrences"
+              ls -d report-* | head -$deleteDir | xargs rm -rf
+            fi
+            count=$(ls -d report-* | wc -l)
+            count=`echo $count | sed -e 's/^[[:space:]]*//'`
+            echo total files after deletion $count
+            git add .
+            git commit -m "Deploy Reports"
+            git push origin $TARGET_BRANCH
   notification:
     name: Slack notification
     needs:
@@ -81,11 +115,13 @@ jobs:
     runs-on: ubuntu-latest
     if: always()
     steps:
+      - name: Get Repository Name
+        run: echo "REPO_NAME=$(basename ${{ github.repository }})" >> $GITHUB_ENV
       - name: Success
         if: ${{ needs.build-and-run.result == 'success' }}
         run: |
-          curl -X POST -H 'Content-type: application/json' --data '{"text":">🟢 Bahmni E2E Tests Passed in ${{env.TARGET_ENV}}. \n<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|View Report & Run Details #${{github.run_id}}>"}' ${{ secrets.SLACK_WEBHOOK_URL }}
+          curl -X POST -H 'Content-type: application/json' --data '{"attachments":[{"color":"#006400","blocks":[{"type":"section","text":{"type":"mrkdwn","text":"✅ Bahmni E2E Tests Passed in ${{env.TARGET_ENV}}."}},{"type":"section","text":{"type":"mrkdwn","text":"📌 View the detailed HTML report here 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://${{github.repository_owner}}.github.io/${{env.REPO_NAME}}/report-${{GITHUB.RUN_ID}}-${{GITHUB.RUN_ATTEMPT}}"}},{"type":"section","text":{"type":"mrkdwn","text":"📌 View Workflow Run Details 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}"}}]}]}' ${{ secrets.SLACK_WEBHOOK_URL }}
       - name: Failure
         if: ${{ needs.build-and-run.result == 'failure' }}
         run: |
-          curl -X POST -H 'Content-type: application/json' --data '{"text":"🔴 Bahmni E2E Tests Failed in ${{env.TARGET_ENV}}. \n<https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}|View Report & Run Details #${{github.run_id}}>"}' ${{ secrets.SLACK_WEBHOOK_URL }}
+          curl -X POST -H 'Content-type: application/json' --data '{"attachments":[{"color":"#FF0000","blocks":[{"type":"section","text":{"type":"mrkdwn","text":"❌ Bahmni E2E Tests Failed in ${{env.TARGET_ENV}}."}},{"type":"section","text":{"type":"mrkdwn","text":"📌 View the detailed HTML report here 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://${{github.repository_owner}}.github.io/${{env.REPO_NAME}}/report-${{GITHUB.RUN_ID}}-${{GITHUB.RUN_ATTEMPT}}"}},{"type":"section","text":{"type":"mrkdwn","text":"📌 View Workflow Run Details 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}"}}]}]}' ${{ secrets.SLACK_WEBHOOK_URL }}
