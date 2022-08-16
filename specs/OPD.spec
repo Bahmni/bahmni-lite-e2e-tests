@@ -138,7 +138,10 @@ tags: clinic, lab-lite
 * Open a patient in lablite
 * Verify the open orders in Lablite
 * Upload and verify report in lablite
-Verify order is removed from Pending lab orders table
+* Verify order is removed from Pending lab orders table
+* Click Home button on lab-lite
+* Navigate to Audit Log module
+* Verify lab-lite audit events
 * Goto Clinical application
 * Open clinical tab with all section
 * verify name with id
