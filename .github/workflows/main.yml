@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - main
-      - BAH-2164-deploy-test-reports-in-github-pages-and-enhance-slack-notification
   schedule:
     - cron:  '30 0 * * *'
   workflow_dispatch:
