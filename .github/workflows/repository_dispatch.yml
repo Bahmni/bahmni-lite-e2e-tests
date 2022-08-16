@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - BAH-2164-deploy-test-reports-in-github-pages-and-enhance-slack-notification
   repository_dispatch:
     types: [Smoke-Test-Dev-Lite]
   workflow_dispatch:
