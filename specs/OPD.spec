@@ -45,32 +45,6 @@ tags: hospital, radiology
 * visit is closed at the front desk
 * verify patient details on DCM4chee
 
-## Doctor and medicines should be billed in paymentlite
-
-tags: clinic, payment-lite
-
-* Login to Bahmni location "Bahmni Clinic" as a "receptionist"
-* Receptionist creates the patient with mobile number "mobileNumber" without village
-* Click Start OPD Visit
-* Logout and Login to Bahmni location "Bahmni Clinic" as a "doctor"
-* Open clinical tab
-* Doctor advises medicines "opd/prescriptionFlow/medication/paracetamol" and tests "opd/prescriptionFlow/lab/Haemogram"
-* Goto Bahmni main home
-* put doctor first name "d3FirstName" middle name "d3MiddleName" lastname "d3LastName"
-* Login to Payment lite
-* Create a doctor in Payment Lite with consultation fee "15000"
-* Create drug with price "1000"
-Drug should flow from Bahmni
-* Create a patient in Payment Lite
-Patient should be auto created in bahmni
-* Raise an invoice for patient
-* Collect the payment from the patient
-* Verify the payment is complete
-* Run report and validate
-* Logout of Payment Lite
-* Goto Clinical application
-* visit is closed at the front desk
-
 ## Doctor should be able to prescribe medicines and tests and get relevant reports
 
 tags: hospital, lab, payment
@@ -121,30 +95,4 @@ tags: hospital
 * Click back button
 * Click back button
 * Logout and Login to Bahmni location "General Ward" as a "receptionist"
-* visit is closed at the front desk
-
-## Doctor should be able to prescribe medicines and tests and get relevant reports from LabLite
-
-tags: clinic, lab-lite
-
-* Login to Bahmni location "Bahmni Clinic" as a "receptionist"
-* Receptionist creates the patient with mobile number "mobileNumber" without village
-* Click Start OPD Visit
-* Logout and Login to Bahmni location "Bahmni Clinic" as a "doctor"
-* Open clinical tab
-* Doctor prescribes tests "opd/prescriptionFlow/lab/Haemogram"
-* Goto Clinical application
-* Open "Lab entry" module
-* Open a patient in lablite
-* Verify the open orders in Lablite
-* Upload and verify report in lablite
-* Verify order is removed from Pending lab orders table
-* Click Home button on lab-lite
-* Navigate to Audit Log module
-* Verify lab-lite audit events
-* Goto Clinical application
-* Open clinical tab with all section
-* verify name with id
-verify the document uploaded/Reports table is available in patient dashboard
-* Logout and Login to Bahmni location "Bahmni Clinic" as a "receptionist"
 * visit is closed at the front desk
