@@ -6,7 +6,7 @@
     "lite": "gauge run specs --env lite -v -p -n=3 --tags 'clinic'",
     "hospital": "gauge run specs --env demo0.9.4 -v -p -n=3 --tags 'setup';gauge run specs --env demo0.9.4 -v -p -n=6 --tags 'hospital'",
     "demo": "gauge run specs --env demo -v -p -n=3 --tags 'setup';gauge run specs --env demo -v -p -n=6 --tags 'hospital'",
-    "ci": "gauge run specs -v -p "
+    "ci": "gauge run specs -v -p -n=5 "
   },
   "dependencies": {
     "axios": "^0.27.2",
@@ -16,5 +16,8 @@
     "pdf-parse": "^1.1.1",
     "taiko": "1.3.2",
     "uuid": "latest"
+  },
+  "devDependencies": {
+    "taiko-video": "^0.2.1"
   }
 }
