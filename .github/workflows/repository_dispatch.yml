@@ -55,7 +55,7 @@ jobs:
             libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 \
             libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 \
             libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates \
-            fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
+            fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget ffmpeg
       - run: npm install @getgauge/cli
       - run: npm install
       - name: Run test
@@ -86,7 +86,7 @@ jobs:
       - name: Success
         if: ${{ needs.build-and-run.result == 'success' }}
         run: |
-          curl -X POST -H 'Content-type: application/json' --data '{"attachments":[{"color":"#006400","blocks":[{"type":"section","text":{"type":"mrkdwn","text":"✅ Bahmni E2E Tests Passed in ${{env.TARGET_ENV}}."}},{"type":"section","text":{"type":"mrkdwn","text":"📌 View the detailed HTML report here 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://${{github.repository_owner}}.github.io/${{env.REPO_NAME}}/report-${{GITHUB.RUN_ID}}-${{GITHUB.RUN_ATTEMPT}}"}},{"type":"section","text":{"type":"mrkdwn","text":"📌 View Workflow Run Details 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}"}}]}]}' ${{ secrets.SLACK_WEBHOOK_URL }}
+          curl -X POST -H 'Content-type: application/json' --data '{"attachments":[{"color":"#006400","blocks":[{"type":"section","text":{"type":"mrkdwn","text":"✅ Bahmni E2E Tests Passed in ${{env.TARGET_ENV}}."}},{"type":"section","text":{"type":"mrkdwn","text":"🧪 View the detailed HTML report here 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://${{github.repository_owner}}.github.io/${{env.REPO_NAME}}/report-${{GITHUB.RUN_ID}}-${{GITHUB.RUN_ATTEMPT}}"}},{"type":"section","text":{"type":"mrkdwn","text":"🧪 View Workflow Run Details 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}"}}]}]}' ${{ secrets.SLACK_WEBHOOK_URL }}
       - name: Failure
         if: ${{ needs.build-and-run.result == 'failure' }}
         run: |

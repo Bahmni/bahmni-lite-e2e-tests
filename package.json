@@ -16,5 +16,8 @@
     "pdf-parse": "^1.1.1",
     "taiko": "1.3.2",
     "uuid": "latest"
+  },
+  "devDependencies": {
+    "taiko-video": "^0.2.1"
   }
 }
