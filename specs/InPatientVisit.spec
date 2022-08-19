@@ -12,7 +12,7 @@ Tags: hospital, IPModule
 * Click back button
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
 * Open clinical tab
-* Enter vitals
+* Enter vitals "opConsultation/Vitals"
 * Doctor prescribes tests "opd/prescriptionFlow/lab/Haemogram"
 * Doctor issues an Discharge disposition
 * Click back button
@@ -42,7 +42,7 @@ Tags: hospital, BedManagement
 * Click back button
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
 * Open clinical tab
-* Enter vitals
+* Enter vitals "opConsultation/Vitals"
 * Doctor prescribes tests "opd/prescriptionFlow/lab/Haemogram"
 * Doctor prescribes medications "opd/prescriptionFlow/medication/paracetamol"
 * Doctor issues an Discharge disposition
