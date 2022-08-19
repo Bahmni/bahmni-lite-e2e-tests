@@ -26,7 +26,6 @@ tags: hospital, lab, payment
 * click Send Anyway
 * Login to Odoo
 * Convert Quotation to Sales
-* View Direct Sales Quotation
 * Confirm Sales
 
 ## Doctor should be able to prescribe radiology tests
@@ -63,7 +62,6 @@ tags: hospital, lab, payment
 * click Send Anyway
 * Login to Odoo
 * Convert Quotation to Sales
-* View Direct Sales Quotation
 * Confirm Sales
 * Goto Clinical application
 * Open clinical tab with all section
