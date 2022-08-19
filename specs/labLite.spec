@@ -4,7 +4,7 @@
 tags: clinic, lab-lite
 
 * Login to Bahmni location "Bahmni Clinic" as a "receptionist"
-* Receptionist creates the patient with mobile number "mobileNumber" without village
+* Receptionist creates the patient with mobile number "+919876543210" without village
 * Click Start OPD Visit
 * Logout and Login to Bahmni location "Bahmni Clinic" as a "doctor"
 * Open clinical tab
