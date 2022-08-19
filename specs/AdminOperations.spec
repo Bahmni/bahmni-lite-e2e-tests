@@ -56,7 +56,6 @@ tags: hospital, payment
 * Goto Bahmni main home
 * Login to Odoo
 * Convert Quotation to Sales
-* View Direct Sales Quotation
 * Confirm Sales
 
 ## Admin should be able to do the search index and Give OT Access to receptionist
