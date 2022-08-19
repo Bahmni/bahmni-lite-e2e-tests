@@ -1,4 +1,5 @@
 # Payment Lite
+* create Login Users for paymentlite
 ## Doctor and medicines should be billed in paymentlite
 
 tags: clinic, payment-lite
@@ -11,7 +12,7 @@ tags: clinic, payment-lite
 * Doctor advises medicines "opd/prescriptionFlow/medication/paracetamol" and tests "opd/prescriptionFlow/lab/Haemogram"
 * Goto Bahmni main home
 * put doctor first name "d3FirstName" middle name "d3MiddleName" lastname "d3LastName"
-* Login to Payment lite
+* Login to Payment lite as "FrontDesk"
 * Create a doctor in Payment Lite with consultation fee "15000"
 * Create drug with price "1000"
 Drug should flow from Bahmni
@@ -20,6 +21,13 @@ Patient should be auto created in bahmni
 * Raise an invoice for patient
 * Collect the payment from the patient
 * Verify the payment is complete
+* Logout of Payment Lite
+START BAH-2151
+Steps are added as workaround to avoid auto login to application. Bug - BAH-2151
+* Goto paymentlite
+* Logout of Payment Lite
+END BAH-2151
+* Login to Payment lite as "Doctor"
 * Run report and validate
 * Logout of Payment Lite
 * Goto Clinical application
