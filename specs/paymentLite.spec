@@ -1,4 +1,5 @@
 # Payment Lite
+* create Login Users for paymentlite
 ## Doctor and medicines should be billed in paymentlite
 
 tags: clinic, payment-lite
@@ -21,10 +22,13 @@ Patient should be auto created in bahmni
 * Collect the payment from the patient
 * Verify the payment is complete
 * Logout of Payment Lite
+START BAH-2151
+Steps are added as workaround to avoid auto login to application. Bug - BAH-2151
+* Goto paymentlite
+* Logout of Payment Lite
+END BAH-2151
 * Login to Payment lite as "Doctor"
 * Run report and validate
 * Logout of Payment Lite
 * Goto Clinical application
 * visit is closed at the front desk
-## PaymentLiteSetup
-* create Login Users for paymentlite
