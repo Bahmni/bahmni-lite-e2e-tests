@@ -1,0 +1,17 @@
+{
+    "diagnosis": {
+      "diagnosisName": "Cardiac arrest",
+      "order": "PRIMARY",
+      "certainty": "CONFIRMED"
+    },
+    "condition": [
+      {
+        "conditionName": "Diabetes II, uncomplicated",
+        "status": "Active"
+      },
+      {
+        "conditionName": "High Blood pressure",
+        "status": "Inactive"
+      }
+    ]
+  }

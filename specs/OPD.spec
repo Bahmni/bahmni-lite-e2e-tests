@@ -16,7 +16,7 @@ tags: hospital, lab, payment
 * Open newly created patient details by search
 * Start an OPD Visit
 * Open clinical tab
-* Enter vitals
+* Enter vitals "opConsultation/Vitals"
 * Doctor advises medicines "opd/prescriptionFlow/medication/paracetamol" and tests "opd/prescriptionFlow/lab/Haemogram"
 * Login to Open ELIS
 * Collect Sample
@@ -52,7 +52,7 @@ tags: hospital, lab, payment
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
 * Open clinical tab
-* Enter vitals
+* Enter vitals "opConsultation/Vitals"
 * Doctor advises medicines "opd/prescriptionFlow/medication/paracetamol" and tests "opd/prescriptionFlow/lab/Haemogram"
 * Login to Open ELIS
 * Collect Sample
@@ -67,10 +67,10 @@ tags: hospital, lab, payment
 * Open clinical tab with all section
 * verify name with id
 * verify OPD
-* verify prescription "opd/prescriptionFlow/medication/paracetamol"
-* verify vitals
+* Verify medical prescription in patient clinical dashboard
+* Verify vitals
 * Doctor clicks consultation
-* Doctor notes the diagnosis
+* Doctor notes the diagnosis and conditions "consultation/diagnosis/diagnosis_condition"
 * Save data
 * Click back button
 * Click back button

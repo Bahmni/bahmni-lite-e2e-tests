@@ -8,7 +8,7 @@ tags: hospital
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Add this newly created patient as merge patient1
 * Open clinical tab
-* Enter vitals
+* Enter vitals "opConsultation/Vitals"
 * Click back button
 * Click back button
 * visit is closed at the front desk
@@ -16,7 +16,7 @@ tags: hospital
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Add this newly created patient as merge patient2
 * Open clinical tab
-* Enter vitals
+* Enter vitals "opConsultation/Vitals"
 * Click back button
 * Click back button
 * Open "Patient Documents" module
