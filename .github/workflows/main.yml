@@ -66,14 +66,26 @@ jobs:
       - name: Run Setup
         if: ${{ env.TEST_SETUP == 'true' }}
         run: xvfb-run npm run ci -- --env $TARGET_ENV --tags 'setup'
-      - name: Run tests
+      - name: Run Tests
         run: xvfb-run npm run ci -- --env $TARGET_ENV --tags $TEST_CONTEXT
-      - name: Upload reports
+      - name: Upload HTML reports
         if: always()
         uses: actions/upload-artifact@v2
         with:
-          name: bahmni-e2e-reports(${{env.TARGET_ENV}})-${{env.TEST_CONTEXT}}
-          path: ./reports
+          name: HTML_Reports_${{ GITHUB.RUN_NUMBER }}
+          path: ./reports/html-report
+      - name: Upload Logs
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: Logs_${{ GITHUB.RUN_NUMBER }}
+          path: ./logs/gauge.log
+      - name: Upload Video
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: Videos_${{ GITHUB.RUN_NUMBER }}
+          path: ./reports/video
       - name: Deploy reports
         if:  always()
         env:
@@ -94,8 +106,8 @@ jobs:
       - name: Success
         if: ${{ needs.build-and-run.result == 'success' }}
         run: |
-          curl -X POST -H 'Content-type: application/json' --data '{"attachments":[{"color":"#006400","blocks":[{"type":"section","text":{"type":"mrkdwn","text":"✅ Bahmni E2E Tests Passed in ${{env.TARGET_ENV}}."}},{"type":"section","text":{"type":"mrkdwn","text":"🧪 View the detailed HTML report here 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://${{github.repository_owner}}.github.io/${{env.REPO_NAME}}/report-${{GITHUB.RUN_ID}}-${{GITHUB.RUN_ATTEMPT}}"}},{"type":"section","text":{"type":"mrkdwn","text":"🧪 View Workflow Run Details 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}"}}]}]}' ${{ secrets.SLACK_WEBHOOK_URL }}
+          curl -X POST -H 'Content-type: application/json' --data '{"attachments":[{"color":"#006400","blocks":[{"type":"section","text":{"type":"mrkdwn","text":"✅ Bahmni E2E Tests Passed in ${{env.TARGET_ENV}}."}},{"type":"divider"},{"type":"section","text":{"type":"mrkdwn","text":"🧪 View the detailed HTML report here 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://${{github.repository_owner}}.github.io/${{env.REPO_NAME}}/report-${{GITHUB.RUN_ID}}-${{GITHUB.RUN_ATTEMPT}}"}},{"type":"section","text":{"type":"mrkdwn","text":"🧪 View Workflow Run Details 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}"}},{"type":"section","fields":[{"type":"plain_text","text":"RUN NUMBER - ${{ GITHUB.RUN_NUMBER }}","emoji":true},{"type":"plain_text","text":"RUN ID - ${{ GITHUB.RUN_ID }}","emoji":true}]}]}]}' ${{ secrets.SLACK_WEBHOOK_URL }}
       - name: Failure
         if: ${{ needs.build-and-run.result == 'failure' }}
         run: |
-          curl -X POST -H 'Content-type: application/json' --data '{"attachments":[{"color":"#FF0000","blocks":[{"type":"section","text":{"type":"mrkdwn","text":"❌ Bahmni E2E Tests Failed in ${{env.TARGET_ENV}}."}},{"type":"section","text":{"type":"mrkdwn","text":"📌 View the detailed HTML report here 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://${{github.repository_owner}}.github.io/${{env.REPO_NAME}}/report-${{GITHUB.RUN_ID}}-${{GITHUB.RUN_ATTEMPT}}"}},{"type":"section","text":{"type":"mrkdwn","text":"📌 View Workflow Run Details 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}"}}]}]}' ${{ secrets.SLACK_WEBHOOK_URL }}
+          curl -X POST -H 'Content-type: application/json' --data '{"attachments":[{"color":"#FF0000","blocks":[{"type":"section","text":{"type":"mrkdwn","text":"❌ Bahmni E2E Tests Failed in ${{env.TARGET_ENV}}."}},{"type":"divider"},{"type":"section","text":{"type":"mrkdwn","text":"📌 View the detailed HTML report here 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://${{github.repository_owner}}.github.io/${{env.REPO_NAME}}/report-${{GITHUB.RUN_ID}}-${{GITHUB.RUN_ATTEMPT}}"}},{"type":"section","text":{"type":"mrkdwn","text":"📌 View Workflow Run Details 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}"}},{"type":"section","fields":[{"type":"plain_text","text":"RUN NUMBER - ${{ GITHUB.RUN_NUMBER }}","emoji":true},{"type":"plain_text","text":"RUN ID - ${{ GITHUB.RUN_ID }}","emoji":true}]}]}]}' ${{ secrets.SLACK_WEBHOOK_URL }}
