@@ -61,7 +61,7 @@ tags: hospital, payment
 
 tags: setup
 
-* Login to Bahmni location "General Ward" as a "admin"
+* Login to Bahmni as a "admin"
 * Goto the openMRS Admin tab
 * Do Search Index
 * Goto Administration
