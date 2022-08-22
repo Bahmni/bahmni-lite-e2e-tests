@@ -8,7 +8,6 @@ tags: hospital, master-data-management
 
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Goto the openMRS Admin tab
-* Goto Administration
 * Manage locations
 * Create a location "OTLocation" if it doesn't exist
 ## Admin should be able to block OT for a surgeon's and schedule a time for a patient's operation

@@ -27,7 +27,6 @@ tags: hospital
 * visit is closed at the front desk
 * Goto Clinical application
 * Goto the openMRS Admin tab
-* Goto Administration
 * Merge the newly created patients
 * Goto Clinical application
 * Open "Registration" module
@@ -64,7 +63,6 @@ tags: setup
 
 * Login to Bahmni location "General Ward" as a "admin"
 * Goto the openMRS Admin tab
-* Goto Administration
 * Do Search Index
 * Goto Administration
 * Give "OT: FullAccess" to "receptionist"

@@ -9,7 +9,6 @@ tags: hospital, program
 * Create a service if it does not exist
 * Goto Clinical application
 * Goto the openMRS Admin tab
-* Goto Administration
 * Manage locations
 * Create a location "appointmentLocation" if it doesn't exist
 * Goto Clinical application
