@@ -1,5 +1,7 @@
 # Reports Validation
 
+tags: clinic, smoke
+
 ## Validate the Visit reports
 
 * Login to Bahmni as a "receptionist"
