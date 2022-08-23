@@ -1,6 +1,6 @@
 # Reports Validation
 
-tags: clinic, smoke
+tags: clinic, reports, regression
 
 ## Validate the Visit reports
 

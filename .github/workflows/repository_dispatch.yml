@@ -9,9 +9,9 @@ on:
   workflow_dispatch:
     inputs:
       TEST_CONTEXT:
-        description: 'Test tags to be executed. eg. clinic, payment, lab, hospital. Logical operators can be used.'
+        description: 'Test tags to be executed. eg. clinic, payment, lab, hospital, smoke, regression. Logical operators can be used.'
         required: false
-        default: clinic
+        default: 'clinic & smoke'
       TARGET_ENV:
         description: 'Environment to test'
         required: true
@@ -24,7 +24,7 @@ on:
           - demo
           - demo0.9.4
 env:
-  TEST_CONTEXT: ${{ github.event.client_payload.context || github.event.inputs.TEST_CONTEXT || 'clinic' }}
+  TEST_CONTEXT: ${{ github.event.client_payload.context || github.event.inputs.TEST_CONTEXT || 'clinic & smoke' }}
   TARGET_ENV: ${{ github.event.inputs.TARGET_ENV || 'dev.lite' }}
 jobs:
   build-and-run:
@@ -59,7 +59,7 @@ jobs:
       - run: npm install @getgauge/cli
       - run: npm install
       - name: Run Tests
-        run: xvfb-run npm run ci -- --env $TARGET_ENV --tags $TEST_CONTEXT
+        run: xvfb-run npm run ci -- --env $TARGET_ENV --tags "${{env.TEST_CONTEXT}}"
       - name: Upload HTML reports
         if: always()
         uses: actions/upload-artifact@v2

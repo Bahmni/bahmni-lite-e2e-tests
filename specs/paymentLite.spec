@@ -2,7 +2,7 @@
 * create Login Users for paymentlite
 ## Doctor and medicines should be billed in paymentlite
 
-tags: clinic, payment-lite
+tags: clinic, payment-lite, smoke, regression
 
 * Login to Bahmni location "Bahmni Clinic" as a "receptionist"
 * Receptionist creates the patient with mobile number "+919876543210" without village

@@ -1,7 +1,9 @@
 # Appointments
 
 ## A receptionist should be able to create and cancel teleconsultation appointment for a patient
-Tags: hospital, appointment
+
+tags: hospital, appointment, clinic, regression
+
 * Login to Bahmni as a "receptionist"
 * Open "Appointment scheduling" module
 * Open admin tab of Appointments
@@ -19,9 +21,13 @@ Tags: hospital, appointment
 * Click back button
 * Receptionist cancels the newly created appointment
 * The patient's appointment should not be found
+* Click back button
+* visit is closed at the front desk
 
 ## A receptionist should be able to create and cancel walkin appointment for a patient
-Tags: hospital, appointment
+
+tags: hospital, appointment, clinic, regression
+
 * Login to Bahmni as a "admin"
 * Open "Appointment scheduling" module
 * Open admin tab of Appointments
@@ -37,3 +43,5 @@ Tags: hospital, appointment
 * Receptionist creates a walkin appointment at "11am" for service
 * Receptionist cancels the newly created appointment
 * The patient's appointment should not be found
+* Click back button
+* visit is closed at the front desk

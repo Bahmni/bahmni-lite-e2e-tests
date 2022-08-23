@@ -1,7 +1,7 @@
 # Lab Lite
 ## Doctor should be able to prescribe medicines and tests and get relevant reports from LabLite
 
-tags: clinic, lab-lite
+tags: clinic, lab-lite, smoke, regression
 
 * Login to Bahmni location "Bahmni Clinic" as a "receptionist"
 * Receptionist creates the patient with mobile number "+919876543210" without village

@@ -1,9 +1,12 @@
-#Patient documents
+# Patient documents
+
+tags: clinic, patient_documents, regression
+
 ## Receptionalist should be able to upload patient documents
 
-* Login to Bahmni location "General Ward" as a "receptionist"
+* Login to Bahmni as a "receptionist"
 * Goto Clinical application
-* Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
+* Receptionist creates the patient with mobile number "+919876543210" and starts an OPD
 * Open "Patient Documents" module
 * Choose newly created patient
 * Add a report "labReport1" to "Patient Documents"

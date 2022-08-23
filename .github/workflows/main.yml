@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       TEST_CONTEXT:
-        description: 'Test tags to be executed. eg. clinic, payment, lab, hospital. Logical operators can be used.'
+        description: 'Test tags to be executed. eg. clinic, payment, lab, hospital, smoke, regression. Logical operators can be used.'
         required: false
         default: hospital
       TARGET_ENV:
@@ -67,7 +67,7 @@ jobs:
         if: ${{ env.TEST_SETUP == 'true' }}
         run: xvfb-run npm run ci -- --env $TARGET_ENV --tags 'setup'
       - name: Run Tests
-        run: xvfb-run npm run ci -- --env $TARGET_ENV --tags $TEST_CONTEXT
+        run: xvfb-run npm run ci -- --env $TARGET_ENV --tags "${{env.TEST_CONTEXT}}"
       - name: Upload HTML reports
         if: always()
         uses: actions/upload-artifact@v2

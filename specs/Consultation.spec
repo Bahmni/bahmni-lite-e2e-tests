@@ -1,10 +1,10 @@
 #Consultation
-
+tags: clinic, consultation, regression
 ## Doctor should be able to capture Consultation
-* Login to Bahmni location "General Ward" as a "receptionist"
+* Login to Bahmni as a "receptionist"
 * Goto Clinical application
-* Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
-* Logout and Login to Bahmni location "General Ward" as a "doctor"
+* Receptionist creates the patient with mobile number "+919876543210" and starts an OPD
+* Logout and Login to Bahmni as a "doctor"
 * Open "Clinical" module
 * Goto All sections and search the newly created patient
 * Doctor clicks consultation
@@ -23,4 +23,5 @@
 * Verify vitals
 * Verify history & examination in patient clinical dashboard
 * Verify consultation notes in patient clinical dashboard
-
+* Logout and Login to Bahmni as a "receptionist"
+* visit is closed at the front desk
