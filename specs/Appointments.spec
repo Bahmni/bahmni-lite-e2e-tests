@@ -13,8 +13,7 @@ tags: hospital, appointment, clinic, regression
 * Manage locations
 * Create a location "appointmentLocation" if it doesn't exist
 * Goto Clinical application
-* Receptionist creates the patient with mobile number "+919876543210"
-* Click back button
+* Receptionist creates the patient with mobile number "+919876543210" and starts an OPD
 * Receptionist creates a teleconsultation appointment "11am"
 * Click back button
 * The doctor joins the link for the appointment
@@ -38,8 +37,7 @@ tags: hospital, appointment, clinic, regression
 * Create a location "appointmentLocation" if it doesn't exist
 * Goto Clinical application
 * Logout and Login to Bahmni as a "receptionist"
-* Receptionist creates the patient with mobile number "+919876543210"
-* Click back button
+* Receptionist creates the patient with mobile number "+919876543210" and starts an OPD
 * Receptionist creates a walkin appointment at "11am" for service
 * Receptionist cancels the newly created appointment
 * The patient's appointment should not be found
