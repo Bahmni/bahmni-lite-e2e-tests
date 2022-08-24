@@ -16,8 +16,8 @@ tags: hospital, lab, payment
 * Open newly created patient details by search
 * Start an OPD Visit
 * Open clinical tab
-* Enter vitals "opConsultation/Vitals"
-* Doctor advises medicines "opd/prescriptionFlow/medication/paracetamol" and tests "opd/prescriptionFlow/lab/Haemogram"
+* Enter vitals "consultation/observations/Vitals"
+* Doctor advises medicines "consultation/medications/paracetamol" and tests "consultation/orders/Haemogram"
 * Login to Open ELIS
 * Collect Sample
 * Enter blood Lab results
@@ -52,8 +52,8 @@ tags: hospital, lab, payment
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
 * Open clinical tab
-* Enter vitals "opConsultation/Vitals"
-* Doctor advises medicines "opd/prescriptionFlow/medication/paracetamol" and tests "opd/prescriptionFlow/lab/Haemogram"
+* Enter vitals "consultation/observations/Vitals"
+* Doctor advises medicines "consultation/medications/paracetamol" and tests "consultation/orders/Haemogram"
 * Login to Open ELIS
 * Collect Sample
 * Enter blood Lab results

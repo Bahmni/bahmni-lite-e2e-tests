@@ -9,7 +9,7 @@ tags: clinic, payment-lite, smoke, regression
 * Click Start OPD Visit
 * Logout and Login to Bahmni location "Bahmni Clinic" as a "doctor"
 * Open clinical tab
-* Doctor advises medicines "opd/prescriptionFlow/medication/paracetamol" and tests "opd/prescriptionFlow/lab/Haemogram"
+* Doctor advises medicines "consultation/medications/paracetamol" and tests "consultation/orders/Haemogram"
 * Goto Bahmni main home
 * put doctor first name "d3FirstName" middle name "d3MiddleName" lastname "d3LastName"
 * Goto paymentlite

@@ -8,12 +8,12 @@ tags: clinic, consultation, regression
 * Open "Clinical" module
 * Goto All sections and search the newly created patient
 * Doctor clicks consultation
-* Enter History and Examination details "program/historyAndExaminationDetails"
-* Enter vitals "opConsultation/Vitals" 
+* Enter History and Examination details "consultation/observations/historyAndExaminationDetails"
+* Enter vitals "consultation/observations/Vitals" 
 * Doctor captures consultation notes "Consultation notes"
 * Doctor notes the diagnosis and conditions "consultation/diagnosis/diagnosis_condition"
-* Doctor prescribes medications "opd/prescriptionFlow/medication/paracetamol"
-* Doctor prescribes tests "opd/prescriptionFlow/lab/Haemogram"
+* Doctor prescribes medications "consultation/medications/paracetamol"
+* Doctor prescribes tests "consultation/orders/Haemogram"
 * Click back button
 * Goto All sections and search the newly created patient
 * Verify medical prescription in patient clinical dashboard
