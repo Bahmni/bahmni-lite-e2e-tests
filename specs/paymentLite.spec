@@ -12,6 +12,7 @@ tags: clinic, payment-lite, smoke, regression
 * Doctor advises medicines "opd/prescriptionFlow/medication/paracetamol" and tests "opd/prescriptionFlow/lab/Haemogram"
 * Goto Bahmni main home
 * put doctor first name "d3FirstName" middle name "d3MiddleName" lastname "d3LastName"
+* Goto paymentlite
 * Login to Payment lite as "FrontDesk"
 * Create a doctor in Payment Lite with consultation fee "15000"
 * Create drug with price "1000"
@@ -25,7 +26,7 @@ Patient should be auto created in bahmni
 START BAH-2151
 Steps are added as workaround to avoid auto login to application. Bug - BAH-2151
 * Goto paymentlite
-* Logout of Payment Lite
+* Logout of Payment Lite if logged in
 END BAH-2151
 * Login to Payment lite as "Doctor"
 * Run report and validate
