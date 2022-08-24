@@ -2,7 +2,7 @@
 
 ## Admin should be able to merge patients
 
-tags: hospital
+tags: hospital, regression
 
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
@@ -43,7 +43,7 @@ tags: hospital
 
 ## A saleable concept should be available in ODOO
 
-tags: hospital, payment
+tags: hospital, payment, regression
 
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Goto the openMRS Admin tab

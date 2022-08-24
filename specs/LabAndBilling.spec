@@ -1,8 +1,8 @@
-# OPD Visits
+# Laboratory and Billing
 
 ## Old Uploaded Patient data should be available for billing
 
-tags: hospital, lab, payment
+tags: hospital, lab, payment, regression
 
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Open "Admin" module
@@ -28,25 +28,9 @@ tags: hospital, lab, payment
 * Convert Quotation to Sales
 * Confirm Sales
 
-## Doctor should be able to prescribe radiology tests
-
-tags: hospital, radiology
-
-* Login to Bahmni location "General Ward" as a "receptionist"
-* Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
-* Logout and Login to Bahmni location "General Ward" as a "doctor"
-* Open clinical tab
-* Open "Orders" Tab
-* Place a radiology order for test "chest lateral"
-* Click back button
-* Click back button
-* Logout and Login to Bahmni location "General Ward" as a "receptionist"
-* visit is closed at the front desk
-* verify patient details on DCM4chee
-
 ## Doctor should be able to prescribe medicines and tests and get relevant reports
 
-tags: hospital, lab, payment
+tags: hospital, lab, payment, regression
 
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
@@ -79,7 +63,7 @@ tags: hospital, lab, payment
 
 ## Bacteriology staff should be able to collect sample
 
-tags: hospital
+tags: hospital, regression
 
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD

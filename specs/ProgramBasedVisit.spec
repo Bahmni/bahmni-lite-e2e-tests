@@ -1,7 +1,7 @@
 # Program Based Visits
 ## Enrol a patient under a program and proceed with consultation
 
-tags: hospital, program
+tags: hospital, program, regression
 
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Open "Appointment scheduling" module

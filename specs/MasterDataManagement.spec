@@ -1,7 +1,8 @@
 # Manage Users
 
 ## Create a new role for a doctor
-Tags: master-data-management
+
+tags: master-data-management
 
 * Login to openMRS as user "admin"
 * Goto Administration

@@ -1,6 +1,6 @@
 # Operation Theatre
 
-tags: hospital
+tags: hospital, regression
 
 ## Create an OT location if it doesn't exisit
 

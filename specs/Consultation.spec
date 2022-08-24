@@ -1,5 +1,7 @@
-#Consultation
+# Consultation
+
 tags: clinic, consultation, regression
+
 ## Doctor should be able to capture Consultation
 * Login to Bahmni as a "receptionist"
 * Goto Clinical application
@@ -9,7 +11,7 @@ tags: clinic, consultation, regression
 * Goto All sections and search the newly created patient
 * Doctor clicks consultation
 * Enter History and Examination details "consultation/observations/historyAndExaminationDetails"
-* Enter vitals "consultation/observations/Vitals" 
+* Enter vitals "consultation/observations/Vitals"
 * Doctor captures consultation notes "Consultation notes"
 * Doctor notes the diagnosis and conditions "consultation/diagnosis/diagnosis_condition"
 * Doctor prescribes medications "consultation/medications/paracetamol"
