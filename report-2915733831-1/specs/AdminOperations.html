@@ -31,11 +31,11 @@
    
   <div class="report_chart">
     <div class="chart">
-      <svg id="pie-chart" data-results="1,5,0" data-total="6">
+      <svg id="pie-chart" data-results="2,4,0" data-total="6">
         <path class="status failed" />
-        <path class="shadow failed" data-status="failed"><title>Failed: 1/6</title></path>
+        <path class="shadow failed" data-status="failed"><title>Failed: 2/6</title></path>
         <path class="status passed" />
-        <path class="shadow passed" data-status="passed"><title>Passed: 5/6</title></path>
+        <path class="shadow passed" data-status="passed"><title>Passed: 4/6</title></path>
         <path class="status skipped" />
         <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/6</title></path>
       </svg>
@@ -46,14 +46,14 @@
   <div class="report_test-results">
     <div class="report_test-result specs">
         <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">6</span></div>
-        <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">1</span></div>
-        <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">5</span></div>
+        <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">2</span></div>
+        <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">4</span></div>
         <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">0</span></div>
     </div>
     <div class="report_test-result scenarios">
         <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">13</span></div>
-        <div class="fail scenario-stats" data-status="failed"><span class="value">1</span></div>
-        <div class="pass scenario-stats" data-status="passed"><span class="value">12</span></div>
+        <div class="fail scenario-stats" data-status="failed"><span class="value">5</span></div>
+        <div class="pass scenario-stats" data-status="passed"><span class="value">8</span></div>
         <div class="skip scenario-stats" data-status="skipped"><span class="value">0</span></div>
     </div>
   </div>
@@ -73,15 +73,15 @@
     
     <li>
       <label>Success Rate </label>
-      <span>83%</span>
+      <span>66%</span>
     </li>
     <li>
       <label>Total Time </label>
-      <span>00:30:50</span>
+      <span>00:32:14</span>
     </li>
     <li>
       <label>Generated On </label>
-      <span>Aug 23, 2022 at 6:19am</span>
+      <span>Aug 24, 2022 at 6:20am</span>
     </li>
   </ul>
 
@@ -118,48 +118,21 @@
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
+          <a href="Appointments.html">
+            
+              <li class="failed spec-name">
+            
+              <span id="scenarioName" class="scenarioname">Appointments</span>
+              <span id="time" class="time">00:09:16</span>
+            </li>
+          </a>
+          
           <a href="OPD.html">
             
               <li class="failed spec-name">
             
               <span id="scenarioName" class="scenarioname">OPD Visits</span>
-              <span id="time" class="time">00:14:28</span>
-            </li>
-          </a>
-          
-          <a href="OperationTheatre.html">
-             
-              <li class="passed spec-name">
-            
-              <span id="scenarioName" class="scenarioname">Operation Theatre</span>
-              <span id="time" class="time">00:02:58</span>
-            </li>
-          </a>
-          
-          <a href="ProgramBasedVisit.html">
-             
-              <li class="passed spec-name">
-            
-              <span id="scenarioName" class="scenarioname">Program Based Visits</span>
-              <span id="time" class="time">00:05:06</span>
-            </li>
-          </a>
-          
-          <a href="AdminOperations.html">
-             
-              <li class="passed spec-name">
-            
-              <span id="scenarioName" class="scenarioname">Admin operations</span>
-              <span id="time" class="time">00:10:23</span>
-            </li>
-          </a>
-          
-          <a href="Appointments.html">
-             
-              <li class="passed spec-name">
-            
-              <span id="scenarioName" class="scenarioname">Appointments</span>
-              <span id="time" class="time">00:07:25</span>
+              <span id="time" class="time">00:14:42</span>
             </li>
           </a>
           
@@ -168,7 +141,34 @@
               <li class="passed spec-name">
             
               <span id="scenarioName" class="scenarioname">In Patient Visit</span>
-              <span id="time" class="time">00:13:41</span>
+              <span id="time" class="time">00:14:10</span>
+            </li>
+          </a>
+          
+          <a href="OperationTheatre.html">
+             
+              <li class="passed spec-name">
+            
+              <span id="scenarioName" class="scenarioname">Operation Theatre</span>
+              <span id="time" class="time">00:03:01</span>
+            </li>
+          </a>
+          
+          <a href="AdminOperations.html">
+             
+              <li class="passed spec-name">
+            
+              <span id="scenarioName" class="scenarioname">Admin operations</span>
+              <span id="time" class="time">00:10:37</span>
+            </li>
+          </a>
+          
+          <a href="ProgramBasedVisit.html">
+             
+              <li class="passed spec-name">
+            
+              <span id="scenarioName" class="scenarioname">Program Based Visits</span>
+              <span id="time" class="time">00:05:13</span>
             </li>
           </a>
           
@@ -200,7 +200,7 @@
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:10:23</span>
+        <span class="time">00:10:37</span>
       </div>
 
 	
@@ -235,7 +235,7 @@
   <div class="scenario-head">
     <h3 class="head borderBottom">Admin should be able to merge patients</h3>
     
-    <span class="time">00:07:02</span>
+    <span class="time">00:07:17</span>
 
 	
   
@@ -279,7 +279,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:22</span>
+      <span class="time">Execution Time : 00:00:23</span>
     </h5>
   
   <div class="step-info passed">
@@ -325,7 +325,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:05</span>
+      <span class="time">Execution Time : 00:00:06</span>
     </h5>
   
   <div class="step-info passed">
@@ -719,7 +719,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:38</span>
+      <span class="time">Execution Time : 00:00:39</span>
     </h5>
   
   <div class="step-info passed">
@@ -755,7 +755,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:07</span>
+      <span class="time">Execution Time : 00:00:08</span>
     </h5>
   
   <div class="step-info passed">
@@ -828,7 +828,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:31</span>
+      <span class="time">Execution Time : 00:00:30</span>
     </h5>
   
   <div class="step-info passed">
@@ -947,7 +947,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:02</span>
+      <span class="time">Execution Time : 00:00:01</span>
     </h5>
   
   <div class="step-info passed">
@@ -983,7 +983,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>firstName aZOufeyVHL</p>
+        <div class="step-message"><p>firstName cWvQCgKnXV</p>
  </div>
       </div>
     </div>
@@ -1054,7 +1054,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>middleName fVILdHbhzS</p>
+        <div class="step-message"><p>middleName nqRihiWtLc</p>
  </div>
       </div>
     </div>
@@ -1125,7 +1125,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>lastName ZyZHhHoTMq</p>
+        <div class="step-message"><p>lastName tpXZuwRdWT</p>
  </div>
       </div>
     </div>
@@ -1509,7 +1509,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:25</span>
+      <span class="time">Execution Time : 00:00:24</span>
     </h5>
   
   <div class="step-info passed">
@@ -1604,7 +1604,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
+      <span class="time">Execution Time : 00:00:02</span>
     </h5>
   
   <div class="step-info passed">
@@ -1671,7 +1671,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:03</span>
+      <span class="time">Execution Time : 00:00:02</span>
     </h5>
   
   <div class="step-info passed">
@@ -1933,7 +1933,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:18</span>
+      <span class="time">Execution Time : 00:00:19</span>
     </h5>
   
   <div class="step-info passed">
@@ -1965,7 +1965,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:09</span>
+      <span class="time">Execution Time : 00:00:10</span>
     </h5>
   
   <div class="step-info passed">
@@ -2164,7 +2164,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:00</span>
+      <span class="time">Execution Time : 00:00:01</span>
     </h5>
   
   <div class="step-info passed">
@@ -2232,7 +2232,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:29</span>
+      <span class="time">Execution Time : 00:00:28</span>
     </h5>
   
   <div class="step-info passed">
@@ -2331,7 +2331,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:06</span>
+      <span class="time">Execution Time : 00:00:07</span>
     </h5>
   
   <div class="step-info passed">
@@ -2394,7 +2394,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:03</span>
+      <span class="time">Execution Time : 00:00:02</span>
     </h5>
   
   <div class="step-info passed">
@@ -2592,7 +2592,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:03</span>
+      <span class="time">Execution Time : 00:00:04</span>
     </h5>
   
   <div class="step-info passed">
@@ -2655,7 +2655,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:30</span>
+      <span class="time">Execution Time : 00:00:31</span>
     </h5>
   
   <div class="step-info passed">
@@ -2687,7 +2687,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:07</span>
+      <span class="time">Execution Time : 00:00:08</span>
     </h5>
   
   <div class="step-info passed">
@@ -2831,7 +2831,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:04</span>
+      <span class="time">Execution Time : 00:00:03</span>
     </h5>
   
   <div class="step-info passed">
@@ -3088,7 +3088,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:01:02</span>
+      <span class="time">Execution Time : 00:01:03</span>
     </h5>
   
   <div class="step-info passed">
@@ -3166,7 +3166,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:07</span>
+      <span class="time">Execution Time : 00:00:08</span>
     </h5>
   
   <div class="step-info passed">
@@ -3239,7 +3239,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:31</span>
+      <span class="time">Execution Time : 00:00:30</span>
     </h5>
   
   <div class="step-info passed">
@@ -3358,7 +3358,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:02</span>
+      <span class="time">Execution Time : 00:00:01</span>
     </h5>
   
   <div class="step-info passed">
@@ -3896,7 +3896,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:23</span>
+      <span class="time">Execution Time : 00:00:24</span>
     </h5>
   
   <div class="step-info passed">
@@ -3991,7 +3991,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
+      <span class="time">Execution Time : 00:00:02</span>
     </h5>
   
   <div class="step-info passed">
@@ -4352,7 +4352,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:09</span>
+      <span class="time">Execution Time : 00:00:10</span>
     </h5>
   
   <div class="step-info passed">
@@ -4488,7 +4488,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:04</span>
+      <span class="time">Execution Time : 00:00:03</span>
     </h5>
   
   <div class="step-info passed">
@@ -4551,7 +4551,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:00</span>
+      <span class="time">Execution Time : 00:00:01</span>
     </h5>
   
   <div class="step-info passed">
@@ -4619,7 +4619,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:30</span>
+      <span class="time">Execution Time : 00:00:28</span>
     </h5>
   
   <div class="step-info passed">
@@ -4718,7 +4718,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:06</span>
+      <span class="time">Execution Time : 00:00:05</span>
     </h5>
   
   <div class="step-info passed">
@@ -4781,7 +4781,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:04</span>
+      <span class="time">Execution Time : 00:00:03</span>
     </h5>
   
   <div class="step-info passed">
@@ -4844,7 +4844,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:16</span>
+      <span class="time">Execution Time : 00:00:15</span>
     </h5>
   
   <div class="step-info passed">
@@ -4979,7 +4979,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:03</span>
+      <span class="time">Execution Time : 00:00:04</span>
     </h5>
   
   <div class="step-info passed">
@@ -5042,7 +5042,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:07</span>
+      <span class="time">Execution Time : 00:00:08</span>
     </h5>
   
   <div class="step-info passed">
@@ -5178,7 +5178,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:02</span>
+      <span class="time">Execution Time : 00:00:03</span>
     </h5>
   
   <div class="step-info passed">
@@ -5318,7 +5318,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:04</span>
+      <span class="time">Execution Time : 00:00:05</span>
     </h5>
   
   <div class="step-info passed">
@@ -5381,7 +5381,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:30</span>
+      <span class="time">Execution Time : 00:00:31</span>
     </h5>
   
   <div class="step-info passed">
@@ -5413,7 +5413,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:07</span>
+      <span class="time">Execution Time : 00:00:08</span>
     </h5>
   
   <div class="step-info passed">
@@ -5486,7 +5486,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:14</span>
+      <span class="time">Execution Time : 00:00:13</span>
     </h5>
   
   <div class="step-info passed">
@@ -5814,7 +5814,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:03</span>
+      <span class="time">Execution Time : 00:00:04</span>
     </h5>
   
   <div class="step-info passed">
@@ -5977,7 +5977,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:26</span>
+      <span class="time">Execution Time : 00:00:34</span>
     </h5>
   
   <div class="step-info passed">
@@ -6135,7 +6135,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:03</span>
+      <span class="time">Execution Time : 00:00:10</span>
     </h5>
   
   <div class="step-info passed">
@@ -6266,7 +6266,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:02</span>
+      <span class="time">Execution Time : 00:00:03</span>
     </h5>
   
   <div class="step-info passed">
@@ -6550,7 +6550,7 @@
   <div class="scenario-head">
     <h3 class="head borderBottom">A saleable concept should be available in ODOO</h3>
     
-    <span class="time">00:03:21</span>
+    <span class="time">00:03:19</span>
 
 	
   
@@ -6596,7 +6596,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:22</span>
+      <span class="time">Execution Time : 00:00:23</span>
     </h5>
   
   <div class="step-info passed">
@@ -6994,7 +6994,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:03</span>
+      <span class="time">Execution Time : 00:00:04</span>
     </h5>
   
   <div class="step-info passed">
@@ -7157,7 +7157,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:42</span>
+      <span class="time">Execution Time : 00:00:46</span>
     </h5>
   
   <div class="step-info passed">
@@ -7189,7 +7189,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:03</span>
+      <span class="time">Execution Time : 00:00:04</span>
     </h5>
   
   <div class="step-info passed">
@@ -7252,7 +7252,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:08</span>
+      <span class="time">Execution Time : 00:00:10</span>
     </h5>
   
   <div class="step-info passed">
@@ -7315,7 +7315,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:08</span>
+      <span class="time">Execution Time : 00:00:09</span>
     </h5>
   
   <div class="step-info passed">
@@ -7383,7 +7383,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>NkQxSigzhH</p>
+        <div class="step-message"><p>CaMFwyTDGA</p>
  </div>
       </div>
     </div>
@@ -7611,7 +7611,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:03</span>
+      <span class="time">Execution Time : 00:00:04</span>
     </h5>
   
   <div class="step-info passed">
@@ -7679,7 +7679,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:21</span>
+      <span class="time">Execution Time : 00:00:22</span>
     </h5>
   
   <div class="step-info passed">
@@ -7715,7 +7715,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>Drug Name - qTBnZNSAhp</p>
+        <div class="step-message"><p>Drug Name - FsGeBREMYq</p>
  </div>
       </div>
     </div>
@@ -7755,7 +7755,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:02</span>
+      <span class="time">Execution Time : 00:00:03</span>
     </h5>
   
   <div class="step-info passed">
@@ -7969,7 +7969,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:30</span>
+      <span class="time">Execution Time : 00:00:29</span>
     </h5>
   
   <div class="step-info passed">
@@ -8124,7 +8124,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>firstName FavQapSYjj</p>
+        <div class="step-message"><p>firstName KIJMoUbcAw</p>
  </div>
       </div>
     </div>
@@ -8195,7 +8195,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>middleName sMqGXBlOpb</p>
+        <div class="step-message"><p>middleName MlIYairreY</p>
  </div>
       </div>
     </div>
@@ -8266,7 +8266,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>lastName NErckIKeEB</p>
+        <div class="step-message"><p>lastName PQosegNagb</p>
  </div>
       </div>
     </div>
@@ -8605,7 +8605,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>patient Identifier GAN203017</p>
+        <div class="step-message"><p>patient Identifier GAN203016</p>
  </div>
       </div>
     </div>
@@ -8682,7 +8682,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:03</span>
+      <span class="time">Execution Time : 00:00:04</span>
     </h5>
   
   <div class="step-info passed">
@@ -9011,7 +9011,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:18</span>
+      <span class="time">Execution Time : 00:00:19</span>
     </h5>
   
   <div class="step-info passed">
@@ -9043,7 +9043,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:09</span>
+      <span class="time">Execution Time : 00:00:10</span>
     </h5>
   
   <div class="step-info passed">
@@ -9179,7 +9179,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:03</span>
+      <span class="time">Execution Time : 00:00:02</span>
     </h5>
   
   <div class="step-info passed">
@@ -9242,7 +9242,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:00</span>
+      <span class="time">Execution Time : 00:00:01</span>
     </h5>
   
   <div class="step-info passed">
@@ -9310,7 +9310,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:17</span>
+      <span class="time">Execution Time : 00:00:18</span>
     </h5>
   
   <div class="step-info passed">
@@ -9486,7 +9486,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:04</span>
+      <span class="time">Execution Time : 00:00:05</span>
     </h5>
   
   <div class="step-info passed">
@@ -9644,7 +9644,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:02</span>
+      <span class="time">Execution Time : 00:00:03</span>
     </h5>
   
   <div class="step-info passed">
@@ -9780,7 +9780,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:19</span>
+      <span class="time">Execution Time : 00:00:09</span>
     </h5>
   
   <div class="step-info passed">
@@ -9812,7 +9812,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:06</span>
+      <span class="time">Execution Time : 00:00:03</span>
     </h5>
   
   <div class="step-info passed">
@@ -10001,7 +10001,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:10</span>
+      <span class="time">Execution Time : 00:00:04</span>
     </h5>
   
   <div class="step-info passed">
