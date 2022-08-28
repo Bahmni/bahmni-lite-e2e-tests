@@ -23,6 +23,9 @@ on:
           - lite
           - demo
           - demo0.9.4
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.client_payload.context || github.event.inputs.TEST_CONTEXT || 'clinic & smoke' }}-${{ github.event.inputs.TARGET_ENV || 'dev.lite' }}
+  cancel-in-progress: true
 env:
   TEST_CONTEXT: ${{ github.event.client_payload.context || github.event.inputs.TEST_CONTEXT || 'clinic & smoke' }}
   TARGET_ENV: ${{ github.event.inputs.TARGET_ENV || 'dev.lite' }}
