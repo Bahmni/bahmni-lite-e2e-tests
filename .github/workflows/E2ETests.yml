@@ -47,7 +47,7 @@ jobs:
           echo "TEST_CONTEXT=clinic & regression" >> $GITHUB_ENV
       - name: Show current Env variables
         run: |
-          echo "TARGET_ENV - ${{env.TARGET_ENV}} TEST_CONTEXT - ${{env.TEST_CONTEXT}"
+          echo "TARGET_ENV - ${{env.TARGET_ENV}} TEST_CONTEXT - ${{env.TEST_CONTEXT}}"
       - run: echo "Current Concurrency Group - ${{ github.workflow }}-${{ github.event.client_payload.context || github.event.inputs.TEST_CONTEXT || 'clinic & smoke' }}-${{ github.event.inputs.TARGET_ENV || 'dev.lite' }}-${{github.event.schedule}}"
       - uses: actions/checkout@v2
         with:
