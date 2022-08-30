@@ -1,51 +1,27 @@
-name: Bahmni e2e tests
+name: Triger E2E Tests on Push
 on:
   push:
     branches:
       - main
-  schedule:
-    - cron:  '30 0 * * *'
-  workflow_dispatch:
-    inputs:
-      TEST_CONTEXT:
-        description: 'Test tags to be executed. eg. clinic, payment, lab, hospital, smoke, regression. Logical operators can be used.'
-        required: false
-        default: hospital
-      TARGET_ENV:
-        description: 'Environment to test'
-        required: true
-        type: choice
-        default: demo
-        options:
-          - dev.lite
-          - qa.lite
-          - lite
-          - demo
-          - demo0.9.4
-      TEST_SETUP:
-        description: 'Enable this to run Pre-Requiste Tests'
-        required: true
-        type: boolean
-        default: true
-env:
-  TEST_CONTEXT: ${{ github.event.inputs.TEST_CONTEXT || 'hospital' }}
-  TARGET_ENV: ${{ github.event.inputs.TARGET_ENV || 'demo' }}
-  TEST_SETUP: ${{ github.event.inputs.TEST_SETUP || 'true' }}
 jobs:
   build-and-run:
     name: Build and Run E2E test
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        TARGET_ENV: [demo, dev.lite]
     steps:
       - uses: actions/checkout@v2
         with:
           submodules: recursive
       - uses: actions/setup-node@v2
         with:
-          node-version: '16'
-          cache: 'npm'
+          node-version: "16"
+          cache: "npm"
       - uses: zcong1993/setup-timezone@v1.1.2
-        with: 
-          timezone: 'Asia/Kolkata'
+        with:
+          timezone: "Asia/Kolkata"
       - name: Install dependencies
         run: |
           sudo apt-get update
@@ -63,51 +39,29 @@ jobs:
             fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget ffmpeg
       - run: npm install @getgauge/cli
       - run: npm install
-      - name: Run Setup
-        if: ${{ env.TEST_SETUP == 'true' }}
-        run: xvfb-run npm run ci -- --env $TARGET_ENV --tags 'setup'
-      - name: Run Tests
-        run: xvfb-run npm run ci -- --env $TARGET_ENV --tags "${{env.TEST_CONTEXT}}"
+      - name: Run Tests in Demo
+        if: ${{matrix.TARGET_ENV == 'demo'}}
+        run: |
+          xvfb-run npm run ci -- --env "${{matrix.TARGET_ENV}}" --tags setup
+          xvfb-run npm run ci -- --env "${{matrix.TARGET_ENV}}" --tags hospital
+      - name: Run Tests in Dev.lite
+        if: ${{matrix.TARGET_ENV == 'dev.lite'}}
+        run: xvfb-run npm run ci -- --env "${{matrix.TARGET_ENV}}" --tags clinic
       - name: Upload HTML reports
         if: always()
         uses: actions/upload-artifact@v2
         with:
-          name: HTML_Reports_${{ GITHUB.RUN_NUMBER }}
+          name: HTML_Reports_${{ GITHUB.RUN_NUMBER }}_${{matrix.TARGET_ENV}}
           path: ./reports/html-report
       - name: Upload Logs
         if: always()
         uses: actions/upload-artifact@v2
         with:
-          name: Logs_${{ GITHUB.RUN_NUMBER }}
+          name: Logs_${{ GITHUB.RUN_NUMBER }}_${{matrix.TARGET_ENV}}
           path: ./logs/gauge.log
       - name: Upload Video
         if: always()
         uses: actions/upload-artifact@v2
         with:
-          name: Videos_${{ GITHUB.RUN_NUMBER }}
+          name: Videos_${{ GITHUB.RUN_NUMBER }}_${{matrix.TARGET_ENV}}
           path: ./reports/video
-      - name: Deploy reports
-        if:  always()
-        env:
-          SRC_FOLDER_PATH: 'reports/html-report'
-          TARGET_BRANCH: 'gh-pages'
-          MAX_DIR: 10
-        shell: bash
-        run: bash .github/deleteOldReports.sh $MAX_DIR $SRC_FOLDER_PATH $TARGET_BRANCH ${{secrets.BAHMNI_USERNAME}} ${{secrets.BAHMNI_EMAIL}} ${{GITHUB.RUN_ID}} ${{GITHUB.RUN_ATTEMPT}}
-  notification:
-    name: Slack notification
-    needs:
-      - build-and-run
-    runs-on: ubuntu-latest
-    if: always()
-    steps:
-      - name: Get Repository Name
-        run: echo "REPO_NAME=$(basename ${{ github.repository }})" >> $GITHUB_ENV
-      - name: Success
-        if: ${{ needs.build-and-run.result == 'success' }}
-        run: |
-          curl -X POST -H 'Content-type: application/json' --data '{"attachments":[{"color":"#006400","blocks":[{"type":"section","text":{"type":"mrkdwn","text":"✅ Bahmni E2E Tests Passed in ${{env.TARGET_ENV}}."}},{"type":"divider"},{"type":"section","text":{"type":"mrkdwn","text":"🧪 View the detailed HTML report here 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://${{github.repository_owner}}.github.io/${{env.REPO_NAME}}/report-${{GITHUB.RUN_ID}}-${{GITHUB.RUN_ATTEMPT}}"}},{"type":"section","text":{"type":"mrkdwn","text":"🧪 View Workflow Run Details 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}"}},{"type":"section","fields":[{"type":"plain_text","text":"RUN NUMBER - ${{ GITHUB.RUN_NUMBER }}","emoji":true},{"type":"plain_text","text":"RUN ID - ${{ GITHUB.RUN_ID }}","emoji":true}]}]}]}' ${{ secrets.SLACK_WEBHOOK_URL }}
-      - name: Failure
-        if: ${{ needs.build-and-run.result == 'failure' }}
-        run: |
-          curl -X POST -H 'Content-type: application/json' --data '{"attachments":[{"color":"#FF0000","blocks":[{"type":"section","text":{"type":"mrkdwn","text":"❌ Bahmni E2E Tests Failed in ${{env.TARGET_ENV}}."}},{"type":"divider"},{"type":"section","text":{"type":"mrkdwn","text":"📌 View the detailed HTML report here 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://${{github.repository_owner}}.github.io/${{env.REPO_NAME}}/report-${{GITHUB.RUN_ID}}-${{GITHUB.RUN_ATTEMPT}}"}},{"type":"section","text":{"type":"mrkdwn","text":"📌 View Workflow Run Details 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}"}},{"type":"section","fields":[{"type":"plain_text","text":"RUN NUMBER - ${{ GITHUB.RUN_NUMBER }}","emoji":true},{"type":"plain_text","text":"RUN ID - ${{ GITHUB.RUN_ID }}","emoji":true}]}]}]}' ${{ secrets.SLACK_WEBHOOK_URL }}
