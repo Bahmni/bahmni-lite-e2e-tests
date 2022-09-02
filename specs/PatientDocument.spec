@@ -2,7 +2,7 @@
 
 tags: clinic, patient_documents, regression
 
-## Receptionalist should be able to upload patient documents
+## Receptionist should be able to upload patient documents
 
 * Login to Bahmni as a "receptionist"
 * Goto Clinical application

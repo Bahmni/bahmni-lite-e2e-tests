@@ -1,18 +1,18 @@
 name: E2E Tests
-on: 
+on:
   schedule:
-    - cron: '30 0 * * *' # Schedule fpr Demo Env Runs at 6.00AM IST - 12.30AM UTC
-    - cron: '0 5 * * *' # Schedule fpr QA.lite Env Runs at 10.30AM IST - 5.00AM UTC
+    - cron: "30 0 * * *" # Schedule fpr Demo Env Runs at 6.00AM IST - 12.30AM UTC
+    - cron: "0 5 * * *" # Schedule fpr QA.lite Env Runs at 10.30AM IST - 5.00AM UTC
   repository_dispatch:
     types: [Smoke-Test-Dev-Lite]
   workflow_dispatch:
     inputs:
       TEST_CONTEXT:
-        description: 'Test tags to be executed. eg. clinic, payment, lab, hospital, smoke, regression. Logical operators can be used.'
+        description: "Test tags to be executed. eg. clinic, payment, lab, hospital, smoke, regression. Logical operators can be used."
         required: false
-        default: 'clinic & smoke'
+        default: "clinic & smoke"
       TARGET_ENV:
-        description: 'Environment to test'
+        description: "Environment to test"
         required: true
         type: choice
         default: dev.lite
@@ -57,11 +57,11 @@ jobs:
         run: bash .github/waitForEnv.sh $TARGET_ENV
       - uses: actions/setup-node@v2
         with:
-          node-version: '16'
-          cache: 'npm'
+          node-version: "16"
+          cache: "npm"
       - uses: zcong1993/setup-timezone@v1.1.2
-        with: 
-          timezone: 'Asia/Kolkata'
+        with:
+          timezone: "Asia/Kolkata"
       - name: Install dependencies
         run: |
           sudo apt-get update
@@ -104,10 +104,10 @@ jobs:
           name: Videos_${{ GITHUB.RUN_NUMBER }}
           path: ./reports/video
       - name: Deploy reports
-        if:  ${{(success() || failure()) && env.ENV_FLAG == 'true'}}
+        if: ${{(success() || failure()) && env.ENV_FLAG == 'true'}}
         env:
-          SRC_FOLDER_PATH: 'reports/html-report'
-          TARGET_BRANCH: 'gh-pages'
+          SRC_FOLDER_PATH: "reports/html-report"
+          TARGET_BRANCH: "gh-pages"
           MAX_DIR: 10
         shell: bash
         run: bash .github/deleteOldReports.sh $MAX_DIR $SRC_FOLDER_PATH $TARGET_BRANCH ${{secrets.BAHMNI_USERNAME}} ${{secrets.BAHMNI_EMAIL}} ${{GITHUB.RUN_ID}} ${{GITHUB.RUN_ATTEMPT}}
@@ -117,12 +117,12 @@ jobs:
       - name: Send Slack Notification if execution Success
         if: ${{ success() && env.ENV_FLAG == 'true'}}
         run: |
-          curl -X POST -H 'Content-type: application/json' --data '{"attachments":[{"blocks":[{"type":"header","text":{"type":"plain_text","text":"✅ Bahmni E2E Tests Passed in ${{env.TARGET_ENV}} for tags ${{env.TEST_CONTEXT}}.","emoji":true}},{"type":"divider"},{"type":"section","text":{"type":"mrkdwn","text":"🧪 View the detailed HTML report here 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://${{github.repository_owner}}.github.io/${{env.REPO_NAME}}/report-${{GITHUB.RUN_ID}}-${{GITHUB.RUN_ATTEMPT}}"}},{"type":"section","text":{"type":"mrkdwn","text":"🧪 View Workflow Run Details 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}"}},{"type":"section","fields":[{"type":"plain_text","text":"RUN NUMBER - ${{ GITHUB.RUN_NUMBER }}","emoji":true},{"type":"plain_text","text":"RUN ID - ${{ GITHUB.RUN_ID }}","emoji":true}]}]}]}' ${{ secrets.SLACK_WEBHOOK_URL }}
+          curl -X POST -H 'Content-type: application/json' --data '{"attachments":[{"color": "#32CD32","blocks":[{"type":"header","text":{"type":"plain_text","text":"✅ Bahmni E2E Tests Passed in ${{env.TARGET_ENV}} for tags ${{env.TEST_CONTEXT}}.","emoji":true}},{"type":"divider"},{"type":"section","text":{"type":"mrkdwn","text":"🧪 View the detailed HTML report here 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://${{github.repository_owner}}.github.io/${{env.REPO_NAME}}/report-${{GITHUB.RUN_ID}}-${{GITHUB.RUN_ATTEMPT}}"}},{"type":"section","text":{"type":"mrkdwn","text":"🧪 View Workflow Run Details 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}"}},{"type":"section","fields":[{"type":"plain_text","text":"RUN NUMBER - ${{ GITHUB.RUN_NUMBER }}","emoji":true},{"type":"plain_text","text":"RUN ID - ${{ GITHUB.RUN_ID }}","emoji":true}]}]}]}' ${{ secrets.SLACK_WEBHOOK_URL }}
       - name: Send Slack Notification if execution Failure
         if: ${{ failure() && env.ENV_FLAG == 'true'}}
         run: |
-          curl -X POST -H 'Content-type: application/json' --data '{"attachments":[{"blocks":[{"type":"header","text":{"type":"plain_text","text":"❌ Bahmni E2E Tests Failed in ${{env.TARGET_ENV}} for tags ${{env.TEST_CONTEXT}}.","emoji":true}},{"type":"divider"},{"type":"section","text":{"type":"mrkdwn","text":"📌 View the detailed HTML report here 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://${{github.repository_owner}}.github.io/${{env.REPO_NAME}}/report-${{GITHUB.RUN_ID}}-${{GITHUB.RUN_ATTEMPT}}"}},{"type":"section","text":{"type":"mrkdwn","text":"📌 View Workflow Run Details 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}"}},{"type":"section","fields":[{"type":"plain_text","text":"RUN NUMBER - ${{ GITHUB.RUN_NUMBER }}","emoji":true},{"type":"plain_text","text":"RUN ID - ${{ GITHUB.RUN_ID }}","emoji":true}]}]}]}' ${{ secrets.SLACK_WEBHOOK_URL }}
+          curl -X POST -H 'Content-type: application/json' --data '{"attachments":[{"color": "#FF0000","blocks":[{"type":"header","text":{"type":"plain_text","text":"❌ Bahmni E2E Tests Failed in ${{env.TARGET_ENV}} for tags ${{env.TEST_CONTEXT}}.","emoji":true}},{"type":"divider"},{"type":"section","text":{"type":"mrkdwn","text":"📌 View the detailed HTML report here 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://${{github.repository_owner}}.github.io/${{env.REPO_NAME}}/report-${{GITHUB.RUN_ID}}-${{GITHUB.RUN_ATTEMPT}}"}},{"type":"section","text":{"type":"mrkdwn","text":"📌 View Workflow Run Details 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}"}},{"type":"section","fields":[{"type":"plain_text","text":"RUN NUMBER - ${{ GITHUB.RUN_NUMBER }}","emoji":true},{"type":"plain_text","text":"RUN ID - ${{ GITHUB.RUN_ID }}","emoji":true}]}]}]}' ${{ secrets.SLACK_WEBHOOK_URL }}
       - name: Send Slack Notification if Environment Not available
         if: ${{(success() || failure()) && env.ENV_FLAG == 'false'}}
         run: |
-          curl -X POST -H 'Content-type: application/json' --data '{"attachments":[{"blocks":[{"type":"header","text":{"type":"plain_text","text":"⚠️ Unable to execute Bahmni E2E Tests in ${{env.TARGET_ENV}}, Environment is down.","emoji":true}},{"type":"divider"},{"type":"section","text":{"type":"mrkdwn","text":"📌 View Workflow Run Details 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}"}},{"type":"section","fields":[{"type":"plain_text","text":"RUN NUMBER - ${{ GITHUB.RUN_NUMBER }}","emoji":true},{"type":"plain_text","text":"RUN ID - ${{ GITHUB.RUN_ID }}","emoji":true}]}]}]}' ${{ secrets.SLACK_WEBHOOK_URL }}
+          curl -X POST -H 'Content-type: application/json' --data '{"attachments":[{"color": "#FF8C00","blocks":[{"type":"header","text":{"type":"plain_text","text":"⚠️ Unable to execute Bahmni E2E Tests in ${{env.TARGET_ENV}}, Environment is down.","emoji":true}},{"type":"divider"},{"type":"section","text":{"type":"mrkdwn","text":"📌 View Workflow Run Details 👉"},"accessory":{"type":"button","text":{"type":"plain_text","text":"View"},"url":"https://github.com/${{github.repository}}/actions/runs/${{github.run_id}}"}},{"type":"section","fields":[{"type":"plain_text","text":"RUN NUMBER - ${{ GITHUB.RUN_NUMBER }}","emoji":true},{"type":"plain_text","text":"RUN ID - ${{ GITHUB.RUN_ID }}","emoji":true}]}]}]}' ${{ secrets.SLACK_WEBHOOK_URL }}

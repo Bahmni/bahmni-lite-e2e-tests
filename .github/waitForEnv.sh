@@ -6,7 +6,10 @@ max_timeout_temp=$max_timeout
 retry_time=10
 url="https://${TARGET_ENV}.mybahmni.in/openmrs/"
 if grep -q "$TARGET_ENV" <<< "demo"; then
-        url="https://${TARGET_ENV}.mybahmni.org/openmrs/"
+        flag=true
+        echo "ENV_FLAG=true" >> $GITHUB_ENV
+        echo "Skipping environment check for ${TARGET_ENV} instance"
+        exit 0
 fi
 while [ $max_timeout -gt 0 ]
 do
