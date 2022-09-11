@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - main
+      - Release_v93
+env:
+  TARGET_BRANCH: main
 jobs:
   build-and-run:
     name: Build and Run E2E test
@@ -12,8 +15,16 @@ jobs:
       matrix:
         TARGET_ENV: [demo, dev.lite]
     steps:
+      - name: Set TARGET_BRANCH
+        if: ${{matrix.TARGET_ENV == 'demo'}}
+        run: |
+          echo "TARGET_BRANCH=Release_v93" >> $GITHUB_ENV
+      - name: Show current Env variables
+        run: |
+          echo "TARGET_ENV - ${{matrix.TARGET_ENV}} TARGET_BRANCH - ${{env.TARGET_BRANCH}}"
       - uses: actions/checkout@v2
         with:
+          ref: ${{env.TARGET_BRANCH}}
           submodules: recursive
       - uses: actions/setup-node@v2
         with:

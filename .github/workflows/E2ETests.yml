@@ -22,6 +22,14 @@ on:
           - lite
           - demo
           - demo-v94
+      TARGET_BRANCH:
+        description: "Branch to checkout"
+        required: true
+        type: choice
+        default: main
+        options:
+          - main
+          - Release_v93
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.client_payload.context || github.event.inputs.TEST_CONTEXT || 'clinic & smoke' }}-${{ github.event.inputs.TARGET_ENV || 'dev.lite' }}-${{github.event.schedule}}
   cancel-in-progress: true
@@ -29,6 +37,7 @@ env:
   TEST_CONTEXT: ${{ github.event.client_payload.context || github.event.inputs.TEST_CONTEXT || 'clinic & smoke' }}
   TARGET_ENV: ${{ github.event.inputs.TARGET_ENV || 'dev.lite' }}
   ENV_FLAG: false
+  TARGET_BRANCH: ${{ github.event.inputs.TARGET_BRANCH || 'main'}}
 jobs:
   build-and-run:
     name: Build and Run E2E tests
@@ -40,17 +49,20 @@ jobs:
           echo "TARGET_ENV=demo" >> $GITHUB_ENV
           echo "TEST_CONTEXT=hospital" >> $GITHUB_ENV
           echo "TEST_SETUP=true" >> $GITHUB_ENV
+          echo "TARGET_BRANCH=Release_v93" >> $GITHUB_ENV
       - name: Set environment variables for QA.lite Regression Schedule
         if: github.event.schedule=='0 5 * * *'
         run: |
           echo "TARGET_ENV=qa.lite" >> $GITHUB_ENV
           echo "TEST_CONTEXT=clinic & regression" >> $GITHUB_ENV
+          echo "TARGET_BRANCH=main" >> $GITHUB_ENV
       - name: Show current Env variables
         run: |
-          echo "TARGET_ENV - ${{env.TARGET_ENV}} TEST_CONTEXT - ${{env.TEST_CONTEXT}}"
+          echo "TARGET_ENV - ${{env.TARGET_ENV}} TEST_CONTEXT - ${{env.TEST_CONTEXT}} TARGET_BRANCH - ${{env.TARGET_BRANCH}}"
       - run: echo "Current Concurrency Group - ${{ github.workflow }}-${{ github.event.client_payload.context || github.event.inputs.TEST_CONTEXT || 'clinic & smoke' }}-${{ github.event.inputs.TARGET_ENV || 'dev.lite' }}-${{github.event.schedule}}"
       - uses: actions/checkout@v2
         with:
+          ref: ${{env.TARGET_BRANCH}}
           submodules: recursive
       - name: Wait for environment to be up
         shell: bash
