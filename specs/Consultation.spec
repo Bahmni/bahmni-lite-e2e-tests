@@ -21,7 +21,6 @@ tags: clinic, consultation, regression
 * Verify medical prescription in patient clinical dashboard
 * Verify diagnosis and condition in patient clinical dashboard
 * Validate the lab tests are available in patient clinical dashboard
-* Verify diagnosis and condition in patient clinical dashboard
 * Verify vitals
 * Verify history & examination in patient clinical dashboard
 * Verify consultation notes in patient clinical dashboard
