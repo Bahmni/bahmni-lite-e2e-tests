@@ -22,7 +22,7 @@ tags: clinic, consultation, regression
 * Verify diagnosis and condition in patient clinical dashboard
 * Validate the lab tests are available in patient clinical dashboard
 * Verify vitals
-* Verify history & examination in patient clinical dashboard
 * Verify consultation notes in patient clinical dashboard
+* Verify history & examination in patient clinical dashboard
 * Logout and Login to Bahmni as a "receptionist"
 * visit is closed at the front desk
