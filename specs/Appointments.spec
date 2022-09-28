@@ -39,7 +39,10 @@ tags: hospital, appointment, clinic, regression
 * Logout and Login to Bahmni as a "receptionist"
 * Receptionist creates the patient with mobile number "+919876543210" and starts an OPD
 * Receptionist creates a walkin appointment at "11am" for service
+* Validate Appointment Details in Clinical Dashboard with status as "Scheduled"
 * Receptionist cancels the newly created appointment
 * The patient's appointment should not be found
+* Click back button
+* Validate Appointment Details in Clinical Dashboard with status as "Cancelled"
 * Click back button
 * visit is closed at the front desk
