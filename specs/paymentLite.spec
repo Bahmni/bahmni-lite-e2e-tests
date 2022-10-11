@@ -17,8 +17,6 @@ tags: clinic, payment-lite, smoke, regression
 * Create a doctor in Payment Lite with consultation fee "15000"
 * Create drug with price "1000"
 Drug should flow from Bahmni
-* Create a patient in Payment Lite
-Patient should be auto created in bahmni
 * Raise an invoice for patient
 * Collect the payment from the patient
 * Verify the payment is complete
