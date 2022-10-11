@@ -10,6 +10,7 @@ tags: clinic, consultation, regression
 * Open "Clinical" module
 * Goto All sections and search the newly created patient
 * Doctor clicks consultation
+* Click History and Examination
 * Enter History and Examination details "consultation/observations/historyAndExaminationDetails"
 * Enter vitals "consultation/observations/Vitals"
 * Doctor captures consultation notes "Consultation notes"
