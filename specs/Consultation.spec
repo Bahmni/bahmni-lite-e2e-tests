@@ -5,7 +5,7 @@ tags: clinic, consultation, regression
 ## Doctor should be able to capture Consultation
 * Login to Bahmni as a "receptionist"
 * Goto Clinical application
-* Receptionist creates the patient with mobile number "+919876543210" and starts an OPD
+* Receptionist creates the patient and starts an OPD
 * Logout and Login to Bahmni as a "doctor"
 * Open "Clinical" module
 * Goto All sections and search the newly created patient

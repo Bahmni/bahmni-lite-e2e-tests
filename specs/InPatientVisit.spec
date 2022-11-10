@@ -4,7 +4,7 @@
 tags: hospital, ipmodule, regression
 
 * Login to Bahmni location "General Ward" as a "receptionist"
-* Receptionist creates a patient with mobileNumber "+91-9876543210" and starts an IPD visit
+* Receptionist creates a patient and starts an IPD visit
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
 * Doctor issues an Admit disposition
 * Click back button
@@ -36,7 +36,7 @@ tags: hospital, ipmodule, regression
 tags: hospital, bedmanagement, regression
 
 * Login to Bahmni location "General Ward" as a "receptionist"
-* Receptionist creates a patient with mobileNumber "+91-9876543210" and starts an IPD visit
+* Receptionist creates a patient and starts an IPD visit
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
 * Doctor issues an Admit disposition
 * Click back button

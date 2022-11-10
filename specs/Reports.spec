@@ -6,7 +6,7 @@ tags: clinic, reports, regression
 
 * Login to Bahmni as a "receptionist"
 * Goto Clinical application
-* Receptionist creates the patient with mobile number "+919876543210" and starts an OPD
+* Receptionist creates the patient and starts an OPD
 * visit is closed at the front desk
 * Goto Clinical application
 * Open "Reports" module

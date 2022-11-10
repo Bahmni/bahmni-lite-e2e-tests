@@ -5,7 +5,7 @@
 tags: hospital, regression
 
 * Login to Bahmni location "General Ward" as a "receptionist"
-* Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
+* Receptionist creates the patient and starts an OPD
 * Add this newly created patient as merge patient1
 * Open clinical tab
 * Enter vitals "consultation/observations/Vitals"
@@ -13,7 +13,7 @@ tags: hospital, regression
 * Click back button
 * visit is closed at the front desk
 * Goto Clinical application
-* Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
+* Receptionist creates the patient and starts an OPD
 * Add this newly created patient as merge patient2
 * Open clinical tab
 * Enter vitals "consultation/observations/Vitals"
@@ -49,7 +49,7 @@ tags: hospital, payment, regression
 * Goto the openMRS Admin tab
 * Admin adds a new drug concept
 * Goto Clinical application
-* Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
+* Receptionist creates the patient and starts an OPD
 * Open clinical tab
 * Doctor prescribes medications "consultation/medications/paracetamol"
 * Goto Bahmni main home

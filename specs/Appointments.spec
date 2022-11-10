@@ -5,7 +5,7 @@
 tags: hospital, appointment, clinic, regression_wip
 
 * Login to Bahmni as a "receptionist"
-* Receptionist creates the patient with mobile number "+919876543210" and starts an OPD
+* Receptionist creates the patient and starts an OPD
 * Receptionist creates a teleconsultation appointment "11am"
 * Click back button
 * The doctor joins the link for the appointment
@@ -20,7 +20,7 @@ tags: hospital, appointment, clinic, regression_wip
 tags: hospital, appointment, clinic, regression
 
 * Login to Bahmni as a "receptionist"
-* Receptionist creates the patient with mobile number "+919876543210" and starts an OPD
+* Receptionist creates the patient and starts an OPD
 * Receptionist creates a walkin appointment at "11am" for service
 * Validate Appointment Details in Clinical Dashboard with status as "Scheduled"
 * Receptionist cancels the newly created appointment

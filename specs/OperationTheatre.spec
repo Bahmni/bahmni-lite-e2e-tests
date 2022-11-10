@@ -12,7 +12,7 @@ tags: hospital, master-data-management
 * Create a location "OTLocation" if it doesn't exist
 ## Admin should be able to block OT for a surgeon's and schedule a time for a patient's operation
 * Login to Bahmni location "General Ward" as a "receptionist"
-* Receptionist creates the patient with mobile number "+91-9876543210"
+* Receptionist creates the patient
 * Click back button
 * OT team creates an OT Schedule
 * Click back button

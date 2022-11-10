@@ -33,7 +33,7 @@ tags: hospital, lab, payment, regression
 tags: hospital, lab, payment, regression
 
 * Login to Bahmni location "General Ward" as a "receptionist"
-* Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
+* Receptionist creates the patient and starts an OPD
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
 * Open clinical tab
 * Enter vitals "consultation/observations/Vitals"
@@ -66,7 +66,7 @@ tags: hospital, lab, payment, regression
 tags: hospital, regression
 
 * Login to Bahmni location "General Ward" as a "receptionist"
-* Receptionist creates the patient with mobile number "+91-9876543210" and starts an OPD
+* Receptionist creates the patient and starts an OPD
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
 * Open clinical tab
 * Collect sample in Bacteriology

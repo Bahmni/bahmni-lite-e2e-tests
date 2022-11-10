@@ -12,7 +12,7 @@ tags: hospital, program, regression
 * Manage locations
 * Create a location "appointmentLocation" if it doesn't exist
 * Goto Clinical application
-* Receptionist creates the patient with mobile number "+91-9876543210" and starts an Special OPD
+* Receptionist creates the patient and starts an Special OPD
 * Receptionist creates a recurring appointment for days "2" at time "12pm"
 * Click back button
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
