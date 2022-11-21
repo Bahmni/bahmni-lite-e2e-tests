@@ -31,13 +31,13 @@
    
   <div class="report_chart">
     <div class="chart">
-      <svg id="pie-chart" data-results="0,2,0" data-total="2">
+      <svg id="pie-chart" data-results="1,5,0" data-total="6">
         <path class="status failed" />
-        <path class="shadow failed" data-status="failed"><title>Failed: 0/2</title></path>
+        <path class="shadow failed" data-status="failed"><title>Failed: 1/6</title></path>
         <path class="status passed" />
-        <path class="shadow passed" data-status="passed"><title>Passed: 2/2</title></path>
+        <path class="shadow passed" data-status="passed"><title>Passed: 5/6</title></path>
         <path class="status skipped" />
-        <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/2</title></path>
+        <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/6</title></path>
       </svg>
     </div>
   </div>
@@ -45,15 +45,15 @@
    
   <div class="report_test-results">
     <div class="report_test-result specs">
-        <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">2</span></div>
-        <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">0</span></div>
-        <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">2</span></div>
+        <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">6</span></div>
+        <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">1</span></div>
+        <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">5</span></div>
         <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">0</span></div>
     </div>
     <div class="report_test-result scenarios">
-        <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">2</span></div>
-        <div class="fail scenario-stats" data-status="failed"><span class="value">0</span></div>
-        <div class="pass scenario-stats" data-status="passed"><span class="value">2</span></div>
+        <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">6</span></div>
+        <div class="fail scenario-stats" data-status="failed"><span class="value">1</span></div>
+        <div class="pass scenario-stats" data-status="passed"><span class="value">5</span></div>
         <div class="skip scenario-stats" data-status="skipped"><span class="value">0</span></div>
     </div>
   </div>
@@ -63,25 +63,25 @@
   <ul>
     <li>
       <label>Environment </label>
-      <span>dev.lite</span>
+      <span>qa.lite</span>
     </li>
     
     <li>
       <label>Tags </label>
-      <span>clinic & smoke</span>
+      <span>clinic & regression</span>
     </li>
     
     <li>
       <label>Success Rate </label>
-      <span>100%</span>
+      <span>83%</span>
     </li>
     <li>
       <label>Total Time </label>
-      <span>00:10:40</span>
+      <span>00:27:50</span>
     </li>
     <li>
       <label>Generated On </label>
-      <span>Nov 18, 2022 at 1:04pm</span>
+      <span>Nov 21, 2022 at 10:36am</span>
     </li>
   </ul>
 
@@ -118,12 +118,48 @@
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
+          <a href="Reports.html">
+            
+              <li class="failed spec-name">
+            
+              <span id="scenarioName" class="scenarioname">Reports Validation</span>
+              <span id="time" class="time">00:03:42</span>
+            </li>
+          </a>
+          
+          <a href="Appointments.html">
+             
+              <li class="passed spec-name">
+            
+              <span id="scenarioName" class="scenarioname">Appointments</span>
+              <span id="time" class="time">00:04:48</span>
+            </li>
+          </a>
+          
+          <a href="Consultation.html">
+             
+              <li class="passed spec-name">
+            
+              <span id="scenarioName" class="scenarioname">Consultation</span>
+              <span id="time" class="time">00:05:17</span>
+            </li>
+          </a>
+          
+          <a href="PatientDocument.html">
+             
+              <li class="passed spec-name">
+            
+              <span id="scenarioName" class="scenarioname">Patient documents</span>
+              <span id="time" class="time">00:03:19</span>
+            </li>
+          </a>
+          
           <a href="labLite.html">
              
               <li class="passed spec-name">
             
               <span id="scenarioName" class="scenarioname">Lab Lite</span>
-              <span id="time" class="time">00:04:44</span>
+              <span id="time" class="time">00:04:45</span>
             </li>
           </a>
           
@@ -132,7 +168,7 @@
               <li class="passed spec-name">
             
               <span id="scenarioName" class="scenarioname">Payment Lite</span>
-              <span id="time" class="time">00:05:54</span>
+              <span id="time" class="time">00:05:53</span>
             </li>
           </a>
           
@@ -147,7 +183,7 @@
   <div id="specificationContainer" class="details">
     <header class="curr-spec">
       <div class="spec-head-wrapper">
-        <h3 class="spec-head" title="/home/runner/work/bahmni-e2e-tests/bahmni-e2e-tests/specs/paymentLite.spec">Payment Lite</h3>
+        <h3 class="spec-head" title="/home/runner/work/bahmni-e2e-tests/bahmni-e2e-tests/specs/Consultation.spec">Consultation</h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
             <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
@@ -159,15 +195,26 @@
       <div class="spec-meta">
         <div class="spec-filename">
           <label for="specFileName">File Path</label>
-          <input id="specFileName" value="/home/runner/work/bahmni-e2e-tests/bahmni-e2e-tests/specs/paymentLite.spec" readonly/>
+          <input id="specFileName" value="/home/runner/work/bahmni-e2e-tests/bahmni-e2e-tests/specs/Consultation.spec" readonly/>
           <button class="clipboard-btn" data-clipboard-target="#specFileName" title="Copy to Clipboard">
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:05:54</span>
+        <span class="time">00:05:17</span>
       </div>
 
 	
+  
+    <div class="tags scenario_tags contentSection">
+      <strong>Tags:</strong>
+      
+        <span> clinic</span>
+      
+        <span> consultation</span>
+      
+        <span> regression</span>
+      
+    </div>
   
 
 	</header>
@@ -183,6 +230,8 @@
     <div class="content">
     
   
+  <span></span>
+  
   
 
   
@@ -195,24 +244,11 @@
 
 	
   <div class="scenario-head">
-    <h3 class="head borderBottom">Doctor and medicines should be billed in paymentlite</h3>
+    <h3 class="head borderBottom">Doctor should be able to capture Consultation</h3>
     
-    <span class="time">00:05:54</span>
+    <span class="time">00:05:17</span>
 
 	
-  
-    <div class="tags scenario_tags contentSection">
-      <strong>Tags:</strong>
-      
-        <span> clinic</span>
-      
-        <span> payment-lite</span>
-      
-        <span> smoke</span>
-      
-        <span> regression</span>
-      
-    </div>
   
 
 	</div>
@@ -226,83 +262,6 @@
 	
 
   
-    <div class="context-step">
-      
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:04</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        create Login Users for paymentlite
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-    </div>
-  
-  
-    
-  
-    <span></span>
-  
-
-  
-    
-  
-    <span></span>
-  
-
   
     
   
@@ -327,17 +286,7 @@
   
     
       <span>
-        Login to Bahmni location 
-      </span>
-    
-  
-    
-      <span class="parameter">"Bahmni Clinic"</span>
-    
-  
-    
-      <span>
-         as a 
+        Login to Bahmni as a 
       </span>
     
   
@@ -358,7 +307,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:06</span>
+      <span class="time">Execution Time : 00:00:05</span>
     </h5>
   
   <div class="step-info passed">
@@ -659,16 +608,6 @@
       <span class="parameter">"receptionist"</span>
     
   
-    
-      <span>
-         with location 
-      </span>
-    
-  
-    
-      <span class="parameter">"Bahmni Clinic"</span>
-    
-  
   </div>
 
   
@@ -698,6 +637,69 @@
 
   
   </div>
+
+  
+
+  
+    
+  
+    
+  
+  <div class="step">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:03</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+      <span>
+        Goto Clinical application
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+  
+	</li></ul></div></div>
+  
+    
+  
 
   
 
@@ -978,7 +980,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>firstName Tarun</p>
+        <div class="step-message"><p>firstName Veda</p>
  </div>
       </div>
     </div>
@@ -1049,7 +1051,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>middleName Shiloh</p>
+        <div class="step-message"><p>middleName Jordan</p>
  </div>
       </div>
     </div>
@@ -1120,7 +1122,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>lastName Gill</p>
+        <div class="step-message"><p>lastName Deshpande</p>
  </div>
       </div>
     </div>
@@ -1262,7 +1264,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>age 38</p>
+        <div class="step-message"><p>age 29</p>
  </div>
       </div>
     </div>
@@ -1333,7 +1335,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>houseNumber 7545</p>
+        <div class="step-message"><p>houseNumber 6364</p>
  </div>
       </div>
     </div>
@@ -1404,7 +1406,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>localitySector Marar Parkways</p>
+        <div class="step-message"><p>localitySector Vasudha Court</p>
  </div>
       </div>
     </div>
@@ -1475,7 +1477,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>village Belagavi</p>
+        <div class="step-message"><p>village Yevla</p>
  </div>
       </div>
     </div>
@@ -1546,7 +1548,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>pinCode 781020</p>
+        <div class="step-message"><p>pinCode 172109</p>
  </div>
       </div>
     </div>
@@ -1617,7 +1619,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>mobile +919800438541</p>
+        <div class="step-message"><p>mobile +919877482546</p>
  </div>
       </div>
     </div>
@@ -1688,7 +1690,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>emailAddress Aagam.Rana@hotmail.com</p>
+        <div class="step-message"><p>emailAddress Meenakshi_Jain@yahoo.co.in</p>
  </div>
       </div>
     </div>
@@ -1822,7 +1824,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>patient Identifier ABC200258</p>
+        <div class="step-message"><p>patient Identifier ABC200298</p>
  </div>
       </div>
     </div>
@@ -2243,17 +2245,7 @@
   
     
       <span>
-        Logout and Login to Bahmni location 
-      </span>
-    
-  
-    
-      <span class="parameter">"Bahmni Clinic"</span>
-    
-  
-    
-      <span>
-         as a 
+        Logout and Login to Bahmni as a 
       </span>
     
   
@@ -2368,16 +2360,6 @@
       <span class="parameter">"doctor"</span>
     
   
-    
-      <span>
-         with location 
-      </span>
-    
-  
-    
-      <span class="parameter">"Bahmni Clinic"</span>
-    
-  
   </div>
 
   
@@ -2410,38 +2392,6 @@
 
   
 
-  
-    
-  
-    
-  
-  <div class="step concept">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:17</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Open clinical tab
-      </span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class="concept-steps">
   
     
   
@@ -2520,11 +2470,43 @@
   
     
   
+  <div class="step concept">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:07</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  <i class="fa fa-plus-square" aria-hidden="true"></i>
+  
+  
+    
+      <span>
+        Goto All sections and search the newly created patient
+      </span>
+    
+  
+  </div>
+
+  </li></ul></div></div>
+  <div class="concept-steps">
+  
+    
+  
+    
+  
   <div class="step">
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:04</span>
+      <span class="time">Execution Time : 00:00:01</span>
     </h5>
   
   <div class="step-info passed">
@@ -2547,7 +2529,7 @@
   
     
       <span>
-        Select the newly created patient
+        Goto All sections
       </span>
     
   
@@ -2587,7 +2569,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
+      <span class="time">Execution Time : 00:00:02</span>
     </h5>
   
   <div class="step-info passed">
@@ -2610,7 +2592,7 @@
   
     
       <span>
-        Doctor clicks consultation
+        Search the newly created patient
       </span>
     
   
@@ -2650,7 +2632,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
+      <span class="time">Execution Time : 00:00:03</span>
     </h5>
   
   <div class="step-info passed">
@@ -2714,11 +2696,137 @@
   
     
   
+  <div class="step">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:02</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+      <span>
+        Doctor clicks consultation
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+  
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class="step">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:03</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+      <span>
+        Click History and Examination
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+  
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
   <div class="step concept">
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:23</span>
+      <span class="time">Execution Time : 00:00:26</span>
     </h5>
   
   <div class="step-info passed">
@@ -2733,28 +2841,85 @@
   
     
       <span>
-        Doctor advises medicines 
+        Enter History and Examination details 
       </span>
     
   
     
-      <span class="parameter">"consultation/medications/paracetamol"</span>
-    
-  
-    
-      <span>
-         and tests 
-      </span>
-    
-  
-    
-      <span class="parameter">"consultation/orders/Haemogram"</span>
+      <span class="parameter">"consultation/observations/historyAndExaminationDetails"</span>
     
   
   </div>
 
   </li></ul></div></div>
   <div class="concept-steps">
+  
+    
+  
+    
+  
+  <div class="step">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:20</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+      <span>
+        Enter History and examination details 
+      </span>
+    
+  
+    
+      <span class="parameter">"consultation/observations/historyAndExaminationDetails"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+  
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
   
     
   
@@ -2779,12 +2944,481 @@
   
     
       <span>
-        Doctor prescribes tests 
+        Save data
+      </span>
+    
+  
+  </div>
+
+  </li></ul></div></div>
+  <div class="concept-steps">
+  
+    
+  
+    
+  
+  <div class="step">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+      <span>
+        wait for overlay to disappear
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+  
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class="step">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:06</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+      <span>
+        Save visit data
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+  
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class="step">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+      <span>
+        wait for overlay to disappear
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+  
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  </div>
+
+  
+
+  
+  </div>
+
+  
+
+  
+    
+  
+    
+  
+  <div class="step concept">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:17</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  <i class="fa fa-plus-square" aria-hidden="true"></i>
+  
+  
+    
+      <span>
+        Enter vitals 
       </span>
     
   
     
-      <span class="parameter">"consultation/orders/Haemogram"</span>
+      <span class="parameter">"consultation/observations/Vitals"</span>
+    
+  
+  </div>
+
+  </li></ul></div></div>
+  <div class="concept-steps">
+  
+    
+  
+    
+  
+  <div class="step">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:02</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+      <span>
+        Click Vitals
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+  
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class="step">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:14</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+      <span>
+        Enter Form Values 
+      </span>
+    
+  
+    
+      <span class="parameter">"consultation/observations/Vitals"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+  
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  </div>
+
+  
+
+  
+    
+  
+    
+  
+  <div class="step">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:03</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+      <span>
+        Doctor captures consultation notes 
+      </span>
+    
+  
+    
+      <span class="parameter">"Consultation notes"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+  
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class="step concept">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:27</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  <i class="fa fa-plus-square" aria-hidden="true"></i>
+  
+  
+    
+      <span>
+        Doctor notes the diagnosis and conditions 
+      </span>
+    
+  
+    
+      <span class="parameter">"consultation/diagnosis/diagnosis_condition"</span>
     
   
   </div>
@@ -2828,7 +3462,7 @@
     
   
     
-      <span class="parameter">"Orders"</span>
+      <span class="parameter">"Diagnoses"</span>
     
   
     
@@ -2873,7 +3507,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
+      <span class="time">Execution Time : 00:00:20</span>
     </h5>
   
   <div class="step-info passed">
@@ -2896,12 +3530,12 @@
   
     
       <span>
-        Doctor prescribe tests 
+        Doctor notes the diagnosis and condition 
       </span>
     
   
     
-      <span class="parameter">"consultation/orders/Haemogram"</span>
+      <span class="parameter">"consultation/diagnosis/diagnosis_condition"</span>
     
   
   </div>
@@ -2940,7 +3574,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:03</span>
+      <span class="time">Execution Time : 00:00:04</span>
     </h5>
   
   <div class="step-info passed">
@@ -3098,7 +3732,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:02</span>
+      <span class="time">Execution Time : 00:00:03</span>
     </h5>
   
   <div class="step-info passed">
@@ -3171,7 +3805,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:16</span>
+      <span class="time">Execution Time : 00:00:17</span>
     </h5>
   
   <div class="step-info passed">
@@ -3347,7 +3981,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:03</span>
+      <span class="time">Execution Time : 00:00:05</span>
     </h5>
   
   <div class="step-info passed">
@@ -3505,7 +4139,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:02</span>
+      <span class="time">Execution Time : 00:00:03</span>
     </h5>
   
   <div class="step-info passed">
@@ -3570,6 +4204,697 @@
   
 
   
+    
+  
+    
+  
+  <div class="step concept">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:07</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  <i class="fa fa-plus-square" aria-hidden="true"></i>
+  
+  
+    
+      <span>
+        Doctor prescribes tests 
+      </span>
+    
+  
+    
+      <span class="parameter">"consultation/orders/Haemogram"</span>
+    
+  
+  </div>
+
+  </li></ul></div></div>
+  <div class="concept-steps">
+  
+    
+  
+    
+  
+  <div class="step">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:01</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+      <span>
+        Open 
+      </span>
+    
+  
+    
+      <span class="parameter">"Orders"</span>
+    
+  
+    
+      <span>
+         Tab
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+  
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class="step">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:01</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+      <span>
+        Doctor prescribe tests 
+      </span>
+    
+  
+    
+      <span class="parameter">"consultation/orders/Haemogram"</span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+  
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class="step concept">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:04</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  <i class="fa fa-plus-square" aria-hidden="true"></i>
+  
+  
+    
+      <span>
+        Save data
+      </span>
+    
+  
+  </div>
+
+  </li></ul></div></div>
+  <div class="concept-steps">
+  
+    
+  
+    
+  
+  <div class="step">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+      <span>
+        wait for overlay to disappear
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+  
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class="step">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:01</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+      <span>
+        Save visit data
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+  
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class="step">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:03</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+      <span>
+        wait for overlay to disappear
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+  
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  </div>
+
+  
+
+  
+  </div>
+
+  
+
+  
+    
+  
+    
+  
+  <div class="step">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:02</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+      <span>
+        Click back button
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+  
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class="step concept">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:08</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  <i class="fa fa-plus-square" aria-hidden="true"></i>
+  
+  
+    
+      <span>
+        Goto All sections and search the newly created patient
+      </span>
+    
+  
+  </div>
+
+  </li></ul></div></div>
+  <div class="concept-steps">
+  
+    
+  
+    
+  
+  <div class="step">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:01</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+      <span>
+        Goto All sections
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+  
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class="step">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:02</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+      <span>
+        Search the newly created patient
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+  
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class="step">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:04</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+      <span>
+        wait for overlay to disappear
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+  
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
   </div>
 
   
@@ -3606,7 +4931,102 @@
   
     
       <span>
-        Goto Bahmni main home
+        Verify medical prescription in patient clinical dashboard
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+  
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class="step concept">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  <i class="fa fa-plus-square" aria-hidden="true"></i>
+  
+  
+    
+      <span>
+        Verify diagnosis and condition in patient clinical dashboard
+      </span>
+    
+  
+  </div>
+
+  </li></ul></div></div>
+  <div class="concept-steps">
+  
+    
+  
+    
+  
+  <div class="step">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+      <span>
+        Verify diagnosis in patient clinical dashboard
       </span>
     
   
@@ -3669,32 +5089,76 @@
   
     
       <span>
-        put doctor first name 
+        Verify condition in patient clinical dashboard
       </span>
     
   
+  </div>
+
+  
     
-      <span class="parameter">"d3FirstName"</span>
     
+  
+
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+  
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+  </div>
+
+  
+
+  
+    
+  
+    
+  
+  <div class="step">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:00</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
   
     
       <span>
-         middle name 
+        Validate the lab tests are available in patient clinical dashboard
       </span>
-    
-  
-    
-      <span class="parameter">"d3MiddleName"</span>
-    
-  
-    
-      <span>
-         lastname 
-      </span>
-    
-  
-    
-      <span class="parameter">"d3LastName"</span>
     
   
   </div>
@@ -3733,7 +5197,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:05</span>
+      <span class="time">Execution Time : 00:00:00</span>
     </h5>
   
   <div class="step-info passed">
@@ -3756,7 +5220,7 @@
   
     
       <span>
-        Goto paymentlite
+        Verify vitals
       </span>
     
   
@@ -3792,7 +5256,70 @@
   
     
   
-  <div class="step concept">
+  <div class="step">
+  
+  
+    <h5 class="execution-time">
+      <span class="time">Execution Time : 00:00:17</span>
+    </h5>
+  
+  <div class="step-info passed">
+  
+  <ul>
+    <li class="step">
+      <div class="step-txt">
+
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+      <span>
+        Verify history &amp; examination in patient clinical dashboard
+      </span>
+    
+  
+  </div>
+
+  
+    
+    
+  
+
+    
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+
+  
+	</li></ul></div></div>
+  
+    
+  
+
+  
+
+  
+    
+  
+    
+  
+  <div class="step">
   
   
     <h5 class="execution-time">
@@ -3806,42 +5333,6 @@
       <div class="step-txt">
 
 
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Login to Payment lite as 
-      </span>
-    
-  
-    
-      <span class="parameter">"FrontDesk"</span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class="concept-steps">
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:02</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
   
   
 
@@ -3855,141 +5346,7 @@
   
     
       <span>
-        Enter crater Email for 
-      </span>
-    
-  
-    
-      <span class="parameter">"FrontDesk"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Enter crater Password for 
-      </span>
-    
-  
-    
-      <span class="parameter">"FrontDesk"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Click Login
+        Verify consultation notes in patient clinical dashboard
       </span>
     
   
@@ -4017,11 +5374,6 @@
   
     
   
-
-  
-
-  
-  </div>
 
   
 
@@ -4034,7 +5386,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:13</span>
+      <span class="time">Execution Time : 00:00:17</span>
     </h5>
   
   <div class="step-info passed">
@@ -4049,12 +5401,12 @@
   
     
       <span>
-        Create a doctor in Payment Lite with consultation fee 
+        Logout and Login to Bahmni as a 
       </span>
     
   
     
-      <span class="parameter">"15000"</span>
+      <span class="parameter">"receptionist"</span>
     
   
   </div>
@@ -4070,7 +5422,7 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:05</span>
+      <span class="time">Execution Time : 00:00:09</span>
     </h5>
   
   <div class="step-info passed">
@@ -4093,7 +5445,7 @@
   
     
       <span>
-        Click Items
+        Log out if still logged in
       </span>
     
   
@@ -4156,12 +5508,12 @@
   
     
       <span>
-        Add doctor with fees 
+        Login as user 
       </span>
     
   
     
-      <span class="parameter">"15000"</span>
+      <span class="parameter">"receptionist"</span>
     
   
   </div>
@@ -4193,2959 +5545,6 @@
 
   
   </div>
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step concept">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Create drug with price 
-      </span>
-    
-  
-    
-      <span class="parameter">"1000"</span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class="concept-steps">
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Click Items
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Add a drug with price 
-      </span>
-    
-  
-    
-      <span class="parameter">"1000"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  </div>
-
-  
-
-  
-    
-  
-    <span><p>Drug should flow from Bahmni</p>
-</span>
-  
-
-  
-    
-  
-    
-  
-  <div class="step concept">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:01:15</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Raise an invoice for patient
-      </span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class="concept-steps">
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Click Customers
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:45</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Select customer
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Click New Transaction
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Create a new invoice
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step concept">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:16</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Add items to invoice
-      </span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class="concept-steps">
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:06</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Choose the doctor in paymentlite
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:02</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Add a new Item
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:06</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Choose the prescibed medicines in paymentlite
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  </div>
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:02</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Save Invoice
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step concept">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:07</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Note the Date, Invoice Number and Amount
-      </span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class="concept-steps">
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Click Invoices
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Goto the tab Draft
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Goto the tab All
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Note the Date
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Note the Invoice Number
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Note the Amount
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  </div>
-
-  
-
-  
-  </div>
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step concept">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:17</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Collect the payment from the patient
-      </span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class="concept-steps">
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:02</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Click Payments
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:06</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Enter patient name for payment
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:03</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Associate the invoice to the payment
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:02</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Select the payment mode as 
-      </span>
-    
-  
-    
-      <span class="parameter">"cash"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:02</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Save payment
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  </div>
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step concept">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:14</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Verify the payment is complete
-      </span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class="concept-steps">
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:04</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Click Invoices
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Goto the tab Draft
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Goto the tab All
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:07</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        open the invoice
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        verify the payment is complete
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  </div>
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step concept">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:03</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Logout of Payment Lite
-      </span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class="concept-steps">
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Click on user menu
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:02</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Click Logout
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  </div>
-
-  
-
-  
-    
-  
-    <span><p>START BAH-2151</p>
-
-<p>Steps are added as workaround to avoid auto login to application. Bug - BAH-2151</p>
-</span>
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:04</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Goto paymentlite
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:03</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Logout of Payment Lite if logged in
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>User is logged in… Logging out</p>
- </div>
-      </div>
-    </div>
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    <span><p>END BAH-2151</p>
-</span>
-  
-
-  
-    
-  
-    
-  
-  <div class="step concept">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:05</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Login to Payment lite as 
-      </span>
-    
-  
-    
-      <span class="parameter">"Doctor"</span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class="concept-steps">
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:02</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Enter crater Email for 
-      </span>
-    
-  
-    
-      <span class="parameter">"Doctor"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Enter crater Password for 
-      </span>
-    
-  
-    
-      <span class="parameter">"Doctor"</span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Click Login
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  </div>
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step concept">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:09</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Run report and validate
-      </span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class="concept-steps">
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:03</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        goto reports in payment lite
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Validate Report is displayed
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:04</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Download the report
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:00</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Validate the downloaded report
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Invoice - INV-000048 Amount - ₹160.00 Date - 2022/11/18</p>
- </div>
-      </div>
-    </div>
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  </div>
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step concept">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:02</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  <i class="fa fa-plus-square" aria-hidden="true"></i>
-  
-  
-    
-      <span>
-        Logout of Payment Lite
-      </span>
-    
-  
-  </div>
-
-  </li></ul></div></div>
-  <div class="concept-steps">
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Click on user menu
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:01</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Click Logout
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-  </div>
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:06</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Goto Clinical application
-      </span>
-    
-  
-  </div>
-
-  
-    
-    
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
 
   
 
@@ -7299,7 +5698,7 @@
     <div class="message-container">
       <i class="fa fa-minus-square" aria-hidden="true"></i>
       <div class="messages">
-        <div class="step-message"><p>patient Identifier ABC200258</p>
+        <div class="step-message"><p>patient Identifier ABC200298</p>
  </div>
       </div>
     </div>
