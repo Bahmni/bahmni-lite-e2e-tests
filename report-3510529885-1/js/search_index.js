@@ -1,0 +1,1 @@
+var index = {"Tags":{"setup":["specs/AdminOperations.html"]},"Specs":{"Admin operations":["specs/AdminOperations.html"]}};
