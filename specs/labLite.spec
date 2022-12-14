@@ -7,7 +7,7 @@ tags: clinic, lab-lite, smoke, regression
 * Receptionist creates the patient and starts an OPD
 * Logout and Login to Bahmni location "Bahmni Clinic" as a "doctor"
 * Open clinical tab
-* Doctor prescribes tests "consultation/orders/Haemogram"
+* Doctor prescribes tests "consultation/orders/WBC"
 * Goto Clinical application
 * Open "Lab entry" module
 * Open a patient in lablite

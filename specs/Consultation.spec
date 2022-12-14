@@ -16,7 +16,7 @@ tags: clinic, consultation, regression
 * Doctor captures consultation notes "Consultation notes"
 * Doctor notes the diagnosis and conditions "consultation/diagnosis/diagnosis_condition"
 * Doctor prescribes medications "consultation/medications/paracetamol"
-* Doctor prescribes tests "consultation/orders/Haemogram"
+* Doctor prescribes tests "consultation/orders/WBC"
 * Click back button
 * Goto All sections and search the newly created patient
 * Verify medical prescription in patient clinical dashboard

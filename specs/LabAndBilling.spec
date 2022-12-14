@@ -17,7 +17,7 @@ tags: hospital, lab, payment, regression
 * Start an OPD Visit
 * Open clinical tab
 * Enter vitals "consultation/observations/Vitals"
-* Doctor advises medicines "consultation/medications/paracetamol" and tests "consultation/orders/Haemogram"
+* Doctor advises medicines "consultation/medications/paracetamol" and tests "consultation/orders/WBC"
 * Login to Open ELIS
 * Collect Sample
 * Enter blood Lab results
@@ -37,7 +37,7 @@ tags: hospital, lab, payment, regression
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
 * Open clinical tab
 * Enter vitals "consultation/observations/Vitals"
-* Doctor advises medicines "consultation/medications/paracetamol" and tests "consultation/orders/Haemogram"
+* Doctor advises medicines "consultation/medications/paracetamol" and tests "consultation/orders/WBC"
 * Login to Open ELIS
 * Collect Sample
 * Enter blood Lab results

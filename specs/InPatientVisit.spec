@@ -15,7 +15,7 @@ tags: hospital, ipmodule, regression
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
 * Open clinical tab
 * Enter vitals "consultation/observations/Vitals"
-* Doctor prescribes tests "consultation/orders/Haemogram"
+* Doctor prescribes tests "consultation/orders/WBC"
 * Doctor issues an Discharge disposition
 * Click back button
 * Click back button
@@ -47,7 +47,7 @@ tags: hospital, bedmanagement, regression
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
 * Open clinical tab
 * Enter vitals "consultation/observations/Vitals"
-* Doctor prescribes tests "consultation/orders/Haemogram"
+* Doctor prescribes tests "consultation/orders/WBC"
 * Doctor prescribes medications "consultation/medications/paracetamol"
 * Doctor issues an Discharge disposition
 * Click back button
