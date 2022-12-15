@@ -8,7 +8,7 @@ tags: clinic, payment-lite, smoke, regression
 * Receptionist creates the patient and starts an OPD
 * Logout and Login to Bahmni location "Bahmni Clinic" as a "doctor"
 * Open clinical tab
-* Doctor advises medicines "consultation/medications/paracetamol" and tests "consultation/orders/WBC"
+* Doctor advises medicines "consultation/medications/paracetamol" and tests "consultation/orders/Platelets"
 * Goto Bahmni main home
 * put doctor first name "d3FirstName" middle name "d3MiddleName" lastname "d3LastName"
 * Goto paymentlite
