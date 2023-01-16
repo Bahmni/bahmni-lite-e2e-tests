@@ -11,7 +11,7 @@ tags: clinic, patient_documents, regression
 * Choose newly created patient
 * Add a report "labReport1" to "Patient Documents"
 * Save the report
-* Click back button
+* Logout and Login to Bahmni as a "doctor"
 * Verify Patient Documents in patient dashboard
 * Click back button
 * Click back button
