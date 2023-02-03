@@ -48,7 +48,7 @@ tags: hospital, bedmanagement, regression
 * Open clinical tab
 * Enter vitals "consultation/observations/Vitals"
 * Doctor prescribes tests "consultation/orders/Platelets"
-* Doctor prescribes medications "consultation/medications/paracetamol"
+* Doctor prescribes medications "consultation/medications/paracetamol,consultation/medications/Morphine,consultation/medications/Diazepam,consultation/medications/Ceftriaxone"
 * Doctor issues an Discharge disposition
 * Click back button
 * Click back button
