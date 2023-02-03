@@ -51,7 +51,7 @@ tags: hospital, payment, regression
 * Goto Clinical application
 * Receptionist creates the patient and starts an OPD
 * Open clinical tab
-* Doctor prescribes medications "consultation/medications/paracetamol,consultation/medications/Morphine,consultation/medications/Diazepam,consultation/medications/Ceftriaxone"
+* Doctor prescribes medications "consultation/medications/paracetamol"
 * Goto Bahmni main home
 * Login to Odoo
 * Convert Quotation to Sales

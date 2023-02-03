@@ -15,7 +15,7 @@ tags: clinic, consultation, regression
 * Enter vitals "consultation/observations/Vitals"
 * Doctor captures consultation notes "Consultation notes"
 * Doctor notes the diagnosis and conditions "consultation/diagnosis/diagnosis_condition"
-* Doctor prescribes medications "consultation/medications/paracetamol,consultation/medications/Morphine,consultation/medications/Diazepam,consultation/medications/Ceftriaxone"
+* Doctor prescribes medications "consultation/medications/paracetamol"
 * Doctor prescribes tests "consultation/orders/Platelets"
 * Click back button
 * Goto All sections and search the newly created patient
