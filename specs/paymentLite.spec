@@ -8,13 +8,13 @@ tags: clinic, payment-lite, smoke, regression
 * Receptionist creates the patient and starts an OPD
 * Logout and Login to Bahmni location "Bahmni Clinic" as a "doctor"
 * Open clinical tab
-* Doctor advises medicines "consultation/medications/paracetamol" and tests "consultation/orders/Platelets"
+* Doctor advises medicines "consultation/medications/paracetamol,consultation/medications/Morphine,consultation/medications/Diazepam,consultation/medications/Ceftriaxone" and tests "consultation/orders/Platelets"
 * Goto Bahmni main home
 * put doctor first name "d3FirstName" middle name "d3MiddleName" lastname "d3LastName"
 * Goto paymentlite
 * Login to Payment lite as "FrontDesk"
 * Create a doctor in Payment Lite with consultation fee "15000"
-* Create drug with price "1000"
+* Create drug with price "100"
 Drug should flow from Bahmni
 * Raise an invoice for patient
 * Collect the payment from the patient
