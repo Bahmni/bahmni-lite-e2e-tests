@@ -1,1 +1,0 @@
-var index = {"Tags":{"clinic":["specs/paymentLite.html","specs/labLite.html"],"lab-lite":["specs/labLite.html"],"payment-lite":["specs/paymentLite.html"],"regression":["specs/paymentLite.html","specs/labLite.html"],"smoke":["specs/paymentLite.html","specs/labLite.html"]},"Specs":{"Lab Lite":["specs/labLite.html"],"Payment Lite":["specs/paymentLite.html"]}};
