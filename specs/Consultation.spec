@@ -63,7 +63,5 @@ tags: clinic, consultation, regression
 * Validate obs "consultation/observations/diabetesProgress" on the patient clinical dashboard
 * Validate obs "consultation/observations/admissionLetter" on the patient clinical dashboard
 * Validate obs "consultation/observations/deathNote" on the patient clinical dashboard
-Validate obs "consultation/observations/registrationDetail" on the patient clinical dashboard
-
 
 
