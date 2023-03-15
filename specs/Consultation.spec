@@ -28,8 +28,6 @@ tags: clinic, consultation, regression
 * Logout and Login to Bahmni as a "receptionist"
 * visit is closed at the front desk
 
-tags: clinic, consultation, regression
-
 ## Doctor should be able to add Observation Form
 * Login to Bahmni as a "receptionist"
 * Goto Clinical application
