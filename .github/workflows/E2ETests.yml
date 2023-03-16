@@ -20,6 +20,7 @@ on:
           - dev.lite
           - qa.lite
           - lite
+          - docker.lite
           - demo
           - demo-v94
       TARGET_BRANCH:
