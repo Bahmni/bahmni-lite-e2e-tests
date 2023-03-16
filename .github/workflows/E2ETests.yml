@@ -39,6 +39,7 @@ env:
   TARGET_ENV: ${{ github.event.inputs.TARGET_ENV || 'dev.lite' }}
   ENV_FLAG: false
   TARGET_BRANCH: ${{ github.event.inputs.TARGET_BRANCH || 'main'}}
+  LANGUAGE: en-IN
 jobs:
   build-and-run:
     name: Build and Run E2E tests
