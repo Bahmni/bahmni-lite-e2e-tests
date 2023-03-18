@@ -29,6 +29,9 @@ tags: clinic, consultation, regression
 * visit is closed at the front desk
 
 ## Doctor should be able to add Observation Form
+
+tags: forms
+
 * Login to Bahmni as a "receptionist"
 * Goto Clinical application
 * Receptionist creates the patient and starts an OPD
@@ -63,5 +66,5 @@ tags: clinic, consultation, regression
 * Validate obs "consultation/observations/diabetesProgress" on the patient clinical dashboard
 * Validate obs "consultation/observations/admissionLetter" on the patient clinical dashboard
 * Validate obs "consultation/observations/deathNote" on the patient clinical dashboard
-
-
+* Logout and Login to Bahmni as a "receptionist"
+* visit is closed at the front desk
