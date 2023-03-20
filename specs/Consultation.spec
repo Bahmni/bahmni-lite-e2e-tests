@@ -39,6 +39,7 @@ tags: forms
 * Open "Clinical" module
 * Goto All sections and search the newly created patient
 * Doctor clicks consultation
+* Enter Form Values and validate no error is displayed on save "consultation/observations/followUp"
 * Enter Form Values and validate no error is displayed on save "consultation/observations/secondVitals"
 * Enter Form Values and validate no error is displayed on save "consultation/observations/deathNote"
 * Enter Form Values and validate no error is displayed on save "consultation/observations/admissionLetter"
@@ -54,6 +55,7 @@ tags: forms
 * Enter Form Values and validate no error is displayed on save "consultation/observations/underTreatmentAndFitnessCertificate"
 * Click back button
 * Goto All sections and search the newly created patient
+* Validate obs "consultation/observations/followUp" on the patient clinical dashboard
 * Validate obs "consultation/observations/underTreatmentAndFitnessCertificate" on the patient clinical dashboard
 * Validate obs "consultation/observations/secondVitals" on the patient clinical dashboard
 * Validate obs "consultation/observations/referralLetter" on the patient clinical dashboard
