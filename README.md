@@ -11,7 +11,7 @@ This repo is for End to End tests for Bahmni.
 
 # Setup
 * Clone this repository
-* Run `git submodule init`
+* In terminal Run `git submodule init`
 * Run `git submodule update`
 
 # QA Test plan
@@ -33,6 +33,8 @@ If you want to override it then [-n=<Number_of_streams>](https://docs.gauge.org/
     In this command we are running the smoke test for `clinic`. 
     If we want to run the regression test for clinics, we can use the following command
     `gauge run specs --env local -v -p --tags 'clinic & regression'`
+
+> It is not mandatory to include all run options in command, we can simply run the command `gauge run specs`, this will execute all the scenarios present under the `specs` directory against the default environment.
     
 > The HTML reports can be found in `./reports/html-report` after the run.
 
