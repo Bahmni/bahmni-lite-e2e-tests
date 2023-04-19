@@ -54,7 +54,7 @@ async function getProviderUuid() {
 }
 
 async function getActivePatients() {
-    return await httpRequests.customGet(endpoints.ACTIVE_PATIENT_QUEUE, { location_uuid: await helper.getLoginLocationUUID(), provider_uuid: await helper.getProviderUuid() });
+    return await httpRequests.customGet(endpoints.ACTIVE_PATIENT_QUEUE, { location_uuid: await getLoginLocationUUID(), provider_uuid: await getProviderUuid() });
 }
 
 async function getConsultationEncounterUUID() {
