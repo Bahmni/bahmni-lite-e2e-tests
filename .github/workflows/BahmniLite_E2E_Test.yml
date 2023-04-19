@@ -85,6 +85,9 @@ jobs:
             fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget ffmpeg
       - run: npm install @getgauge/cli
       - run: npm install
+      - name: Run API Tests
+        id: run_api_test
+        run: xvfb-run npm run ci -- --env $TARGET_ENV --tags 'api'
       - name: Run Tests
         id: run_test
         run: xvfb-run npm run ci -- --env $TARGET_ENV --tags "${{env.TEST_CONTEXT}}"
