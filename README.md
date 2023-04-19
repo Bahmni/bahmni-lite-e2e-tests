@@ -1,8 +1,10 @@
-# Gauge tests for Bahmni E2E tests
+# Gauge tests for Bahmni E2E tests for Standard & Lite
 
-![E2E tests result](https://github.com/Bahmni/bahmni-e2e-tests/actions/workflows/main.yml/badge.svg?branch=main)
+[![Bahmni Standard V93 E2E Tests](https://github.com/Bahmni/bahmni-e2e-tests/actions/workflows/BahmniStandard_V93_E2E_Test.yml/badge.svg?branch=main)](https://github.com/Bahmni/bahmni-e2e-tests/actions/workflows/BahmniStandard_V93_E2E_Test.yml)
 
-This repo is for End to End tests for Bahmni.
+[![Bahmni Lite E2E Tests](https://github.com/Bahmni/bahmni-e2e-tests/actions/workflows/BahmniLite_E2E_Test.yml/badge.svg)](https://github.com/Bahmni/bahmni-e2e-tests/actions/workflows/BahmniLite_E2E_Test.yml)
+
+This repo is for End to End tests for Bahmni Standard & Bahmni Lite. Check out branch `BahmniStandard_V93` for Bahmni Standard and Check out `main` for Bahmni Lite.
 
 # Pre-requisites
 * [Node-js](https://nodejs.org/en/)
@@ -10,7 +12,7 @@ This repo is for End to End tests for Bahmni.
 * Install Taiko `npm install -g taiko`
 
 # Setup
-* Clone this repository
+* Clone this repository and check out to branch as required.(`main` for bahmni lite & `BahmniStandard_V93` for bahmni standard)
 * In terminal Run `git submodule init`
 * Run `git submodule update`
 
