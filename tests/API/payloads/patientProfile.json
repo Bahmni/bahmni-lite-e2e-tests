@@ -1,0 +1,60 @@
+{
+    "patient": {
+        "person": {
+            "names": [
+                {
+                    "givenName": "First",
+                    "middleName": "Middle",
+                    "familyName": "Last",
+                    "display": "First Last",
+                    "preferred": false
+                }
+            ],
+            "addresses": [
+                {
+                    "address1": "123",
+                    "address2": "Locality",
+                    "cityVillage": "City",
+                    "countyDistrict": "CHENNAI",
+                    "stateProvince": "TAMIL NADU",
+                    "postalCode": "600092"
+                }
+            ],
+            "birthdate": "1989-04-11",
+            "gender": "M",
+            "birthtime": null,
+            "attributes": [
+                {
+                    "attributeType": {
+                        "uuid": "a13b601c-cf8c-11ed-8f48-0242ac13000d"
+                    },
+                    "value": "superman@bahmni.org"
+                },
+                {
+                    "attributeType": {
+                        "uuid": "63c61dc2-bb10-4348-ab96-4e7716b0a03d"
+                    },
+                    "value": "+911111111111"
+                },
+                {
+                    "attributeType": {
+                        "uuid": "fe8d1f53-91f9-4cc4-8c86-bae15a5cb0b2"
+                    },
+                    "value": "+912222222222"
+                }
+            ],
+            "deathDate": null,
+            "causeOfDeath": ""
+        },
+        "identifiers": [
+            {
+                "identifierSourceUuid": "c5cf4b68-6529-43fc-a644-c775ae73745e",
+                "identifierPrefix": "ABC",
+                "identifierType": "98bb435a-cf8c-11ed-8f48-0242ac13000d",
+                "preferred": true,
+                "voided": false
+            }
+        ]
+    },
+    "relationships": []
+}

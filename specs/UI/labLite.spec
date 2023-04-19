@@ -1,4 +1,7 @@
 # Lab Lite
+
+tags: ui
+
 ## Doctor should be able to prescribe medicines and tests and get relevant reports from LabLite
 
 tags: clinic, lab-lite, smoke, regression

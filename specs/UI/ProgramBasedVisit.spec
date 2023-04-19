@@ -1,4 +1,7 @@
 # Program Based Visits
+
+tags: ui
+
 ## Enrol a patient under a program and proceed with consultation
 
 tags: hospital, program, regression

@@ -1,5 +1,7 @@
 # Appointments
 
+tags: ui
+
 ## A receptionist should be able to create and cancel teleconsultation appointment for a patient
 
 tags: hospital, appointment, clinic, regression

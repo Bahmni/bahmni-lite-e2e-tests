@@ -1,6 +1,6 @@
 # Reports Validation
 
-tags: clinic, reports, regression
+tags: ui, clinic, reports, regression
 
 ## Validate the Visit reports
 

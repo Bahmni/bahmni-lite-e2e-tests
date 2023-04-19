@@ -1,6 +1,6 @@
 # Patient documents
 
-tags: clinic, patient_documents, regression
+tags: clinic, patient_documents, regression, ui
 
 ## Receptionist should be able to upload patient documents
 

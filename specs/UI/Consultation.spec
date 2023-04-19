@@ -1,6 +1,6 @@
 # Consultation
 
-tags: clinic, consultation, regression
+tags: clinic, consultation, regression, ui
 
 ## Doctor should be able to capture Consultation
 * Login to Bahmni as a "receptionist"

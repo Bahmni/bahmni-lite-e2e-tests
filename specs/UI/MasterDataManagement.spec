@@ -1,5 +1,7 @@
 # Manage Users
 
+tags: ui
+
 ## Create a new role for a doctor
 
 tags: master-data-management

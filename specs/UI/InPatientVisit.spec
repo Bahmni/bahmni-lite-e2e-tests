@@ -1,4 +1,7 @@
 # In Patient Visit
+
+tags: ui
+
 ## Nurse should be able to admit and discharge a patient based on doctor's disposition
 
 tags: hospital, ipmodule, regression

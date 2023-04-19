@@ -1,5 +1,7 @@
 # Admin operations
 
+tags: ui
+
 ## Admin should be able to merge patients
 
 tags: hospital, regression

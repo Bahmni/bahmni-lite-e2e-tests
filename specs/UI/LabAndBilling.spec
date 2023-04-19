@@ -1,5 +1,7 @@
 # Laboratory and Billing
 
+tags: ui
+
 ## Old Uploaded Patient data should be available for billing
 
 tags: hospital, lab, payment, regression

@@ -1,4 +1,7 @@
 # Radiology
+
+tags: ui
+
 ## Doctor should be able to prescribe radiology tests
 
 tags: hospital, radiology, regression

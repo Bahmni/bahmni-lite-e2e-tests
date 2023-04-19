@@ -1,5 +1,7 @@
 # Implementer interface
 
+tags: ui
+
 ## Admin should be able to create a form
 
 tags: master-data-management

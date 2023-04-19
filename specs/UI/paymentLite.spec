@@ -1,4 +1,7 @@
 # Payment Lite
+
+tags: ui
+
 * create Login Users for paymentlite
 ## Doctor and medicines should be billed in paymentlite
 
