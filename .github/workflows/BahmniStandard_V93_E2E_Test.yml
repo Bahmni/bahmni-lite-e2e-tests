@@ -2,7 +2,7 @@ name: Bahmni Standard V93 E2E Tests
 on:
   push:
     branches:
-      - Release_v93
+      - Bahmni_Standard_V93
   schedule:
     - cron: "30 0 * * *" # Schedule for Bahmni Standard Env Runs at 6.00AM IST - 12.30AM UTC
   workflow_dispatch:
