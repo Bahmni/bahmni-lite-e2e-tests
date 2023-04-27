@@ -46,7 +46,7 @@ jobs:
           echo "TARGET_ENV=demo" >> $GITHUB_ENV
           echo "TEST_CONTEXT=hospital" >> $GITHUB_ENV
           echo "TEST_SETUP=true" >> $GITHUB_ENV
-          echo "TARGET_BRANCH=Release_v93" >> $GITHUB_ENV
+          echo "TARGET_BRANCH=Bahmni_Standard_V93" >> $GITHUB_ENV
       - name: Show current Env variables
         run: |
           echo "TARGET_ENV - ${{env.TARGET_ENV}} TEST_CONTEXT - ${{env.TEST_CONTEXT}} TARGET_BRANCH - ${{env.TARGET_BRANCH}}"
