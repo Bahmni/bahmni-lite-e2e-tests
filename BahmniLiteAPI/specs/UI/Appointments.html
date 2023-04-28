@@ -1,0 +1,34 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="../../style.css"><h1>Appointments</h1>
+<p>tags: ui</p>
+<h2>A receptionist should be able to create and cancel teleconsultation appointment for a patient</h2>
+<p>tags: hospital, appointment, clinic, regression</p>
+<ul>
+<li>Login to Bahmni as a &quot;receptionist&quot;</li>
+<li>Receptionist creates the patient and starts an OPD</li>
+<li>Receptionist creates a teleconsultation appointment &quot;11am&quot;</li>
+<li>Click back button</li>
+<li>Logout and Login to Bahmni as a &quot;doctor&quot;</li>
+<li>The doctor joins the link for the appointment</li>
+<li>Logout and Login to Bahmni as a &quot;receptionist&quot;</li>
+<li>Receptionist cancels the newly created appointment</li>
+<li>The patient's appointment should not be found</li>
+<li>Click back button</li>
+<li>visit is closed at the front desk</li>
+</ul>
+<h2>A receptionist should be able to create and cancel walkin appointment for a patient</h2>
+<p>tags: hospital, appointment, clinic, regression</p>
+<ul>
+<li>Login to Bahmni as a &quot;receptionist&quot;</li>
+<li>Receptionist creates the patient and starts an OPD</li>
+<li>Receptionist creates a walkin appointment at &quot;11am&quot; for service</li>
+<li>Logout and Login to Bahmni as a &quot;doctor&quot;</li>
+<li>Validate Appointment Details in Clinical Dashboard with status as &quot;Scheduled&quot;</li>
+<li>Logout and Login to Bahmni as a &quot;receptionist&quot;</li>
+<li>Receptionist cancels the newly created appointment</li>
+<li>The patient's appointment should not be found</li>
+<li>Logout and Login to Bahmni as a &quot;doctor&quot;</li>
+<li>Validate Appointment Details in Clinical Dashboard with status as &quot;Cancelled&quot;</li>
+<li>Click back button</li>
+<li>visit is closed at the front desk</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href="../../index.html">=</a></li><li class="nav"><a href="./Consultation.html">></a></li></center></article>

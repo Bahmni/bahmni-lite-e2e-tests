@@ -1,0 +1,68 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="../../style.css"><h1>Admin operations</h1>
+<p>tags: ui</p>
+<h2>Admin should be able to merge patients</h2>
+<p>tags: hospital, regression</p>
+<ul>
+<li>Login to Bahmni location &quot;General Ward&quot; as a &quot;receptionist&quot;</li>
+<li>Receptionist creates the patient and starts an OPD</li>
+<li>Add this newly created patient as merge patient1</li>
+<li>Open clinical tab</li>
+<li>Enter vitals &quot;consultation/observations/Vitals&quot;</li>
+<li>Click back button</li>
+<li>Click back button</li>
+<li>visit is closed at the front desk</li>
+<li>Goto Clinical application</li>
+<li>Receptionist creates the patient and starts an OPD</li>
+<li>Add this newly created patient as merge patient2</li>
+<li>Open clinical tab</li>
+<li>Enter vitals &quot;consultation/observations/Vitals&quot;</li>
+<li>Click back button</li>
+<li>Click back button</li>
+<li>Open &quot;Patient Documents&quot; module</li>
+<li>Choose newly created patient</li>
+<li>Add a report &quot;labReport1&quot; to &quot;Patient Documents&quot;</li>
+<li>Save the report</li>
+<li>Click back button</li>
+<li>visit is closed at the front desk</li>
+<li>Goto Clinical application</li>
+<li>Goto the openMRS Admin tab</li>
+<li>Merge the newly created patients</li>
+<li>Goto Clinical application</li>
+<li>Open &quot;Registration&quot; module</li>
+<li>Open patient2 details by search</li>
+<li>Verify patient1 details are open</li>
+</ul>
+<h2>Create a report</h2>
+<ul>
+<li>Login to Bahmni location &quot;General Ward&quot; as a &quot;receptionist&quot;</li>
+<li>Goto the openMRS Admin tab</li>
+<li>Goto reporting</li>
+<li>Goto Report Administration</li>
+<li>Create Period Indicator Report</li>
+<li>Add Period Indicator Details</li>
+</ul>
+<h2>A saleable concept should be available in ODOO</h2>
+<p>tags: hospital, payment, regression</p>
+<ul>
+<li>Login to Bahmni location &quot;General Ward&quot; as a &quot;receptionist&quot;</li>
+<li>Goto the openMRS Admin tab</li>
+<li>Admin adds a new drug concept</li>
+<li>Goto Clinical application</li>
+<li>Receptionist creates the patient and starts an OPD</li>
+<li>Open clinical tab</li>
+<li>Doctor prescribes medications &quot;consultation/medications/paracetamol&quot;</li>
+<li>Goto Bahmni main home</li>
+<li>Login to Odoo</li>
+<li>Convert Quotation to Sales</li>
+<li>Confirm Sales</li>
+</ul>
+<h2>Admin should be able to do the search index and Give OT Access to receptionist</h2>
+<p>tags: setup</p>
+<ul>
+<li>Login to Bahmni as a &quot;admin&quot;</li>
+<li>Goto the openMRS Admin tab</li>
+<li>Do Search Index</li>
+<li>Goto Administration</li>
+<li>Give &quot;OT: FullAccess&quot; to &quot;receptionist&quot;</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href="../../index.html">=</a></li><li class="nav"><a href="./Appointments.html">></a></li></center></article>

@@ -1,0 +1,36 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="../../style.css"><h1>Payment Lite</h1>
+<p>tags: ui</p>
+<ul>
+<li>create Login Users for paymentlite</li>
+</ul>
+<h2>Doctor and medicines should be billed in paymentlite</h2>
+<p>tags: clinic, payment-lite, smoke, regression</p>
+<ul>
+<li>Login to Bahmni location &quot;Bahmni Clinic&quot; as a &quot;receptionist&quot;</li>
+<li>Receptionist creates the patient and starts an OPD</li>
+<li>Logout and Login to Bahmni location &quot;Bahmni Clinic&quot; as a &quot;doctor&quot;</li>
+<li>Open clinical tab</li>
+<li>Doctor advises medicines &quot;consultation/medications/paracetamol,consultation/medications/Morphine,consultation/medications/Diazepam,consultation/medications/Ceftriaxone&quot; and tests &quot;consultation/orders/Platelets&quot;</li>
+<li>Goto Bahmni main home</li>
+<li>put doctor first name &quot;d3FirstName&quot; middle name &quot;d3MiddleName&quot; lastname &quot;d3LastName&quot;</li>
+<li>Goto paymentlite</li>
+<li>Login to Payment lite as &quot;FrontDesk&quot;</li>
+<li>Create a doctor in Payment Lite with consultation fee &quot;15000&quot;</li>
+<li>Create drug with price &quot;100&quot;
+Drug should flow from Bahmni</li>
+<li>Raise an invoice for patient</li>
+<li>Collect the payment from the patient</li>
+<li>Verify the payment is complete</li>
+<li>Logout of Payment Lite
+START BAH-2151
+Steps are added as workaround to avoid auto login to application. Bug - BAH-2151</li>
+<li>Goto paymentlite</li>
+<li>Logout of Payment Lite if logged in
+END BAH-2151</li>
+<li>Login to Payment lite as &quot;Doctor&quot;</li>
+<li>Run report and validate</li>
+<li>Logout of Payment Lite</li>
+<li>Goto Clinical application</li>
+<li>visit is closed at the front desk</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href="./labLite.html"><</a></li><li class="nav"><a href="../../index.html">=</a></li></center></article>

@@ -1,0 +1,37 @@
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="../../style.css"><h1>Program Based Visits</h1>
+<p>tags: ui</p>
+<h2>Enrol a patient under a program and proceed with consultation</h2>
+<p>tags: hospital, program, regression</p>
+<ul>
+<li>Login to Bahmni location &quot;General Ward&quot; as a &quot;receptionist&quot;</li>
+<li>Open &quot;Appointment scheduling&quot; module</li>
+<li>Open admin tab of Appointments</li>
+<li>Create a service if it does not exist</li>
+<li>Goto Clinical application</li>
+<li>Goto the openMRS Admin tab</li>
+<li>Manage locations</li>
+<li>Create a location &quot;appointmentLocation&quot; if it doesn't exist</li>
+<li>Goto Clinical application</li>
+<li>Receptionist creates the patient and starts an Special OPD</li>
+<li>Receptionist creates a recurring appointment for days &quot;2&quot; at time &quot;12pm&quot;</li>
+<li>Click back button</li>
+<li>Logout and Login to Bahmni location &quot;General Ward&quot; as a &quot;doctor&quot;</li>
+<li>Doctor enrolls Patient onto &quot;HIV Program&quot; stage &quot;programStage&quot; starting &quot;5&quot; years ago with treatment start &quot;2&quot; years ago, id &quot;1234&quot;, dr incharge &quot;doctor&quot; and treatment stage &quot;Initial Stage&quot;</li>
+<li>Doctor clicks consultation</li>
+<li>wait for overlay to disappear</li>
+<li>Doctor captures the consultation notes &quot;Consultation Notes&quot; for newly created patient</li>
+<li>Click back button</li>
+<li>Click back button</li>
+<li>Logout and Login to Bahmni location &quot;General Ward&quot; as a &quot;labtechnician&quot;</li>
+<li>lab technician uploads patient document and radiology reports</li>
+<li>Click back button</li>
+</ul>
+<hr />
+<ul>
+<li>Logout and Login to Bahmni location &quot;General Ward&quot; as a &quot;receptionist&quot;</li>
+<li>Receptionist cancels all the appointments</li>
+<li>The patient's appointment should not be found in next week</li>
+<li>Click back button</li>
+<li>visit is closed at the front desk</li>
+</ul>
+<ul id="navigation"><center><li class="nav"><a href="./PatientDocument.html"><</a></li><li class="nav"><a href="../../index.html">=</a></li><li class="nav"><a href="./Radiology.html">></a></li></center></article>
