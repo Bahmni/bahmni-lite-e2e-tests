@@ -44,7 +44,7 @@ jobs:
     name: Build and Run E2E tests
     runs-on: ubuntu-latest
     steps:
-      - name: Set environment variables for QA.lite Regression Schedule
+      - name: Set environment variables for DEV.lite Regression Schedule
         if: github.event.schedule=='0 1 * * *'
         run: |
           echo "TARGET_ENV=dev.lite" >> $GITHUB_ENV
