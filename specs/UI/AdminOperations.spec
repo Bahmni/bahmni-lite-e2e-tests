@@ -4,13 +4,13 @@ tags: ui
 
 ## Admin should be able to merge patients
 
-tags: hospital, regression
+tags: hospital, regression, cure
 
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Receptionist creates the patient and starts an OPD
 * Add this newly created patient as merge patient1
 * Open clinical tab
-* Enter vitals "consultation/observations/Vitals"
+* Enter History and Examination details "consultation/observations/historyAndExaminationDetails"
 * Click back button
 * Click back button
 * visit is closed at the front desk
@@ -18,7 +18,7 @@ tags: hospital, regression
 * Receptionist creates the patient and starts an OPD
 * Add this newly created patient as merge patient2
 * Open clinical tab
-* Enter vitals "consultation/observations/Vitals"
+* Enter Orthopaedic followup "consultation/observations/OrthopaedicFollowup"
 * Click back button
 * Click back button
 * Open "Patient Documents" module
@@ -27,13 +27,6 @@ tags: hospital, regression
 * Save the report
 * Click back button
 * visit is closed at the front desk
-* Goto Clinical application
-* Goto the openMRS Admin tab
-* Merge the newly created patients
-* Goto Clinical application
-* Open "Registration" module
-* Open patient2 details by search
-* Verify patient1 details are open
 
 ## Create a report
 * Login to Bahmni location "General Ward" as a "receptionist"
@@ -43,9 +36,9 @@ tags: hospital, regression
 * Create Period Indicator Report
 * Add Period Indicator Details
 
-## A saleable concept should be available in ODOO
+## A saleable concept should be available in OPENMRS
 
-tags: hospital, payment, regression
+tags: hospital, payment, regression, cure
 
 * Login to Bahmni location "General Ward" as a "receptionist"
 * Goto the openMRS Admin tab
@@ -54,14 +47,10 @@ tags: hospital, payment, regression
 * Receptionist creates the patient and starts an OPD
 * Open clinical tab
 * Doctor prescribes medications "consultation/medications/paracetamol"
-* Goto Bahmni main home
-* Login to Odoo
-* Convert Quotation to Sales
-* Confirm Sales
 
 ## Admin should be able to do the search index and Give OT Access to receptionist
 
-tags: setup
+tags: setup, cure
 
 * Login to Bahmni as a "admin"
 * Goto the openMRS Admin tab

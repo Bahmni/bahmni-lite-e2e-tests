@@ -2,13 +2,13 @@
 
 tags: ui
 
-## A receptionist should be able to create and cancel teleconsultation appointment for a patient
+## A receptionist should be able to create and cancel regular appointment for a patient
 
-tags: hospital, appointment, clinic, regression
+tags: hospital, appointment, clinic, regression, cure
 
 * Login to Bahmni as a "receptionist"
 * Receptionist creates the patient and starts an OPD
-* Receptionist creates a teleconsultation appointment "11am"
+* Receptionist creates a regular appointment "11am"
 * Click back button
 * Logout and Login to Bahmni as a "doctor"
 * The doctor joins the link for the appointment
