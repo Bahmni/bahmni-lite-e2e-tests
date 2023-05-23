@@ -31,13 +31,13 @@
    
   <div class="report_chart">
     <div class="chart">
-      <svg id="pie-chart" data-results="0,2,0" data-total="2">
+      <svg id="pie-chart" data-results="1,2,0" data-total="3">
         <path class="status failed" />
-        <path class="shadow failed" data-status="failed"><title>Failed: 0/2</title></path>
+        <path class="shadow failed" data-status="failed"><title>Failed: 1/3</title></path>
         <path class="status passed" />
-        <path class="shadow passed" data-status="passed"><title>Passed: 2/2</title></path>
+        <path class="shadow passed" data-status="passed"><title>Passed: 2/3</title></path>
         <path class="status skipped" />
-        <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/2</title></path>
+        <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/3</title></path>
       </svg>
     </div>
   </div>
@@ -45,15 +45,15 @@
    
   <div class="report_test-results">
     <div class="report_test-result specs">
-        <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">2</span></div>
-        <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">0</span></div>
+        <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">3</span></div>
+        <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">1</span></div>
         <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">2</span></div>
         <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">0</span></div>
     </div>
     <div class="report_test-result scenarios">
-        <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">2</span></div>
-        <div class="fail scenario-stats" data-status="failed"><span class="value">0</span></div>
-        <div class="pass scenario-stats" data-status="passed"><span class="value">2</span></div>
+        <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">11</span></div>
+        <div class="fail scenario-stats" data-status="failed"><span class="value">1</span></div>
+        <div class="pass scenario-stats" data-status="passed"><span class="value">10</span></div>
         <div class="skip scenario-stats" data-status="skipped"><span class="value">0</span></div>
     </div>
   </div>
@@ -68,20 +68,20 @@
     
     <li>
       <label>Tags </label>
-      <span>clinic & smoke</span>
+      <span>api</span>
     </li>
     
     <li>
       <label>Success Rate </label>
-      <span>100%</span>
+      <span>66%</span>
     </li>
     <li>
       <label>Total Time </label>
-      <span>00:12:00</span>
+      <span>00:01:16</span>
     </li>
     <li>
       <label>Generated On </label>
-      <span>May 19, 2023 at 7:28pm</span>
+      <span>May 23, 2023 at 10:49am</span>
     </li>
   </ul>
 
@@ -113,21 +113,30 @@
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
-          <a href="specs/UI/paymentLite.html">
-             
-              <li class="passed spec-name">
+          <a href="specs/API/apiConsultation.html">
             
-              <span id="scenarioName" class="scenarioname">Payment Lite</span>
-              <span id="time" class="time">00:06:44</span>
+              <li class="failed spec-name">
+            
+              <span id="scenarioName" class="scenarioname">Consultation Test</span>
+              <span id="time" class="time">00:00:22</span>
             </li>
           </a>
           
-          <a href="specs/UI/labLite.html">
+          <a href="specs/API/apiLogin.html">
              
               <li class="passed spec-name">
             
-              <span id="scenarioName" class="scenarioname">Lab Lite</span>
-              <span id="time" class="time">00:05:13</span>
+              <span id="scenarioName" class="scenarioname">Login Test</span>
+              <span id="time" class="time">00:00:01</span>
+            </li>
+          </a>
+          
+          <a href="specs/API/apiRegistration.html">
+             
+              <li class="passed spec-name">
+            
+              <span id="scenarioName" class="scenarioname">Registration Test</span>
+              <span id="time" class="time">00:00:50</span>
             </li>
           </a>
           
@@ -136,10 +145,6 @@
     </aside>
   
 
-	
-    <div class="congratulations details">
-      <p>Congratulations! You've gone all <span class="green">green</span> and saved the environment!</p>
-    </div>
 	
  	</div>
  	</div>
