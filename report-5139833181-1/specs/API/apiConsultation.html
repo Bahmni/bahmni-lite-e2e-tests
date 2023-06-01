@@ -31,11 +31,11 @@
    
   <div class="report_chart">
     <div class="chart">
-      <svg id="pie-chart" data-results="2,1,0" data-total="3">
+      <svg id="pie-chart" data-results="0,3,0" data-total="3">
         <path class="status failed" />
-        <path class="shadow failed" data-status="failed"><title>Failed: 2/3</title></path>
+        <path class="shadow failed" data-status="failed"><title>Failed: 0/3</title></path>
         <path class="status passed" />
-        <path class="shadow passed" data-status="passed"><title>Passed: 1/3</title></path>
+        <path class="shadow passed" data-status="passed"><title>Passed: 3/3</title></path>
         <path class="status skipped" />
         <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/3</title></path>
       </svg>
@@ -46,14 +46,14 @@
   <div class="report_test-results">
     <div class="report_test-result specs">
         <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">3</span></div>
-        <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">2</span></div>
-        <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">1</span></div>
+        <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">0</span></div>
+        <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">3</span></div>
         <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">0</span></div>
     </div>
     <div class="report_test-result scenarios">
         <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">11</span></div>
-        <div class="fail scenario-stats" data-status="failed"><span class="value">9</span></div>
-        <div class="pass scenario-stats" data-status="passed"><span class="value">2</span></div>
+        <div class="fail scenario-stats" data-status="failed"><span class="value">0</span></div>
+        <div class="pass scenario-stats" data-status="passed"><span class="value">11</span></div>
         <div class="skip scenario-stats" data-status="skipped"><span class="value">0</span></div>
     </div>
   </div>
@@ -73,15 +73,15 @@
     
     <li>
       <label>Success Rate </label>
-      <span>33%</span>
+      <span>100%</span>
     </li>
     <li>
       <label>Total Time </label>
-      <span>00:00:55</span>
+      <span>00:01:27</span>
     </li>
     <li>
       <label>Generated On </label>
-      <span>May 29, 2023 at 12:28pm</span>
+      <span>Jun 1, 2023 at 8:34am</span>
     </li>
   </ul>
 
@@ -118,21 +118,12 @@
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
-          <a href="apiRegistration.html">
-            
-              <li class="failed spec-name">
-            
-              <span id="scenarioName" class="scenarioname">Registration Test</span>
-              <span id="time" class="time">00:00:35</span>
-            </li>
-          </a>
-          
           <a href="apiConsultation.html">
-            
-              <li class="failed spec-name">
+             
+              <li class="passed spec-name">
             
               <span id="scenarioName" class="scenarioname">Consultation Test</span>
-              <span id="time" class="time">00:00:09</span>
+              <span id="time" class="time">00:00:24</span>
             </li>
           </a>
           
@@ -141,7 +132,16 @@
               <li class="passed spec-name">
             
               <span id="scenarioName" class="scenarioname">Login Test</span>
-              <span id="time" class="time">00:00:02</span>
+              <span id="time" class="time">00:00:01</span>
+            </li>
+          </a>
+          
+          <a href="apiRegistration.html">
+             
+              <li class="passed spec-name">
+            
+              <span id="scenarioName" class="scenarioname">Registration Test</span>
+              <span id="time" class="time">00:00:52</span>
             </li>
           </a>
           
@@ -159,8 +159,8 @@
         <h3 class="spec-head" title="/home/runner/work/bahmni-e2e-tests/bahmni-e2e-tests/specs/API/apiConsultation.spec">Consultation Test</h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
-            <li class="fail"><span class="value">2</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">0</span><span class="txt">Passed</span></li>
+            <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
+            <li class="pass"><span class="value">2</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -173,7 +173,7 @@
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:09</span>
+        <span class="time">00:00:24</span>
       </div>
 
 	
@@ -210,14 +210,14 @@
       
         
 	
-  <div class="scenario-container failed">
+  <div class="scenario-container passed">
     
 
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Verify the active patient queue in consultation module</h3>
     
-    <span class="time">00:00:04</span>
+    <span class="time">00:00:14</span>
 
 	
   
@@ -242,10 +242,10 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:04</span>
+      <span class="time">Execution Time : 00:00:05</span>
     </h5>
   
-  <div class="step-info failed">
+  <div class="step-info passed">
   
   <ul>
     <li class="step">
@@ -273,31 +273,15 @@
 
   
     
-        
-  <div class="error-container failed">
-    <div class="exception-container">
-      <div class="exception">
-        <h4 class="error-message">
-          <pre>{}</pre>
-        </h4>
-        <pre class="stacktrace">TypeError: Cannot read properties of undefined (reading &#39;identifiers&#39;)<br/>    at Object.&lt;anonymous&gt; (tests/API/steps/stepsRegistration.js:122:59)<br/>    at processTicksAndRejections (node:internal/process/task_queues:96:5)</pre>
+    
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Patient ID - ABC200001</p>
+ </div>
       </div>
-      
-        
-          
-            <div class="screenshot-container custom-screenshot-message">
-              <div class="screenshot">
-              <p class="custom-message">To view a screenshot of this failed step, Please set up a <a href="https://docs.gauge.org/writing-specifications/#taking-custom-screenshots">custom screenshot handler.</a></p>
-              </div>
-            </div>
-          
-        
-      
     </div>
-  </div>
-
-    
-    
   
 
     
@@ -329,10 +313,10 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:00</span>
+      <span class="time">Execution Time : 00:00:09</span>
     </h5>
   
-  <div class="step-info not-executed">
+  <div class="step-info passed">
   
   <ul>
     <li class="step">
@@ -362,6 +346,16 @@
     
     
   
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>patient UUID - 84f1b4c7-354d-4414-af5d-db2490e11e86</p>
+ </div><div class="step-message"><p>Login Location UUID - 833d0c66-e29a-4d31-ac13-ca9050d1bfa9</p>
+ </div><div class="step-message"><p>Visit Type UUID - 649024be-72ef-4fb6-9b90-6ff7519b903a</p>
+ </div>
+      </div>
+    </div>
+  
 
     
     
@@ -399,14 +393,14 @@
       
         
 	
-  <div class="scenario-container failed">
+  <div class="scenario-container passed">
     
 
 	
   <div class="scenario-head">
     <h3 class="head borderBottom">Verify user is able to save the consultation encounter for a patient</h3>
     
-    <span class="time">00:00:04</span>
+    <span class="time">00:00:09</span>
 
 	
   
@@ -431,10 +425,10 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:04</span>
+      <span class="time">Execution Time : 00:00:05</span>
     </h5>
   
-  <div class="step-info failed">
+  <div class="step-info passed">
   
   <ul>
     <li class="step">
@@ -462,31 +456,15 @@
 
   
     
-        
-  <div class="error-container failed">
-    <div class="exception-container">
-      <div class="exception">
-        <h4 class="error-message">
-          <pre>{}</pre>
-        </h4>
-        <pre class="stacktrace">TypeError: Cannot read properties of undefined (reading &#39;identifiers&#39;)<br/>    at Object.&lt;anonymous&gt; (tests/API/steps/stepsRegistration.js:122:59)<br/>    at processTicksAndRejections (node:internal/process/task_queues:96:5)</pre>
+    
+  
+    <div class="message-container">
+      <i class="fa fa-minus-square" aria-hidden="true"></i>
+      <div class="messages">
+        <div class="step-message"><p>Patient ID - ABC200002</p>
+ </div>
       </div>
-      
-        
-          
-            <div class="screenshot-container custom-screenshot-message">
-              <div class="screenshot">
-              <p class="custom-message">To view a screenshot of this failed step, Please set up a <a href="https://docs.gauge.org/writing-specifications/#taking-custom-screenshots">custom screenshot handler.</a></p>
-              </div>
-            </div>
-          
-        
-      
     </div>
-  </div>
-
-    
-    
   
 
     
@@ -518,10 +496,10 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:00</span>
+      <span class="time">Execution Time : 00:00:04</span>
     </h5>
   
-  <div class="step-info not-executed">
+  <div class="step-info passed">
   
   <ul>
     <li class="step">
