@@ -3,7 +3,7 @@
   "description": "Starter template for writing JavaScript tests for Gauge",
   "scripts": {
     "local": "gauge run specs --env local -v -p --tags 'cure'",
-    "cure": "gauge run specs/UI --env cure/qa -v --tags 'cure'",
+    "cure": "gauge run specs/UI --env cure/qa -v --tags 'devtest'",
     "ci": "gauge run specs -v "
   },
   "dependencies": {
