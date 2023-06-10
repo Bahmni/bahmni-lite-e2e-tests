@@ -16,7 +16,7 @@ tags: hospital, program, regression
 * Create a location "appointmentLocation" if it doesn't exist
 * Goto Clinical application
 * Receptionist creates the patient and starts an Special OPD
-* Receptionist creates a recurring appointment for days "2" at time "12pm"
+* Receptionist creates a recurring appointment for "2" days every "3" at time "12am"
 * Click back button
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
 * Doctor enrolls Patient onto "HIV Program" stage "programStage" starting "5" years ago with treatment start "2" years ago, id "1234", dr incharge "doctor" and treatment stage "Initial Stage"

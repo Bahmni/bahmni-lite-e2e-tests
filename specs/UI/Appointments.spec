@@ -13,14 +13,14 @@ tags: hospital, appointment, clinic, regression, cure
 * Logout and Login to Bahmni as a "doctor"
 * The doctor joins the link for the appointment
 * Logout and Login to Bahmni as a "receptionist"
-* Receptionist cancels all the newly created appointment
+* Receptionist cancels the newly created appointment
 * The patient's appointment should not be found
 * Click back button
 * visit is closed at the front desk
 
 ## A receptionist should be able to create and cancel recurring appointment for a patient
 
-tags: hospital, appointment, clinic, regression, devtest
+tags: hospital, appointment, clinic, regression, cure
 
 * Login to Bahmni as a "receptionist"
 * Receptionist creates the patient and starts an OPD
