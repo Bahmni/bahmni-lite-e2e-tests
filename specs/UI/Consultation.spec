@@ -31,7 +31,7 @@ tags: cure
 
 ## Doctor should be able to add Observation Form
 
-tags: forms, devtest
+tags: forms, cure
 
 * Login to Bahmni as a "receptionist"
 * Goto Clinical application
@@ -41,8 +41,12 @@ tags: forms, devtest
 * Goto All sections and search the newly created patient
 * Doctor clicks consultation
 * Enter Form Values and validate no error is displayed on save "consultation/observations/OrthopaedicHistoryPhysical"
+* Enter Form Values and validate no error is displayed on save "consultation/observations/physicalTherapy"
+* Enter Form Values and validate no error is displayed on save "consultation/observations/pediatricsForm"
 * Click back button
 * Goto All sections and search the newly created patient
 * Validate obs "consultation/observations/OrthopaedicHistoryPhysical" on the patient clinical dashboard
+* Validate obs "consultation/observations/physicalTherapy" on the patient clinical dashboard
+* Validate obs "consultation/observations/pediatricsForm" on the patient clinical dashboard
 * Logout and Login to Bahmni as a "receptionist"
 * visit is closed at the front desk
