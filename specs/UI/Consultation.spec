@@ -2,6 +2,17 @@
 
 tags: clinic, consultation, regression, ui
 
+
+## Doctor should be able to see the specialities tab
+
+tags: cure, devtest
+
+* Login to Bahmni as a "doctor"
+* Goto Clinical application
+* Open "Clinical" module
+* Verify the specialitis list
+* Log out if still logged in
+
 ## Doctor should be able to capture Consultation
 
 tags: cure

@@ -4,7 +4,7 @@ tags: ui
 
 ## A receptionist view the registration location in login,appointments and visits
 
-tags: hospital, clinic, regression, cure
+tags: hospital, clinic, regression, devtest
 
 * Login to Bahmni as a "receptionist"
 * Verify the visit locations
@@ -12,3 +12,5 @@ tags: hospital, clinic, regression, cure
 * View all appointments
 * Open calender at time "10am"
 * Verify the appointment locations
+* Log out if still logged in
+
