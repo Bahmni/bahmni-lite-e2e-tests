@@ -2,7 +2,7 @@
   "name": "gauge-taiko-template",
   "description": "Starter template for writing JavaScript tests for Gauge",
   "scripts": {
-    "local": "gauge run specs --env local -v --tags 'devtest'",
+    "local": "gauge run specs --env local -v -p -n=3 --tags 'cure'",
     "cure": "gauge run specs/UI --env cure/qa -v -p -n=2 --tags 'cure'",
     "ci": "gauge run specs -v "
   },

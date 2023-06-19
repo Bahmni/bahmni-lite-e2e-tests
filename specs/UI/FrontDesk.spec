@@ -4,7 +4,7 @@ tags: ui
 
 ## A receptionist view the registration location in login,appointments and visits
 
-tags: hospital, clinic, regression, devtest
+tags: hospital, clinic, regression, cure
 
 * Login to Bahmni as a "receptionist"
 * Verify the visit locations

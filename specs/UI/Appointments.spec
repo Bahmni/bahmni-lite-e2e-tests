@@ -30,6 +30,7 @@ tags: hospital, appointment, clinic, regression, cure
 * Logout and Login to Bahmni as a "receptionist"
 * Receptionist cancels the newly created appointment
 * The patient's appointment should not be found
+* Goto Clinical application
 * Logout and Login to Bahmni as a "doctor"
 * Validate Appointment Details in Clinical Dashboard with status as "Cancelled"
 * Click back button
