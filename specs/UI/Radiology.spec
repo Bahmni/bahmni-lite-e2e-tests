@@ -7,7 +7,7 @@ tags: ui
 tags: hospital, radiology, regression
 
 * Login to Bahmni location "General Ward" as a "receptionist"
-* Receptionist creates the patient and starts an OPD
+* Receptionist creates the "cure" patient and starts an OPD
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
 * Open clinical tab
 * Open "Orders" Tab

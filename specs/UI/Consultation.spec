@@ -18,14 +18,14 @@ tags: cure
 tags: cure
 
 * Login to Bahmni as a "receptionist"
-* Receptionist creates the patient and starts an OPD
+* Receptionist creates the "cure" patient and starts an OPD
 * Receptionist creates a regular appointment "11am" on same day for provider "Bailly RURANGIRWA" for speciality "ENT" for service "New Assessment - ENT"
 * Goto Clinical application
 * Logout and Login to Bahmni as a "doctor"
 * Open "Clinical" app
 * Verify the patient visit is added in my patient queue and the "ENT" queue
 * Goto Clinical application
-* Receptionist cancels the newly created appointment
+* Receptionist cancels the newly created "regular" appointment
 * Goto Clinical application
 * Logout and Login to Bahmni as a "receptionist"
 * visit is closed at the front desk
@@ -37,7 +37,7 @@ tags: cure
 
 * Login to Bahmni as a "receptionist"
 * Goto Clinical application
-* Receptionist creates the patient and starts an OPD
+* Receptionist creates the "cure" patient and starts an OPD
 * Logout and Login to Bahmni as a "doctor"
 * Open "Clinical" module
 * Goto All sections and search the newly created patient
@@ -57,6 +57,7 @@ tags: cure
 * Verify history & examination in patient clinical dashboard
 * Logout and Login to Bahmni as a "receptionist"
 * visit is closed at the front desk
+* Log out if still logged in
 
 ## Doctor should be able to add Observation Form
 
@@ -64,7 +65,7 @@ tags: forms, cure
 
 * Login to Bahmni as a "receptionist"
 * Goto Clinical application
-* Receptionist creates the patient and starts an OPD
+* Receptionist creates the "cure" patient and starts an OPD
 * Logout and Login to Bahmni as a "doctor"
 * Open "Clinical" module
 * Goto All sections and search the newly created patient
@@ -79,3 +80,4 @@ tags: forms, cure
 * Validate obs "consultation/observations/pediatricsForm" on the patient clinical dashboard
 * Logout and Login to Bahmni as a "receptionist"
 * visit is closed at the front desk
+* Log out if still logged in

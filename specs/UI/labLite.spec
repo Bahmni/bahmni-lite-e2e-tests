@@ -7,7 +7,7 @@ tags: ui
 tags: clinic, lab-lite, smoke, regression
 
 * Login to Bahmni location "Bahmni Clinic" as a "receptionist"
-* Receptionist creates the patient and starts an OPD
+* Receptionist creates the "cure" patient and starts an OPD
 * Logout and Login to Bahmni location "Bahmni Clinic" as a "doctor"
 * Open clinical tab
 * Doctor prescribes tests "consultation/orders/Platelets"

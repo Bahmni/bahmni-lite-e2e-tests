@@ -6,7 +6,7 @@ tags: clinic, patient_documents, regression, ui
 
 * Login to Bahmni as a "receptionist"
 * Goto Clinical application
-* Receptionist creates the patient and starts an OPD
+* Receptionist creates the "cure" patient and starts an OPD
 * Open "Patient Documents" module
 * Choose newly created patient
 * Add a report "labReport1" to "Patient Documents"

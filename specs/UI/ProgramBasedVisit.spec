@@ -15,7 +15,7 @@ tags: hospital, program, regression
 * Manage locations
 * Create a location "appointmentLocation" if it doesn't exist
 * Goto Clinical application
-* Receptionist creates the patient and starts an Special OPD
+* Receptionist creates the "cure" patient and starts an Special OPD
 * Receptionist creates a recurring appointment for "2" days every "3" at time "12am"
 * Click back button
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
