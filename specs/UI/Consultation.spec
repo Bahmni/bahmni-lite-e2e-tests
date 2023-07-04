@@ -19,7 +19,7 @@ tags: cure
 
 * Login to Bahmni as a "receptionist"
 * Receptionist creates the "cure" patient and starts an OPD
-* Receptionist creates a regular appointment "11am" on same day for provider "Bailly RURANGIRWA" for speciality "ENT" for service "New Assessment - ENT"
+* Receptionist creates a regular appointment "11am" on same day for provider "Test Doctor" for speciality "ENT" for service "New Assessment - ENT"
 * Goto Clinical application
 * Logout and Login to Bahmni as a "doctor"
 * Open "Clinical" app
@@ -42,7 +42,6 @@ tags: cure
 * Open "Clinical" module
 * Goto All sections and search the newly created patient
 * Doctor clicks consultation
-* Click History and Examination
 * Enter History and Examination details "consultation/observations/historyAndExaminationDetails"
 * Enter Orthopaedic Followup "consultation/observations/OrthopaedicFollowup"
 * Doctor notes the diagnosis and conditions "consultation/diagnosis/diagnosis_condition"
