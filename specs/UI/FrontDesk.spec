@@ -14,3 +14,11 @@ tags: hospital, clinic, regression, cure
 * Verify the appointment locations
 * Log out if still logged in
 
+## A receptionist view the list of appointments in the summary page
+
+tags: regression, cure, dev
+
+* Login to Bahmni as a "receptionist"
+* Open "Appointment scheduling" module
+* Verify the appointments in grid view
+
