@@ -33,4 +33,18 @@ tags: regression, cure
 * Admit the patient in "General Ward"
 * Open "InPatient" module
 * Verify the patient is present in "General Ward"
+* visit is closed at the front desk
+* Log out if still logged in
+
+## A receptionist starts an opd visit and views the ipd dashboard
+
+tags: regression, cure, dev
+
+* Login to Bahmni as a "receptionist"
+* Receptionist creates the "cure" patient and starts an OPD
+* Open "Clinical" app
+* Search and select patient
+* Verify the IPD dashboard
+* visit is closed at the front desk
+* Log out if still logged in
 
