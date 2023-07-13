@@ -2,7 +2,7 @@
 
 tags: ui
 
-## A receptionist view the registration location in login,appointments and visits
+## A receptionist view the registration location, specialties and providers list in login,appointments and visits
 
 tags: hospital, clinic, regression, cure
 
@@ -12,6 +12,8 @@ tags: hospital, clinic, regression, cure
 * View all appointments
 * Open calender at time "10am"
 * Verify the appointment locations
+* Verify the appointment specialitis list
+* Verify if all the providers are present
 * Log out if still logged in
 
 ## A receptionist view the list of appointments in the summary page
@@ -38,7 +40,7 @@ tags: regression, cure
 
 ## A receptionist starts an opd visit and views the ipd dashboard
 
-tags: regression, cure
+tags: regression, cure, dev
 
 * Login to Bahmni as a "receptionist"
 * Receptionist creates the "cure" patient and starts an OPD

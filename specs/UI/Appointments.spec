@@ -17,6 +17,7 @@ tags: hospital, appointment, clinic, regression, cure
 * The patient's appointment should not be found
 * Click back button
 * visit is closed at the front desk
+* Log out if still logged in
 
 ## A receptionist should be able to create and cancel recurring appointment for a patient
 
@@ -35,3 +36,5 @@ tags: hospital, appointment, clinic, regression, cure
 * Validate Appointment Details in Clinical Dashboard with status as "Cancelled"
 * Click back button
 * visit is closed at the front desk
+* Log out if still logged in
+
