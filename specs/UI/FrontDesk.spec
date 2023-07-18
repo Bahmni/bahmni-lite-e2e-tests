@@ -40,7 +40,7 @@ tags: regression, cure
 
 ## A receptionist starts an opd visit and views the ipd dashboard
 
-tags: regression, cure, dev
+tags: regression, cure
 
 * Login to Bahmni as a "receptionist"
 * Receptionist creates the "cure" patient and starts an OPD
