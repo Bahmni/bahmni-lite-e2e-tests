@@ -22,7 +22,8 @@ on:
           - dev.lite
           - qa.lite
           - lite
-          - docker.lite
+          - dev-lite
+          - demo-lite
       TARGET_BRANCH:
         description: "Branch to checkout"
         required: true
