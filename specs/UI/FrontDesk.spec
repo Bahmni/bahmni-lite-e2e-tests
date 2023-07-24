@@ -52,7 +52,7 @@ tags: regression, cure
 
 ## A receptionist creates a patient and add a relationship
 
-tags: regression, cure, dev
+tags: regression, cure
 
 * Login to Bahmni as a "receptionist"
 * Receptionist creates the "cure" patient and adds a relation and starts an OPD
