@@ -83,7 +83,7 @@ tags: forms, cure
 
 ## Doctor should be able to add Cure Observation Form
 
-tags: forms, cure
+tags: forms, cure, dev
 
 * Login to Bahmni as a "receptionist"
 * Goto Clinical application
