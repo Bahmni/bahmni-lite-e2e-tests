@@ -83,7 +83,7 @@ tags: forms, cure
 
 ## Doctor should be able to add Cure Observation Form
 
-tags: forms, cure, dev
+tags: forms, cure
 
 * Login to Bahmni as a "receptionist"
 * Goto Clinical application
@@ -93,9 +93,11 @@ tags: forms, cure, dev
 * Goto All sections and search the newly created patient
 * Doctor clicks consultation
 * Enter Form Values and validate no error is displayed on save "consultation/observations/preAnaesthesiaAssessment"
+* Enter Form Values and validate no error is displayed on save "consultation/observations/patientProgressNotesOrders"
 * Click back button
 * Goto All sections and search the newly created patient
 * Validate obs "consultation/observations/preAnaesthesiaAssessment" on the patient clinical dashboard
+* Validate obs "consultation/observations/patientProgressNotesOrders" on the patient clinical dashboard
 * Logout and Login to Bahmni as a "receptionist"
 * visit is closed at the front desk
 * Log out if still logged in
