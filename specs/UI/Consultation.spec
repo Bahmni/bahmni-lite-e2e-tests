@@ -44,6 +44,7 @@ tags: cure
 * Doctor clicks consultation
 * Enter History and Examination details "consultation/observations/historyAndExaminationDetails"
 * Enter Orthopaedic Followup "consultation/observations/OrthopaedicFollowup"
+* Enter Form Values and validate no error is displayed on save "consultation/observations/OrthopaedicHistoryPhysical"
 * Doctor notes the diagnosis and conditions "consultation/diagnosis/diagnosis_condition"
 * Doctor prescribes medications "consultation/medications/paracetamol,consultation/medications/Morphine,consultation/medications/Diazepam,consultation/medications/Ceftriaxone"
 * Doctor prescribes radiology "consultation/orders/CTscan"
