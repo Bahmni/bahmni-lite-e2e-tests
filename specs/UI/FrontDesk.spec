@@ -50,12 +50,12 @@ tags: regression, cure
 * visit is closed at the front desk
 * Log out if still logged in
 
-## A receptionist creates a patient and add a relationship
+## A receptionist creates a patient, add and edit a relationship
 
-tags: regression, cure
+tags: regression, cure, dev
 
 * Login to Bahmni as a "receptionist"
-* Receptionist creates the "cure" patient and adds a relation and starts an OPD
+* Receptionist creates the "cure" patient adds and edit a relation and starts an OPD
 * visit is closed at the front desk
 * Log out if still logged in
 
