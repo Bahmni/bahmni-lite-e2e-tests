@@ -10,9 +10,12 @@ tags: hospital, appointment, clinic, regression, cure
 * Receptionist creates the "cure" patient and starts an OPD
 * Receptionist creates a regular appointment "11am"
 * Click back button
+* Receptionist creates a conflict regular appointment
 * Logout and Login to Bahmni as a "doctor"
 * The doctor joins the link for the appointment
 * Logout and Login to Bahmni as a "receptionist"
+* Receptionist cancels the newly created "regular" appointment
+* Click back button
 * Receptionist cancels the newly created "regular" appointment
 * The patient's appointment should not be found
 * Click back button
