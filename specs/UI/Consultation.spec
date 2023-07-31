@@ -50,6 +50,10 @@ tags: cure
 * Doctor prescribes radiology "consultation/orders/CTscan"
 * Doctor prescribes tests "consultation/orders/Platelets"
 * Click back button
+* Click back button
+* Verify the Radiologist name is displayed for "consultation/orders/CTscan"
+* Click back button
+* Open "Clinical" module
 * Goto All sections and search the newly created patient
 * Verify medical prescription in patient clinical dashboard
 * Verify diagnosis and condition in patient clinical dashboard
@@ -73,30 +77,13 @@ tags: forms, cure
 * Enter Form Values and validate no error is displayed on save "consultation/observations/OrthopaedicHistoryPhysical"
 * Enter Form Values and validate no error is displayed on save "consultation/observations/physicalTherapy"
 * Enter Form Values and validate no error is displayed on save "consultation/observations/pediatricsForm"
+* Enter Form Values and validate no error is displayed on save "consultation/observations/preAnaesthesiaAssessment"
+* Enter Form Values and validate no error is displayed on save "consultation/observations/patientProgressNotesOrders"
 * Click back button
 * Goto All sections and search the newly created patient
 * Validate obs "consultation/observations/OrthopaedicHistoryPhysical" on the patient clinical dashboard
 * Validate obs "consultation/observations/physicalTherapy" on the patient clinical dashboard
 * Validate obs "consultation/observations/pediatricsForm" on the patient clinical dashboard
-* Logout and Login to Bahmni as a "receptionist"
-* visit is closed at the front desk
-* Log out if still logged in
-
-## Doctor should be able to add Cure Observation Form
-
-tags: forms, cure
-
-* Login to Bahmni as a "receptionist"
-* Goto Clinical application
-* Receptionist creates the "cure" patient and starts an OPD
-* Logout and Login to Bahmni as a "doctor"
-* Open "Clinical" module
-* Goto All sections and search the newly created patient
-* Doctor clicks consultation
-* Enter Form Values and validate no error is displayed on save "consultation/observations/preAnaesthesiaAssessment"
-* Enter Form Values and validate no error is displayed on save "consultation/observations/patientProgressNotesOrders"
-* Click back button
-* Goto All sections and search the newly created patient
 * Validate obs "consultation/observations/preAnaesthesiaAssessment" on the patient clinical dashboard
 * Validate obs "consultation/observations/patientProgressNotesOrders" on the patient clinical dashboard
 * Logout and Login to Bahmni as a "receptionist"
