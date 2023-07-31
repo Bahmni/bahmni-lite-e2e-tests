@@ -9,8 +9,8 @@ tags: snomed, ui
 * Logout and Login to Bahmni snomed location "General Ward" as a "doctor"
 * Open clinical tab
 * Open "Diagnoses" Tab
-* Doctor adds random snomed diagnosis "consultation/diagnosis/disease"
-* Verify random snomed diagnosis is added to openmrs database
+* Doctor adds random snomed diagnosis "consultation/diagnosis/disease" which is not present in Openmrs Database
+* Verify random snomed diagnosis saved is added to openmrs database with required metadata
 * Open patient dashboard
 * Verify diagnosis in patient dashboard
 * Click back button
