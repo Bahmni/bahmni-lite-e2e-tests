@@ -43,7 +43,11 @@ tags: regression, cure
 tags: regression, cure
 
 * Login to Bahmni as a "receptionist"
-* Receptionist creates the "cure" patient and starts an OPD
+* Receptionist creates the "pre" patient
+* Click back button
+* Verify the patient is present in clinical module
+* Click back button
+* Receptionist updates the newly created patient as "cure" patient and starts an OPD
 * Open "Clinical" app
 * Search and select patient
 * Verify the IPD dashboard
