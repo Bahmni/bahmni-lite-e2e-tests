@@ -47,7 +47,7 @@ tags: regression, cure
 * Click back button
 * Verify the patient is present in clinical module
 * Click back button
-* Receptionist updates the newly created patient as "cure" patient and starts an OPD
+* Receptionist updates the newly created patient as "CURE" patient and starts an OPD
 * Open "Clinical" app
 * Search and select patient
 * Verify the IPD dashboard
