@@ -47,8 +47,9 @@ tags: regression, cure
 * Click back button
 * Verify the patient is present in clinical module
 * Click back button
-* Receptionist updates the newly created patient as "CURE" patient and starts an OPD
+* Receptionist updates the newly created patient as "cure" patient and starts an OPD
 * Open "Clinical" app
+* Verify the clinical queue table "tables/clinicalQueue"
 * Search and select patient
 * Verify the IPD dashboard
 * visit is closed at the front desk
@@ -62,4 +63,3 @@ tags: regression, cure
 * Receptionist creates the "cure" patient adds and edit a relation and starts an OPD
 * visit is closed at the front desk
 * Log out if still logged in
-
