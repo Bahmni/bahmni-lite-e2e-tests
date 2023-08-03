@@ -11,7 +11,8 @@ const endpoints = {
     ACTIVE_PATIENT_QUEUE: "/openmrs/ws/rest/v1/bahmnicore/sql?q=emrapi.sqlSearch.activePatients&v=full",
     PROVIDER: "/openmrs/ws/rest/v1/provider?v=default",
     ENCOUNTER_TYPE: "/openmrs/ws/rest/v1/encountertype",
-    BAHMNI_ENCOUNTER: "/openmrs/ws/rest/v1/bahmnicore/bahmniencounter"
+    BAHMNI_ENCOUNTER: "/openmrs/ws/rest/v1/bahmnicore/bahmniencounter",
+    DIAGNOSIS_SEARCH:"/openmrs/ws/rest/v1/concept"
 }
 
 const expectedValues = {
