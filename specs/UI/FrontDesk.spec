@@ -49,7 +49,7 @@ tags: regression, cure
 * Click back button
 * Receptionist updates the newly created patient as "cure" patient and starts an OPD
 * Open "Clinical" app
-* Verify the clinical queue table "tables/clinicalQueue"
+* Verify the queue table "tables/clinicalQueue"
 * Search and select patient
 * Verify the IPD dashboard
 * visit is closed at the front desk
