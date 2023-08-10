@@ -9,13 +9,13 @@ tags: snomed, ui
 * Logout and Login to Bahmni snomed location "General Ward" as a "doctor"
 * Open clinical tab
 * Open "Diagnoses" Tab
-* Doctor adds random snomed diagnosis from the file "consultation/diagnosis/disease" which is not present in Openmrs Database using "name" search
+* Doctor adds random snomed diagnosis with snomed code "404684003" which is not present in Openmrs Database using "name" search
 * Verify random snomed "diagnosis name" saved is added to openmrs database with required metadata
 * Open patient dashboard
 * Verify diagnosis in patient clinical dashboard
 * Doctor clicks consultation
 * Open "Diagnoses" Tab
-* Doctor adds random snomed diagnosis from the file "consultation/diagnosis/disease" which is not present in Openmrs Database using "code" search
+* Doctor adds random snomed diagnosis with snomed code "404684003" which is not present in Openmrs Database using "code" search
 * Verify random snomed "diagnosis code" saved is added to openmrs database with required metadata
 * Open patient dashboard
 * Verify diagnosis in patient clinical dashboard
