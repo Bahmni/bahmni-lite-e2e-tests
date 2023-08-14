@@ -15,7 +15,7 @@ tags: snomed, ui
 * Click back button
 * Open "Reports" module
 * Select start date, end date and "HTML" format for "SNOMED Diagnosis Count Report for Malaria" and click on run button
-* Validate the count report generated for "malaria" if descendants of "malaria" is added.
+* Validate the count report generated for "malaria" when descendants of "malaria" is added.
 * Click on home page
 * Logout and Login to Bahmni snomed location "General Ward" as a "receptionist"
 * Create new patient with random details and start an OPD visit
@@ -28,7 +28,7 @@ tags: snomed, ui
 * Click back button
 * Open "Reports" module
 * Select start date, end date and "HTML" format for "SNOMED Diagnosis Count Report for Malaria" and click on run button
-* Validate the count report generated for "malaria" if descendants of "asthma" is added.
+* Validate the count report generated for "malaria" when descendants of "asthma" is added.
 * Click on home page
 * Logout and Login to Bahmni snomed location "General Ward" as a "receptionist"
 * visit is closed at the front desk
@@ -48,7 +48,7 @@ tags: snomed, ui
 * Click back button
 * Open "Reports" module
 * Select start date, end date and "HTML" format for "SNOMED Diagnosis Count Report for Asthma" and click on run button
-* Validate the count report generated for "asthma" if descendants of "asthma" is added.
+* Validate the count report generated for "asthma" when descendants of "asthma" is added.
 * Click on home page
 * Logout and Login to Bahmni snomed location "General Ward" as a "receptionist"
 * Create new patient with random details and start an OPD visit
@@ -61,7 +61,7 @@ tags: snomed, ui
 * Click back button
 * Open "Reports" module
 * Select start date, end date and "HTML" format for "SNOMED Diagnosis Count Report for Asthma" and click on run button
-* Validate the count report generated for "asthma" if descendants of "covid-19" is added.
+* Validate the count report generated for "asthma" when descendants of "covid-19" is added.
 * Click on home page
 * Logout and Login to Bahmni snomed location "General Ward" as a "receptionist"
 * visit is closed at the front desk
@@ -81,7 +81,7 @@ tags: snomed, ui
 * Click back button
 * Open "Reports" module
 * Select start date, end date and "HTML" format for "SNOMED Diagnosis Count Report for COVID-19" and click on run button
-* Validate the count report generated for "covid-19" if descendants of "covid-19" is added.
+* Validate the count report generated for "covid-19" when descendants of "covid-19" is added.
 * Click on home page
 * Logout and Login to Bahmni snomed location "General Ward" as a "receptionist"
 * Create new patient with random details and start an OPD visit
@@ -94,7 +94,7 @@ tags: snomed, ui
 * Click back button
 * Open "Reports" module
 * Select start date, end date and "HTML" format for "SNOMED Diagnosis Count Report for COVID-19" and click on run button
-* Validate the count report generated for "covid-19" if descendants of "malaria" is added.
+* Validate the count report generated for "covid-19" when descendants of "malaria" is added.
 * Click on home page
 * Logout and Login to Bahmni snomed location "General Ward" as a "receptionist"
 * visit is closed at the front desk
