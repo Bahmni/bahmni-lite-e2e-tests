@@ -14,7 +14,7 @@ tags: ui, as
    |Mandatory|
    |AddMore  |
    |Abnormal |
-* Create obs group "Coronary Artery Disease, Progress"
+* Create obs group "Coronary Artery Disease, Progress" and add an ecl query for "Coronary Artery Disease, Risk factors"
 
    |Property    |
    |------------|
