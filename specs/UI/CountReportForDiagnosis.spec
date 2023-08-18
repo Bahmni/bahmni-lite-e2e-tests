@@ -8,7 +8,7 @@ tags: snomed, ui
 * Create new patient with random details and start an OPD visit
 * Logout and Login to Bahmni snomed location "General Ward" as a "doctor"
 * Open "Reports" module
-* Validate the count report for "SNOMED Diagnosis Count Report for Malaria" before adding the diagnosis "malaria" with snomed code "61462000"
+* Validate the count report for "SNOMED Diagnosis Count Report for Malaria" before adding the identified diagnosis "malaria"
 * Doctor add random snomed diagnosis for "malaria" using "name" search
 * Save data
 * Click back button
@@ -21,7 +21,7 @@ tags: snomed, ui
 * Create new patient with random details and start an OPD visit
 * Logout and Login to Bahmni snomed location "General Ward" as a "doctor"
 * Open "Reports" module
-* Validate the count report for "SNOMED Diagnosis Count Report for Asthma" before adding the diagnosis "Asthma" with snomed code "195967001"
+* Validate the count report for "SNOMED Diagnosis Count Report for Asthma" before adding the identified diagnosis "asthma"
 * Doctor add random snomed diagnosis for "Asthma" using "name" search
 * Save data
 * Click back button
@@ -41,7 +41,7 @@ tags: snomed, ui
 * Create new patient with random details and start an OPD visit
 * Logout and Login to Bahmni snomed location "General Ward" as a "doctor"
 * Open "Reports" module
-* Validate the count report for "SNOMED Diagnosis Count Report for Asthma" before adding the diagnosis "asthma" with snomed code "195967001"
+* Validate the count report for "SNOMED Diagnosis Count Report for Asthma" before adding the identified diagnosis "asthma"
 * Doctor add random snomed diagnosis for "asthma" using "name" search
 * Save data
 * Click back button
@@ -54,7 +54,7 @@ tags: snomed, ui
 * Create new patient with random details and start an OPD visit
 * Logout and Login to Bahmni snomed location "General Ward" as a "doctor"
 * Open "Reports" module
-* Validate the count report for "SNOMED Diagnosis Count Report for COVID-19" before adding the diagnosis "covid-19" with snomed code "840539006"
+* Validate the count report for "SNOMED Diagnosis Count Report for COVID-19" before adding the identified diagnosis "covid-19"
 * Doctor add random snomed diagnosis for "covid-19" using "name" search
 * Save data
 * Click back button
@@ -74,7 +74,7 @@ tags: snomed, ui
 * Create new patient with random details and start an OPD visit
 * Logout and Login to Bahmni snomed location "General Ward" as a "doctor"
 * Open "Reports" module
-* Validate the count report for "SNOMED Diagnosis Count Report for COVID-19" before adding the diagnosis "covid-19" with snomed code "840539006"
+* Validate the count report for "SNOMED Diagnosis Count Report for COVID-19" before adding the identified diagnosis "covid-19"
 * Doctor add random snomed diagnosis for "covid-19" using "name" search
 * Save data
 * Click back button
@@ -87,7 +87,7 @@ tags: snomed, ui
 * Create new patient with random details and start an OPD visit
 * Logout and Login to Bahmni snomed location "General Ward" as a "doctor"
 * Open "Reports" module
-* Validate the count report for "SNOMED Diagnosis Count Report for Malaria" before adding the diagnosis "malaria" with snomed code "61462000"
+* Validate the count report for "SNOMED Diagnosis Count Report for Malaria" before adding the identified diagnosis "malaria"
 * Doctor add random snomed diagnosis for "Malaria" using "name" search
 * Save data
 * Click back button
