@@ -12,7 +12,9 @@ const endpoints = {
     PROVIDER: "/openmrs/ws/rest/v1/provider?v=default",
     ENCOUNTER_TYPE: "/openmrs/ws/rest/v1/encountertype",
     BAHMNI_ENCOUNTER: "/openmrs/ws/rest/v1/bahmnicore/bahmniencounter",
-    DIAGNOSIS_SEARCH:"/openmrs/ws/rest/v1/concept"
+    DIAGNOSIS_SEARCH:"/openmrs/ws/rest/v1/concept",
+    SNOWSTORM_URL:"https://snowstorm.snomed.mybahmni.in/fhir/ValueSet/$expand",
+    ECL_QUERY:"http://snomed.info/sct?fhir_vs=ecl/<<"
 }
 
 const expectedValues = {
