@@ -14,7 +14,8 @@ const endpoints = {
     BAHMNI_ENCOUNTER: "/openmrs/ws/rest/v1/bahmnicore/bahmniencounter",
     DIAGNOSIS_SEARCH:"/openmrs/ws/rest/v1/concept",
     SNOWSTORM_URL:"https://snowstorm.snomed.mybahmni.in/fhir/ValueSet/$expand",
-    ECL_QUERY:"http://snomed.info/sct?fhir_vs=ecl/<<"
+    ECL_QUERY:"http://snomed.info/sct?fhir_vs=ecl/<<",
+    VALUESET_URL:"http://bahmni.org/fhir/ValueSet/bahmni-valueset-hospitalisation"
 }
 
 const expectedValues = {

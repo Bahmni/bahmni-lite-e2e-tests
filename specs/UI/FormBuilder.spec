@@ -2,7 +2,7 @@
 
 ## Admin should be able to create a form using form-builder
 
-tags: ui, as
+tags: ui
 
 * Login to Bahmni snomed location "General Ward" as a "admin"
 * Open "Implementer interface" module
@@ -14,6 +14,11 @@ tags: ui, as
    |Mandatory|
    |AddMore  |
    |Abnormal |
+* create obs "Is admission to hospital required?"
+
+   |Property|
+   |--------|
+   |Url     |
 * Create obs group "Coronary Artery Disease, Progress" and add an ecl query for "Coronary Artery Disease, Risk factors"
 
    |Property    |
