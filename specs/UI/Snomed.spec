@@ -4,22 +4,22 @@
 
 tags: snomed, ui
 
-* Login to Bahmni snomed location "General Ward" as a "receptionist"
+* Login to Bahmni SNOMED location "General Ward" as a "receptionist"
 * Create new patient with random details and start an OPD visit
-* Logout and Login to Bahmni snomed location "General Ward" as a "doctor"
+* Logout and Login to Bahmni SNOMED location "General Ward" as a "doctor"
 * Open clinical tab
 * Open "Diagnoses" Tab
-* Random snomed diagnosis is identified using ECL query for "clinical_finding" which is not present in Openmrs Database and Doctor adds the identified snomed diagnosis in bahmni using "name" search
-* Verify random snomed "diagnosis name" saved is added to openmrs database with required metadata
+* Random SNOMED diagnosis is identified using ECL query for "clinical_finding" which is not present in Openmrs Database and Doctor adds the identified SNOMED diagnosis in bahmni using "name" search
+* Verify random SNOMED "diagnosis name" saved is added to openmrs database with required metadata
 * Open patient dashboard
 * Verify diagnosis in patient clinical dashboard
 * Doctor clicks consultation
 * Open "Diagnoses" Tab
-* Random snomed diagnosis is identified using ECL query for "clinical_finding" which is not present in Openmrs Database and Doctor adds the identified snomed diagnosis in bahmni using "code" search
-* Verify random snomed "diagnosis code" saved is added to openmrs database with required metadata
+* Random SNOMED diagnosis is identified using ECL query for "clinical_finding" which is not present in Openmrs Database and Doctor adds the identified SNOMED diagnosis in bahmni using "code" search
+* Verify random SNOMED "diagnosis code" saved is added to openmrs database with required metadata
 * Open patient dashboard
 * Verify diagnosis in patient clinical dashboard
 * Click back button
 * Click back button
-* Logout and Login to Bahmni snomed location "General Ward" as a "receptionist"
+* Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
 * visit is closed at the front desk
