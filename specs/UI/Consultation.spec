@@ -33,7 +33,7 @@ tags: cure
 
 ## Doctor should be able to capture Consultation
 
-tags: cure
+tags: cure, fail
 
 * Login to Bahmni as a "receptionist"
 * Goto Clinical application

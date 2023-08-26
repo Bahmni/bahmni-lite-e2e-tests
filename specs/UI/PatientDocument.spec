@@ -15,6 +15,6 @@ tags: cure
 * Save the report
 * Logout and Login to Bahmni as a "doctor"
 * Verify Patient Documents in patient dashboard
-* Click back button
-* Click back button
+* Click on active patients list
+* Click on home page
 * visit is closed at the front desk

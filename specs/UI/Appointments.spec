@@ -60,7 +60,7 @@ tags: hospital, appointment, clinic, regression, cure
 
 ## A receptionist should be able to create waitist appointment for a patient
 
-tags: hospital, appointment, clinic, regression, cure, demo
+tags: hospital, appointment, clinic, regression, cure
 
 * Login to Bahmni as a "receptionist"
 * Receptionist creates the "cure" patient and starts an OPD
@@ -68,7 +68,7 @@ tags: hospital, appointment, clinic, regression, cure, demo
 * Click back button
 * Logout and Login to Bahmni as a "receptionist"
 * Receptionist cancels the newly created waitlist appointment
-* Click back button
+* Click on home page
 * The patient's appointment should not be found in the waitlist
 * Click back button
 * visit is closed at the front desk

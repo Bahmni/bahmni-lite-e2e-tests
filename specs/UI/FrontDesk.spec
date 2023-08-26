@@ -4,7 +4,7 @@ tags: ui
 
 ## A receptionist view the registration location, specialties and providers list in login,appointments and visits
 
-tags: hospital, clinic, regression, cure
+tags: hospital, clinic, regression, cure, fail
 
 * Login to Bahmni as a "receptionist"
 * Verify the visit locations
@@ -26,7 +26,7 @@ tags: regression, cure
 
 ## A receptionist admits a patient and do search the patient in the inPatient module
 
-tags: regression, cure
+tags: regression, cure, fail
 
 * Login to Bahmni as a "receptionist"
 * Receptionist creates the "cure" patient and starts an OPD
@@ -40,7 +40,7 @@ tags: regression, cure
 
 ## A receptionist starts an opd visit and views the ipd dashboard
 
-tags: regression, cure
+tags: regression, cure, fail
 
 * Login to Bahmni as a "receptionist"
 * Receptionist creates the "pre" patient
