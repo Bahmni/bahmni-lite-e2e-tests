@@ -1,0 +1,2 @@
+var tags = ["snomed", "ui"]
+var specs = [{"path":"specs/UI/diagnosisSearchAndSave.html","name":"Snomed Diagnosis","scenarios":[{"name":"Doctor should be able to add Diagnosis and save which is coming from snomed ct server","tags":["snomed","ui"]}]}]
