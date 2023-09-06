@@ -1,4 +1,4 @@
-# Snomed Diagnosis
+# Diagnosis Search and Save
 
 ## Doctor should be able to add Diagnosis and save which is coming from snomed ct server
 
