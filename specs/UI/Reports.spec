@@ -10,5 +10,5 @@ tags: ui, clinic, reports, regression
 * visit is closed at the front desk
 * Goto Clinical application
 * Open "Reports" module
-* Select start date, end date and "HTML" format for "Visit Report" and click on run button
+* Select start date, end date and "HTML" format for "Clinic Visit Report" and click on run button
 * Validate the report generated.
