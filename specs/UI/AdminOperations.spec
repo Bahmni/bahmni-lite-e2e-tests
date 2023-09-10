@@ -13,7 +13,7 @@ tags: hospital, regression
 * Enter vitals "consultation/observations/Vitals"
 * Click back button
 * Click back button
-* visit is closed at the front desk
+* Visit is closed at the front desk
 * Goto Clinical application
 * Receptionist creates the patient and starts an OPD
 * Add this newly created patient as merge patient2
@@ -26,7 +26,7 @@ tags: hospital, regression
 * Add a report "labReport1" to "Patient Documents"
 * Save the report
 * Click back button
-* visit is closed at the front desk
+* Visit is closed at the front desk
 * Goto Clinical application
 * Goto the openMRS Admin tab
 * Merge the newly created patients

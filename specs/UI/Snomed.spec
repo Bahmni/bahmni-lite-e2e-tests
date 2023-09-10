@@ -22,4 +22,4 @@ tags: snomed, ui
 * Click back button
 * Click back button
 * Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
-* visit is closed at the front desk
+* Visit is closed at the front desk
