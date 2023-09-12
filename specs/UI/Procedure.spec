@@ -17,3 +17,18 @@ tags: snomed, ui
 * Verify Procedure on patient clinical dashboard
 * Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
 * Visit is closed at the front desk
+* Login to openMRS as user "admin"
+* Goto Administration
+* Delete the procedure from openMRS
+* Delete the procedure from snowstorm
+
+## Admin should be able to upload and add
+
+tags: snomed, ui
+ Delete the procedure from snowstorm
+ *Login to openMRS as user "admin"
+ Goto Administration
+ Delete the procedure from openmrs
+
+
+
