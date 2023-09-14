@@ -25,7 +25,7 @@ tags: snomed, ui
 * Navigate to Audit Log module
 * Verify dismissal entry is added in audit log
 * Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
-* visit is closed at the front desk
+* Visit is closed at the front desk
 
 ## Doctor should be able to get contraindication warning alert for the diagnosis-drugs interaction
 
@@ -46,4 +46,4 @@ tags: snomed, ui
 * Open patient dashboard
 * Verify medication on patient clinical dashboard
 * Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
-* visit is closed at the front desk
+* Visit is closed at the front desk

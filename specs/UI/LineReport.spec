@@ -17,7 +17,7 @@ tags: snomed, ui
 * Validate the SNOMED diagnosis line report for Malaria
 * Click on home page
 * Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
-* visit is closed at the front desk
+* Visit is closed at the front desk
 
 ## Doctor should be able to validate Line report for asthma
 
@@ -36,7 +36,7 @@ tags: snomed, ui
 * Validate the SNOMED diagnosis line report for Asthma
 * Click on home page
 * Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
-* visit is closed at the front desk
+* Visit is closed at the front desk
 
 ## Doctor should be able to validate Line report for COVID-19
 
@@ -55,4 +55,4 @@ tags: snomed, ui
 * Validate the SNOMED diagnosis line report for COVID-19
 * Click on home page
 * Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
-* visit is closed at the front desk
+* Visit is closed at the front desk
