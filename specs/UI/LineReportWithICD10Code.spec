@@ -36,10 +36,3 @@ tags: snomed, ui
 * Click on home page
 * Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
 * Visit is closed at the front desk
-
-
-## Doctor should be able to validate Line 
-
-tags: snomed, ui,as
-
-* Goto ICD Mappings Demonstrator and get the ICD-10 codes for the "Bronchitis"
