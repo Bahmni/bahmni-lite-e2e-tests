@@ -23,8 +23,7 @@ tags: hospital, program, regression
 * Doctor clicks consultation
 * wait for overlay to disappear
 * Doctor captures the consultation notes "Consultation Notes" for newly created patient
-* Click back button
-* Click back button
+* Click on home page
 * Logout and Login to Bahmni location "General Ward" as a "labtechnician"
 * lab technician uploads patient document and radiology reports
 * Click back button

@@ -10,8 +10,7 @@ tags: hospital, ipmodule, regression
 * Receptionist creates a patient and starts an IPD visit
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
 * Doctor issues an Admit disposition
-* Click back button
-* Click back button
+* Click on home page
 * Logout and Login to Bahmni location "General Ward" as a "nurse"
 * Nurse admits the patient to available bed
 * Click back button
@@ -20,8 +19,7 @@ tags: hospital, ipmodule, regression
 * Enter vitals "consultation/observations/Vitals"
 * Doctor prescribes tests "consultation/orders/Platelets"
 * Doctor issues an Discharge disposition
-* Click back button
-* Click back button
+* Click on home page
 * Logout and Login to Bahmni location "General Ward" as a "labtechnician"
 * Open "Patient Documents" module
 * Choose newly created patient
@@ -42,8 +40,7 @@ tags: hospital, bedmanagement, regression
 * Receptionist creates a patient and starts an IPD visit
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
 * Doctor issues an Admit disposition
-* Click back button
-* Click back button
+* Click on home page
 * Logout and Login to Bahmni location "General Ward" as a "nurse"
 * Admit a patient to general ward bed
 * Click back button
@@ -53,8 +50,7 @@ tags: hospital, bedmanagement, regression
 * Doctor prescribes tests "consultation/orders/Platelets"
 * Doctor prescribes medications "consultation/medications/paracetamol"
 * Doctor issues an Discharge disposition
-* Click back button
-* Click back button
+* Click on home page
 * Logout and Login to Bahmni location "General Ward" as a "labtechnician"
 * Open "Patient Documents" module
 * Choose newly created patient

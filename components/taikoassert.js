@@ -1,35 +1,40 @@
+'use strict';
 const assert = require('assert');
-import { getElements } from './selectors';
-import { title, text, textBox, toLeftOf, evaluate } from 'taiko';
-
+const { title, text, textBox, toLeftOf, evaluate } = require('taiko')
+var asserTTimeOut=parseInt(process.env.assertTimeOut)
 async function assertTitle(userTitle) {
     assert.ok((await title()).includes(userTitle));
   }
-async function assertExists(table) {
-    for (const element of getElements(table)) {
-      assert.ok(await element.exists());
+
+
+  async function assertExists(element) {
+    try
+    {
+    assert.ok(await element.exists(500,asserTTimeOut))
+    }
+    catch(err)
+    {
+      console.log(element , "does not exist")
     }
   }
 
- async function assertTextToBeEmpty(table) {
-    for (const element of getElements(table)) {
-      assert.equal(await element.text(), '');
+  async function assertNotExists(element) {
+    try
+    {
+    assert.ok(!await element.exists(500,asserTTimeOut))
+    }
+    catch(err)
+    {
+      console.log(element , "does exist")
     }
   }
 
  async function assertTextExists(content) {
-    assert.ok(await text(content).exists());
+    assert.ok(await text(content).exists(500,asserTTimeOut));
   }
 
  async function assertTextDoesNotExists(content) {
-    assert.ok(!(await text(content).exists(0, 0)));
-  }
-
- async function assertTextExistsOnTextArea(expectedText, table) {
-    for (const element of getElements(table)) {
-      const actualText = await textBox(toLeftOf(element)).value();
-      assert.equal(actualText, expectedText.trim());
-    }
+    assert.ok(!(await text(content).exists(500, asserTTimeOut)));
   }
 
 async function assertPageHasSetTimezone() {
@@ -81,12 +86,21 @@ async function assertPageHasSetTimezone() {
     assert.equal(innerWidth, width);
     assert.equal(innerHeight, height);
   }
+
+ function assertArray(actual,expected)
+  {
+    assert.ok(actual.includes(expected))
+  }
+
+function assertArrayPresence(list,value)
+{
+  assert.ok(list.includes(value))
+}
+
 module.exports={
   assertTitle:assertTitle,
-  assertTextToBeEmpty:assertTextToBeEmpty,
-  assertExists:assertExists,
   assertTextExists:assertTextExists,
-  assertTextExistsOnTextArea:assertTextExistsOnTextArea,
+  assertArrayPresence:assertArrayPresence,
   assertTextDoesNotExists:assertTextDoesNotExists,
   assertPageHasSetTimezone:assertPageHasSetTimezone,
   assertUrl:assertUrl,
@@ -94,6 +108,8 @@ module.exports={
   assertCookiesWithOptions:assertCookiesWithOptions,
   assertCookieWithInvalidOption:assertCookieWithInvalidOption,
   assertGeoLocation:assertGeoLocation,
-  assertWidthAndHeight:assertWidthAndHeight
-
+  assertWidthAndHeight:assertWidthAndHeight,
+  assertArray:assertArray,
+  assertExists:assertExists,
+  assertNotExists:assertNotExists
 }

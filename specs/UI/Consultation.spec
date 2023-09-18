@@ -8,9 +8,9 @@ tags: clinic, consultation, regression, ui
 tags: cure
 
 * Login to Bahmni as a "doctor"
-* Goto Clinical application
 * Open "Clinical" module
 * Verify the specialitis list
+* Click on home page
 * Log out if still logged in
 
 ## Doctor should be able to see the patient in My Patient queue and speciality tab
@@ -20,23 +20,20 @@ tags: cure
 * Login to Bahmni as a "receptionist"
 * Receptionist creates the "cure" patient and starts an OPD
 * Receptionist creates a regular appointment "11am" on same day for provider "Test Doctor" for speciality "ENT" for service "New Assessment - ENT"
-* Goto Clinical application
 * Logout and Login to Bahmni as a "doctor"
 * Open "Clinical" app
 * Verify the patient visit is added in my patient queue and the "ENT" queue
-* Goto Clinical application
+* Click on home page
 * Receptionist cancels the newly created "regular" appointment
-* Goto Clinical application
 * Logout and Login to Bahmni as a "receptionist"
 * visit is closed at the front desk
 * Log out if still logged in
 
 ## Doctor should be able to capture Consultation
 
-tags: cure, fail
+tags: cure
 
 * Login to Bahmni as a "receptionist"
-* Goto Clinical application
 * Receptionist creates the "cure" patient and starts an OPD
 * Logout and Login to Bahmni as a "doctor"
 * Open "Clinical" module
@@ -49,16 +46,17 @@ tags: cure, fail
 * Doctor prescribes medications "consultation/medications/paracetamol,consultation/medications/Morphine,consultation/medications/Diazepam,consultation/medications/Ceftriaxone"
 * Doctor prescribes radiology "consultation/orders/CTscan"
 * Doctor prescribes tests "consultation/orders/Platelets"
-* Click back button
-* Click back button
+* Click on active patients list
+* Click on home page
 * Verify the Radiologist name is displayed for "consultation/orders/CTscan"
-* Click back button
 * Open "Clinical" module
 * Goto All sections and search the newly created patient
 * Verify medical prescription in patient clinical dashboard
 * Verify diagnosis and condition in patient clinical dashboard
 * Validate the lab tests are available in patient clinical dashboard
 * Verify history & examination in patient clinical dashboard
+* Click on active patients list
+* Click on home page
 * Logout and Login to Bahmni as a "receptionist"
 * visit is closed at the front desk
 * Log out if still logged in
@@ -68,7 +66,6 @@ tags: cure, fail
 tags: forms, cure
 
 * Login to Bahmni as a "receptionist"
-* Goto Clinical application
 * Receptionist creates the "cure" patient and starts an OPD
 * Logout and Login to Bahmni as a "doctor"
 * Open "Clinical" module
@@ -79,13 +76,15 @@ tags: forms, cure
 * Enter Form Values and validate no error is displayed on save "consultation/observations/pediatricsForm"
 * Enter Form Values and validate no error is displayed on save "consultation/observations/preAnaesthesiaAssessment"
 * Enter Form Values and validate no error is displayed on save "consultation/observations/patientProgressNotesOrders"
-* Click back button
+* Click on active patients list
 * Goto All sections and search the newly created patient
 * Validate obs "consultation/observations/OrthopaedicHistoryPhysical" on the patient clinical dashboard
 * Validate obs "consultation/observations/physicalTherapy" on the patient clinical dashboard
 * Validate obs "consultation/observations/pediatricsForm" on the patient clinical dashboard
-* Validate obs "consultation/observations/preAnaesthesiaAssessment" on the patient clinical dashboard
-* Validate obs "consultation/observations/patientProgressNotesOrders" on the patient clinical dashboard
+* Validate new obs "consultation/observations/preAnaesthesiaAssessment" on the patient clinical dashboard
+* Validate new obs "consultation/observations/patientProgressNotesOrders" on the patient clinical dashboard
+* Click on active patients list
+* Click on home page
 * Logout and Login to Bahmni as a "receptionist"
 * visit is closed at the front desk
 * Log out if still logged in

@@ -5,6 +5,6 @@
     },
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 500,
-    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreview": true,
     "terminal.integrated.enableImages": false
 }

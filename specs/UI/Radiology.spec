@@ -12,8 +12,7 @@ tags: hospital, radiology, regression
 * Open clinical tab
 * Open "Orders" Tab
 * Place a radiology order for test "chest lateral"
-* Click back button
-* Click back button
+* Click on home page
 * Logout and Login to Bahmni location "General Ward" as a "receptionist"
 * visit is closed at the front desk
 * verify patient details on DCM4chee

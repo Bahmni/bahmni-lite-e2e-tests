@@ -13,80 +13,153 @@ const {
   write,
   textBox,
   toRightOf,
+  toLeftOf,
+  into,dropDown, highlight,attach,timeField,evaluate,scrollTo,clear,checkBox, clearHighlights,press,confirm,accept, above
 } =require('taiko')
+const path = require('path');
+const { get } = require('http');
+const taikoElement = require('./taikoElement');
 
-async function Click(type,value,relativeLocator){
-
-switch(type){
-  case 'link':
-      clickLink(value,relativeLocator)
-      break
-  case 'text':
-      clickText(value,relativeLocator)
-      break
-  case 'button':
-      clickButton(value,relativeLocator)
-      break
-  case 'near':
-      clickNear(value,relativeLocator)
-      break
-  default:
-      await click(value)
-      console.log('Default click is used')
-    
-}
-
-async function Write(type,value,relativeLocator)
-{
-  switch(type){
-    case 'into':
-      writeInto(value,relativeLocator)
-      break
-    default:
-      await write(value)
-      console.log("Default write is used")
-
+async function Click(element, type, relativeLocator) {
+  try{
+  const selector = getSelector(element, type);
+  await taikoElement.isPresent(selector)
+  if (relativeLocator === undefined) {
+    await highlight(selector);
+    await clearHighlights()
+    await click(selector,{navigationTimeout: process.env.actionTimeout,force:true});
+  } else {
+    await highlight(selector);
+    await click(selector,{navigationTimeout: process.env.actionTimeout,force:true}, relativeLocator);
   }
 }
-
-async function writeInto(value,relativeLocator)
+catch(e)
 {
-  if(relativeLocator)
-  await write(value)
-  else
-  await write(value,into(textBox(relativeLocator)))
+  console.error(element+' of type '+type+' is not clickable');
 }
-}
-async function clickLink(value,relativeLocator)
-{
-  if(relativeLocator)
-  await click(link(value))
-  else
-  await click(link(value),relativeLocator)
 }
 
-async function clickText(value,relativeLocator)
+async function AlertClick(element, type,text) {
+  try{
+  const selector = getSelector(element, type);
+  await taikoElement.isPresent(selector)
+    confirm(text, async () => await accept())
+    await click(selector,{navigationTimeout: process.env.actionTimeout,force:true});
+}
+catch(e)
 {
-  if(relativeLocator)
-  await click(text(value))
-  else
-  await click(text(value),relativeLocator)
+  console.error(element+' of type '+type+' is not clickable');
+}
+}
+async function EvaluateClick(element) {
+  try{
+    await evaluate(element, (el) => el.click())
+}
+catch(e)
+{
+  console.error(element+' is not getting evaluated');
+}
 }
 
-async function clickButton(value,relativeLocator)
+async function Write(value,type,element,relativeLocator) {
+
+  try{
+  const selector = getSelector(element, type);
+  if (relativeLocator === undefined) 
+  {
+    await taikoElement.isPresent(selector)
+    await write(value,selector);
+  } 
+  else 
+  {
+    if(type=='xpath')
+    {
+      const xpathSelector=getSelector(relativeLocator, type);
+      await taikoElement.isPresent(xpathSelector)
+      await write(value,xpathSelector);
+    }
+    else
+    {
+    await write(value,relativeLocator);
+    }
+  }
+}
+catch(e){
+  console.error(element+' of type '+type+' is not writable');
+}
+}
+async function Clear(element,type,relativeLocator)
 {
-  if(relativeLocator)
-  await click(button(value))
-  else
-  await click(button(value),relativeLocator)
+  try{
+  const selector = getSelector(element, type);
+  await taikoElement.isPresent(selector)
+  if (typeof relativeLocator === 'undefined') {
+    await clear(selector);
+  } else {
+    await clear(selector);
+  }
+}
+catch(e){
+  console.error(element+' of type '+type+' is not clearable');
+}
+}
+async function Dropdown(dropdown,value)
+{
+  try{
+  await dropDown(dropdown).select(value);
+  }
+  catch(e){
+    console.error(dropdown+' of dropdown '+value+' is not selectable');
+  } 
+}
+async function pressEnter(){
+  try{
+  await press('Enter',{ waitForNavigation: true, navigationTimeout: process.env.actionTimeout })}
+  catch(e){
+    console.error('Enter is not pressed');
+  } 
+}
+async function Timefield(element,value)
+{
+  try{
+  await timeField(element).select(value);
+  }
+  catch(e){
+    console.error(element+' of timefield '+value+' is not selectable');
+  } 
 }
 
-async function clickNear(value,relativeLocator)
-{
-  if(relativeLocator)
-  await click(near(value))
-  else
-  await click(near(value),relativeLocator)
+async function Attach(filePath,element){
+  await attach(path.join(filePath), element, { force: true });
+}
+
+function getSelector(element, type) {
+  switch (type) {
+    case 'link':
+      return link(element);
+    case 'text':
+      return text(element);
+    case 'button':
+      return button(element);
+    case 'near':
+      return near(element);
+    case 'toRightOf':
+      return toRightOf(element);
+    case 'toLeftOf':
+      return toLeftOf(element);
+    case 'below':
+      return below(element);
+    case 'into':
+      return into(textBox(element));
+    case 'dropdown':
+      return dropDown(element);
+    case 'checkbox':
+      return checkBox(toLeftOf(element));
+    case 'xpath':
+      return $(element);
+    default:
+      return into($(element));
+  }
 }
 
 async function clickRight(element) {
@@ -132,10 +205,19 @@ async function pressAndReleaseElement(X, Y) {
 
 module.exports={
     Click:Click,
+    AlertClick,AlertClick,
+    Write:Write,
+    Clear:Clear,
+    Attach:Attach,
+    EvaluateClick:EvaluateClick,
+    Dropdown:Dropdown,
+    Timefield:Timefield,
     rightClick:clickRight,
     doubleClick:clickDouble,
+    pressEnter:pressEnter,
     pressAndReleaseElement1:pressAndReleaseElement1,
     pressAndReleaseElement2:pressAndReleaseElement2,
-    pressAndReleaseElement:pressAndReleaseElement
+    pressAndReleaseElement:pressAndReleaseElement,
+    getSelector:getSelector
 
 }

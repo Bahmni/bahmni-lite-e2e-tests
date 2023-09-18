@@ -6,8 +6,8 @@ const PatientProfile = require('../payloads/patientProfile');
 const helper = require('../util/helper');
 
 step("Verify the user is able to create a new patient and returns status code as 200", async function () {
-    var payload = gauge.dataStore.scenarioStore.get("payloadCreatePatient");
-    const response = gauge.dataStore.scenarioStore.get("responseCreatePatient");
+    var payload = gaugeHelper.get("payloadCreatePatient");
+    const response = gaugeHelper.get("responseCreatePatient");
     assert.equal(response.statusCode, 200)
     assert.equal(response.body.patient.person.names[0].givenName, payload.patient.person.names[0].givenName)
     assert.equal(response.body.patient.person.names[0].middleName, payload.patient.person.names[0].middleName)
@@ -17,7 +17,7 @@ step("Verify the user is able to create a new patient and returns status code as
 });
 
 step("Verify the user is able to update the existing patient and returns status code as 200", async function () {
-    const response = gauge.dataStore.scenarioStore.get("responseCreatePatient");
+    const response = gaugeHelper.get("responseCreatePatient");
     var patientUUID = response.body.patient.uuid
     var payloadUpdate = await new PatientProfile().initialize();
     const responseUpdate = await httpRequests.customPost(endpoints.PATIENT_PROFILE + `/${patientUUID}`, JSON.stringify(payloadUpdate))
@@ -41,8 +41,8 @@ async function validateRegistrationSearchResult(actualResponse, expectedResponse
 
 step("Verify the search results are fetched by Patient ID", async function () {
 
-    var payload = gauge.dataStore.scenarioStore.get("payloadCreatePatient");
-    const response = gauge.dataStore.scenarioStore.get("responseCreatePatient");
+    var payload = gaugeHelper.get("payloadCreatePatient");
+    const response = gaugeHelper.get("responseCreatePatient");
     assert.equal(response.statusCode, 200)
     var patientID = response.body.patient.identifiers[0].identifier;
 
@@ -57,8 +57,8 @@ step("Verify the search results are fetched by Patient ID", async function () {
 
 step("Verify the search results are fetched by Patient Name", async function () {
 
-    var payload = gauge.dataStore.scenarioStore.get("payloadCreatePatient");
-    const response = gauge.dataStore.scenarioStore.get("responseCreatePatient");
+    var payload = gaugeHelper.get("payloadCreatePatient");
+    const response = gaugeHelper.get("responseCreatePatient");
     var fullName = `${payload.patient.person.names[0].givenName} ${payload.patient.person.names[0].middleName} ${payload.patient.person.names[0].familyName}`
 
     //get Location UUID
@@ -72,8 +72,8 @@ step("Verify the search results are fetched by Patient Name", async function () 
 
 step("Verify the search results are fetched by Patient Phone Number", async function () {
 
-    var payload = gauge.dataStore.scenarioStore.get("payloadCreatePatient");
-    const response = gauge.dataStore.scenarioStore.get("responseCreatePatient");
+    var payload = gaugeHelper.get("payloadCreatePatient");
+    const response = gaugeHelper.get("responseCreatePatient");
     assert.equal(response.statusCode, 200);
 
     //get Location UUID
@@ -87,8 +87,8 @@ step("Verify the search results are fetched by Patient Phone Number", async func
 
 step("Verify the search results are fetched by Patient Alternate Phone Number", async function () {
     //Create Patient
-    var payload = gauge.dataStore.scenarioStore.get("payloadCreatePatient");
-    const response = gauge.dataStore.scenarioStore.get("responseCreatePatient");
+    var payload = gaugeHelper.get("payloadCreatePatient");
+    const response = gaugeHelper.get("responseCreatePatient");
     assert.equal(response.statusCode, 200);
 
     //get Location UUID
@@ -101,7 +101,7 @@ step("Verify the search results are fetched by Patient Alternate Phone Number", 
 });
 
 step("Verify the start visit and end the visit", async function () {
-    var payload = gauge.dataStore.scenarioStore.get("payloadCreatePatient");
+    var payload = gaugeHelper.get("payloadCreatePatient");
 
     //start visit
     var responseStartVisit = await helper.startVisit(payload);
@@ -117,7 +117,7 @@ step("Verify the start visit and end the visit", async function () {
 step("Create a Patient through API", async function () {
     var payload = await new PatientProfile().initialize();
     const response = await helper.createPatient(payload);
-    gauge.dataStore.scenarioStore.put("responseCreatePatient", response);
-    gauge.dataStore.scenarioStore.put("payloadCreatePatient", payload);
+    gaugeHelper.save("responseCreatePatient", response);
+    gaugeHelper.save("payloadCreatePatient", payload);
     gauge.message("Patient ID - " + response.body.patient.identifiers[0].identifier);
 });

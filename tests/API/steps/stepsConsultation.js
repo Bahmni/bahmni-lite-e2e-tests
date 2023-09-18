@@ -7,8 +7,8 @@ const helper = require('../util/helper');
 const BahmniEncounter = require('../payloads/bahmniEncounter');
 
 step("Verify the active patient is retuned with status code 200", async function () {
-	var payload = gauge.dataStore.scenarioStore.get("payloadCreatePatient");
-	const response = gauge.dataStore.scenarioStore.get("responseCreatePatient");
+	var payload = gaugeHelper.get("payloadCreatePatient");
+	const response = gaugeHelper.get("responseCreatePatient");
 	var responseStartVisit = await helper.startVisit(payload);
 
 	//Vakidate active patient queue

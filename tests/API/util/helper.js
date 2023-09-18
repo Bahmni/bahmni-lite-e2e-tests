@@ -24,7 +24,7 @@ async function createPatient(payload) {
 
 async function startVisit(createPatientPayload) {
     //create Patient
-    const response = gauge.dataStore.scenarioStore.get("responseCreatePatient");
+    const response = gaugeHelper.get("responseCreatePatient");
 
     //get Patient UUID
     var patientUUID = response.body.patient.uuid;
@@ -66,12 +66,12 @@ async function getEncounterTypeUUID(encountertype) {
 }
 
 async function getPatientUUID() {
-    var responseCreatePatient = gauge.dataStore.scenarioStore.get("responseCreatePatient");
+    var responseCreatePatient = gaugeHelper.get("responseCreatePatient");
     if (!responseCreatePatient) {
         var payload = await new PatientProfile().initialize();
         responseCreatePatient = await createPatient(payload);
-        gauge.dataStore.scenarioStore.put("responseCreatePatient", response);
-        gauge.dataStore.scenarioStore.put("payloadCreatePatient", payload);
+        gaugeHelper.save("responseCreatePatient", response);
+        gaugeHelper.save("payloadCreatePatient", payload);
         gauge.message("Patient ID - " + response.body.patient.identifiers[0].identifier);
     }
     return responseCreatePatient.body.patient.uuid;

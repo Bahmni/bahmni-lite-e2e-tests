@@ -6,6 +6,7 @@
     "local": "gauge run specs --env local -v -p -n=3 --tags 'cure'",
     "qa": "gauge run specs/UI --env cure/qa -v -p -n=3 --tags 'cure'",
     "uat": "gauge run specs/UI --env cure/uat -v -p -n=3 --tags 'cure'",
+    "failed":"gauge run --failed",
     "ci": "gauge run specs -v "
   },
   "dependencies": {
@@ -16,7 +17,7 @@
     "json2csv": "latest",
     "pdf-parse": "^1.1.1",
     "supertest": "^6.3.3",
-    "taiko": "1.3.2",
+    "taiko": "1.3.10",
     "uuid": "latest"
   },
   "devDependencies": {
