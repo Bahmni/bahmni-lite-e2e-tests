@@ -93,7 +93,7 @@ async function elementDisabled(element)
     }
     catch(e)
     {
-        console.log(element +' of type '+type+' is not disabled');
+        console.log(element +' is not disabled');
     }
 }
 
@@ -105,17 +105,31 @@ async function elementEnabled(element)
     }
     catch(e)
     {
-        console.log(element +' of type '+type+' is enabled');
+        console.log(element +' is enabled');
+    }
+}
+
+async function getText(element)
+{
+    try
+    {
+    return (await element.text())
+    }
+    catch(e)
+    {
+        console.log(element +' text not found');
     }
 }
 module.exports = {
     isPresent: isPresent,
     isNotPresent: isNotPresent,
     isExists:isExists,
+    isNotExists:isNotExists,
     waitNotToExists:waitNotToExists,
     waitToExists:waitToExists,
     waitToPresent: waitToPresent,
     waitNotToPresent:waitNotToPresent,
     elementDisabled: elementDisabled,
-    elementEnabled: elementEnabled
+    elementEnabled: elementEnabled,
+    getText:getText
 }

@@ -97,6 +97,10 @@ function assertArrayPresence(list,value)
   assert.ok(list.includes(value))
 }
 
+function assertEquals(actual,expected )
+{
+  assert.equal(actual,expected)
+}
 module.exports={
   assertTitle:assertTitle,
   assertTextExists:assertTextExists,
@@ -111,5 +115,6 @@ module.exports={
   assertWidthAndHeight:assertWidthAndHeight,
   assertArray:assertArray,
   assertExists:assertExists,
-  assertNotExists:assertNotExists
+  assertNotExists:assertNotExists,
+  assertEquals:assertEquals
 }
