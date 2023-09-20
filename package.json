@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "gauge run specs --env local -v --tags 'dev'",
     "local": "gauge run specs --env local -v -p -n=3 --tags 'cure'",
-    "qa": "gauge run specs/UI --env cure/qa -v -p -n=3 --tags 'devtest'",
+    "qa": "gauge run specs/UI --env cure/qa -v -p -n=3 --tags 'cure'",
     "uat": "gauge run specs/UI --env cure/uat -v -p -n=3 --tags 'cure'",
     "failed":"gauge run --failed",
     "ci": "gauge run specs -v "

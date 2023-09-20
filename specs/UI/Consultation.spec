@@ -63,7 +63,7 @@ tags: cure
 
 ## Doctor should be able to add Observation Form
 
-tags: forms, cure
+tags: forms, cure, devtest
 
 * Login to Bahmni as a "receptionist"
 * Receptionist creates the "cure" patient and starts an OPD
@@ -76,6 +76,8 @@ tags: forms, cure
 * Enter Form Values and validate no error is displayed on save "consultation/observations/pediatricsForm"
 * Enter Form Values and validate no error is displayed on save "consultation/observations/preAnaesthesiaAssessment"
 * Enter Form Values and validate no error is displayed on save "consultation/observations/patientProgressNotesOrders"
+* Enter Form Values and validate no error is displayed on save "consultation/observations/vitals"
+* Enter Form Values and validate no error is displayed on save "consultation/observations/admissionOrder"
 * Click on active patients list
 * Goto All sections and search the newly created patient
 * Validate obs "consultation/observations/OrthopaedicHistoryPhysical" on the patient clinical dashboard
@@ -83,6 +85,8 @@ tags: forms, cure
 * Validate obs "consultation/observations/pediatricsForm" on the patient clinical dashboard
 * Validate new obs "consultation/observations/preAnaesthesiaAssessment" on the patient clinical dashboard
 * Validate new obs "consultation/observations/patientProgressNotesOrders" on the patient clinical dashboard
+* Validate new obs "consultation/observations/vitals" on the patient clinical dashboard
+* Validate new obs "consultation/observations/admissionOrder" on the patient clinical dashboard
 * Click on active patients list
 * Click on home page
 * Logout and Login to Bahmni as a "receptionist"
