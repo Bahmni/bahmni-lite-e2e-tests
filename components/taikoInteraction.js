@@ -19,24 +19,23 @@ const {
 const path = require('path');
 const { get } = require('http');
 const taikoElement = require('./taikoElement');
+const taikoAssert = require('./taikoAssert');
+var errorElement='//DIV[@class="message-container error-message-container"]'
+
 
 async function Click(element, type, relativeLocator) {
-  try{
   const selector = getSelector(element, type);
   await taikoElement.isPresent(selector)
   if (relativeLocator === undefined) {
     await highlight(selector);
     await clearHighlights()
     await click(selector,{navigationTimeout: process.env.actionTimeout,force:true});
+    await taikoAssert.assertNotExists($(errorElement))
   } else {
     await highlight(selector);
     await click(selector,{navigationTimeout: process.env.actionTimeout,force:true}, relativeLocator);
+    await taikoAssert.assertNotExists($(errorElement))
   }
-}
-catch(e)
-{
-  console.error(element+' of type '+type+' is not clickable');
-}
 }
 
 async function AlertClick(element, type,text) {

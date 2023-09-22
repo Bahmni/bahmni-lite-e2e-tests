@@ -16,6 +16,7 @@ async function isPresent(element)
 
 async function isNotPresent(element)
 {
+    
     try{
     return !(await element.isVisible(500,asserTTimeOut))
     }

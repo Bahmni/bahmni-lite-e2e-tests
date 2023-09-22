@@ -8,25 +8,11 @@ async function assertTitle(userTitle) {
 
 
   async function assertExists(element) {
-    try
-    {
-    assert.ok(await element.exists(500,asserTTimeOut))
-    }
-    catch(err)
-    {
-      console.log(element , "does not exist")
-    }
+     assert.ok(await element.exists(500,asserTTimeOut))
   }
 
   async function assertNotExists(element) {
-    try
-    {
     assert.ok(!await element.exists(500,asserTTimeOut))
-    }
-    catch(err)
-    {
-      console.log(element , "does exist")
-    }
   }
 
  async function assertTextExists(content) {
