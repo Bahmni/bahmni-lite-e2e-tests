@@ -20,6 +20,7 @@ const path = require('path');
 const { get } = require('http');
 const taikoElement = require('./taikoElement');
 const taikoAssert = require('./taikoAssert');
+const gaugeHelper=require('../bahmni-e2e-common-flows/tests/util/gaugeHelper')
 var errorElement='//DIV[@class="message-container error-message-container"]'
 
 
@@ -35,6 +36,7 @@ async function Click(element, type, relativeLocator) {
     await highlight(selector);
     await click(selector,{navigationTimeout: process.env.actionTimeout,force:true}, relativeLocator);
     await taikoAssert.assertNotExists($(errorElement))
+    await gaugeHelper.print('Error message is '+$(errorElement).text())
   }
 }
 

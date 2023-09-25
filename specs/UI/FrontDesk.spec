@@ -46,7 +46,7 @@ tags: regression, cure, failtest
 * Login to Bahmni as a "receptionist"
 * Receptionist creates the "pre" patient
 * Click on home page
-* Verify the patient is present in clinical module
+* Verify the patient is not present in clinical module
 * Click on home page
 * Receptionist updates the newly created patient as "cure" patient and starts an OPD
 * Open "Clinical" app
