@@ -7,7 +7,6 @@ tags: ui
 tags: cure, hospital, program, regression
 
 * Login to Bahmni as a "receptionist"
-* Receptionist creates the "pre" patient
-* Click on home page
 * Open "Programs" app
 * Verify the programs list
+* Verify the program queue table "tables/programQueue"
