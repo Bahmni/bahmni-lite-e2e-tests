@@ -36,7 +36,6 @@ async function Click(element, type, relativeLocator) {
     await highlight(selector);
     await click(selector,{navigationTimeout: process.env.actionTimeout,force:true}, relativeLocator);
     await taikoAssert.assertNotExists($(errorElement))
-    await gaugeHelper.print('Error message is '+$(errorElement).text())
   }
 }
 

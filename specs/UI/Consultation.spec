@@ -48,7 +48,7 @@ tags: cure
 * Doctor prescribes tests "consultation/orders/Platelets"
 * Click on active patients list
 * Click on home page
-* Verify the Radiologist name is displayed for "consultation/orders/CTscan"
+* Verify the orders for "consultation/orders/CTscan"
 * Open "Clinical" module
 * Goto All sections and search the newly created patient
 * Verify medical prescription in patient clinical dashboard
