@@ -17,7 +17,7 @@ tags: hospital, ipmodule, regression
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
 * Open clinical tab
 * Enter vitals "consultation/observations/Vitals"
-* Doctor prescribes tests "consultation/orders/Platelets"
+* Doctor prescribes lab test "consultation/orders/Platelets"
 * Doctor issues an Discharge disposition
 * Click on home page
 * Logout and Login to Bahmni location "General Ward" as a "labtechnician"
@@ -47,7 +47,7 @@ tags: hospital, bedmanagement, regression
 * Logout and Login to Bahmni location "General Ward" as a "doctor"
 * Open clinical tab
 * Enter vitals "consultation/observations/Vitals"
-* Doctor prescribes tests "consultation/orders/Platelets"
+* Doctor prescribes lab test "consultation/orders/Platelets"
 * Doctor prescribes medications "consultation/medications/paracetamol"
 * Doctor issues an Discharge disposition
 * Click on home page

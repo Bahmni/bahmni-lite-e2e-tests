@@ -44,11 +44,12 @@ tags: cure
 * Enter Form Values and validate no error is displayed on save "consultation/observations/OrthopaedicHistoryPhysical"
 * Doctor notes the diagnosis and conditions "consultation/diagnosis/diagnosis_condition"
 * Doctor prescribes medications "consultation/medications/paracetamol,consultation/medications/Morphine,consultation/medications/Diazepam,consultation/medications/Ceftriaxone"
-* Doctor prescribes radiology "consultation/orders/CTscan"
-* Doctor prescribes tests "consultation/orders/Platelets"
+* Doctor prescribes radiology test "consultation/orders/CTscan"
+* Doctor prescribes lab test "consultation/orders/Platelets"
 * Click on active patients list
 * Click on home page
-* Verify the orders for "consultation/orders/CTscan"
+* Verify the radiology order for "consultation/orders/CTscan"
+* Verify the lab order for "consultation/orders/Platelets"
 * Open "Clinical" module
 * Goto All sections and search the newly created patient
 * Verify medical prescription in patient clinical dashboard
