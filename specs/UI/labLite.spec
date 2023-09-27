@@ -22,3 +22,4 @@ tags: clinic, lab-lite, smoke, regression, cure
 * Click Home button on lab-lite
 * Logout and Login to Bahmni location "CURE Ethiopia" as a "receptionist"
 * visit is closed at the front desk
+* Log out if still logged in
