@@ -1,14 +1,30 @@
-# Diagnosis Search and Save
+# FHIR Export
 
-## Doctor should be able to add Diagnosis and save which is coming from snomed ct server
+## Admin should be able to export Patient data with Non-anonymisation and Anonymisation
 
 tags: snomed, ui
 
- Login to Bahmni SNOMED location "General Ward" as a "receptionist"
- Create new patient with random details and start an OPD visit
- Doctor adds the random SNOMED descendant of "malaria" using "name" search
- Doctor add the drug for "asthma"
-* Export anonymised data with "Redact"
- Validate files
-* Validate ndjson file for "redacted" data 
+* Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Create new patient with random details and start an OPD visit
+* Logout and Login to Bahmni SNOMED location "General Ward" as a "doctor"
+* Random SNOMED diagnosis is identified using ECL query for descendants of "asthma"
+* Doctor adds the random SNOMED descendant of "asthma" using "name" search
+* Open "Medication" Tab
+* Doctor add the drug for "Disease of liver"
+* Doctor should be able to add drug after adding the mandatory details
+* Save data
+  Export Non-anonymised data
+  Validate Non-anonymised fields from ndjson file export
+ Export Anonymised data using "Redact" method
+ Validate "Redacted" fields from ndjson output
+ Export Anonymised data using "Random" method
+ Validate "Randomized" fields from ndjson output
+* Export Anonymised data using "Correlate" method
+* Validate "Correlated" fields from ndjson output
 
+## Admin should be able to export Patient data with
+
+tags: snomed, ui
+
+* Export Non-anonymised data
+* Validate Non-anonymised fields from ndjson file export
