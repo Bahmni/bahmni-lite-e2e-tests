@@ -61,6 +61,6 @@ tags: regression, cure, failtest
 tags: regression, cure
 
 * Login to Bahmni as a "receptionist"
-* Receptionist creates the "cure" patient adds and edit a relation and starts an OPD
+* Receptionist creates the "cure" patient adds a relation and starts an OPD
 * visit is closed at the front desk
 * Log out if still logged in

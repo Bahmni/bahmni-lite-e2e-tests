@@ -2,7 +2,7 @@
 const {waitFor} =require('taiko');
 const taikoInteraction = require('./taikoInteraction');
 const asserTTimeOut=parseInt(process.env.asserTTimeOut)
-
+const logHelper = require('../bahmni-e2e-common-flows/tests/util/logHelper');
 
 async function isPresent(element)
 {
@@ -10,7 +10,7 @@ async function isPresent(element)
     return await element.isVisible(500,asserTTimeOut)
     }
     catch(e){
-        console.log(element + ' is not present');
+        logHelper.info(element ,' is not present');
     }
 }
 
@@ -21,27 +21,32 @@ async function isNotPresent(element)
     return !(await element.isVisible(500,asserTTimeOut))
     }
     catch(e){
-        console.log(element + ' is still present');
+        logHelper.info(element ,' is still present');
     }
 }
 async function isExists(element)
 {
+    var check;
     try{
-    return await element.exists(500,asserTTimeOut)
+        check= await element.exists(500,asserTTimeOut)
     }
     catch(e){
-        console.log(element + ' is not exists');
+        logHelper.info(element ,' is not exists');
     }
+    return check;
 }
 
 async function isNotExists(element)
 {
+    var check;
     try{
-    return !await element.exists(500,asserTTimeOut)
+
+        check= !await element.exists(500,asserTTimeOut)
     }
     catch(e){
-        console.log(element + ' is not exists');
+        logHelper.info(element ,' is exists');
     }
+    return check;
 }
 async function waitToExists(element)
 {
@@ -49,7 +54,7 @@ async function waitToExists(element)
         await waitFor(async () => (await element.exists(500,asserTTimeOut)))
         }
         catch(e){
-            console.log(element + ' still not Exists');
+            logHelper.info(element ,' still not Exists');
         }
 }
 async function waitNotToExists(element)
@@ -59,7 +64,7 @@ async function waitNotToExists(element)
     }
     catch(e)
     {
-        console.log(element + ' still Exists');
+        logHelper.info(element ,' still Exists');
     }
 }
 async function waitToPresent(element)
@@ -71,7 +76,7 @@ async function waitToPresent(element)
     } while (!isFound)
     }
     catch(e){
-        console.log(element + ' still not present');
+        logHelper.info(element ,' still not present');
     }
 }
 async function waitNotToPresent(element)
@@ -83,7 +88,7 @@ async function waitNotToPresent(element)
         } while (!isFound)
         }
         catch(e){
-            console.log(element + ' still not present');
+            logHelper.info(element ,' still present');
         }
 }
 async function elementDisabled(element)
@@ -94,7 +99,7 @@ async function elementDisabled(element)
     }
     catch(e)
     {
-        console.log(element +' is not disabled');
+        logHelper.info(element ,' is not disabled');
     }
 }
 
@@ -106,7 +111,7 @@ async function elementEnabled(element)
     }
     catch(e)
     {
-        console.log(element +' is enabled');
+        logHelper.info(element ,' is enabled');
     }
 }
 
@@ -118,7 +123,7 @@ async function getText(element)
     }
     catch(e)
     {
-        console.log(element +' text not found');
+        logHelper.info(element ,' text not found');
     }
 }
 module.exports = {

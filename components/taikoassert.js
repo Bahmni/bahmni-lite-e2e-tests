@@ -1,6 +1,7 @@
 'use strict';
 const assert = require('assert');
 const { title, text, textBox, toLeftOf, evaluate } = require('taiko')
+const logHelper = require('../bahmni-e2e-common-flows/tests/util/logHelper');
 var asserTTimeOut=parseInt(process.env.assertTimeOut)
 async function assertTitle(userTitle) {
     assert.ok((await title()).includes(userTitle));
@@ -8,11 +9,21 @@ async function assertTitle(userTitle) {
 
 
   async function assertExists(element) {
-     assert.ok(await element.exists(500,asserTTimeOut))
+    var check=await element.exists(500,asserTTimeOut)
+    if(!check)
+    {
+      logHelper.error(element,' is not exists');
+      assert.fail(element+' is not exists')
+    }
   }
 
   async function assertNotExists(element) {
-    assert.ok(!await element.exists(500,asserTTimeOut))
+    var check=await element.exists(500,asserTTimeOut)
+    if(check)
+    {
+      logHelper.error(element,' is exists');
+      assert.fail(element+' is  exists')
+    }
   }
 
  async function assertTextExists(content) {
@@ -87,6 +98,11 @@ function assertEquals(actual,expected )
 {
   assert.equal(actual,expected)
 }
+
+function assertNotEmpty(text)
+{
+  assert.notEqual(text,'')
+}
 module.exports={
   assertTitle:assertTitle,
   assertTextExists:assertTextExists,
@@ -102,5 +118,6 @@ module.exports={
   assertArray:assertArray,
   assertExists:assertExists,
   assertNotExists:assertNotExists,
-  assertEquals:assertEquals
+  assertEquals:assertEquals,
+  assertNotEmpty:assertNotEmpty
 }

@@ -31,7 +31,7 @@ tags: cure
 
 ## Doctor should be able to capture Consultation
 
-tags: cure
+tags: cure, devtest
 
 * Login to Bahmni as a "receptionist"
 * Receptionist creates the "cure" patient and starts an OPD
@@ -47,6 +47,7 @@ tags: cure
 * Doctor prescribes radiology test "consultation/orders/CTscan"
 * Doctor prescribes lab test "consultation/orders/Platelets"
 * Click on active patients list
+* Verify the patient is consulted
 * Click on home page
 * Verify the radiology order for "consultation/orders/CTscan"
 * Verify the lab order for "consultation/orders/Platelets"

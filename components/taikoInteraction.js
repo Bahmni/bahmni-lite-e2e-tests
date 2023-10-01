@@ -20,23 +20,23 @@ const path = require('path');
 const { get } = require('http');
 const taikoElement = require('./taikoElement');
 const taikoAssert = require('./taikoAssert');
-const gaugeHelper=require('../bahmni-e2e-common-flows/tests/util/gaugeHelper')
+const gaugeHelper=require('../bahmni-e2e-common-flows/tests/util/gaugeHelper');
+const logHelper = require('../bahmni-e2e-common-flows/tests/util/logHelper');
 var errorElement='//DIV[@class="message-container error-message-container"]'
 
 
 async function Click(element, type, relativeLocator) {
   const selector = getSelector(element, type);
-  await taikoElement.isPresent(selector)
+  await taikoElement.waitToExists(selector)
   if (relativeLocator === undefined) {
     await highlight(selector);
     await clearHighlights()
     await click(selector,{navigationTimeout: process.env.actionTimeout,force:true});
-    await taikoAssert.assertNotExists($(errorElement))
   } else {
     await highlight(selector);
     await click(selector,{navigationTimeout: process.env.actionTimeout,force:true}, relativeLocator);
-    await taikoAssert.assertNotExists($(errorElement))
   }
+  await taikoAssert.assertNotExists($(errorElement))
 }
 
 async function AlertClick(element, type,text) {
@@ -45,19 +45,23 @@ async function AlertClick(element, type,text) {
   await taikoElement.isPresent(selector)
     confirm(text, async () => await accept())
     await click(selector,{navigationTimeout: process.env.actionTimeout,force:true});
+    await taikoAssert.assertNotExists($(errorElement))
+
 }
 catch(e)
 {
-  console.error(element+' of type '+type+' is not clickable');
+  logHelper.error(element,' of type is not clickable');
 }
 }
 async function EvaluateClick(element) {
   try{
     await evaluate(element, (el) => el.click())
+    await taikoAssert.assertNotExists($(errorElement))
+
 }
 catch(e)
 {
-  console.error(element+' is not getting evaluated');
+  logHelper.error(element,' is not getting evaluated');
 }
 }
 
@@ -65,9 +69,9 @@ async function Write(value,type,element,relativeLocator) {
 
   try{
   const selector = getSelector(element, type);
+  await taikoElement.waitToExists(selector)
   if (relativeLocator === undefined) 
   {
-    await taikoElement.isPresent(selector)
     await write(value,selector);
   } 
   else 
@@ -75,7 +79,6 @@ async function Write(value,type,element,relativeLocator) {
     if(type=='xpath')
     {
       const xpathSelector=getSelector(relativeLocator, type);
-      await taikoElement.isPresent(xpathSelector)
       await write(value,xpathSelector);
     }
     else
@@ -83,24 +86,20 @@ async function Write(value,type,element,relativeLocator) {
     await write(value,relativeLocator);
     }
   }
+  await taikoAssert.assertNotExists($(errorElement))
 }
 catch(e){
-  console.error(element+' of type '+type+' is not writable');
+  logHelper.error(element,' of type is not writable');
 }
 }
-async function Clear(element,type,relativeLocator)
+async function Clear(element)
 {
-  try{
-  const selector = getSelector(element, type);
-  await taikoElement.isPresent(selector)
-  if (typeof relativeLocator === 'undefined') {
-    await clear(selector);
-  } else {
-    await clear(selector);
+  try
+  {
+    await clear(textBox(element));
   }
-}
 catch(e){
-  console.error(element+' of type '+type+' is not clearable');
+  logHelper.error(element,' of type is not clearable');
 }
 }
 async function Dropdown(dropdown,value)
@@ -109,15 +108,16 @@ async function Dropdown(dropdown,value)
   await dropDown(dropdown).select(value);
   }
   catch(e){
-    console.error(dropdown+' of dropdown '+value+' is not selectable');
+    logHelper.error(dropdown,' of dropdown is not selectable');
   } 
 }
 async function pressEnter(){
   try{
   await press('Enter',{ waitForNavigation: true, navigationTimeout: process.env.actionTimeout })}
   catch(e){
-    console.error('Enter is not pressed');
+    logHelper.error('Enter is not pressed');
   } 
+  await taikoAssert.assertNotExists($(errorElement))
 }
 async function Timefield(element,value)
 {
@@ -125,8 +125,9 @@ async function Timefield(element,value)
   await timeField(element).select(value);
   }
   catch(e){
-    console.error(element+' of timefield '+value+' is not selectable');
+    logHelper.error(element,' of timefield is not selectable');
   } 
+  await taikoAssert.assertNotExists($(errorElement))
 }
 
 async function Attach(filePath,element){

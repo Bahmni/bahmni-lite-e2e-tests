@@ -15,11 +15,8 @@ tags: clinic, lab-lite, smoke, regression, cure
 * Doctor prescribes lab test "consultation/orders/Platelets"
 * Click on active patients list
 * Click on home page
-* Open "Lab Entry" module
-* Open a patient in lablite
-* Verify the open orders in Lablite
-* Upload and verify report in lablite
-* Click Home button on lab-lite
+* Open "Orders" module
+* Verify the lab order for "consultation/orders/Platelets"
 * Logout and Login to Bahmni location "CURE Ethiopia" as a "receptionist"
 * visit is closed at the front desk
 * Log out if still logged in

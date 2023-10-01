@@ -38,7 +38,7 @@ tags: hospital, appointment, clinic, regression, cure
 
 ## A receptionist should be able to create and edit regular appointment for a patient
 
-tags: hospital, appointment, clinic, regression, cure, appointmentfail
+tags: hospital, appointment, clinic, regression, cure
 
 * Login to Bahmni as a "receptionist"
 * Receptionist creates the "cure" patient and starts an OPD
