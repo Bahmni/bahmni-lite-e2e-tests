@@ -31,7 +31,7 @@ tags: cure
 
 ## Doctor should be able to capture Consultation
 
-tags: cure, devtest
+tags: cure
 
 * Login to Bahmni as a "receptionist"
 * Receptionist creates the "cure" patient and starts an OPD

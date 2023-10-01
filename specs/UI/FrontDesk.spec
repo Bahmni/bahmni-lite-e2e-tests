@@ -58,9 +58,12 @@ tags: regression, cure, failtest
 
 ## A receptionist creates a patient, add and edit a relationship
 
-tags: regression, cure
+tags: regression, cure, devtest
 
 * Login to Bahmni as a "receptionist"
 * Receptionist creates the "cure" patient adds a relation and starts an OPD
+* Receptionist search the patient by phone number
+* Verify the patient is returned in the search results
+* Click on home page
 * visit is closed at the front desk
 * Log out if still logged in
