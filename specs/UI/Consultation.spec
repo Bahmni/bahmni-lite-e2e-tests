@@ -51,8 +51,7 @@ tags: cure
 * Click on home page
 * Verify the radiology order for "consultation/orders/CTscan"
 * Verify the lab order for "consultation/orders/Platelets"
-* Open "Clinical" module
-* Goto All sections and search the newly created patient
+* Goto patient clinical dashboard
 * Verify medical prescription in patient clinical dashboard
 * Verify diagnosis and condition in patient clinical dashboard
 * Validate the lab tests are available in patient clinical dashboard
@@ -80,8 +79,7 @@ tags: forms, cure
 * Enter Form Values and validate no error is displayed on save "consultation/observations/patientProgressNotesOrders"
 * Enter Form Values and validate no error is displayed on save "consultation/observations/vitals"
 * Enter Form Values and validate no error is displayed on save "consultation/observations/admissionOrder"
-* Click on active patients list
-* Goto All sections and search the newly created patient
+* Goto patient clinical dashboard
 * Validate obs "consultation/observations/OrthopaedicHistoryPhysical" on the patient clinical dashboard
 * Validate obs "consultation/observations/physicalTherapy" on the patient clinical dashboard
 * Validate obs "consultation/observations/pediatricsForm" on the patient clinical dashboard
@@ -94,3 +92,21 @@ tags: forms, cure
 * Logout and Login to Bahmni as a "receptionist"
 * visit is closed at the front desk
 * Log out if still logged in
+
+## Doctor should be able to add and edit IPD medications
+
+tags: cure, devtest
+
+* Login to Bahmni as a "receptionist"
+* Receptionist creates the "cure" patient and starts an OPD
+* Logout and Login to Bahmni as a "doctor"
+* Open "Clinical" module
+* Goto All sections and search the newly created patient
+* Doctor clicks consultation
+* Doctor prescribes medications "consultation/medications/paracetamol,consultation/medications/Diazepam"
+* Goto patient clinical dashboard
+* Verify medical prescription in patient clinical dashboard
+* Doctor clicks consultation
+* Doctor updates "consultation/medications/paracetamol,consultation/medications/Diazepam" as non ipd drug
+* Goto patient clinical dashboard
+* Verify medical prescription is updated as non ipd for "consultation/medications/paracetamol,consultation/medications/Diazepam"
