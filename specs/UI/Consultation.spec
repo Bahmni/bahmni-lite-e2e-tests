@@ -39,8 +39,6 @@ tags: cure
 * Open "Clinical" module
 * Goto All sections and search the newly created patient
 * Doctor clicks consultation
-* Enter History and Examination details "consultation/observations/historyAndExaminationDetails"
-* Enter Orthopaedic Followup "consultation/observations/OrthopaedicFollowup"
 * Enter Form Values and validate no error is displayed on save "consultation/observations/OrthopaedicHistoryPhysical"
 * Doctor notes the diagnosis and conditions "consultation/diagnosis/diagnosis_condition"
 * Doctor prescribes medications "consultation/medications/paracetamol,consultation/medications/Morphine,consultation/medications/Diazepam,consultation/medications/Ceftriaxone"
@@ -51,11 +49,11 @@ tags: cure
 * Click on home page
 * Verify the radiology order for "consultation/orders/CTscan"
 * Verify the lab order for "consultation/orders/Platelets"
-* Goto patient clinical dashboard
+* Open "Clinical" module
+* Goto All sections and search the newly created patient
 * Verify medical prescription in patient clinical dashboard
 * Verify diagnosis and condition in patient clinical dashboard
 * Validate the lab tests are available in patient clinical dashboard
-* Verify history & examination in patient clinical dashboard
 * Click on active patients list
 * Click on home page
 * Logout and Login to Bahmni as a "receptionist"
@@ -72,21 +70,25 @@ tags: forms, cure
 * Open "Clinical" module
 * Goto All sections and search the newly created patient
 * Doctor clicks consultation
-* Enter Form Values and validate no error is displayed on save "consultation/observations/OrthopaedicHistoryPhysical"
 * Enter Form Values and validate no error is displayed on save "consultation/observations/physicalTherapy"
-* Enter Form Values and validate no error is displayed on save "consultation/observations/pediatricsForm"
 * Enter Form Values and validate no error is displayed on save "consultation/observations/preAnaesthesiaAssessment"
+* Enter Form Values and validate no error is displayed on save "consultation/observations/paediatricAssessment"
 * Enter Form Values and validate no error is displayed on save "consultation/observations/patientProgressNotesOrders"
 * Enter Form Values and validate no error is displayed on save "consultation/observations/vitals"
-* Enter Form Values and validate no error is displayed on save "consultation/observations/admissionOrder"
+* Enter Form Values and validate no error is displayed on save "consultation/observations/rehabReferral"
+* Enter Form Values and validate no error is displayed on save "consultation/observations/rehabAssessment"
+//* Enter Form Values and validate no error is displayed on save "consultation/observations/admissionOrder"
+* Enter Form Values and validate no error is displayed on save "consultation/observations/orthopaedicOperativeReport"
 * Goto patient clinical dashboard
-* Validate obs "consultation/observations/OrthopaedicHistoryPhysical" on the patient clinical dashboard
 * Validate obs "consultation/observations/physicalTherapy" on the patient clinical dashboard
-* Validate obs "consultation/observations/pediatricsForm" on the patient clinical dashboard
 * Validate new obs "consultation/observations/preAnaesthesiaAssessment" on the patient clinical dashboard
 * Validate new obs "consultation/observations/patientProgressNotesOrders" on the patient clinical dashboard
 * Validate new obs "consultation/observations/vitals" on the patient clinical dashboard
-* Validate new obs "consultation/observations/admissionOrder" on the patient clinical dashboard
+//* Validate new obs "consultation/observations/admissionOrder" on the patient clinical dashboard
+* Validate new obs "consultation/observations/paediatricAssessment" on the patient clinical dashboard
+* Validate new obs "consultation/observations/rehabReferral" on the patient clinical dashboard
+* Validate new obs "consultation/observations/rehabAssessment" on the patient clinical dashboard
+* Validate new obs "consultation/observations/orthopaedicOperativeReport" on the patient clinical dashboard
 * Click on active patients list
 * Click on home page
 * Logout and Login to Bahmni as a "receptionist"

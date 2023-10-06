@@ -102,6 +102,17 @@ catch(e){
   logHelper.error(element,' of type is not clearable');
 }
 }
+async function ScrollTo(element)
+{
+  try
+  {
+    await scrollTo(element);
+  }
+catch(e){
+  logHelper.error(element,' is not scrollable');
+}
+}
+
 async function Dropdown(dropdown,value)
 {
   try{
@@ -209,6 +220,7 @@ module.exports={
     AlertClick,AlertClick,
     Write:Write,
     Clear:Clear,
+    ScrollTo:ScrollTo,
     Attach:Attach,
     EvaluateClick:EvaluateClick,
     Dropdown:Dropdown,

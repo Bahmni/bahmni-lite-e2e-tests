@@ -91,7 +91,12 @@ async function assertPageHasSetTimezone() {
 
 function assertArrayPresence(list,value)
 {
-  assert.ok(list.includes(value))
+  var check=list.includes(value)
+  if(!check)
+  {
+    logHelper.error(list,`${value} is not exists`);
+    assert.fail(value+' is not present in the list')
+  }
 }
 
 function assertEquals(actual,expected )

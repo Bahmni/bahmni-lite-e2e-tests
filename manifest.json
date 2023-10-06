@@ -2,7 +2,8 @@
   "Language": "js",
   "Plugins": [
     "html-report",
-    "spectacle"
+    "spectacle",
+    "flash"
   ],
   "EnvironmentDir": ""
 }

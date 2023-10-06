@@ -6,27 +6,30 @@ const logHelper = require('../bahmni-e2e-common-flows/tests/util/logHelper');
 
 async function isPresent(element)
 {
+    var check=false
     try{
-    return await element.isVisible(500,asserTTimeOut)
+        check= await element.isVisible(500,asserTTimeOut)
     }
     catch(e){
         logHelper.info(element ,' is not present');
     }
+    return check;
 }
 
 async function isNotPresent(element)
 {
-    
+    var check=false
     try{
-    return !(await element.isVisible(500,asserTTimeOut))
+    check= !(await element.isVisible(500,asserTTimeOut))
     }
     catch(e){
         logHelper.info(element ,' is still present');
     }
+    return check
 }
 async function isExists(element)
 {
-    var check;
+    var check=false;
     try{
         check= await element.exists(500,asserTTimeOut)
     }
@@ -38,7 +41,7 @@ async function isExists(element)
 
 async function isNotExists(element)
 {
-    var check;
+    var check=false;
     try{
 
         check= !await element.exists(500,asserTTimeOut)
@@ -93,26 +96,30 @@ async function waitNotToPresent(element)
 }
 async function elementDisabled(element)
 {
+    var check=false;
     try
     {
-    return await element.isDisabled()
+    check= await element.isDisabled(500,asserTTimeOut)
     }
     catch(e)
     {
         logHelper.info(element ,' is not disabled');
     }
+    return check
 }
 
 async function elementEnabled(element)
 {
+    var check=false;
     try
     {
-    return !(await element.isDisabled())
+    check= !(await element.isDisabled(500,asserTTimeOut))
     }
     catch(e)
     {
         logHelper.info(element ,' is enabled');
     }
+    return check
 }
 
 async function getText(element)
