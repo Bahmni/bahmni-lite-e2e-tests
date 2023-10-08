@@ -97,7 +97,7 @@ tags: forms, cure
 
 ## Doctor should be able to add and edit IPD medications
 
-tags: cure, devtest
+tags: cure
 
 * Login to Bahmni as a "receptionist"
 * Receptionist creates the "cure" patient and starts an OPD
@@ -112,3 +112,8 @@ tags: cure, devtest
 * Doctor updates "consultation/medications/paracetamol,consultation/medications/Diazepam" as non ipd drug
 * Goto patient clinical dashboard
 * Verify medical prescription is updated as non ipd for "consultation/medications/paracetamol,consultation/medications/Diazepam"
+* Click on active patients list
+* Click on home page
+* Logout and Login to Bahmni as a "receptionist"
+* visit is closed at the front desk
+* Log out if still logged in
