@@ -79,6 +79,7 @@ tags: forms, cure
 * Enter Form Values and validate no error is displayed on save "consultation/observations/rehabAssessment"
 //* Enter Form Values and validate no error is displayed on save "consultation/observations/admissionOrder"
 * Enter Form Values and validate no error is displayed on save "consultation/observations/orthopaedicOperativeReport"
+* Enter Form Values and validate no error is displayed on save "consultation/observations/nursingPatientProgress"
 * Goto patient clinical dashboard
 * Validate obs "consultation/observations/physicalTherapy" on the patient clinical dashboard
 * Validate new obs "consultation/observations/preAnaesthesiaAssessment" on the patient clinical dashboard
@@ -89,6 +90,7 @@ tags: forms, cure
 * Validate new obs "consultation/observations/rehabReferral" on the patient clinical dashboard
 * Validate new obs "consultation/observations/rehabAssessment" on the patient clinical dashboard
 * Validate new obs "consultation/observations/orthopaedicOperativeReport" on the patient clinical dashboard
+* Validate new obs "consultation/observations/nursingPatientProgress" on the patient clinical dashboard
 * Click on active patients list
 * Click on home page
 * Logout and Login to Bahmni as a "receptionist"
