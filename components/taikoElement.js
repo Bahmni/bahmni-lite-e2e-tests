@@ -30,25 +30,18 @@ async function isNotPresent(element)
 async function isExists(element)
 {
     var check=false;
-    try{
-        check= await element.exists(500,asserTTimeOut)
-    }
-    catch(e){
+    check= await element.exists(500,asserTTimeOut)
+    if(!check)
         logHelper.info(element ,' is not exists');
-    }
     return check;
 }
 
 async function isNotExists(element)
 {
     var check=false;
-    try{
-
         check= !await element.exists(500,asserTTimeOut)
-    }
-    catch(e){
+     if(!check) 
         logHelper.info(element ,' is exists');
-    }
     return check;
 }
 async function waitToExists(element)
