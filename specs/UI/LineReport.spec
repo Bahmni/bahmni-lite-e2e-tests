@@ -8,6 +8,8 @@ tags: snomed, ui
 * Create new patient with random details and start an OPD visit
 * Logout and Login to Bahmni SNOMED location "General Ward" as a "doctor"
 * Random SNOMED diagnosis is identified using ECL query for descendants of "malaria"
+* Open clinical tab
+* Open "Diagnoses" Tab
 * Doctor adds the random SNOMED descendant of "malaria" using "name" search
 * Save data
 * Click back button
@@ -17,7 +19,7 @@ tags: snomed, ui
 * Validate the SNOMED diagnosis line report for Malaria
 * Click on home page
 * Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
-* visit is closed at the front desk
+* Visit is closed at the front desk
 
 ## Doctor should be able to validate Line report for asthma
 
@@ -27,6 +29,8 @@ tags: snomed, ui
 * Create new patient with random details and start an OPD visit
 * Logout and Login to Bahmni SNOMED location "General Ward" as a "doctor"
 * Random SNOMED diagnosis is identified using ECL query for descendants of "asthma"
+* Open clinical tab
+* Open "Diagnoses" Tab
 * Doctor adds the random SNOMED descendant of "asthma" using "name" search
 * Save data
 * Click back button
@@ -36,7 +40,7 @@ tags: snomed, ui
 * Validate the SNOMED diagnosis line report for Asthma
 * Click on home page
 * Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
-* visit is closed at the front desk
+* Visit is closed at the front desk
 
 ## Doctor should be able to validate Line report for COVID-19
 
@@ -46,6 +50,8 @@ tags: snomed, ui
 * Create new patient with random details and start an OPD visit
 * Logout and Login to Bahmni SNOMED location "General Ward" as a "doctor"
 * Random SNOMED diagnosis is identified using ECL query for descendants of "covid-19"
+* Open clinical tab
+* Open "Diagnoses" Tab
 * Doctor adds the random SNOMED descendant of "covid-19" using "name" search
 * Save data
 * Click back button
@@ -55,4 +61,4 @@ tags: snomed, ui
 * Validate the SNOMED diagnosis line report for COVID-19
 * Click on home page
 * Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
-* visit is closed at the front desk
+* Visit is closed at the front desk
