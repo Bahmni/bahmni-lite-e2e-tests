@@ -18,12 +18,14 @@ tags: snomed, ui
 * Create user and role to export Anonymised and Non-anonymised data
 * Export Non-anonymised data
 * Validate Non-anonymised fields from ndjson file export
-* Export Anonymised data using "Redact" method
-* Validate "Redacted" fields from ndjson output
-* Export Anonymised data using "Random" method
-* Validate "Randomized" fields from ndjson output
-* Export Anonymised data using "Correlate" method
-* Validate "Correlated" fields from ndjson output
+* Configue global variable for "Redact" method
+* Invoke endpoint for "anonymised" export
+* Validate Anonymised fields from ndjson file export
+* close tab
+* close tab
+* Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* visit is closed at the front desk
+
 
 ## Admin should be able to export Patient data with Non-anonymisation and Anonymisation through UI
 
@@ -42,3 +44,24 @@ tags: snomed, ui
 * Click back button
 * Open "Admin" module
 * Click on FHIR Export module
+* Validate privilege to export data
+* Logout and Login to Bahmni SNOMED location "General Ward" as a "plainExporter"
+* Open "Admin" module
+* Click on FHIR Export module
+* Login to openMRS as user "admin"
+* Goto Administration
+* Create user and role to export Anonymised and Non-anonymised data
+* close tab
+* reload the page
+* Select start date,end date and "Non-Anonymised" option to export data
+* Download Zip file,rename it and extract the files present in it
+* Validate Non-anonymised fields from ndjson file export
+* Logout and Login to Bahmni SNOMED location "General Ward" as a "defaultExporter"
+* Open "Admin" module
+* Click on FHIR Export module
+* Select start date,end date and "Anonymised" option to export data
+* Download Zip file,rename it and extract the files present in it
+* Validate Anonymised fields from ndjson file export
+* Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* visit is closed at the front desk
+
