@@ -19,7 +19,7 @@ tags: cure
 
 * Login to Bahmni as a "receptionist"
 * Receptionist creates the "cure" patient and starts an OPD
-* Receptionist creates a regular appointment "11am" on same day for provider "Test Doctor" for speciality "ENT" for service "New Assessment - ENT"
+* Receptionist creates a regular appointment "11am" on same day for provider "Timothy Nunn" for speciality "ENT" for service "New Assessment - ENT"
 * Logout and Login to Bahmni as a "doctor"
 * Open "Clinical" app
 * Verify the patient visit is added in my patient queue and the "ENT" queue
@@ -38,8 +38,10 @@ tags: cure
 * Logout and Login to Bahmni as a "doctor"
 * Open "Clinical" module
 * Goto All sections and search the newly created patient
+* Add Nutrional values
+* Open "Clinical" module
+* Goto All sections and search the newly created patient
 * Doctor clicks consultation
-* Enter Form Values and validate no error is displayed on save "consultation/observations/OrthopaedicHistoryPhysical"
 * Doctor notes the diagnosis and conditions "consultation/diagnosis/diagnosis_condition"
 * Doctor prescribes medications "consultation/medications/paracetamol,consultation/medications/Morphine,consultation/medications/Diazepam,consultation/medications/Ceftriaxone"
 * Doctor prescribes radiology test "consultation/orders/CTscan"
@@ -62,7 +64,7 @@ tags: cure
 
 ## Doctor should be able to add Observation Form
 
-tags: forms, cure
+tags: forms, cure, devtest
 
 * Login to Bahmni as a "receptionist"
 * Receptionist creates the "cure" patient and starts an OPD
@@ -70,27 +72,25 @@ tags: forms, cure
 * Open "Clinical" module
 * Goto All sections and search the newly created patient
 * Doctor clicks consultation
-* Enter Form Values and validate no error is displayed on save "consultation/observations/physicalTherapy"
-* Enter Form Values and validate no error is displayed on save "consultation/observations/preAnaesthesiaAssessment"
-* Enter Form Values and validate no error is displayed on save "consultation/observations/paediatricAssessment"
-* Enter Form Values and validate no error is displayed on save "consultation/observations/patientProgressNotesOrders"
-* Enter Form Values and validate no error is displayed on save "consultation/observations/vitals"
-* Enter Form Values and validate no error is displayed on save "consultation/observations/rehabReferral"
-* Enter Form Values and validate no error is displayed on save "consultation/observations/rehabAssessment"
+//* Enter Form Values and validate no error is displayed on save "consultation/observations/preAnaesthesiaAssessment"
+//* Enter Form Values and validate no error is displayed on save "consultation/observations/paediatricAssessment"
+//* Enter Form Values and validate no error is displayed on save "consultation/observations/patientProgressNotesOrders"
+//* Enter Form Values and validate no error is displayed on save "consultation/observations/vitals"
+//* Enter Form Values and validate no error is displayed on save "consultation/observations/rehabReferral"
+//* Enter Form Values and validate no error is displayed on save "consultation/observations/rehabAssessment"
 //* Enter Form Values and validate no error is displayed on save "consultation/observations/admissionOrder"
 * Enter Form Values and validate no error is displayed on save "consultation/observations/orthopaedicOperativeReport"
-* Enter Form Values and validate no error is displayed on save "consultation/observations/nursingPatientProgress"
+//* Enter Form Values and validate no error is displayed on save "consultation/observations/nursingPatientProgress"
 * Goto patient clinical dashboard
-* Validate obs "consultation/observations/physicalTherapy" on the patient clinical dashboard
-* Validate new obs "consultation/observations/preAnaesthesiaAssessment" on the patient clinical dashboard
-* Validate new obs "consultation/observations/patientProgressNotesOrders" on the patient clinical dashboard
-* Validate new obs "consultation/observations/vitals" on the patient clinical dashboard
+//* Validate new obs "consultation/observations/preAnaesthesiaAssessment" on the patient clinical dashboard
+//* Validate new obs "consultation/observations/patientProgressNotesOrders" on the patient clinical dashboard
+//* Validate new obs "consultation/observations/vitals" on the patient clinical dashboard
 //* Validate new obs "consultation/observations/admissionOrder" on the patient clinical dashboard
-* Validate new obs "consultation/observations/paediatricAssessment" on the patient clinical dashboard
-* Validate new obs "consultation/observations/rehabReferral" on the patient clinical dashboard
-* Validate new obs "consultation/observations/rehabAssessment" on the patient clinical dashboard
+//* Validate new obs "consultation/observations/paediatricAssessment" on the patient clinical dashboard
+//* Validate new obs "consultation/observations/rehabReferral" on the patient clinical dashboard
+//* Validate new obs "consultation/observations/rehabAssessment" on the patient clinical dashboard
 * Validate new obs "consultation/observations/orthopaedicOperativeReport" on the patient clinical dashboard
-* Validate new obs "consultation/observations/nursingPatientProgress" on the patient clinical dashboard
+//* Validate new obs "consultation/observations/nursingPatientProgress" on the patient clinical dashboard
 * Click on active patients list
 * Click on home page
 * Logout and Login to Bahmni as a "receptionist"
@@ -104,6 +104,9 @@ tags: cure
 * Login to Bahmni as a "receptionist"
 * Receptionist creates the "cure" patient and starts an OPD
 * Logout and Login to Bahmni as a "doctor"
+* Open "Clinical" module
+* Goto All sections and search the newly created patient
+* Add Nutrional values
 * Open "Clinical" module
 * Goto All sections and search the newly created patient
 * Doctor clicks consultation

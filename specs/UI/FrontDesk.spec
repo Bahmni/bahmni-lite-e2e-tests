@@ -29,7 +29,7 @@ tags: regression, cure
 
 tags: regression, cure
 
-* Login to Bahmni as a "receptionist"
+* Login to Bahmni as a "nurse"
 * Receptionist creates the "cure" patient and starts an OPD
 * Open "Clinical" app
 * Search and select patient
@@ -67,3 +67,28 @@ tags: regression, cure
 * Click on home page
 * visit is closed at the front desk
 * Log out if still logged in
+
+## A nurse captures drug details for a patient
+
+tags: regression, cure
+
+* Login to Bahmni as a "receptionist"
+* Receptionist creates the "cure" patient and starts an OPD
+* Logout and Login to Bahmni as a "doctor"
+* Open "Clinical" module
+* Goto All sections and search the newly created patient
+* Doctor clicks consultation
+* Doctor prescribes medications "consultation/medications/Diazepam"
+* Goto patient dashboard
+* Verify medical prescription in patient clinical dashboard
+* Click on active patients list
+* Click on home page
+* Logout and Login to Bahmni as a "nurse"
+* Open "Clinical" module
+* Goto All sections and search the newly created patient
+* Nurse saves the medication "consultation/medications/Diazepam" timing
+* Verify if the medication "consultation/medications/Diazepam" is present in drug chart modal
+* Click on active patients list
+* Click on home page
+* Logout and Login to Bahmni as a "receptionist"
+* visit is closed at the front desk
