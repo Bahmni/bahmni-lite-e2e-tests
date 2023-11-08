@@ -44,7 +44,7 @@ tags: ui
 * Validate the report generated for Snomed form builder form Report "consultation/observations/testForm"
 * Click on home page
 * Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
-* visit is closed at the front desk
+* Visit is closed at the front desk
 * Login to openMRS as user "admin"
 * Goto Administration
 * Delete the form from the openMRS
