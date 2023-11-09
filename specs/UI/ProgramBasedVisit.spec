@@ -33,4 +33,4 @@ ___
 * Receptionist cancels all the appointments
 * The patient's appointment should not be found in next week
 * Click back button
-* visit is closed at the front desk
+* Visit is closed at the front desk

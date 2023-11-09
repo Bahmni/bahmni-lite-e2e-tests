@@ -16,7 +16,7 @@ tags: hospital, appointment, clinic, regression
 * Receptionist cancels the newly created appointment
 * The patient's appointment should not be found
 * Click back button
-* visit is closed at the front desk
+* Visit is closed at the front desk
 
 ## A receptionist should be able to create and cancel walkin appointment for a patient
 
@@ -33,4 +33,4 @@ tags: hospital, appointment, clinic, regression
 * Logout and Login to Bahmni as a "doctor"
 * Validate Appointment Details in Clinical Dashboard with status as "Cancelled"
 * Click back button
-* visit is closed at the front desk
+* Visit is closed at the front desk

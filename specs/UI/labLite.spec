@@ -25,4 +25,4 @@ tags: clinic, lab-lite, smoke, regression
 * verify name with id
 verify the document uploaded/Reports table is available in patient dashboard
 * Logout and Login to Bahmni location "Bahmni Clinic" as a "receptionist"
-* visit is closed at the front desk
+* Visit is closed at the front desk

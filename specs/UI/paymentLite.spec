@@ -32,4 +32,4 @@ END BAH-2151
 * Run report and validate
 * Logout of Payment Lite
 * Goto Clinical application
-* visit is closed at the front desk
+* Visit is closed at the front desk

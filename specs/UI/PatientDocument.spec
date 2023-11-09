@@ -15,4 +15,4 @@ tags: clinic, patient_documents, regression, ui
 * Verify Patient Documents in patient dashboard
 * Click back button
 * Click back button
-* visit is closed at the front desk
+* Visit is closed at the front desk
