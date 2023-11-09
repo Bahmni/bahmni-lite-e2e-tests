@@ -61,7 +61,7 @@ tags: hospital, lab, payment, regression
 * Click back button
 * Click back button
 * Logout and Login to Bahmni location "General Ward" as a "receptionist"
-* Visit is closed at the front desk
+* visit is closed at the front desk
 
 ## Bacteriology staff should be able to collect sample
 
@@ -79,4 +79,4 @@ tags: hospital, regression
 * Click back button
 * Click back button
 * Logout and Login to Bahmni location "General Ward" as a "receptionist"
-* Visit is closed at the front desk
+* visit is closed at the front desk

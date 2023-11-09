@@ -26,7 +26,7 @@ tags: clinic, consultation, regression, ui
 * Verify history & examination in patient clinical dashboard
 * Verify consultation notes in patient clinical dashboard
 * Logout and Login to Bahmni as a "receptionist"
-* Visit is closed at the front desk
+* visit is closed at the front desk
 
 ## Doctor should be able to add Observation Form
 
@@ -69,4 +69,4 @@ tags: forms
 * Validate obs "consultation/observations/admissionLetter" on the patient clinical dashboard
 * Validate obs "consultation/observations/deathNote" on the patient clinical dashboard
 * Logout and Login to Bahmni as a "receptionist"
-* Visit is closed at the front desk
+* visit is closed at the front desk

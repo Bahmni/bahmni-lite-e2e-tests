@@ -32,7 +32,7 @@ tags: hospital, ipmodule, regression
 * Nurse discharges the patient
 * Click back button
 * Login to Bahmni location "General Ward" as a "receptionist"
-* Visit is closed at the front desk
+* visit is closed at the front desk
 
 ## Nurse uses Bed management to admit and discharge a patient based on doctor's disposition
 
@@ -65,4 +65,4 @@ tags: hospital, bedmanagement, regression
 * Discharge the patient from allocated bed
 * Click back button
 * Logout and Login to Bahmni location "General Ward" as a "receptionist"
-* Visit is closed at the front desk
+* visit is closed at the front desk

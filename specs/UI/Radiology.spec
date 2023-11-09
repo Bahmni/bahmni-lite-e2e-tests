@@ -15,5 +15,5 @@ tags: hospital, radiology, regression
 * Click back button
 * Click back button
 * Logout and Login to Bahmni location "General Ward" as a "receptionist"
-* Visit is closed at the front desk
+* visit is closed at the front desk
 * verify patient details on DCM4chee
