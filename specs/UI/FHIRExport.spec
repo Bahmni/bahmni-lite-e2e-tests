@@ -4,9 +4,9 @@
 
 tags: snomed, ui
 
-* Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Login to Bahmni as a "receptionist"
 * Create new patient with random details and start an OPD visit
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "doctor"
+* Logout and Login to Bahmni as a "doctor"
 * Random SNOMED diagnosis is identified using ECL query for descendants of "asthma"
 * Doctor adds the random SNOMED descendant of "asthma" using "name" search
 * Open "Medication" Tab
@@ -18,22 +18,21 @@ tags: snomed, ui
 * Create user and role to export Anonymised and Non-anonymised data
 * Export Non-anonymised data
 * Validate Non-anonymised fields from ndjson file export
-* Configue global variable for "Redact" method
+* Validate global property for anonymised config
 * Invoke endpoint for "anonymised" export
 * Validate Anonymised fields from ndjson file export
-* close tab
-* close tab
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
-* visit is closed at the front desk
-
+* Close tab
+* Close tab
+* Logout and Login to Bahmni as a "receptionist"
+* Visit is closed at the front desk
 
 ## Admin should be able to export Patient data with Non-anonymisation and Anonymisation through UI
 
 tags: snomed, ui
 
-* Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Login to Bahmni as a "receptionist"
 * Create new patient with random details and start an OPD visit
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "doctor"
+* Logout and Login to Bahmni as a "doctor"
 * Random SNOMED diagnosis is identified using ECL query for descendants of "asthma"
 * Doctor adds the random SNOMED descendant of "asthma" using "name" search
 * Open "Medication" Tab
@@ -44,24 +43,25 @@ tags: snomed, ui
 * Click back button
 * Open "Admin" module
 * Click on FHIR Export module
-* Validate privilege to export data
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "plainExporter"
-* Open "Admin" module
-* Click on FHIR Export module
+* Validate privilege to export FHIR data with "doctor" credentials
 * Login to openMRS as user "admin"
 * Goto Administration
 * Create user and role to export Anonymised and Non-anonymised data
-* close tab
-* reload the page
-* Select start date,end date and "Non-Anonymised" option to export data
-* Download Zip file,rename it and extract the files present in it
-* Validate Non-anonymised fields from ndjson file export
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "defaultExporter"
+* Close tab
+* Logout and Login to Bahmni as a "plainExporter"
 * Open "Admin" module
 * Click on FHIR Export module
+* Validate privilege to export FHIR data with "plainExpoter" credentials
+* Select start date,end date and "Non-Anonymised" option to export data
+* Download and extract zip file
+* Validate Non-anonymised fields from ndjson file export
+* Logout and Login to Bahmni as a "defaultExporter"
+* Open "Admin" module
+* Click on FHIR Export module
+* Validate privilege to export FHIR data with "defaultExporter" credentials
 * Select start date,end date and "Anonymised" option to export data
-* Download Zip file,rename it and extract the files present in it
+* Download and extract zip file
 * Validate Anonymised fields from ndjson file export
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
-* visit is closed at the front desk
+* Logout and Login to Bahmni as a "receptionist"
+* Visit is closed at the front desk
 
