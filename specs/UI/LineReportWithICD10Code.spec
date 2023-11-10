@@ -4,9 +4,9 @@
 
 tags: snomed, ui
 
-* Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Login to Bahmni as a "receptionist" 
 * Create new patient with random details and start an OPD visit
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "doctor"
+* Logout and Login to Bahmni as a "doctor"
 * Doctor add diagnosis "SARS-CoV-2 breakthrough infection"
 * Save data
 * Navigate to the ICD Mappings Demonstrator and retrieve the ICD-10 codes for "SARS-CoV-2 breakthrough infection" using the mapRule associated with the "mutiple mapGroup" condition
@@ -34,5 +34,5 @@ tags: snomed, ui
 * Select start date, end date and "HTML" format for "SNOMED Diagnosis Line Report(ICD) for Peritonitis" and click on run button
 * Validate the SNOMED diagnosis line report for Peritonitis with ICD-10 code
 * Click on home page
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Logout and Login to Bahmni as a "receptionist"
 * Visit is closed at the front desk
