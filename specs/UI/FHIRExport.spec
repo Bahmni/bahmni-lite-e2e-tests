@@ -1,6 +1,6 @@
 # FHIR Export
 
-## Admin should be able to export Patient data with Non-anonymisation and Anonymisation through API
+## Admin should be able to export anonymised and non-anonymised Patient data through API
 
 tags: snomed, ui
 
@@ -16,17 +16,17 @@ tags: snomed, ui
 * Login to openMRS as user "admin"
 * Goto Administration
 * Create user and role to export Anonymised and Non-anonymised data
-* Export Non-anonymised data
+* Export "non-anonymised" data
 * Validate Non-anonymised fields from ndjson file export
 * Validate global property for anonymised config
-* Invoke endpoint for "anonymised" export
+* Export "anonymised" data
 * Validate Anonymised fields from ndjson file export
 * Close tab
 * Close tab
 * Logout and Login to Bahmni as a "receptionist"
 * Visit is closed at the front desk
 
-## Admin should be able to export Patient data with Non-anonymisation and Anonymisation through UI
+## Admin should be able to export anonymised and non-anonymised Patient data through UI
 
 tags: snomed, ui
 
@@ -51,15 +51,15 @@ tags: snomed, ui
 * Logout and Login to Bahmni as a "plainExporter"
 * Open "Admin" module
 * Click on FHIR Export module
-* Validate privilege to export FHIR data with "plainExpoter" credentials
-* Select start date,end date and "Non-Anonymised" option to export data
+* Validate privilege to export FHIR data with "plainExporter" credentials
+* Select start date, end date and "non-anonymised" option to export data
 * Download and extract zip file
 * Validate Non-anonymised fields from ndjson file export
 * Logout and Login to Bahmni as a "defaultExporter"
 * Open "Admin" module
 * Click on FHIR Export module
 * Validate privilege to export FHIR data with "defaultExporter" credentials
-* Select start date,end date and "Anonymised" option to export data
+* Select start date, end date and "anonymised" option to export data
 * Download and extract zip file
 * Validate Anonymised fields from ndjson file export
 * Logout and Login to Bahmni as a "receptionist"
