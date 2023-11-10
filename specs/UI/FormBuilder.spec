@@ -4,21 +4,19 @@
 
 tags: ui
 
-* Login to Bahmni SNOMED location "General Ward" as a "admin"
+* Login to Bahmni as a "admin" 
 * Open "Implementer interface" module
 * Create a form with form name as "Test Form"
-* create obs "Height"
+* Create obs "Heart Rate"
 
    |Property |
    |---------|
    |Mandatory|
    |AddMore  |
-   |Abnormal |
-* create obs "Is admission to hospital required?"
-
+* Create obs "Heart Rate Abnormal"
    |Property|
    |--------|
-   |Url     |
+   |Notes   ||
 * Create obs group "Coronary Artery Disease, Progress" and add an ecl query for "Coronary Artery Disease, Risk factors"
 
    |Property    |
@@ -29,9 +27,9 @@ tags: ui
 * Save data
 * Click Publish button
 * Click back button
-* Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Login to Bahmni as a "receptionist" 
 * Create new patient with random details and start an OPD visit
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "doctor"
+* Logout and Login to Bahmni as a "doctor"
 * Open clinical tab
 * Enter Form Values and validate no error is displayed on save "consultation/observations/testForm"
 * Click back button
@@ -43,7 +41,7 @@ tags: ui
 * Select start date, end date and "HTML" format for "SNOMED Form builder form Report" and click on run button
 * Validate the report generated for Snomed form builder form Report "consultation/observations/testForm"
 * Click on home page
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Logout and Login to Bahmni as a "receptionist"
 * Visit is closed at the front desk
 * Login to openMRS as user "admin"
 * Goto Administration

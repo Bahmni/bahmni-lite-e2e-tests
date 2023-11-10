@@ -4,11 +4,11 @@
 
 tags: snomed, ui
 
-* Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Login to Bahmni as a "receptionist" 
 * Create new patient with random details and start an OPD visit
 * Create ValueSet for a procedure "consultation/procedure/valueSetHead"
 * Procedure created is uploaded in Bahmni
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "doctor"
+* Logout and Login to Bahmni as a "doctor"
 * Open clinical tab
 * Open "Orders" Tab
 * Click on Procedure
@@ -38,5 +38,5 @@ tags: snomed, ui
 * Switch to "openMRS" tab
 * Remove the procedure from openMRS
 * Switch to "SNOMED" tab
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Logout and Login to Bahmni as a "receptionist"
 * Visit is closed at the front desk

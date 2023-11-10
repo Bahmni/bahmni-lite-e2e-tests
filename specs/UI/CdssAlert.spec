@@ -3,9 +3,9 @@
 
 tags: snomed, ui
 
-* Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Login to Bahmni as a "receptionist" 
 * Create new patient with random details and start an OPD visit
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "doctor"
+* Logout and Login to Bahmni as a "doctor"
 * Verify CDSS is enabled in openMRS in order to trigger contraindication alerts
 * Random SNOMED diagnosis is identified using ECL query for descendants of "asthma"
 * Open clinical tab
@@ -23,16 +23,16 @@ tags: snomed, ui
 * Click back button
 * Navigate to Audit Log module
 * Verify dismissal entry is added in audit log
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Logout and Login to Bahmni as a "receptionist"
 * Visit is closed at the front desk
 
 ## Doctor should be able to get contraindication warning alert for the diagnosis-drugs interaction
 
 tags: snomed, ui
 
-* Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Login to Bahmni as a "receptionist" 
 * Create new patient with random details and start an OPD visit
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "doctor"
+* Logout and Login to Bahmni as a "doctor"
 * Verify CDSS is enabled in openMRS in order to trigger contraindication alerts
 * Open clinical tab
 * Open "Diagnoses" Tab
@@ -47,7 +47,7 @@ tags: snomed, ui
 * Save data
 * Open patient dashboard
 * Verify medical prescription in patient clinical dashboard
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Logout and Login to Bahmni as a "receptionist"
 * Visit is closed at the front desk
 
 
@@ -55,9 +55,9 @@ tags: snomed, ui
 
 tags: snomed, ui
 
-* Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Login to Bahmni as a "receptionist" 
 * Create new patient with random details and start an OPD visit
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "doctor"
+* Logout and Login to Bahmni as a "doctor"
 * Verify CDSS is enabled in openMRS in order to trigger contraindication alerts
 * Open clinical tab
 * Doctor add drugs "consultation/medications/Amoxicillin,consultation/medications/Amitriptyline" which are contraindicative with each other
@@ -72,20 +72,17 @@ tags: snomed, ui
 * Click back button
 * Navigate to Audit Log module
 * Verify dismissal entry is added in audit log
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Logout and Login to Bahmni as a "receptionist"
 * Visit is closed at the front desk
- Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
- Visit is closed at the front desk
-
 
 
 ## Doctor should be able to get contraindication Info alert for the drug-drug interaction
 
 tags: snomed, ui
 
-* Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Login to Bahmni as a "receptionist" 
 * Create new patient with random details and start an OPD visit
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "doctor"
+* Logout and Login to Bahmni as a "doctor"
 * Verify CDSS is enabled in openMRS in order to trigger contraindication alerts
 * Open clinical tab
 * Doctor add drugs "consultation/medications/Albendazole,consultation/medications/Amiodarone" which are contraindicative with each other
@@ -94,7 +91,7 @@ tags: snomed, ui
 * Save data
 * Open patient dashboard
 * Verify medical prescription in patient clinical dashboard
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Logout and Login to Bahmni as a "receptionist"
 * Visit is closed at the front desk
 
 
@@ -103,9 +100,9 @@ tags: snomed, ui
 
 tags: snomed, ui
 
-* Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Login to Bahmni as a "receptionist" 
 * Create new patient with random details and start an OPD visit
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "doctor"
+* Logout and Login to Bahmni as a "doctor"
 * Verify CDSS is enabled in openMRS in order to trigger contraindication alerts
 * Open clinical tab
 * Open "Medication" Tab
@@ -115,16 +112,16 @@ tags: snomed, ui
 * Save data
 * Open patient dashboard
 * Verify medical prescription in patient clinical dashboard
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Logout and Login to Bahmni as a "receptionist"
 * Visit is closed at the front desk
 
 ## Doctor should be able to get High Dosage Alert for multiple drugs having same substance
 
 tags: snomed, ui
 
-* Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Login to Bahmni as a "receptionist" 
 * Create new patient with random details and start an OPD visit
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "doctor"
+* Logout and Login to Bahmni as a "doctor"
 * Verify CDSS is enabled in openMRS in order to trigger contraindication alerts
 * Open clinical tab
 * Open "Medication" Tab
@@ -135,16 +132,16 @@ tags: snomed, ui
 * Save data
 * Open patient dashboard
 * Verify medical prescription in patient clinical dashboard
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Logout and Login to Bahmni as a "receptionist"
 * Visit is closed at the front desk
 
 ## Doctor should be able to get High Dosage Alert for a single drug having multiple substances
 
 tags: snomed, ui
 
-* Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Login to Bahmni as a "receptionist" 
 * Create new patient with random details and start an OPD visit
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "doctor"
+* Logout and Login to Bahmni as a "doctor"
 * Verify CDSS is enabled in openMRS in order to trigger contraindication alerts
 * Open clinical tab
 * Open "Medication" Tab
@@ -156,5 +153,5 @@ tags: snomed, ui
 * Save data
 * Open patient dashboard
 * Verify medical prescription in patient clinical dashboard
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Logout and Login to Bahmni as a "receptionist"
 * Visit is closed at the front desk

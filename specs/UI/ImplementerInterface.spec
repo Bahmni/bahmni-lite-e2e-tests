@@ -11,7 +11,7 @@ tags: master-data-management
 * Open Form builder
 * put formname "Formrandom"
 * edit form "Formrandom"
-* create obs "Height"
+* Create obs "Height"
 
    |Property |
    |---------|
