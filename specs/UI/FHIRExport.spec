@@ -8,10 +8,11 @@ tags: snomed, ui
 * Create new patient with random details and start an OPD visit
 * Logout and Login to Bahmni as a "doctor"
 * Random SNOMED diagnosis is identified using ECL query for descendants of "asthma"
+* Open clinical tab
+* Open "Diagnoses" Tab
 * Doctor adds the random SNOMED descendant of "asthma" using "name" search
 * Open "Medication" Tab
-* Doctor add the drug for "Disease of liver"
-* Doctor should be able to add drug after adding the mandatory details
+* Doctor prescribes medicines "consultation/medications/Atorvastatin"
 * Save data
 * Login to openMRS as user "admin"
 * Goto Administration
@@ -34,10 +35,11 @@ tags: snomed, ui
 * Create new patient with random details and start an OPD visit
 * Logout and Login to Bahmni as a "doctor"
 * Random SNOMED diagnosis is identified using ECL query for descendants of "asthma"
+* Open clinical tab
+* Open "Diagnoses" Tab
 * Doctor adds the random SNOMED descendant of "asthma" using "name" search
 * Open "Medication" Tab
-* Doctor add the drug for "Disease of liver"
-* Doctor should be able to add drug after adding the mandatory details
+* Doctor prescribes medicines "consultation/medications/Atorvastatin"
 * Save data
 * Click back button
 * Click back button
