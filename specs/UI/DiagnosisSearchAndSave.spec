@@ -4,9 +4,9 @@
 
 tags: snomed, ui
 
-* Login to Bahmni SNOMED location "General Ward" as a "receptionist"
+* Login to Bahmni as a "receptionist" 
 * Create new patient with random details and start an OPD visit
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "doctor"
+* Logout and Login to Bahmni as a "doctor"
 * Open clinical tab
 * Open "Diagnoses" Tab
 * Random SNOMED diagnosis is identified using ECL query for "clinical_finding" which is not present in Openmrs Database and Doctor adds the identified SNOMED diagnosis in bahmni using "name" search
@@ -21,5 +21,5 @@ tags: snomed, ui
 * Verify diagnosis in patient clinical dashboard
 * Click back button
 * Click back button
-* Logout and Login to Bahmni SNOMED location "General Ward" as a "receptionist"
-* visit is closed at the front desk
+* Logout and Login to Bahmni as a "receptionist"
+* Visit is closed at the front desk
