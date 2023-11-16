@@ -1,30 +1,67 @@
-<article class='markdown-body'>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="../../style.css">
-    <h1>FHIR Export</h1>
-    <h2>Admin should be able to export Patient data with Non-anonymisation and Anonymisation</h2>
+<article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="../../style.css"><h1>FHIR Export</h1>
+    <h2>Admin should be able to export anonymised and non-anonymised Patient data through API</h2>
     <p>tags: snomed, ui</p>
     <ul>
-        <li>Login to Bahmni SNOMED location &quot;General Ward&quot; as a &quot;receptionist&quot;</li>
-        <li>Create new patient with random details and start an OPD visit</li>
-        <li>Logout and Login to Bahmni SNOMED location &quot;General Ward&quot; as a &quot;doctor&quot;</li>
-        <li>Random SNOMED diagnosis is identified using ECL query for descendants of &quot;asthma&quot;</li>
-        <li>Doctor adds the random SNOMED descendant of &quot;asthma&quot; using &quot;name&quot; search</li>
-        <li>Open &quot;Medication&quot; Tab</li>
-        <li>Doctor add the drug for &quot;Disease of liver&quot;</li>
-        <li>Doctor should be able to add drug after adding the mandatory details</li>
-        <li>Save data</li>
-        <li>Export Non-anonymised data</li>
-        <li>Validate Non-anonymised fields from ndjson file export</li>
-        <li>Export Anonymised data using &quot;Redact&quot; method</li>
-        <li>Validate &quot;Redacted&quot; fields from ndjson output</li>
-        <li>Export Anonymised data using &quot;Random&quot; method</li>
-        <li>Validate &quot;Randomized&quot; fields from ndjson output</li>
-        <li>Export Anonymised data using &quot;Correlate&quot; method</li>
-        <li>Validate &quot;Correlated&quot; fields from ndjson output</li>
+    <li>Login to Bahmni as a &quot;receptionist&quot;</li>
+    <li>Create new patient with random details and start an OPD visit</li>
+    <li>Logout and Login to Bahmni as a &quot;doctor&quot;</li>
+    <li>Random SNOMED diagnosis is identified using ECL query for descendants of &quot;asthma&quot;</li>
+    <li>Open clinical tab</li>
+    <li>Open &quot;Diagnoses&quot; Tab</li>
+    <li>Doctor adds the random SNOMED descendant of &quot;asthma&quot; using &quot;name&quot; search</li>
+    <li>Open &quot;Medication&quot; Tab</li>
+    <li>Doctor prescribes medicines &quot;consultation/medications/Atorvastatin&quot;</li>
+    <li>Save data</li>
+    <li>Login to openMRS as user &quot;admin&quot;</li>
+    <li>Goto Administration</li>
+    <li>Create user and role to export Anonymised and Non-anonymised data</li>
+    <li>Export &quot;non-anonymised&quot; data</li>
+    <li>Validate Non-anonymised fields from ndjson file export</li>
+    <li>Validate global property for anonymised config</li>
+    <li>Export &quot;anonymised&quot; data</li>
+    <li>Validate Anonymised fields from ndjson file export</li>
+    <li>Close tab</li>
+    <li>Close tab</li>
+    <li>Logout and Login to Bahmni as a &quot;receptionist&quot;</li>
+    <li>Visit is closed at the front desk</li>
     </ul>
-    <ul id="navigation">
-        <center>
-            <li class="nav"><a href="../../index.html">=</a></li>
-        </center>
-</article>
+    <h2>Admin should be able to export anonymised and non-anonymised Patient data through UI</h2>
+    <p>tags: snomed, ui</p>
+    <ul>
+    <li>Login to Bahmni as a &quot;receptionist&quot;</li>
+    <li>Create new patient with random details and start an OPD visit</li>
+    <li>Logout and Login to Bahmni as a &quot;doctor&quot;</li>
+    <li>Random SNOMED diagnosis is identified using ECL query for descendants of &quot;asthma&quot;</li>
+    <li>Open clinical tab</li>
+    <li>Open &quot;Diagnoses&quot; Tab</li>
+    <li>Doctor adds the random SNOMED descendant of &quot;asthma&quot; using &quot;name&quot; search</li>
+    <li>Open &quot;Medication&quot; Tab</li>
+    <li>Doctor prescribes medicines &quot;consultation/medications/Atorvastatin&quot;</li>
+    <li>Save data</li>
+    <li>Click back button</li>
+    <li>Click back button</li>
+    <li>Open &quot;Admin&quot; module</li>
+    <li>Click on FHIR Export module</li>
+    <li>Validate privilege to export FHIR data with &quot;doctor&quot; credentials</li>
+    <li>Login to openMRS as user &quot;admin&quot;</li>
+    <li>Goto Administration</li>
+    <li>Create user and role to export Anonymised and Non-anonymised data</li>
+    <li>Close tab</li>
+    <li>Logout and Login to Bahmni as a &quot;plainExporter&quot;</li>
+    <li>Open &quot;Admin&quot; module</li>
+    <li>Click on FHIR Export module</li>
+    <li>Validate privilege to export FHIR data with &quot;plainExporter&quot; credentials</li>
+    <li>Select start date, end date and &quot;non-anonymised&quot; option to export data</li>
+    <li>Download and extract zip file</li>
+    <li>Validate Non-anonymised fields from ndjson file export</li>
+    <li>Logout and Login to Bahmni as a &quot;defaultExporter&quot;</li>
+    <li>Open &quot;Admin&quot; module</li>
+    <li>Click on FHIR Export module</li>
+    <li>Validate privilege to export FHIR data with &quot;defaultExporter&quot; credentials</li>
+    <li>Select start date, end date and &quot;anonymised&quot; option to export data</li>
+    <li>Download and extract zip file</li>
+    <li>Validate Anonymised fields from ndjson file export</li>
+    <li>Logout and Login to Bahmni as a &quot;receptionist&quot;</li>
+    <li>Visit is closed at the front desk</li>
+    </ul>
+    <ul id="navigation"><center><li class="nav"><a href="../../index.html">=</a></li></center></article>
