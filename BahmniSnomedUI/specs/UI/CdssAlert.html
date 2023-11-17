@@ -1,49 +1,148 @@
 <article class='markdown-body'><meta charset="utf-8"><link rel="stylesheet" type="text/css" href="../../style.css"><h1>Snomed CDSS Diagnosis-Drug Alert</h1>
-<h2>Doctor should be able to get contraindication critical alert for the diagnosis-drugs interaction</h2>
-<p>tags: snomed, ui</p>
-<ul>
-<li>Login to Bahmni SNOMED location &quot;General Ward&quot; as a &quot;receptionist&quot;</li>
-<li>Create new patient with random details and start an OPD visit</li>
-<li>Logout and Login to Bahmni SNOMED location &quot;General Ward&quot; as a &quot;doctor&quot;</li>
-<li>Verify CDSS is enabled in openmrs in order to trigger contraindication alerts</li>
-<li>Random SNOMED diagnosis is identified using ECL query for descendants of &quot;asthma&quot;</li>
-<li>Doctor adds the random SNOMED descendant of &quot;asthma&quot; using &quot;name&quot; search</li>
-<li>Open &quot;Medication&quot; Tab</li>
-<li>Doctor adds a drug that has contraindication with the diagnosis &quot;asthma&quot;</li>
-<li>Verify alert message with card indicator &quot;Critical&quot; is displayed when drug is selected</li>
-<li>Verify add button is &quot;disabled&quot;</li>
-<li>Doctor select the reason for dismissal</li>
-<li>Click on dismiss button</li>
-<li>Verify add button is &quot;enabled&quot;</li>
-<li>Doctor should be able to add drug after adding the mandatory details</li>
-<li>Save data</li>
-<li>Open patient dashboard</li>
-<li>Verify medication on patient clinical dashboard</li>
-<li>Click back button</li>
-<li>Click back button</li>
-<li>Navigate to Audit Log module</li>
-<li>Verify dismissal entry is added in audit log</li>
-<li>Logout and Login to Bahmni SNOMED location &quot;General Ward&quot; as a &quot;receptionist&quot;</li>
-<li>visit is closed at the front desk</li>
-</ul>
-<h2>Doctor should be able to get contraindication warning alert for the diagnosis-drugs interaction</h2>
-<p>tags: snomed, ui</p>
-<ul>
-<li>Login to Bahmni SNOMED location &quot;General Ward&quot; as a &quot;receptionist&quot;</li>
-<li>Create new patient with random details and start an OPD visit</li>
-<li>Logout and Login to Bahmni SNOMED location &quot;General Ward&quot; as a &quot;doctor&quot;</li>
-<li>Verify CDSS is enabled in openmrs in order to trigger contraindication alerts</li>
-<li>Random SNOMED diagnosis is identified using ECL query for descendants of &quot;Disease of liver&quot;</li>
-<li>Doctor adds the random SNOMED descendant of &quot;Disease of liver&quot; using &quot;name&quot; search</li>
-<li>Open &quot;Medication&quot; Tab</li>
-<li>Doctor adds a drug that has contraindication with the diagnosis &quot;Disease of liver&quot;</li>
-<li>Verify alert message with card indicator &quot;Warning&quot; is displayed when drug is selected</li>
-<li>Verify add button is &quot;enabled&quot;</li>
-<li>Doctor should be able to add drug after adding the mandatory details</li>
-<li>Save data</li>
-<li>Open patient dashboard</li>
-<li>Verify medication on patient clinical dashboard</li>
-<li>Logout and Login to Bahmni SNOMED location &quot;General Ward&quot; as a &quot;receptionist&quot;</li>
-<li>visit is closed at the front desk</li>
-</ul>
-<ul id="navigation"><center><li class="nav"><a href="../../index.html">=</a></li></center></article>
+    <h2>Doctor should be able to get contraindication critical alert for the diagnosis-drugs interaction</h2>
+    <p>tags: snomed, ui</p>
+    <ul>
+    <li>Login to Bahmni as a &quot;receptionist&quot;</li>
+    <li>Create new patient with random details and start an OPD visit</li>
+    <li>Logout and Login to Bahmni as a &quot;doctor&quot;</li>
+    <li>Verify CDSS is enabled in openMRS in order to trigger contraindication alerts</li>
+    <li>Random SNOMED diagnosis is identified using ECL query for descendants of &quot;asthma&quot;</li>
+    <li>Open clinical tab</li>
+    <li>Open &quot;Diagnoses&quot; Tab</li>
+    <li>Doctor adds the random SNOMED descendant of &quot;asthma&quot; using &quot;name&quot; search</li>
+    <li>Doctor prescribes a drug &quot;consultation/medications/Propranolol&quot; that is contraindicated for the patient's diagnosis</li>
+    <li>Verify that a &quot;Critical&quot; alert message is displayed after the drug is added</li>
+    <li>Verify the question icon with contraindication information link is displayed in the alert message</li>
+    <li>Doctor select the reason for dismissal</li>
+    <li>Click on dismiss button</li>
+    <li>Save data</li>
+    <li>Open patient dashboard</li>
+    <li>Verify medical prescription in patient clinical dashboard</li>
+    <li>Click back button</li>
+    <li>Click back button</li>
+    <li>Navigate to Audit Log module</li>
+    <li>Verify dismissal entry is added in audit log</li>
+    <li>Logout and Login to Bahmni as a &quot;receptionist&quot;</li>
+    <li>Visit is closed at the front desk</li>
+    </ul>
+    <h2>Doctor should be able to get contraindication warning alert for the diagnosis-drugs interaction</h2>
+    <p>tags: snomed, ui</p>
+    <ul>
+    <li>Login to Bahmni as a &quot;receptionist&quot;</li>
+    <li>Create new patient with random details and start an OPD visit</li>
+    <li>Logout and Login to Bahmni as a &quot;doctor&quot;</li>
+    <li>Verify CDSS is enabled in openMRS in order to trigger contraindication alerts</li>
+    <li>Open clinical tab</li>
+    <li>Open &quot;Diagnoses&quot; Tab</li>
+    <li>Random SNOMED diagnosis is identified using ECL query for descendants of &quot;hypokalemia&quot;</li>
+    <li>Doctor adds the random SNOMED descendant of &quot;hypokalemia&quot; using &quot;name&quot; search</li>
+    <li>Random SNOMED diagnosis is identified using ECL query for descendants of &quot;hyponatremia&quot;</li>
+    <li>Doctor adds the random SNOMED descendant of &quot;hyponatremia&quot; using &quot;name&quot; search</li>
+    <li>Doctor prescribes a drug &quot;consultation/medications/Acetazolamide&quot; that is contraindicated for the patient's diagnosis</li>
+    <li>Verify that a &quot;Warning&quot; alert message is displayed after the drug is added</li>
+    <li>Verify the question icon with contraindication information link is displayed in the alert message</li>
+    <li>Verify that the medication is striked off after it is dismissed</li>
+    <li>Save data</li>
+    <li>Open patient dashboard</li>
+    <li>Verify medical prescription in patient clinical dashboard</li>
+    <li>Logout and Login to Bahmni as a &quot;receptionist&quot;</li>
+    <li>Visit is closed at the front desk</li>
+    </ul>
+    <h2>Doctor should be able to get contraindication critical alert for the drug-drug interaction</h2>
+    <p>tags: snomed, ui</p>
+    <ul>
+    <li>Login to Bahmni as a &quot;receptionist&quot;</li>
+    <li>Create new patient with random details and start an OPD visit</li>
+    <li>Logout and Login to Bahmni as a &quot;doctor&quot;</li>
+    <li>Verify CDSS is enabled in openMRS in order to trigger contraindication alerts</li>
+    <li>Open clinical tab</li>
+    <li>Doctor add drugs &quot;consultation/medications/Amoxicillin,consultation/medications/Amitriptyline&quot; which are contraindicative with each other</li>
+    <li>Verify alert message with card indicator &quot;Critical&quot; is displayed against added contraindicative drugs &quot;Amoxicillin&quot; and &quot;Amitriptyline&quot;</li>
+    <li>Verify the question icon with contraindication information link is displayed in the alert message</li>
+    <li>Doctor select the reason for dismissal</li>
+    <li>Click on dismiss button</li>
+    <li>Save data</li>
+    <li>Open patient dashboard</li>
+    <li>Verify medical prescription in patient clinical dashboard</li>
+    <li>Click back button</li>
+    <li>Click back button</li>
+    <li>Navigate to Audit Log module</li>
+    <li>Verify dismissal entry is added in audit log</li>
+    <li>Logout and Login to Bahmni as a &quot;receptionist&quot;</li>
+    <li>Visit is closed at the front desk</li>
+    </ul>
+    <h2>Doctor should be able to get contraindication Info alert for the drug-drug interaction</h2>
+    <p>tags: snomed, ui</p>
+    <ul>
+    <li>Login to Bahmni as a &quot;receptionist&quot;</li>
+    <li>Create new patient with random details and start an OPD visit</li>
+    <li>Logout and Login to Bahmni as a &quot;doctor&quot;</li>
+    <li>Verify CDSS is enabled in openMRS in order to trigger contraindication alerts</li>
+    <li>Open clinical tab</li>
+    <li>Doctor add drugs &quot;consultation/medications/Albendazole,consultation/medications/Amiodarone&quot; which are contraindicative with each other</li>
+    <li>Verify alert message with card indicator &quot;Info&quot; is displayed against added contraindicative drugs &quot;Albendazole&quot; and &quot;Amiodarone&quot;</li>
+    <li>Verify the question icon with contraindication information link is displayed in the alert message</li>
+    <li>Save data</li>
+    <li>Open patient dashboard</li>
+    <li>Verify medical prescription in patient clinical dashboard</li>
+    <li>Logout and Login to Bahmni as a &quot;receptionist&quot;</li>
+    <li>Visit is closed at the front desk</li>
+    </ul>
+    <h2>Doctor should be able to get High Dosage Alert for a single drug having a single substance</h2>
+    <p>tags: snomed, ui</p>
+    <ul>
+    <li>Login to Bahmni as a &quot;receptionist&quot;</li>
+    <li>Create new patient with random details and start an OPD visit</li>
+    <li>Logout and Login to Bahmni as a &quot;doctor&quot;</li>
+    <li>Verify CDSS is enabled in openMRS in order to trigger contraindication alerts</li>
+    <li>Open clinical tab</li>
+    <li>Open &quot;Medication&quot; Tab</li>
+    <li>Doctor add a drug with high dosage &quot;consultation/medications/Ranitidine(injection)&quot;</li>
+    <li>Verify that a &quot;Warning&quot; alert message is displayed after the drug is added</li>
+    <li>Verify the question icon with contraindication information link is displayed in the alert message</li>
+    <li>Save data</li>
+    <li>Open patient dashboard</li>
+    <li>Verify medical prescription in patient clinical dashboard</li>
+    <li>Logout and Login to Bahmni as a &quot;receptionist&quot;</li>
+    <li>Visit is closed at the front desk</li>
+    </ul>
+    <h2>Doctor should be able to get High Dosage Alert for multiple drugs having same substance</h2>
+    <p>tags: snomed, ui</p>
+    <ul>
+    <li>Login to Bahmni as a &quot;receptionist&quot;</li>
+    <li>Create new patient with random details and start an OPD visit</li>
+    <li>Logout and Login to Bahmni as a &quot;doctor&quot;</li>
+    <li>Verify CDSS is enabled in openMRS in order to trigger contraindication alerts</li>
+    <li>Open clinical tab</li>
+    <li>Open &quot;Medication&quot; Tab</li>
+    <li>Doctor add a drug with high dosage &quot;consultation/medications/Ranitidine(tablet)&quot;</li>
+    <li>Doctor add a drug with high dosage &quot;consultation/medications/Ranitidine(injection)&quot;</li>
+    <li>Verify that a &quot;info&quot; alert message is displayed after the drug is added</li>
+    <li>Verify the question icon with contraindication information link is displayed in the alert message</li>
+    <li>Save data</li>
+    <li>Open patient dashboard</li>
+    <li>Verify medical prescription in patient clinical dashboard</li>
+    <li>Logout and Login to Bahmni as a &quot;receptionist&quot;</li>
+    <li>Visit is closed at the front desk</li>
+    </ul>
+    <h2>Doctor should be able to get High Dosage Alert for a single drug having multiple substances</h2>
+    <p>tags: snomed, ui</p>
+    <ul>
+    <li>Login to Bahmni as a &quot;receptionist&quot;</li>
+    <li>Create new patient with random details and start an OPD visit</li>
+    <li>Logout and Login to Bahmni as a &quot;doctor&quot;</li>
+    <li>Verify CDSS is enabled in openMRS in order to trigger contraindication alerts</li>
+    <li>Open clinical tab</li>
+    <li>Open &quot;Medication&quot; Tab</li>
+    <li>Doctor add a drug with high dosage &quot;consultation/medications/Colchicine&quot;</li>
+    <li>Verify alert message with card indicator &quot;Warning&quot; is displayed against added contraindicative drugs &quot;Probenecid&quot; and &quot;Colchicine&quot;</li>
+    <li>Verify the question icon with contraindication information link is displayed in the alert message</li>
+    <li>Verify the dosage alert message is displayed for the substance &quot;Probenecid&quot;</li>
+    <li>Verify the dosage alert message is displayed for the substance &quot;Colchicine&quot;</li>
+    <li>Save data</li>
+    <li>Open patient dashboard</li>
+    <li>Verify medical prescription in patient clinical dashboard</li>
+    <li>Logout and Login to Bahmni as a &quot;receptionist&quot;</li>
+    <li>Visit is closed at the front desk</li>
+    </ul>
+    <ul id="navigation"><center><li class="nav"><a href="../../index.html">=</a></li></center></article>
