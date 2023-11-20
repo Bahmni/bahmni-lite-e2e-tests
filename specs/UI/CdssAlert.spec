@@ -127,7 +127,7 @@ tags: snomed, ui
 * Open "Medication" Tab
 * Doctor add a drug with high dosage "consultation/medications/Ranitidine(tablet)"
 * Doctor add a drug with high dosage "consultation/medications/Ranitidine(injection)"
-* Verify that a "info" alert message is displayed after the drug is added
+* Verify that a "Warning" alert message is displayed after the drug is added
 * Verify the question icon with contraindication information link is displayed in the alert message
 * Save data
 * Open patient dashboard
