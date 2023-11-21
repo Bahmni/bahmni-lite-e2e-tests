@@ -17,6 +17,7 @@ if grep -q "$TARGET_ENV" <<< "docker.standard"; then
         echo "Skipping environment check for ${TARGET_ENV} instance"
         exit 0
 fi
+if [ $TARGET_ENV = "docker.standard" ];then echo 1; fi
 while [ $max_timeout -gt 0 ]
 do
         statusCode="$(curl -s -w '%{http_code}' -o / $url --insecure --max-time 2 -L)"
