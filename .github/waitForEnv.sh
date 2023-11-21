@@ -13,7 +13,7 @@ if grep -q "$TARGET_ENV" <<< "demo"; then
 fi
 while [ $max_timeout -gt 0 ]
 do
-        statusCode="$(curl -s -w '%{http_code}' -o / $url --insecure --max-time 2)"
+        statusCode="$(curl -s -w '%{http_code}' -o / $url --insecure --max-time 2 -L)"
         if [ $statusCode -ne 200 ]
         then
                 echo $url is not reachable with status code $statusCode, retrying after $retry_time seconds, remaining time left $max_timeout seconds
