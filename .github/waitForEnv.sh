@@ -10,6 +10,8 @@ if [[ "$TARGET_ENV" == "demo" || "$TARGET_ENV" == "docker.standard" ]]; then
         echo "ENV_FLAG=true" >> $GITHUB_ENV
         echo "Skipping environment check for ${TARGET_ENV} instance"
         exit 0
+else
+         echo "TARGET_ENV is not 'demo' or 'docker.standard'. Actual value: $TARGET_ENV"
 fi
 while [ $max_timeout -gt 0 ]
 do
