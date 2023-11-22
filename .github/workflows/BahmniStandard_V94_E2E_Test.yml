@@ -57,7 +57,7 @@ jobs:
           ref: ${{env.TARGET_BRANCH}}
           submodules: recursive
       - name: Wait for environment to be up
-        run: chmod +x .github/waitForEnv.sh && ./.github/waitForEnv.sh $TARGET_ENV
+        run: cat .github/waitForEnv.sh && chmod +x .github/waitForEnv.sh && ./.github/waitForEnv.sh $TARGET_ENV
       - uses: actions/setup-node@v2
         with:
           node-version: "16"
