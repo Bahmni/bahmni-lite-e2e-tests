@@ -54,7 +54,6 @@ jobs:
       - run: echo "Current Concurrency Group - ${{ github.workflow }}-${{ github.event.inputs.TEST_CONTEXT || 'hospital & regression' }}-${{ github.event.inputs.TARGET_ENV || 'docker.standard' }}-${{github.event.schedule}}"
       - uses: actions/checkout@v2
         with:
-          ref: ${{env.TARGET_BRANCH}}
           submodules: recursive
       - name: Wait for environment to be up
         run: cat .github/waitForEnv.sh && chmod +x .github/waitForEnv.sh && ./.github/waitForEnv.sh $TARGET_ENV
