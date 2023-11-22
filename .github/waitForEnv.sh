@@ -11,13 +11,13 @@ url="https://${TARGET_ENV}.mybahmni.in/openmrs/"
 #         echo "Skipping environment check for ${TARGET_ENV} instance"
 #         exit 0
 # fi
-if grep -q "$TARGET_ENV" <<< "docker.standard"; then
+if grep -q "$TARGET_ENV" <<< 'docker.standard'; then
         flag=true
         echo "ENV_FLAG=true" >> $GITHUB_ENV
         echo "Skipping environment check for ${TARGET_ENV} instance"
         exit 0
 fi
-if [ $TARGET_ENV = "docker.standard" ]
+if [ $TARGET_ENV = 'docker.standard' ]
 then 
         echo 1
 else
