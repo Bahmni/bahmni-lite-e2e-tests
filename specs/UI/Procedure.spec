@@ -21,22 +21,7 @@ tags: snomed, ui
 * Search Body Site name
 * Click on Procedure name
 * Click on Edit
-* Update the procedure name
-* Save the concept
-* Switch to "SNOMED" tab
-* Doctor clicks consultation
-* Open "Orders" Tab
-* Click on Procedure
-* Add Procedure
-* Verify the updated procedure name
-* Procedure created is uploaded in Bahmni
-* Reload the page
-* Click on Procedure
-* Add Procedure
-* Open patient dashboard
-* Verify Procedure on patient clinical dashboard
-* Switch to "openMRS" tab
+* Verify the short name of the procedure setMember in openMRS
 * Remove the procedure from openMRS
-* Switch to "SNOMED" tab
 * Logout and Login to Bahmni as a "receptionist"
 * Visit is closed at the front desk
