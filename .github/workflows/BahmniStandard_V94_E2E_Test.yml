@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - Bahmni_Standard_V94
+      - test-wait-script
   schedule:
     - cron: "30 0 * * *" # Schedule for Bahmni docker Standard Env Runs at 6.00AM IST - 12.30AM UTC
   workflow_dispatch:
