@@ -4,6 +4,9 @@
 
 tags: ui
 
+* Login to openMRS as user "admin"
+* Goto Administration
+* Delete the "Test Form" from the openMRS if exist
 * Login to Bahmni as a "admin" 
 * Open "Implementer interface" module
 * Create a form with form name as "Test Form"
@@ -43,6 +46,3 @@ tags: ui
 * Click on home page
 * Logout and Login to Bahmni as a "receptionist"
 * Visit is closed at the front desk
-* Login to openMRS as user "admin"
-* Goto Administration
-* Delete the form from the openMRS
