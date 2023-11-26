@@ -52,7 +52,7 @@ tags: hospital, lab, payment, regression
 * verify name with id
 * verify OPD
 * Verify medical prescription in patient clinical dashboard
-* Verify vitals
+* Validate obs "consultation/observations/Vitals" on the patient clinical dashboard
 * Doctor clicks consultation
 * Doctor notes the diagnosis and conditions "consultation/diagnosis/diagnosis_condition"
 * Save data
