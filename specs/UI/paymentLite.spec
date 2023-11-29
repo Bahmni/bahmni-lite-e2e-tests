@@ -25,11 +25,12 @@ Drug should flow from Bahmni
 * Logout of Payment Lite
 START BAH-2151
 Steps are added as workaround to avoid auto login to application. Bug - BAH-2151
-* Goto paymentlite
-* Logout of Payment Lite if logged in
+Goto paymentlite
+Logout of Payment Lite if logged in
+* Delete Browsercookies
 END BAH-2151
 * Login to Payment lite as "Doctor"
 * Run report and validate
 * Logout of Payment Lite
-* Goto Clinical application
+* Login to Bahmni location "Bahmni Clinic" as a "receptionist"
 * visit is closed at the front desk
