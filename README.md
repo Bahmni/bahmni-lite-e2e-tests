@@ -2,6 +2,8 @@
 
 [![Bahmni Standard V93 E2E Tests](https://github.com/Bahmni/bahmni-e2e-tests/actions/workflows/BahmniStandard_V93_E2E_Test.yml/badge.svg?branch=main)](https://github.com/Bahmni/bahmni-e2e-tests/actions/workflows/BahmniStandard_V93_E2E_Test.yml)
 
+[![Bahmni Standard V94 E2E Tests](https://github.com/Bahmni/bahmni-e2e-tests/actions/workflows/BahmniStandard_V94_E2E_Test.yml/badge.svg)](https://github.com/Bahmni/bahmni-e2e-tests/actions/workflows/BahmniStandard_V94_E2E_Test.yml)
+
 [![Bahmni Lite E2E Tests](https://github.com/Bahmni/bahmni-e2e-tests/actions/workflows/BahmniLite_E2E_Test.yml/badge.svg)](https://github.com/Bahmni/bahmni-e2e-tests/actions/workflows/BahmniLite_E2E_Test.yml)
 
 This repo is for End to End tests for Bahmni Standard & Bahmni Lite. Check out branch `BahmniStandard_V93` for Bahmni Standard and Check out `main` for Bahmni Lite.
