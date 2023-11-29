@@ -79,7 +79,10 @@ tags: forms, cure, devtest
 //* Enter Form Values and validate no error is displayed on save "consultation/observations/rehabReferral"
 //* Enter Form Values and validate no error is displayed on save "consultation/observations/rehabAssessment"
 //* Enter Form Values and validate no error is displayed on save "consultation/observations/admissionOrder"
-* Enter Form Values and validate no error is displayed on save "consultation/observations/orthopaedicOperativeReport"
+//* Enter Form Values and validate no error is displayed on save "consultation/observations/orthopaedicOperativeReport"
+* Enter Form Values and validate no error is displayed on save "consultation/observations/radiologyStudyReport"
+* Enter Form Values and validate no error is displayed on save "consultation/observations/dischargeSummaryForm"
+* Enter Form Values and validate no error is displayed on save "consultation/observations/OPDVisitForm"
 //* Enter Form Values and validate no error is displayed on save "consultation/observations/nursingPatientProgress"
 * Goto patient clinical dashboard
 //* Validate new obs "consultation/observations/preAnaesthesiaAssessment" on the patient clinical dashboard
@@ -89,7 +92,10 @@ tags: forms, cure, devtest
 //* Validate new obs "consultation/observations/paediatricAssessment" on the patient clinical dashboard
 //* Validate new obs "consultation/observations/rehabReferral" on the patient clinical dashboard
 //* Validate new obs "consultation/observations/rehabAssessment" on the patient clinical dashboard
-* Validate new obs "consultation/observations/orthopaedicOperativeReport" on the patient clinical dashboard
+//* Validate new obs "consultation/observations/orthopaedicOperativeReport" on the patient clinical dashboard
+* Validate new obs "consultation/observations/radiologyStudyReport" on the patient clinical dashboard
+* Validate new obs "consultation/observations/dischargeSummaryForm" on the patient clinical dashboard
+* Validate new obs "consultation/observations/OPDVisitForm" on the patient clinical dashboard
 //* Validate new obs "consultation/observations/nursingPatientProgress" on the patient clinical dashboard
 * Click on active patients list
 * Click on home page
