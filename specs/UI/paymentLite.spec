@@ -28,6 +28,8 @@ Steps are added as workaround to avoid auto login to application. Bug - BAH-2151
 Goto paymentlite
 Logout of Payment Lite if logged in
 * Delete Browsercookies
+* Restart browser
+* Goto paymentlite
 END BAH-2151
 * Login to Payment lite as "Doctor"
 * Run report and validate
