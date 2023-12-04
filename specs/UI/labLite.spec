@@ -22,8 +22,7 @@ tags: clinic, lab-lite, smoke, regression
 * Verify lab-lite audit events
 * Goto Clinical application
 * Open clinical tab with all section
-* verify name with id
-verify the document uploaded/Reports table is available in patient dashboard
+* Verify the document uploaded is available in patient dashboard
 * Logout and Login to Bahmni location "Bahmni Clinic" as a "receptionist"
 * visit is closed at the front desk
 
