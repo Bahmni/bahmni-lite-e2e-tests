@@ -2,7 +2,7 @@
 
 ## A receptionist should be able to create and cancel teleconsultation appointment for a patient
 
-tags: hospital, appointment, clinic, regression
+tags: hospital, appointment, clinic
 
 * Login to Bahmni as a "receptionist"
 * Open "Appointment scheduling" module
