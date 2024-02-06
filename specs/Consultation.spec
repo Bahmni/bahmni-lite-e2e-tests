@@ -1,15 +1,12 @@
 # Consultation
 
-tags: clinic, consultation, regression
+tags: clinic, consultation, regression, hospital
 
 ## Doctor should be able to capture Consultation
 * Login to Bahmni as a "receptionist"
-* Goto Clinical application
-* Receptionist creates the patient with mobile number "+919876543210" and starts an OPD
+* Create new patient with random details and start an OPD visit
 * Logout and Login to Bahmni as a "doctor"
-* Open "Clinical" module
-* Goto All sections and search the newly created patient
-* Doctor clicks consultation
+* Open clinical tab
 * Enter History and Examination details "consultation/observations/historyAndExaminationDetails"
 * Enter vitals "consultation/observations/Vitals"
 * Doctor captures consultation notes "Consultation notes"
@@ -18,12 +15,11 @@ tags: clinic, consultation, regression
 * Doctor prescribes tests "consultation/orders/Haemogram"
 * Click back button
 * Goto All sections and search the newly created patient
+* Verify history & examination in patient clinical dashboard
+* Validate the lab tests are available in patient clinical dashboard
 * Verify medical prescription in patient clinical dashboard
 * Verify diagnosis and condition in patient clinical dashboard
-* Validate the lab tests are available in patient clinical dashboard
-* Verify diagnosis and condition in patient clinical dashboard
-* Verify vitals
-* Verify history & examination in patient clinical dashboard
+* Validate obs "consultation/observations/Vitals" on the patient clinical dashboard
 * Verify consultation notes in patient clinical dashboard
 * Logout and Login to Bahmni as a "receptionist"
 * visit is closed at the front desk
