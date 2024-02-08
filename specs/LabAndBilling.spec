@@ -73,7 +73,7 @@ tags: hospital, regression
 * Click back button
 * Click back button
 * Open clinical tab with all section
-* verify bacteriology details
+* Verify bacteriology details
 * Click back button
 * Click back button
 * Logout and Login to Bahmni location "General Ward" as a "receptionist"
