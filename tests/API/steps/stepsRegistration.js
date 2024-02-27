@@ -121,3 +121,26 @@ step("Create a Patient through API", async function () {
     gauge.dataStore.scenarioStore.put("payloadCreatePatient", payload);
     gauge.message("Patient ID - " + response.body.patient.identifiers[0].identifier);
 });
+
+step("start visit hard", async function () {
+    var responseStartVisit = await helper.startVisitHard();
+    assert.equal(responseStartVisit.statusCode, 201)
+    var visitUUID = responseStartVisit.body.uuid
+    gauge.message("Visit UUID - " + visitUUID)
+    gauge.dataStore.scenarioStore.put("Visit UUID", visitUUID);
+});
+
+step("end visit hard", async function () {
+    const responseEndVisit = await helper.endVisit(gauge.dataStore.scenarioStore.get("Visit UUID"));
+    assert.equal(responseEndVisit.statusCode, 200)
+});
+
+step("Create a Patient through API <arg0>", async function (arg0) {
+    for (var row of arg0.rows) {
+        var payload = await new PatientProfile().initialize1(row.cells[0],row.cells[1],row.cells[2]);
+        const response = await helper.createPatient(payload);
+        gauge.dataStore.scenarioStore.put("responseCreatePatient", response);
+        gauge.dataStore.scenarioStore.put("payloadCreatePatient", payload);
+        gauge.message("Patient ID - " + response.body.patient.identifiers[0].identifier);
+    }
+});

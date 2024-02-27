@@ -43,6 +43,10 @@ async function startVisit(createPatientPayload) {
     return await httpRequests.customPost(endpoints.VISIT_START, JSON.stringify(payloadStartVisit));
 }
 
+async function startVisitHard(){
+    var payloadStartVisit = { patient: "a0c52168-0d65-4692-a2c5-7b015b8708a9", visitType: "ba053380-1e6f-48f4-9723-922cdd993c4b", location: "833d0c66-e29a-4d31-ac13-ca9050d1bfa9" }
+    return await httpRequests.customPost(endpoints.VISIT_START, JSON.stringify(payloadStartVisit));
+}
 async function endVisit(visitUUID) {
     var payloadEndVisit = { withCredentials: true }
     return await httpRequests.customPost(endpoints.VISIT_END, JSON.stringify(payloadEndVisit), { visitUuid: visitUUID })
@@ -88,5 +92,6 @@ module.exports = {
     getProviderUuid,
     getActivePatients,
     getConsultationEncounterUUID,
-    getPatientUUID
+    getPatientUUID,
+    startVisitHard
 };
