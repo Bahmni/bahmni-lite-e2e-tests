@@ -31,13 +31,13 @@
    
   <div class="report_chart">
     <div class="chart">
-      <svg id="pie-chart" data-results="4,5,0" data-total="9">
+      <svg id="pie-chart" data-results="0,7,0" data-total="7">
         <path class="status failed" />
-        <path class="shadow failed" data-status="failed"><title>Failed: 4/9</title></path>
+        <path class="shadow failed" data-status="failed"><title>Failed: 0/7</title></path>
         <path class="status passed" />
-        <path class="shadow passed" data-status="passed"><title>Passed: 5/9</title></path>
+        <path class="shadow passed" data-status="passed"><title>Passed: 7/7</title></path>
         <path class="status skipped" />
-        <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/9</title></path>
+        <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/7</title></path>
       </svg>
     </div>
   </div>
@@ -45,15 +45,15 @@
    
   <div class="report_test-results">
     <div class="report_test-result specs">
-        <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">9</span></div>
-        <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">4</span></div>
-        <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">5</span></div>
+        <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">7</span></div>
+        <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">0</span></div>
+        <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">7</span></div>
         <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">0</span></div>
     </div>
     <div class="report_test-result scenarios">
         <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">13</span></div>
-        <div class="fail scenario-stats" data-status="failed"><span class="value">4</span></div>
-        <div class="pass scenario-stats" data-status="passed"><span class="value">9</span></div>
+        <div class="fail scenario-stats" data-status="failed"><span class="value">0</span></div>
+        <div class="pass scenario-stats" data-status="passed"><span class="value">13</span></div>
         <div class="skip scenario-stats" data-status="skipped"><span class="value">0</span></div>
     </div>
   </div>
@@ -63,7 +63,7 @@
   <ul>
     <li>
       <label>Environment </label>
-      <span>docker.standard</span>
+      <span>demo</span>
     </li>
     
     <li>
@@ -73,15 +73,15 @@
     
     <li>
       <label>Success Rate </label>
-      <span>55%</span>
+      <span>100%</span>
     </li>
     <li>
       <label>Total Time </label>
-      <span>00:59:34</span>
+      <span>01:01:22</span>
     </li>
     <li>
       <label>Generated On </label>
-      <span>Apr 10, 2024 at 6:18am</span>
+      <span>Apr 13, 2024 at 6:17am</span>
     </li>
   </ul>
 
@@ -113,57 +113,21 @@
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
-          <a href="specs/ImplementerInterface.html">
-            
-              <li class="failed spec-name">
-            
-              <span id="scenarioName" class="scenarioname">Implementer interface</span>
-              <span id="time" class="time">00:05:19</span>
-            </li>
-          </a>
-          
-          <a href="specs/Appointments.html">
-            
-              <li class="failed spec-name">
-            
-              <span id="scenarioName" class="scenarioname">Appointments</span>
-              <span id="time" class="time">00:03:06</span>
-            </li>
-          </a>
-          
-          <a href="specs/Consultation.html">
-            
-              <li class="failed spec-name">
-            
-              <span id="scenarioName" class="scenarioname">Consultation</span>
-              <span id="time" class="time">00:04:54</span>
-            </li>
-          </a>
-          
-          <a href="specs/ProgramBasedVisit.html">
-            
-              <li class="failed spec-name">
-            
-              <span id="scenarioName" class="scenarioname">Program Based Visits</span>
-              <span id="time" class="time">00:02:41</span>
-            </li>
-          </a>
-          
           <a href="specs/AdminOperations.html">
              
               <li class="passed spec-name">
             
               <span id="scenarioName" class="scenarioname">Admin operations</span>
-              <span id="time" class="time">00:11:07</span>
+              <span id="time" class="time">00:10:29</span>
             </li>
           </a>
           
-          <a href="specs/Radiology.html">
+          <a href="specs/Appointments.html">
              
               <li class="passed spec-name">
             
-              <span id="scenarioName" class="scenarioname">Radiology</span>
-              <span id="time" class="time">00:03:38</span>
+              <span id="scenarioName" class="scenarioname">Appointments</span>
+              <span id="time" class="time">00:09:24</span>
             </li>
           </a>
           
@@ -172,7 +136,7 @@
               <li class="passed spec-name">
             
               <span id="scenarioName" class="scenarioname">In Patient Visit</span>
-              <span id="time" class="time">00:08:37</span>
+              <span id="time" class="time">00:13:57</span>
             </li>
           </a>
           
@@ -181,7 +145,7 @@
               <li class="passed spec-name">
             
               <span id="scenarioName" class="scenarioname">Laboratory and Billing</span>
-              <span id="time" class="time">00:16:06</span>
+              <span id="time" class="time">00:14:21</span>
             </li>
           </a>
           
@@ -190,7 +154,25 @@
               <li class="passed spec-name">
             
               <span id="scenarioName" class="scenarioname">Operation Theatre</span>
-              <span id="time" class="time">00:03:08</span>
+              <span id="time" class="time">00:03:01</span>
+            </li>
+          </a>
+          
+          <a href="specs/ProgramBasedVisit.html">
+             
+              <li class="passed spec-name">
+            
+              <span id="scenarioName" class="scenarioname">Program Based Visits</span>
+              <span id="time" class="time">00:05:20</span>
+            </li>
+          </a>
+          
+          <a href="specs/Radiology.html">
+             
+              <li class="passed spec-name">
+            
+              <span id="scenarioName" class="scenarioname">Radiology</span>
+              <span id="time" class="time">00:03:07</span>
             </li>
           </a>
           
@@ -199,6 +181,10 @@
     </aside>
   
 
+	
+    <div class="congratulations details">
+      <p>Congratulations! You've gone all <span class="green">green</span> and saved the environment!</p>
+    </div>
 	
  	</div>
  	</div>
