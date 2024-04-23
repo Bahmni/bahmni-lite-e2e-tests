@@ -31,11 +31,11 @@
    
   <div class="report_chart">
     <div class="chart">
-      <svg id="pie-chart" data-results="0,3,0" data-total="3">
+      <svg id="pie-chart" data-results="3,0,0" data-total="3">
         <path class="status failed" />
-        <path class="shadow failed" data-status="failed"><title>Failed: 0/3</title></path>
+        <path class="shadow failed" data-status="failed"><title>Failed: 3/3</title></path>
         <path class="status passed" />
-        <path class="shadow passed" data-status="passed"><title>Passed: 3/3</title></path>
+        <path class="shadow passed" data-status="passed"><title>Passed: 0/3</title></path>
         <path class="status skipped" />
         <path class="shadow skipped" data-status="skipped"><title>Skipped: 0/3</title></path>
       </svg>
@@ -46,14 +46,14 @@
   <div class="report_test-results">
     <div class="report_test-result specs">
         <div class="total-specs" title="Filter all specs"><span class="txt">Total specs</span><span class="value">3</span></div>
-        <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">0</span></div>
-        <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">3</span></div>
+        <div class="fail spec-filter" data-status="failed" title="Filter failed specs"><span class="value">3</span></div>
+        <div class="pass spec-filter" data-status="passed" title="Filter passed specs"><span class="value">0</span></div>
         <div class="skip spec-filter" data-status="skipped" title="Filter skipped specs"><span class="value">0</span></div>
     </div>
     <div class="report_test-result scenarios">
         <div class="total-scenarios"><span class="txt">Total scenario</span><span class="value">11</span></div>
-        <div class="fail scenario-stats" data-status="failed"><span class="value">0</span></div>
-        <div class="pass scenario-stats" data-status="passed"><span class="value">11</span></div>
+        <div class="fail scenario-stats" data-status="failed"><span class="value">11</span></div>
+        <div class="pass scenario-stats" data-status="passed"><span class="value">0</span></div>
         <div class="skip scenario-stats" data-status="skipped"><span class="value">0</span></div>
     </div>
   </div>
@@ -73,15 +73,15 @@
     
     <li>
       <label>Success Rate </label>
-      <span>100%</span>
+      <span>0%</span>
     </li>
     <li>
       <label>Total Time </label>
-      <span>00:01:23</span>
+      <span>00:31:12</span>
     </li>
     <li>
       <label>Generated On </label>
-      <span>Apr 20, 2024 at 6:58am</span>
+      <span>Apr 23, 2024 at 6:59am</span>
     </li>
   </ul>
 
@@ -118,30 +118,30 @@
       <div id="listOfSpecifications">
         <ul id="scenarios" class="spec-list">
         
+          <a href="apiConsultation.html">
+            
+              <li class="failed spec-name">
+            
+              <span id="scenarioName" class="scenarioname">Consultation Test</span>
+              <span id="time" class="time">00:04:04</span>
+            </li>
+          </a>
+          
           <a href="apiLogin.html">
-             
-              <li class="passed spec-name">
+            
+              <li class="failed spec-name">
             
               <span id="scenarioName" class="scenarioname">Login Test</span>
-              <span id="time" class="time">00:00:01</span>
+              <span id="time" class="time">00:06:00</span>
             </li>
           </a>
           
           <a href="apiRegistration.html">
-             
-              <li class="passed spec-name">
+            
+              <li class="failed spec-name">
             
               <span id="scenarioName" class="scenarioname">Registration Test</span>
-              <span id="time" class="time">00:00:50</span>
-            </li>
-          </a>
-          
-          <a href="apiConsultation.html">
-             
-              <li class="passed spec-name">
-            
-              <span id="scenarioName" class="scenarioname">Consultation Test</span>
-              <span id="time" class="time">00:00:23</span>
+              <span id="time" class="time">00:21:00</span>
             </li>
           </a>
           
@@ -156,11 +156,11 @@
   <div id="specificationContainer" class="details">
     <header class="curr-spec">
       <div class="spec-head-wrapper">
-        <h3 class="spec-head" title="/home/runner/work/bahmni-e2e-tests/bahmni-e2e-tests/specs/API/apiConsultation.spec">Consultation Test</h3>
+        <h3 class="spec-head" title="/home/runner/work/bahmni-e2e-tests/bahmni-e2e-tests/specs/API/apiLogin.spec">Login Test</h3>
         <div class="hidden report_test-results" alt="Scenarios" title="Scenarios">
           <ul>
-            <li class="fail"><span class="value">0</span><span class="txt">Failed</span></li>
-            <li class="pass"><span class="value">2</span><span class="txt">Passed</span></li>
+            <li class="fail"><span class="value">2</span><span class="txt">Failed</span></li>
+            <li class="pass"><span class="value">0</span><span class="txt">Passed</span></li>
             <li class="skip"><span class="value">0</span><span class="txt">Skipped</span></li>
           </ul>
         </div>
@@ -168,12 +168,12 @@
       <div class="spec-meta">
         <div class="spec-filename">
           <label for="specFileName">File Path</label>
-          <input id="specFileName" value="/home/runner/work/bahmni-e2e-tests/bahmni-e2e-tests/specs/API/apiConsultation.spec" readonly/>
+          <input id="specFileName" value="/home/runner/work/bahmni-e2e-tests/bahmni-e2e-tests/specs/API/apiLogin.spec" readonly/>
           <button class="clipboard-btn" data-clipboard-target="#specFileName" title="Copy to Clipboard">
               <i class="fa fa-clipboard" aria-hidden="true" title="Copy to Clipboard"></i>
           </button>
         </div>
-        <span class="time">00:00:23</span>
+        <span class="time">00:06:00</span>
       </div>
 
 	
@@ -183,7 +183,7 @@
       
         <span> api</span>
       
-        <span> consultation</span>
+        <span> login</span>
       
     </div>
   
@@ -210,14 +210,14 @@
       
         
 	
-  <div class="scenario-container passed">
+  <div class="scenario-container failed">
     
 
 	
   <div class="scenario-head">
-    <h3 class="head borderBottom">Verify the active patient queue in consultation module</h3>
+    <h3 class="head borderBottom">Verify the login location is returning status code 200</h3>
     
-    <span class="time">00:00:14</span>
+    <span class="time">00:03:00</span>
 
 	
   
@@ -242,10 +242,10 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:04</span>
+      <span class="time">Execution Time : 00:03:00</span>
     </h5>
   
-  <div class="step-info passed">
+  <div class="step-info failed">
   
   <ul>
     <li class="step">
@@ -265,7 +265,7 @@
   
     
       <span>
-        Create a Patient through API
+        Verify the login location is returning status code 200
       </span>
     
   
@@ -273,88 +273,31 @@
 
   
     
-    
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Patient ID - ABC12341624</p>
- </div>
+        
+  <div class="error-container failed">
+    <div class="exception-container">
+      <div class="exception">
+        <h4 class="error-message">
+          <pre>Error: Timed out</pre>
+        </h4>
+        <pre class="stacktrace">Error: Timed out<br/>    at Timeout.&lt;anonymous&gt; (/home/runner/.gauge/plugins/js/4.0.1/src/test.js:44:23)<br/>    at listOnTimeout (node:internal/timers:559:17)<br/>    at processTimers (node:internal/timers:502:7)</pre>
       </div>
+      
+        
+          
+            <div class="screenshot-container custom-screenshot-message">
+              <div class="screenshot">
+              <p class="custom-message">To view a screenshot of this failed step, Please set up a <a href="https://docs.gauge.org/writing-specifications/#taking-custom-screenshots">custom screenshot handler.</a></p>
+              </div>
+            </div>
+          
+        
+      
     </div>
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:09</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Verify the active patient is retuned with status code 200
-      </span>
-    
-  
   </div>
 
-  
     
     
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>patient UUID - e8123bbe-c5a9-42c3-92b5-3ecbea34ae34</p>
- </div><div class="step-message"><p>Login Location UUID - 833d0c66-e29a-4d31-ac13-ca9050d1bfa9</p>
- </div><div class="step-message"><p>Visit Type UUID - ba053380-1e6f-48f4-9723-922cdd993c4b</p>
- </div>
-      </div>
-    </div>
   
 
     
@@ -393,14 +336,14 @@
       
         
 	
-  <div class="scenario-container passed">
+  <div class="scenario-container failed">
     
 
 	
   <div class="scenario-head">
-    <h3 class="head borderBottom">Verify user is able to save the consultation encounter for a patient</h3>
+    <h3 class="head borderBottom">Verify login location is returning valid location</h3>
     
-    <span class="time">00:00:08</span>
+    <span class="time">00:03:00</span>
 
 	
   
@@ -425,10 +368,10 @@
   
   
     <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:04</span>
+      <span class="time">Execution Time : 00:03:00</span>
     </h5>
   
-  <div class="step-info passed">
+  <div class="step-info failed">
   
   <ul>
     <li class="step">
@@ -448,7 +391,7 @@
   
     
       <span>
-        Create a Patient through API
+        Verify login location is returning valid location
       </span>
     
   
@@ -456,76 +399,29 @@
 
   
     
-    
-  
-    <div class="message-container">
-      <i class="fa fa-minus-square" aria-hidden="true"></i>
-      <div class="messages">
-        <div class="step-message"><p>Patient ID - ABC12341625</p>
- </div>
+        
+  <div class="error-container failed">
+    <div class="exception-container">
+      <div class="exception">
+        <h4 class="error-message">
+          <pre>Error: Timed out</pre>
+        </h4>
+        <pre class="stacktrace">Error: Timed out<br/>    at Timeout.&lt;anonymous&gt; (/home/runner/.gauge/plugins/js/4.0.1/src/test.js:44:23)<br/>    at listOnTimeout (node:internal/timers:559:17)<br/>    at processTimers (node:internal/timers:502:7)</pre>
       </div>
+      
+        
+          
+            <div class="screenshot-container custom-screenshot-message">
+              <div class="screenshot">
+              <p class="custom-message">To view a screenshot of this failed step, Please set up a <a href="https://docs.gauge.org/writing-specifications/#taking-custom-screenshots">custom screenshot handler.</a></p>
+              </div>
+            </div>
+          
+        
+      
     </div>
-  
-
-    
-    
-  
-
-  
-  
-  
-  
-
-  
-  
-
-  
-	</li></ul></div></div>
-  
-    
-  
-
-  
-
-  
-    
-  
-    
-  
-  <div class="step">
-  
-  
-    <h5 class="execution-time">
-      <span class="time">Execution Time : 00:00:04</span>
-    </h5>
-  
-  <div class="step-info passed">
-  
-  <ul>
-    <li class="step">
-      <div class="step-txt">
-
-
-  
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-    
-      <span>
-        Verify user is able to save the consultation encounter for a patient with status code 200
-      </span>
-    
-  
   </div>
 
-  
     
     
   
