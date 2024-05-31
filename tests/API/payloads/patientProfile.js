@@ -8,9 +8,9 @@ class PatientProfile {
         this.data.patient.person.names[0].givenName = faker.name.firstName();
         this.data.patient.person.names[0].middleName = faker.name.middleName();
         this.data.patient.person.names[0].familyName = faker.name.lastName();
-        this.data.patient.person.addresses[0].address1 = faker.address.streetAddress();
-        this.data.patient.person.addresses[0].address2 = faker.address.secondaryAddress();
-        this.data.patient.person.addresses[0].cityVillage = faker.address.city();
+        this.data.patient.person.addresses[0].address1 = faker.address.streetAddress().replace(/[^a-zA-Z0-9\s]/g, '');
+        this.data.patient.person.addresses[0].address2 = faker.address.secondaryAddress().replace(/[^a-zA-Z0-9\s]/g, '');
+        this.data.patient.person.addresses[0].cityVillage = faker.address.city().replace(/[^a-zA-Z0-9\s]/g, '');
         this.data.patient.person.addresses[0].countyDistrict = faker.address.county();
         this.data.patient.person.addresses[0].stateProvince = faker.address.state();
         this.data.patient.person.addresses[0].postalCode = faker.address.zipCode();
