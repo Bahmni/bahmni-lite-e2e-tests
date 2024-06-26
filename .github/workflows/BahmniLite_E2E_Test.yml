@@ -64,7 +64,7 @@ jobs:
         run: bash .github/waitForEnv.sh $TARGET_ENV
       - uses: actions/setup-node@v2
         with:
-          node-version: "latest"
+          node-version: "22"
           cache: "npm"
       - uses: zcong1993/setup-timezone@v1.1.2
         with:
