@@ -61,7 +61,7 @@ jobs:
           echo "ENV_FLAG=true" >> $GITHUB_ENV
       - uses: actions/setup-node@v2
         with:
-          node-version: "16"
+          node-version: "latest"
           cache: "npm"
       - uses: zcong1993/setup-timezone@v1.1.2
         with:
