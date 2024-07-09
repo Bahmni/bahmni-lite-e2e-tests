@@ -1,0 +1,16 @@
+{
+    "names": [
+        {
+            "name": "strName",
+            "locale": "en",
+            "localePreferred": true,
+            "conceptNameType": "FULLY_SPECIFIED"
+        }
+    ],
+    "datatype":  "strType",
+    "version": "1.2.2",
+    "conceptClass": "strClass",
+    "mappings": [],
+    "descriptions": [],
+    "attributes": "blnSaleable"
+}

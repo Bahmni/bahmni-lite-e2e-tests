@@ -6,7 +6,7 @@
     "lite": "gauge run specs --env lite -v -p -n=3 --tags 'clinic'",
     "hospital": "gauge run specs --env demo0.9.4 -v -p -n=3 --tags 'setup';gauge run specs --env demo0.9.4 -v -p -n=6 --tags 'hospital'",
     "demo": "gauge run specs --env demo -v -p -n=3 --tags 'setup';gauge run specs --env demo -v -p -n=6 --tags 'hospital'",
-    "ci": "gauge run specs -v "
+    "ci": "gauge run specs/UI -v "
   },
   "dependencies": {
     "adm-zip": "^0.5.10",
@@ -14,6 +14,7 @@
     "buffer": "latest",
     "csvtojson": "latest",
     "date-fns": "^2.30.0",
+    "decimal.js": "^10.4.3",
     "json2csv": "latest",
     "moment": "^2.30.1",
     "ndjson": "^2.0.0",
@@ -25,6 +26,6 @@
     "uuid": "latest"
   },
   "devDependencies": {
-    "@faker-js/faker": "^7.6.0"
+    "@faker-js/faker": "^8.4.1"
   }
 }

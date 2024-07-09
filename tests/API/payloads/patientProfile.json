@@ -1,0 +1,48 @@
+{
+    "patient": {
+        "person": {
+            "names": [
+                {
+                    "givenName": "First",
+                    "middleName": "Middle",
+                    "familyName": "Last",
+                    "display": "First Last",
+                    "preferred": false
+                }
+            ],
+            "addresses": [
+                {
+                    "address1": "123",
+                    "address2": "GramPanchayat",
+                    "address3": "Tehsil",
+                    "cityVillage": "City",
+                    "countyDistrict": "CHENNAI",
+                    "stateProvince": "TAMIL NADU"
+                }
+            ],
+            "birthdate": "1989-04-11",
+            "gender": "M",
+            "birthtime": null,
+            "attributes": [],
+            "deathDate": null,
+            "causeOfDeath": ""
+        },
+        "identifiers": [
+            {
+                "identifierSourceUuid": "c1d8a345-3f10-11e4-adec-0800271c1b75",
+                "identifierPrefix": "GAN",
+                "identifierType": "81433852-3f10-11e4-adec-0800271c1b75",
+                "preferred": true,
+                "voided": false
+            },
+            {
+                "identifierPrefix": "NAT",
+                "identifierSourceUuid": "a1a7e96e-83b3-4c1c-b0c6-f24710e62a97",
+                "identifierType": "0d2ac572-8de3-46c8-9976-1f78899c599f",
+                "preferred": false,
+                "voided": false
+            }
+        ]
+    },
+    "relationships": []
+}

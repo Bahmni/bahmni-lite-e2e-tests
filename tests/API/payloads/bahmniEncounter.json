@@ -1,0 +1,269 @@
+{
+    "bahmniDiagnoses": [],
+    "context": {},
+    "disposition": null,
+    "drugOrders": [],
+    "encounterDateTime": null,
+    "encounterTypeUuid": "3abe25b2-7bbc-11ed-807c-026601bd99d0",
+    "encounterUuid": null,
+    "extensions": {
+        "mdrtbSpecimen": []
+    },
+    "locationUuid": "833d0c66-e29a-4d31-ac13-ca9050d1bfa9",
+    "observations": [
+        {
+            "concept": {
+                "name": "Chief Complaint Data",
+                "uuid": "9bb0795c-4ff0-0305-1990-000000000004"
+            },
+            "formFieldPath": "History and Examination.1/15-0",
+            "formNamespace": "Bahmni",
+            "groupMembers": [
+                {
+                    "concept": {
+                        "name": "Chief Complaint Coded",
+                        "uuid": "9bb0795c-4ff0-0305-1990-000000000002"
+                    },
+                    "formFieldPath": "History and Examination.1/15-0/16-0",
+                    "formNamespace": "Bahmni",
+                    "groupMembers": [],
+                    "inactive": false,
+                    "interpretation": null,
+                    "value": {
+                        "displayString": "Fever",
+                        "name": {
+                            "conceptNameType": "FULLY_SPECIFIED",
+                            "display": "Fever",
+                            "links": [
+                                {
+                                    "rel": "self",
+                                    "resourceAlias": "name",
+                                    "uri": "http://localhost/openmrs/ws/rest/v1/concept/140238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/name/40007BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+                                },
+                                {
+                                    "rel": "full",
+                                    "resourceAlias": "name",
+                                    "uri": "http://localhost/openmrs/ws/rest/v1/concept/140238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/name/40007BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB?v=full"
+                                }
+                            ],
+                            "locale": "en",
+                            "localePreferred": true,
+                            "name": "Fever",
+                            "resourceVersion": "1.9",
+                            "uuid": "40007BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+                        },
+                        "names": [
+                            {
+                                "conceptNameType": "FULLY_SPECIFIED",
+                                "display": "Fever",
+                                "links": [
+                                    {
+                                        "rel": "self",
+                                        "resourceAlias": "name",
+                                        "uri": "http://localhost/openmrs/ws/rest/v1/concept/140238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/name/40007BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+                                    },
+                                    {
+                                        "rel": "full",
+                                        "resourceAlias": "name",
+                                        "uri": "http://localhost/openmrs/ws/rest/v1/concept/140238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/name/40007BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB?v=full"
+                                    }
+                                ],
+                                "locale": "en",
+                                "localePreferred": true,
+                                "name": "Fever",
+                                "resourceVersion": "1.9",
+                                "uuid": "40007BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+                            }
+                        ],
+                        "resourceVersion": "2.0",
+                        "translationKey": "FEVER_16",
+                        "uuid": "140238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                    },
+                    "voided": false
+                },
+                {
+                    "concept": {
+                        "name": "Sign/symptom duration",
+                        "uuid": "1731AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                    },
+                    "formFieldPath": "History and Examination.1/15-0/18-0",
+                    "formNamespace": "Bahmni",
+                    "groupMembers": [],
+                    "inactive": false,
+                    "interpretation": null,
+                    "value": "7",
+                    "voided": false
+                },
+                {
+                    "concept": {
+                        "name": "Chief Complaint Duration",
+                        "uuid": "9bb0795c-4ff0-0305-1990-000000000003"
+                    },
+                    "formFieldPath": "History and Examination.1/15-0/19-0",
+                    "formNamespace": "Bahmni",
+                    "groupMembers": [],
+                    "inactive": false,
+                    "interpretation": null,
+                    "value": {
+                        "displayString": "Days",
+                        "name": {
+                            "conceptNameType": "FULLY_SPECIFIED",
+                            "display": "Days",
+                            "links": [
+                                {
+                                    "rel": "self",
+                                    "resourceAlias": "name",
+                                    "uri": "http://localhost/openmrs/ws/rest/v1/concept/1072AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/name/1146BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+                                },
+                                {
+                                    "rel": "full",
+                                    "resourceAlias": "name",
+                                    "uri": "http://localhost/openmrs/ws/rest/v1/concept/1072AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/name/1146BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB?v=full"
+                                }
+                            ],
+                            "locale": "en",
+                            "localePreferred": true,
+                            "name": "Days",
+                            "resourceVersion": "1.9",
+                            "uuid": "1146BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+                        },
+                        "names": [
+                            {
+                                "conceptNameType": "FULLY_SPECIFIED",
+                                "display": "Days",
+                                "links": [
+                                    {
+                                        "rel": "self",
+                                        "resourceAlias": "name",
+                                        "uri": "http://localhost/openmrs/ws/rest/v1/concept/1072AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/name/1146BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+                                    },
+                                    {
+                                        "rel": "full",
+                                        "resourceAlias": "name",
+                                        "uri": "http://localhost/openmrs/ws/rest/v1/concept/1072AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/name/1146BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB?v=full"
+                                    }
+                                ],
+                                "locale": "en",
+                                "localePreferred": true,
+                                "name": "Days",
+                                "resourceVersion": "1.9",
+                                "uuid": "1146BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+                            }
+                        ],
+                        "resourceVersion": "2.0",
+                        "translationKey": "DAYS_19",
+                        "uuid": "1072AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                    },
+                    "voided": false
+                }
+            ],
+            "inactive": false,
+            "voided": false
+        },
+        {
+            "concept": {
+                "name": "History of present illness",
+                "uuid": "1390AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            },
+            "formFieldPath": "History and Examination.1/7-0",
+            "formNamespace": "Bahmni",
+            "groupMembers": [],
+            "inactive": false,
+            "interpretation": null,
+            "value": "No Illness",
+            "voided": false
+        },
+        {
+            "concept": {
+                "name": "Smoking status",
+                "uuid": "163201AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            },
+            "formFieldPath": "History and Examination.1/8-0",
+            "formNamespace": "Bahmni",
+            "groupMembers": [],
+            "inactive": false,
+            "interpretation": null,
+            "value": {
+                "displayString": "Never smoker",
+                "name": {
+                    "conceptNameType": "FULLY_SPECIFIED",
+                    "display": "Never smoker",
+                    "links": [
+                        {
+                            "rel": "self",
+                            "resourceAlias": "name",
+                            "uri": "http://localhost/openmrs/ws/rest/v1/concept/163198AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/name/135296BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+                        },
+                        {
+                            "rel": "full",
+                            "resourceAlias": "name",
+                            "uri": "http://localhost/openmrs/ws/rest/v1/concept/163198AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/name/135296BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB?v=full"
+                        }
+                    ],
+                    "locale": "en",
+                    "localePreferred": true,
+                    "name": "Never smoker",
+                    "resourceVersion": "1.9",
+                    "uuid": "135296BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+                },
+                "names": [
+                    {
+                        "conceptNameType": null,
+                        "display": "Never smoked tobacco",
+                        "links": [
+                            {
+                                "rel": "self",
+                                "resourceAlias": "name",
+                                "uri": "http://localhost/openmrs/ws/rest/v1/concept/163198AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/name/135297BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+                            },
+                            {
+                                "rel": "full",
+                                "resourceAlias": "name",
+                                "uri": "http://localhost/openmrs/ws/rest/v1/concept/163198AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/name/135297BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB?v=full"
+                            }
+                        ],
+                        "locale": "en",
+                        "localePreferred": false,
+                        "name": "Never smoked tobacco",
+                        "resourceVersion": "1.9",
+                        "uuid": "135297BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+                    },
+                    {
+                        "conceptNameType": "FULLY_SPECIFIED",
+                        "display": "Never smoker",
+                        "links": [
+                            {
+                                "rel": "self",
+                                "resourceAlias": "name",
+                                "uri": "http://localhost/openmrs/ws/rest/v1/concept/163198AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/name/135296BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+                            },
+                            {
+                                "rel": "full",
+                                "resourceAlias": "name",
+                                "uri": "http://localhost/openmrs/ws/rest/v1/concept/163198AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/name/135296BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB?v=full"
+                            }
+                        ],
+                        "locale": "en",
+                        "localePreferred": true,
+                        "name": "Never smoker",
+                        "resourceVersion": "1.9",
+                        "uuid": "135296BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+                    }
+                ],
+                "resourceVersion": "2.0",
+                "translationKey": "NEVER_SMOKER_8",
+                "uuid": "163198AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+            },
+            "voided": false
+        }
+    ],
+    "orders": [],
+    "patientUuid": "7700342b-8cea-403e-abd3-d76c7865e80f",
+    "providers": [
+        {
+            "uuid": "3eee098f-7bbc-11ed-807c-026601bd99d0"
+        }
+    ],
+    "visitType": "OPD",
+    "visitUuid": null
+}
